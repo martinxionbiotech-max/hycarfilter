@@ -1,0 +1,156 @@
+/* Hycarfilter — global styles (lightweight, no framework) */
+:root {
+  --brand: #0e6eb8;          /* primary blue */
+  --brand-dark: #0a558f;
+  --brand-ink: #0d1b2a;      /* dark text */
+  --ink-soft: #44566c;
+  --accent: #ee7700;         /* CTA orange */
+  --accent-dark: #c96000;
+  --bg: #ffffff;
+  --bg-soft: #f4f7fb;
+  --line: #e2e8f0;
+  --radius: 10px;
+  --maxw: 1140px;
+  --shadow-sm: 0 1px 3px rgba(13, 27, 42, 0.08);
+  --shadow-md: 0 6px 18px rgba(13, 27, 42, 0.10);
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--brand-ink);
+  background: var(--bg);
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+a { color: var(--brand); text-decoration: none; }
+a:hover { color: var(--brand-dark); }
+
+img { max-width: 100%; height: auto; display: block; }
+
+h1, h2, h3, h4 {
+  line-height: 1.25;
+  margin: 0 0 0.5em;
+  font-weight: 700;
+  color: var(--brand-ink);
+}
+
+h1 { font-size: clamp(1.9rem, 4vw, 2.8rem); }
+h2 { font-size: clamp(1.5rem, 3vw, 2rem); }
+h3 { font-size: 1.25rem; }
+
+p { margin: 0 0 1em; }
+
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.section { padding: 3.5rem 0; }
+.section--soft { background: var(--bg-soft); }
+
+.section-head { max-width: 760px; margin-bottom: 2rem; }
+.section-head h2 { margin-bottom: 0.35em; }
+.lede { color: var(--ink-soft); font-size: 1.05rem; }
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.1s ease;
+}
+.btn--primary { background: var(--accent); color: #fff; }
+.btn--primary:hover { background: var(--accent-dark); color: #fff; }
+.btn--outline { background: transparent; color: var(--brand); border-color: var(--brand); }
+.btn--outline:hover { background: var(--brand); color: #fff; }
+.btn--brand { background: var(--brand); color: #fff; }
+.btn--brand:hover { background: var(--brand-dark); color: #fff; }
+
+/* Cards / grid */
+.grid { display: grid; gap: 1.5rem; }
+.grid--2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.grid--3 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.grid--4 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.4rem;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+.card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.card h3 { margin-bottom: 0.4em; }
+
+/* Badge / chip */
+.chip {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: var(--bg-soft);
+  color: var(--brand-dark);
+  border: 1px solid var(--line);
+}
+
+/* Tables */
+.table-wrap { overflow-x: auto; }
+table.spec {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  font-size: 0.92rem;
+}
+table.spec th, table.spec td {
+  border: 1px solid var(--line);
+  padding: 0.55rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+table.spec th { background: var(--bg-soft); font-weight: 700; white-space: nowrap; }
+table.spec td.null { color: #9aa7b8; }
+
+/* Blockquote / subjective opinion */
+.opinion {
+  border-left: 4px solid var(--accent);
+  background: #fff7ed;
+  padding: 1rem 1.2rem;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  margin: 1.5rem 0;
+}
+.opinion .byline { font-size: 0.85rem; color: var(--ink-soft); margin-top: 0.4rem; }
+
+/* FAQ */
+details.faq {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0.9rem 1.1rem;
+  margin-bottom: 0.8rem;
+  background: #fff;
+}
+details.faq summary { cursor: pointer; font-weight: 600; }
+details.faq p { margin: 0.6rem 0 0; color: var(--ink-soft); }
+
+/* Utility */
+.muted { color: var(--ink-soft); }
+.small { font-size: 0.88rem; }
+.mt-2 { margin-top: 2rem; }
+.mb-2 { margin-bottom: 2rem; }
+.center { text-align: center; }

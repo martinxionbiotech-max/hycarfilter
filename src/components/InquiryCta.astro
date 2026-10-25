@@ -1,0 +1,22 @@
+---
+// Inquiry CTA band — reuse across pages.
+import { site } from '../data/site';
+
+interface Props {
+  title?: string;
+  sub?: string;
+}
+
+const { title = 'Ready to source filters?', sub = 'Tell us your model, OE number, or target market — we reply within 24 hours.' } = Astro.props;
+---
+
+<section class="cta section section--soft">
+  <div class="container center">
+    <h2>{title}</h2>
+    <p class="lede">{sub}</p>
+    <p class="mt-2">
+      <a class="btn btn--primary" href="/contact/">Send an Inquiry</a>
+      <a class="btn btn--outline" href={site.whatsappLink} target="_blank" rel="nofollow noopener">WhatsApp Us</a>
+    </p>
+  </div>
+</section>

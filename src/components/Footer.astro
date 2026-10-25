@@ -1,0 +1,78 @@
+---
+import { site, nav, complianceLinks } from '../data/site';
+---
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__col">
+        <p class="footer__brand">
+          <span class="logo__mark">HC</span> {site.brand}
+        </p>
+        <p class="muted small">
+          {site.positioning}
+        </p>
+      </div>
+
+      <div class="footer__col">
+        <h4>Sitemap</h4>
+        <ul class="footer__list">
+          {nav.map((i) => <li><a href={i.href}>{i.label}</a></li>)}
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <ul class="footer__list">
+          <li>{site.address}</li>
+          <li><a href={`mailto:${site.email}`}>{site.email}</a></li>
+          <li><a href={site.whatsappLink} target="_blank" rel="nofollow noopener">WhatsApp {site.whatsapp}</a></li>
+          <li><a href={`tel:${site.mobile}`}>{site.mobile}</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>Legal</h4>
+        <ul class="footer__list">
+          {complianceLinks.map((i) => <li><a href={i.href}>{i.label}</a></li>)}
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© {new Date().getFullYear()} {site.companyName}. All rights reserved.</span>
+      <span class="muted small">SINCE {site.since}</span>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--brand-ink);
+    color: #dbe4ee;
+    padding: 3rem 0 1.5rem;
+    margin-top: 3rem;
+  }
+  .footer a { color: #dbe4ee; }
+  .footer a:hover { color: #fff; }
+  .footer__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+  .footer__brand { font-size: 1.15rem; font-weight: 700; color: #fff; }
+  .footer .logo__mark {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 30px; height: 30px; border-radius: 8px;
+    background: var(--brand); color: #fff; font-weight: 800;
+    margin-right: 0.3rem;
+  }
+  .footer h4 { color: #fff; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 0.8rem; }
+  .footer__list { list-style: none; margin: 0; padding: 0; font-size: 0.92rem; }
+  .footer__list li { margin-bottom: 0.45rem; }
+  .footer__bottom {
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;
+    margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid rgba(255,255,255,0.14);
+    font-size: 0.85rem;
+  }
+</style>
