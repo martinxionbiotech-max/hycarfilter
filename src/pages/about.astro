@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import InquiryCta from '../components/InquiryCta.astro';
+import { site } from '../data/site';
+
+const facts = [
+  { k: 'Founded', v: 'SINCE 2013' },
+  { k: 'Location', v: 'Qinghe County, Xingtai, Hebei — China filter industry cluster' },
+  { k: 'Business', v: 'Manufacturing, R&D, sales & after-sales service' },
+  { k: 'Categories', v: 'Air · Cabin · Oil · Fuel filters · Wipers · Transmission screens · LED' },
+  { k: 'Model', v: 'OEM / ODM / private label' },
+  { k: 'Quality', v: 'ISO 9001 · IATF 16949 (framework)' },
+];
+---
+
+<BaseLayout
+  title="About Us"
+  description="About hycarfilter: a professional automotive filter manufacturer and exporter since 2013, based in the Qinghe filter industry cluster, Hebei, China."
+>
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h1>About {site.brand}</h1>
+        <p class="lede">
+          {site.companyNameShort} is a professional filter manufacturing company integrating production,
+          research and development, sales and after-sales service. We specialize in automotive air filters,
+          cabin filters, oil filters, fuel filters, wipers, transmission filter screens and LED headlights.
+        </p>
+      </div>
+
+      <div class="grid grid--2 mb-2">
+        {facts.map((f) => (
+          <div class="card">
+            <h3>{f.k}</h3>
+            <p class="muted" style="margin:0">{f.v}</p>
+          </div>
+        ))}
+      </div>
+
+      <p class="muted">
+        Headquartered in the Qinghe County filter industry cluster of Xingtai, Hebei — one of China's densest
+        automotive-filter production bases — {site.brand} is positioned for export with an OEM/ODM model.
+        We are known in the industry for rapid development, high-end quality and dependable service.
+      </p>
+      <p class="muted small">
+        <em>Note: this page carries placeholder company details inherited from the source site pending final
+        legal-entity confirmation.</em>
+      </p>
+    </div>
+  </section>
+
+  <InquiryCta title="Want to know our factory?" sub="Ask for a factory tour, sample pack, or quality certificate." />
+</BaseLayout>

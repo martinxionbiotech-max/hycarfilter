@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site';
+---
+
+<BaseLayout
+  title="Contact & Inquiry"
+  description="Contact hycarfilter for filter quotes: email, WhatsApp and address. Send your OE number, target vehicle or market for a fast quote."
+>
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h1>Contact Us</h1>
+        <p class="lede">Send your model, OE number, or target market — we reply within 24 hours.</p>
+      </div>
+
+      <div class="grid grid--2">
+        <div>
+          <h2>Get in Touch</h2>
+          <ul class="contact-list">
+            <li><strong>Email</strong><br /><a href={`mailto:${site.email}`}>{site.email}</a></li>
+            <li><strong>WhatsApp / WeChat</strong><br /><a href={site.whatsappLink} target="_blank" rel="nofollow noopener">{site.whatsapp}</a></li>
+            <li><strong>Mobile</strong><br /><a href={`tel:${site.mobile}`}>{site.mobile}</a></li>
+            <li><strong>Address</strong><br />{site.address}<br /><span class="muted small">{site.addressZh}</span></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Inquiry Form</h2>
+          <p class="muted small">
+            Form is a placeholder for the skeleton; wiring to a form backend / CRM happens in a later phase.
+          </p>
+          <form class="form" action="/contact/" method="post" onsubmit="return false;">
+            <label>Name<input type="text" name="name" placeholder="Your name" /></label>
+            <label>Email *<input type="email" name="email" placeholder="you@company.com" required /></label>
+            <label>WhatsApp<input type="text" name="whatsapp" placeholder="+xx ..." /></label>
+            <label>Message *<textarea name="message" rows="4" placeholder="Model / OE number / target market..." required></textarea></label>
+            <button class="btn btn--primary" type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .contact-list { list-style: none; padding: 0; margin: 0; }
+  .contact-list li { margin-bottom: 1.1rem; }
+  .form { display: flex; flex-direction: column; gap: 0.9rem; }
+  .form label { display: flex; flex-direction: column; gap: 0.3rem; font-size: 0.9rem; font-weight: 600; }
+  .form input, .form textarea {
+    padding: 0.6rem 0.7rem; border: 1px solid var(--line); border-radius: 8px;
+    font: inherit; font-weight: 400;
+  }
+  .form input:focus, .form textarea:focus { outline: 2px solid var(--brand); outline-offset: 0; }
+</style>

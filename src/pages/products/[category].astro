@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import InquiryCta from '../../components/InquiryCta.astro';
+import productsData from '../../data/products.json';
+import { categoryContent } from '../../data/categoryContent';
+
+export function getStaticPaths() {
+  return productsData.categories.map((c) => ({ params: { category: c.slug } }));
+}
+
+const { category } = Astro.params;
+const cat = productsData.categories.find((c) => c.slug === category);
+const content = categoryContent[cat?.code ?? ''];
+
+// Guard: unknown slug
+if (!cat || !content) {
+  return Astro.redirect('/products/');
+}
+
+const skus = productsData.products.filter((p) => p.category === cat.code);
+
+// Compact dimension summary for the table
+function dimsSummary(p: any): string {
+  const d = p.dimensions;
+  const parts: string[] = [];
+  if (d.length_mm) parts.push(`${d.length_mm}mm`);
+  if (d.width_mm) parts.push(`${d.width_mm}mm`);
+  if (d.height_mm) parts.push(`H${d.height_mm}mm`);
+  if (d.outer_diameter_mm) parts.push(`OD${d.outer_diameter_mm}mm`);
+  if (d.thread) parts.push(d.thread);
+  return parts.join(' \u00d7 ') || '—';
+}
+---
+
+<BaseLayout
+  title={`${cat.name_en} (${cat.name_zh})`}
+  description={`${cat.name_en} selection guide and SKU table from hycarfilter. ${cat.tagline}`}
+>
+  <section class="section">
+    <div class="container">
+      <p class="small muted">
+        <a href="/products/">Products</a> &rsaquo; {cat.name_en}
+      </p>
+      <div class="section-head">
+        <h1>{cat.name_en} <span class="muted" style="font-size:0.6em;font-weight:600">/ {cat.name_zh}</span></h1>
+        <p class="lede">{content.intro}</p>
+      </div>
+
+      <!-- Selection guide -->
+      <h2>Selection Guide</h2>
+      <div class="grid grid--2 mb-2">
+        {content.selection.map((s) => (
+          <div class="card">
+            <h3>{s.title}</h3>
+            <p class="muted" style="margin:0">{s.text}</p>
+          </div>
+        ))}
+      </div>
+
+      <!-- SKU table -->
+      <h2>SKU Table</h2>
+      <p class="muted small">
+        Canonical seed values (defined once in <code>src/data/products.json</code>). HS code: {cat.hs_code}.
+      </p>
+      <div class="table-wrap">
+        <table class="spec">
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th>Series</th>
+              <th>Dimensions</th>
+              <th>Filtration Efficiency</th>
+              <th>Media</th>
+              <th>Applicable Vehicles</th>
+              <th>Carton Qty</th>
+              <th>MOQ</th>
+            </tr>
+          </thead>
+          <tbody>
+            {skus.map((p: any) => (
+              <tr>
+                <td><strong>{p.model}</strong></td>
+                <td>{p.series}</td>
+                <td>{dimsSummary(p)}</td>
+                <td>{p.filtration_efficiency ?? '—'}</td>
+                <td>{p.media}</td>
+                <td>{p.applicable_vehicles.join(', ')}</td>
+                <td>{p.packing.carton_qty}</td>
+                <td>{p.moq}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Opinion -->
+      <div class="opinion">
+        <strong>{content.opinion.title}</strong>
+        <p style="margin:0.5rem 0 0">{content.opinion.body}</p>
+        <p class="byline">— {content.opinion.title ? 'hycarfilter editorial' : ''} · procurement note</p>
+      </div>
+
+      <!-- FAQ -->
+      <h2>Procurement Q&amp;A</h2>
+      {content.faqs.map((f) => (
+        <details class="faq">
+          <summary>{f.q}</summary>
+          <p>{f.a}</p>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <InquiryCta
+    title={`Request a ${cat.name_en} quote`}
+    sub="Send your OE number, target vehicle, or market — we match the right SKU and provide a full spec sheet."
+  />
+</BaseLayout>
+
+<style>
+  code { background: var(--bg-soft); padding: 0.1rem 0.35rem; border-radius: 4px; font-size: 0.85em; }
+</style>

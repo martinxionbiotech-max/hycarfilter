@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import InquiryCta from '../../components/InquiryCta.astro';
+
+const scenes = [
+  {
+    title: 'Passenger Cars',
+    zh: '乘用车',
+    icon: '🚗',
+    filters: ['Panel air filter', 'Cabin filter (particle/carbon/HEPA)', 'Spin-on & cartridge oil filter', 'Inline fuel filter', 'Beam/hybrid wipers', 'H4/H7 LED bulbs'],
+    body: 'The highest-volume, most price-sensitive segment. Fitment accuracy and consistent seal quality drive repeat orders. Distributors here want a broad OE-coverage catalog with fast, consolidated shipping.',
+  },
+  {
+    title: 'Commercial Vehicles',
+    zh: '商用车',
+    icon: '🚚',
+    filters: ['Round/heavy-duty air filter', 'Heavy-duty oil filter', 'Fuel water-separator filter', 'Spin-on fuel filter', 'LED light bar'],
+    body: 'Trucks and buses run long hours in demanding conditions. Filtration here is about uptime and fuel protection. Buyers prioritize heavy-duty media, water separation for diesel, and durable canisters over unit price.',
+  },
+  {
+    title: 'Construction Machinery',
+    zh: '工程机械',
+    icon: '🚜',
+    filters: ['Heavy-duty air filter (safety layer)', 'Heavy-duty oil filter', 'Fuel water separator', 'Transmission filter screen', 'LED work lights'],
+    body: 'Dust, shock and vibration define this segment. Filters must survive high dust loads and protect expensive engines and hydraulics. Buyers value rugged media, reliable seals, and predictable service intervals.',
+  },
+  {
+    title: 'Agricultural Machinery',
+    zh: '农机',
+    icon: '🌾',
+    filters: ['Heavy-duty air filter', 'Fuel water-separator filter', 'Heavy-duty oil filter', 'Transmission filter screen'],
+    body: 'Seasonal, high-dust, long-idle duty cycles. Farmers need filters that tolerate field dust and occasional poor fuel. Water separation and high-dust air media are the decisive factors in this segment.',
+  },
+];
+---
+
+<BaseLayout
+  title="Applications — Where Our Filters Work"
+  description="Hycarfilter filters across four application segments: passenger cars, commercial vehicles, construction machinery and agricultural machinery — with segment-specific filter selection."
+>
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h1>Applications</h1>
+        <p class="lede">
+          The same filter category behaves differently across segments. Here is how we match product to duty cycle —
+          so an importer buys the right grade for the right market, not just the cheapest part number.
+        </p>
+      </div>
+
+      <div class="grid grid--2">
+        {scenes.map((s) => (
+          <div class="card scene">
+            <h3>{s.icon} {s.title} <span class="muted" style="font-size:0.7em;font-weight:600">/ {s.zh}</span></h3>
+            <p class="muted">{s.body}</p>
+            <p class="small" style="margin:0.8rem 0 0"><strong>Typical filter mix:</strong></p>
+            <ul class="small">
+              {s.filters.map((f) => <li>{f}</li>)}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <InquiryCta
+    title="Tell us your target segment"
+    sub="We recommend the right filter grades and packaging for your market's vehicles and duty cycles."
+  />
+</BaseLayout>
+
+<style>
+  .scene ul { margin: 0.3rem 0 0; padding-left: 1.1rem; color: var(--ink-soft); }
+  .scene li { margin-bottom: 0.2rem; }
+</style>

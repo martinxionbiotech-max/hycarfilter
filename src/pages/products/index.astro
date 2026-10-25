@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import InquiryCta from '../../components/InquiryCta.astro';
+import productsData from '../../data/products.json';
+
+const categories = productsData.categories;
+const products = productsData.products;
+const countByCategory = (code: string) => products.filter((p) => p.category === code).length;
+---
+
+<BaseLayout
+  title="Products — Filter Catalog"
+  description="Browse hycarfilter's seven filter categories: air, cabin, oil, fuel filters, wipers, transmission filter screens and LED lights. Each category links to its SKU table and selection guide."
+>
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h1>Products</h1>
+        <p class="lede">
+          Seven filter categories, each with a canonical SKU table. Specs are defined once in a single
+          dataset and referenced across the hycarfilter network — the values you see here are the values we quote.
+        </p>
+      </div>
+
+      <div class="grid grid--3">
+        {
+          categories.map((c) => (
+            <a class="card cat-card" href={`/products/${c.slug}/`}>
+              <span class="chip">{c.code.toUpperCase()}</span>
+              <h3>{c.name_en}</h3>
+              <p class="small muted">{c.name_zh}</p>
+              <p class="small" style="margin:0">{c.tagline}</p>
+              <p class="small muted" style="margin-top:0.6rem">
+                <strong>{countByCategory(c.code)}</strong> seed SKUs · HS {c.hs_code}
+              </p>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <InquiryCta
+    title="Can't find your model?"
+    sub="Send us your OE number or target vehicle — we match it against our SKU table and custom OEM/ODM range."
+  />
+</BaseLayout>
+
+<style>
+  .cat-card { display: block; color: var(--brand-ink); }
+  .cat-card:hover { color: var(--brand-ink); }
+  .cat-card h3 { margin: 0.5rem 0 0.2rem; }
+</style>
