@@ -47,6 +47,26 @@ const metaDescription =
 const siteUrl = Astro.site?.toString() ?? 'https://hycarfilter.com';
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const finalAlternates = alternates ?? hreflangAlternates(Astro.url.pathname, siteUrl);
+
+// Organization JSON-LD — legal entity (E-E-A-T). `sameAs` is emitted only when a
+// verifiable authority profile exists (Baidu Baike entry not found as of 2026-10-25).
+const orgJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': `${siteUrl}/#organization`,
+  name: site.entity.legalName,
+  legalName: site.entity.legalName,
+  alternateName: [site.brand, site.companyNameShort],
+  url: siteUrl,
+  address: {
+    '@type': 'PostalAddress',
+    addressCountry: 'CN',
+    addressRegion: '河北省',
+    addressLocality: '邢台市清河县',
+    streetAddress: '闽江街以北、九华山路以西',
+  },
+  ...(site.entity.sameAs ? { sameAs: [site.entity.sameAs] } : {}),
+};
 ---
 
 <!doctype html>
@@ -67,6 +87,7 @@ const finalAlternates = alternates ?? hreflangAlternates(Astro.url.pathname, sit
     {!noindex && finalAlternates?.map((a) => (
       <link rel="alternate" hreflang={a.lang} href={a.href} />
     ))}
+    <script type="application/ld+json" set:html={JSON.stringify(orgJsonLd)} />
   </head>
   <body>
     <Header />

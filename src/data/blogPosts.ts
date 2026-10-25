@@ -297,7 +297,7 @@ export const blogPosts: BlogPost[] = [
       {
         heading: 'Our booth at Automechanika Shanghai',
         paragraphs: [
-          'Hebei Hongying Automotive Parts Co., Ltd. (hycarfilter) exhibited at Automechanika Shanghai 2025, held November 26\u201329 at the National Exhibition and Convention Center. Our booth was located at Hall 1.1, Booth A17, where we showed our air, cabin, oil and fuel filter lines, wipers, transmission filter screens and LED lighting to buyers from across the export markets.',
+          'Qinghe County Huiying Auto Parts Co., Ltd. (hycarfilter) exhibited at Automechanika Shanghai 2025, held November 26\u201329 at the National Exhibition and Convention Center. Our booth was located at Hall 1.1, Booth A17, where we showed our air, cabin, oil and fuel filter lines, wipers, transmission filter screens and LED lighting to buyers from across the export markets.',
           'The show is a key meeting point for aftermarket and OEM buyers across Asia, the Middle East, Africa and beyond. For us it is the place to put physical samples in a buyer\u2019s hands — where a one-piece drawn shell, a calibrated bypass valve and a high-rebound seal can be seen and felt, not just read about on a spec sheet.',
         ],
       },

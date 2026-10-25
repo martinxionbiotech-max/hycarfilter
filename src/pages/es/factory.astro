@@ -59,6 +59,13 @@ const certFramework = [
         <div class="card"><h3>Modelo de negocio</h3><p class="muted" style="margin:0">OEM / ODM / marca privada</p></div>
         <div class="card"><h3>Categorías</h3><p class="muted" style="margin:0">Aire · Habitáculo · Aceite · Combustible · Escobillas · Mallas de transmisión · LED</p></div>
       </div>
+
+      <div class="entity-disclosure">
+        <h3>Divulgación de la entidad jurídica</h3>
+        <p><strong>Entidad jurídica:</strong> {site.entity.legalName}（{site.entity.legalNameZh}）</p>
+        <p><strong>Dirección registrada:</strong> {site.entity.addressCn}</p>
+        <p><strong>Código de crédito social unificado:</strong> {site.entity.creditCode}</p>
+      </div>
     </div>
   </section>
 
@@ -181,4 +188,7 @@ const certFramework = [
   .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
   .cert-grid__img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 8px; border: 1px solid var(--line); background: #fff; }
   .cert-grid__img--doc { aspect-ratio: auto; max-height: 340px; object-fit: contain; }
+  .entity-disclosure { background: #F4F7FA; border: 1px solid var(--line); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+  .entity-disclosure h3 { margin-top: 0; }
+  .entity-disclosure p { margin: 0.35rem 0; }
 </style>

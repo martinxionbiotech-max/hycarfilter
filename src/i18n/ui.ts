@@ -41,6 +41,9 @@ export interface UIStrings {
   marketSubsite: string;
   allRightsReserved: string;
   since: string;
+  legalEntity: string;
+  registeredAddress: string;
+  creditCode: string;
   // whatsapp
   waLabel: string;
   waAria: string;
@@ -196,6 +199,9 @@ const ar: UIStrings = {
   marketSubsite: 'رؤى السوق',
   allRightsReserved: 'جميع الحقوق محفوظة.',
   since: 'منذ',
+  legalEntity: 'الكيان القانوني',
+  registeredAddress: 'العنوان المسجل',
+  creditCode: 'رمز الائتمان الاجتماعي الموحد',
   waLabel: 'تواصل معنا الآن',
   waAria: 'تواصل معنا عبر واتساب',
   ctaEyebrow: 'اطلب عرض سعر',
@@ -342,6 +348,9 @@ const es: UIStrings = {
   marketSubsite: 'Perspectivas de mercado',
   allRightsReserved: 'Todos los derechos reservados.',
   since: 'DESDE',
+  legalEntity: 'Entidad jurídica',
+  registeredAddress: 'Dirección registrada',
+  creditCode: 'Código de crédito social unificado',
   waLabel: 'Chatea con nosotros ahora',
   waAria: 'Chatea con nosotros por WhatsApp',
   ctaEyebrow: 'Solicita una cotización',

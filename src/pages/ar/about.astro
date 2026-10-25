@@ -63,6 +63,34 @@ const values = [
         والاحتفاظ بالغبار. هذا هو الدور الذي نلعبه.
       </p>
 
+      <h2>الكيان القانوني للشركة</h2>
+      <p class="lede">
+        الهوية القانونية الموثقة خلف علامة {site.brand}، مأخوذة من سجل الأعمال العام في الصين.
+      </p>
+
+      <div class="grid grid--2 mb-2">
+        <div class="card"><h3>اسم الشركة</h3><p class="muted" style="margin:0">{site.entity.legalNameZh}<br />{site.entity.legalName}</p></div>
+        <div class="card"><h3>التأسيس (التسجيل)</h3><p class="muted" style="margin:0">{site.entity.foundedDate}</p></div>
+        <div class="card"><h3>الممثل القانوني</h3><p class="muted" style="margin:0">{site.entity.legalRepZh}</p></div>
+        <div class="card"><h3>رأس المال المسجل</h3><p class="muted" style="margin:0">{site.entity.registeredCapital}</p></div>
+        <div class="card"><h3>حالة التسجيل</h3><p class="muted" style="margin:0">نشطة (存续 — في التشغيل)</p></div>
+        <div class="card"><h3>نطاق العمل</h3><p class="muted" style="margin:0">تصنيع قطع غيار وملحقات السيارات؛ بيع قطع غيار السيارات بالتجزئة؛ تصنيع الآلات الزراعية؛ بيع الآلات الزراعية؛ استيراد وتصدير البضائع.</p></div>
+      </div>
+
+      <p>
+        الشركة مسجلة في تجمّع صناعة الفلاتر بمحافظة تشينغخه في شينغتاي بمقاطعة خبي — المنطقة المعترف بها
+        على نطاق واسع كأكثف قاعدة لإنتاج فلاتر السيارات في الصين. ومن تلك القاعدة تُصمَّم مجموعة {site.brand}
+        وتُصنَّع وتُشحن للتصدير.
+      </p>
+
+      <div class="entity-disclosure">
+        <h3>إفصاح الكيان القانوني</h3>
+        <p><strong>الكيان القانوني:</strong> {site.entity.legalName}（{site.entity.legalNameZh}）</p>
+        <p><strong>العنوان المسجل:</strong> {site.entity.addressCn}</p>
+        <p><strong>رمز الائتمان الاجتماعي الموحد:</strong> {site.entity.creditCode}</p>
+        <p class="muted small">المصدر: سجلات الأعمال العامة في الصين، استُرجعت بتاريخ 2026-10-25. لا توجد صفحة بايدو بايكه لهذا الكيان حتى تاريخ الاسترجاع.</p>
+      </div>
+
       <h2>تمركزنا</h2>
       <p>
         نحن <strong>مُصنّع ومُصدّر للفلاتر</strong>، لسنا وسيطاً تجارياً. هذا الفارق مهم لأنه يغيّر الحوار:
@@ -109,4 +137,7 @@ const values = [
 <style>
   .about-hero { width: 100%; max-height: 360px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--line); margin-bottom: 2rem; }
   .about-secondary { width: 100%; max-height: 300px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--line); margin-bottom: 2rem; }
+  .entity-disclosure { background: #F4F7FA; border: 1px solid var(--line); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+  .entity-disclosure h3 { margin-top: 0; }
+  .entity-disclosure p { margin: 0.35rem 0; }
 </style>

@@ -1,10 +1,26 @@
 // Central site config — single source for brand/contact facts (kept consistent site-wide).
 export const site = {
   brand: 'hycarfilter',
-  companyName: 'Hebei Hongying Automotive Parts Co., Ltd.',
-  companyNameShort: 'Hongying Automotive Parts',
+  companyName: 'Qinghe County Huiying Auto Parts Co., Ltd.',
+  companyNameShort: 'Huiying Auto Parts',
   domain: 'hycarfilter.com', // placeholder domain
   since: 2013,
+  // Verified legal entity (E-E-A-T disclosure) — sourced from China public business
+  // registry via Sogou search results aggregating Tianyancha + the Hebei 2023 Q4
+  // technology-based SME list. Retrieved 2026-10-25. Zero fabrication: Baidu Baike
+  // has no entry for this entity, so `sameAs` is intentionally left empty.
+  entity: {
+    legalName: 'Qinghe County Huiying Auto Parts Co., Ltd.',
+    legalNameZh: '清河县汇盈汽车零部件有限公司',
+    creditCode: '91130534MA0958NT84',
+    addressCn: '河北省邢台市清河县闽江街以北、九华山路以西',
+    sameAs: '',
+    foundedDate: '2017-10-10',
+    legalRepZh: '刘风秀',
+    registeredCapital: '100万元人民币',
+    businessScopeZh:
+      '汽车零部件及配件制造；汽车零配件零售；农业机械制造；农业机械销售；货物进出口',
+  },
   tagline: 'Filter manufacturer & exporter',
   taglineAr: 'مُصنّع ومُصدّر الفلاتر',
   taglineEs: 'Fabricante y exportador de filtros',

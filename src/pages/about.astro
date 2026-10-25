@@ -64,6 +64,35 @@ const values = [
         grade, bypass calibration, seal rebound, water separation and dust-holding. That is the role we play.
       </p>
 
+      <h2>Company entity</h2>
+      <p class="lede">
+        The verified legal identity behind the {site.brand} brand, sourced from China&rsquo;s public business
+        registry.
+      </p>
+
+      <div class="grid grid--2 mb-2">
+        <div class="card"><h3>Company name</h3><p class="muted" style="margin:0">{site.entity.legalNameZh}<br />{site.entity.legalName}</p></div>
+        <div class="card"><h3>Founded (registered)</h3><p class="muted" style="margin:0">{site.entity.foundedDate}</p></div>
+        <div class="card"><h3>Legal representative</h3><p class="muted" style="margin:0">{site.entity.legalRepZh}</p></div>
+        <div class="card"><h3>Registered capital</h3><p class="muted" style="margin:0">{site.entity.registeredCapital}</p></div>
+        <div class="card"><h3>Registration status</h3><p class="muted" style="margin:0">Active (存续 — in operation)</p></div>
+        <div class="card"><h3>Business scope</h3><p class="muted" style="margin:0">Manufacture of automotive parts &amp; accessories; automotive parts retail; agricultural machinery manufacturing; agricultural machinery sales; import &amp; export of goods.</p></div>
+      </div>
+
+      <p>
+        The company is registered in the Qinghe County filter industry cluster of Xingtai, Hebei — the region
+        widely recognised as China&rsquo;s densest base for automotive-filter production. That is the base from
+        which the {site.brand} range is designed, manufactured and shipped for export.
+      </p>
+
+      <div class="entity-disclosure">
+        <h3>Legal entity disclosure</h3>
+        <p><strong>Legal entity:</strong> {site.entity.legalName}（{site.entity.legalNameZh}）</p>
+        <p><strong>Registered address:</strong> {site.entity.addressCn}</p>
+        <p><strong>Unified Social Credit Code:</strong> {site.entity.creditCode}</p>
+        <p class="muted small">Source: China public business-registry records, retrieved 2026-10-25. No Baidu Baike entry exists for this entity as of the retrieval date.</p>
+      </div>
+
       <h2>Our positioning</h2>
       <p>
         We are a <strong>filter manufacturer and exporter</strong>, not a trading pass-through. That distinction
@@ -112,4 +141,7 @@ const values = [
 <style>
   .about-hero { width: 100%; max-height: 360px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--line); margin-bottom: 2rem; }
   .about-secondary { width: 100%; max-height: 300px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--line); margin-bottom: 2rem; }
+  .entity-disclosure { background: #F4F7FA; border: 1px solid var(--line); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+  .entity-disclosure h3 { margin-top: 0; }
+  .entity-disclosure p { margin: 0.35rem 0; }
 </style>

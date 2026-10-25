@@ -65,6 +65,35 @@ const values = [
         separación de agua y retención de polvo. Ese es el papel que desempeñamos.
       </p>
 
+      <h2>Entidad jurídica de la empresa</h2>
+      <p class="lede">
+        La identidad jurídica verificada detrás de la marca {site.brand}, tomada del registro mercantil público
+        de China.
+      </p>
+
+      <div class="grid grid--2 mb-2">
+        <div class="card"><h3>Nombre de la empresa</h3><p class="muted" style="margin:0">{site.entity.legalNameZh}<br />{site.entity.legalName}</p></div>
+        <div class="card"><h3>Fundada (registro)</h3><p class="muted" style="margin:0">{site.entity.foundedDate}</p></div>
+        <div class="card"><h3>Representante legal</h3><p class="muted" style="margin:0">{site.entity.legalRepZh}</p></div>
+        <div class="card"><h3>Capital registrado</h3><p class="muted" style="margin:0">{site.entity.registeredCapital}</p></div>
+        <div class="card"><h3>Estado de registro</h3><p class="muted" style="margin:0">Activa (存续 — en operación)</p></div>
+        <div class="card"><h3>Actividad</h3><p class="muted" style="margin:0">Fabricación de piezas y accesorios automotrices; venta al por menor de piezas automotrices; fabricación de maquinaria agrícola; venta de maquinaria agrícola; importación y exportación de mercancías.</p></div>
+      </div>
+
+      <p>
+        La empresa está registrada en el clúster industrial de filtros del condado de Qinghe, Xingtai, Hebei — la
+        región ampliamente reconocida como la base más densa de producción de filtros automotrices de China. Esa
+        es la base desde la que se diseña, fabrica y envía la gama {site.brand} para la exportación.
+      </p>
+
+      <div class="entity-disclosure">
+        <h3>Divulgación de la entidad jurídica</h3>
+        <p><strong>Entidad jurídica:</strong> {site.entity.legalName}（{site.entity.legalNameZh}）</p>
+        <p><strong>Dirección registrada:</strong> {site.entity.addressCn}</p>
+        <p><strong>Código de crédito social unificado:</strong> {site.entity.creditCode}</p>
+        <p class="muted small">Fuente: registros públicos mercantiles de China, recuperados el 2026-10-25. No existe una entrada en Baidu Baike para esta entidad a la fecha de recuperación.</p>
+      </div>
+
       <h2>Nuestro posicionamiento</h2>
       <p>
         Somos un <strong>fabricante y exportador de filtros</strong>, no un intermediario comercial. Esa distinción
@@ -115,4 +144,7 @@ const values = [
 <style>
   .about-hero { width: 100%; max-height: 360px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--line); margin-bottom: 2rem; }
   .about-secondary { width: 100%; max-height: 300px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--line); margin-bottom: 2rem; }
+  .entity-disclosure { background: #F4F7FA; border: 1px solid var(--line); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+  .entity-disclosure h3 { margin-top: 0; }
+  .entity-disclosure p { margin: 0.35rem 0; }
 </style>

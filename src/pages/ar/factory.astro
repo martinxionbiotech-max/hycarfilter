@@ -59,6 +59,13 @@ const certFramework = [
         <div class="card"><h3>نموذج العمل</h3><p class="muted" style="margin:0">OEM / ODM / علامة خاصة</p></div>
         <div class="card"><h3>الفئات</h3><p class="muted" style="margin:0">هواء · مقصورة · زيت · وقود · مسّاحات · مصافي ناقل الحركة · LED</p></div>
       </div>
+
+      <div class="entity-disclosure">
+        <h3>إفصاح الكيان القانوني</h3>
+        <p><strong>الكيان القانوني:</strong> {site.entity.legalName}（{site.entity.legalNameZh}）</p>
+        <p><strong>العنوان المسجل:</strong> {site.entity.addressCn}</p>
+        <p><strong>رمز الائتمان الاجتماعي الموحد:</strong> {site.entity.creditCode}</p>
+      </div>
     </div>
   </section>
 
@@ -179,4 +186,7 @@ const certFramework = [
   .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
   .cert-grid__img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 8px; border: 1px solid var(--line); background: #fff; }
   .cert-grid__img--doc { aspect-ratio: auto; max-height: 340px; object-fit: contain; }
+  .entity-disclosure { background: #F4F7FA; border: 1px solid var(--line); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+  .entity-disclosure h3 { margin-top: 0; }
+  .entity-disclosure p { margin: 0.35rem 0; }
 </style>

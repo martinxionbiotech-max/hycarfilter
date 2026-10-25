@@ -93,6 +93,10 @@ const positioning = currentLocale === 'ar' ? site.positioningAr : currentLocale 
       <span>© {new Date().getFullYear()} {site.companyName}. {u ? u.allRightsReserved : 'All rights reserved.'}</span>
       <span class="footer__since">SINCE {site.since}</span>
     </div>
+
+    <p class="footer__legal-entity">
+      {u?.legalEntity ?? 'Legal entity'}: {site.entity.legalName}（{site.entity.legalNameZh}）· {u?.creditCode ?? 'Unified Social Credit Code'}: {site.entity.creditCode}
+    </p>
   </div>
 </footer>
 
@@ -160,6 +164,12 @@ const positioning = currentLocale === 'ar' ? site.positioningAr : currentLocale 
     color: #8FA0B2;
   }
   .footer__since { letter-spacing: 0.06em; }
+  .footer__legal-entity {
+    margin: 1rem 0 0;
+    font-size: 0.78rem;
+    color: #7A8B9C;
+    line-height: 1.5;
+  }
 
   @media (max-width: 820px) {
     .footer__grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
