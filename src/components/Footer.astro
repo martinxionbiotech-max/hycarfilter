@@ -66,9 +66,9 @@ const positioning = currentLocale === 'ar' ? site.positioningAr : currentLocale 
         <h4>{u ? u.contact : 'Contact'}</h4>
         <ul class="footer__list">
           <li>{site.address}</li>
-          <li><a href={`mailto:${site.email}`}>{site.email}</a></li>
+          <li><strong>{u?.formEmailLabel ?? 'Email'}:</strong> <a href={`mailto:${site.email}`}>{site.email}</a></li>
           <li><a class="wa-btn" href={site.whatsappLink} target="_blank" rel="nofollow noopener">💬 {u?.formWhatsappBtn ?? 'Chat on WhatsApp Now'}</a></li>
-          <li><a href={`tel:${site.phone}`}>{site.phone}</a></li>
+          <li><strong>{u?.formPhoneLabel ?? 'Phone'} | WeChat:</strong> <a href={`tel:${site.phone}`}>{site.phone}</a></li>
         </ul>
       </div>
 
