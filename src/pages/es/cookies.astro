@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { site } from '../../data/site';
+---
+
+<BaseLayout
+  title="Política de cookies"
+  description={`Política de cookies de ${site.companyName} (${site.brand}): qué son las cookies, cuáles utiliza este sitio web y cómo gestionarlas.`}
+>
+  <section class="section">
+    <div class="container">
+      <article class="legal">
+        <h1>Política de cookies</h1>
+        <p class="updated">Última actualización: 25 de octubre de 2026</p>
+
+        <p>
+          Esta Política de cookies explica cómo <strong>{site.companyName}</strong> (&ldquo;{site.brand}&rdquo;,
+          &ldquo;nosotros&rdquo; o &ldquo;nuestro/a&rdquo;) utiliza cookies y tecnologías similares en{' '}
+          <strong>{site.domain}</strong>. Debe leerse junto con nuestra{' '}
+          <a href="/es/privacy/">Política de privacidad</a>.
+        </p>
+
+        <h2>¿Qué son las cookies?</h2>
+        <p>
+          Las cookies son pequeños archivos de texto que se almacenan en su dispositivo cuando visita un sitio
+          web. Ayudan a que un sitio web recuerde información sobre su visita, como sus preferencias o si ya lo
+          ha visitado antes. Las &ldquo;tecnologías similares&rdquo; incluyen el almacenamiento local y otros
+          mecanismos basados en el navegador que cumplen funciones comparables.
+        </p>
+
+        <h2>Cómo utilizamos las cookies</h2>
+        <p>
+          Este sitio web es principalmente un sitio de información estático orientado al comercio entre empresas
+          (B2B). Utiliza solo un conjunto limitado de cookies y tecnologías similares, que se dividen en las
+          siguientes categorías:
+        </p>
+        <ul>
+          <li>
+            <strong>Estrictamente necesarias / funcionales.</strong> Son necesarias para que el sitio web
+            funcione correctamente, como recordar el estado básico de la sesión o las preferencias. Sin ellas,
+            es posible que algunas partes del sitio no funcionen como se espera.
+          </li>
+          <li>
+            <strong>Analíticas / de rendimiento.</strong> Cuando están habilitadas, nos ayudan a comprender el
+            uso agregado —por ejemplo, qué páginas se visitan y cómo se desplazan los visitantes por el sitio—
+            para poder mejorar el contenido y la estructura. Esta información se agrega y no se utiliza para
+            identificarlo personalmente.
+          </li>
+        </ul>
+        <p>
+          No utilizamos cookies para publicidad dirigida en este sitio web y no vendemos a terceros los datos
+          recopilados mediante cookies.
+        </p>
+
+        <h2>Servicios de terceros</h2>
+        <p>
+          Algunas páginas pueden utilizar servicios de terceros (por ejemplo, mapas integrados, vídeos o
+          proveedores de analítica) que establecen sus propias cookies. Dichos terceros pueden recopilar
+          información de conformidad con sus propias políticas de privacidad y de cookies. Le recomendamos
+          revisar esas políticas cuando aparezcan dichos servicios.
+        </p>
+
+        <h2>Gestión de cookies</h2>
+        <p>
+          La mayoría de los navegadores web le permiten controlar las cookies a través de su configuración. Por
+          lo general, puede optar por bloquear todas las cookies, bloquear las cookies de terceros o eliminar las
+          cookies que ya se hayan establecido. Tenga en cuenta que deshabilitar las cookies puede afectar la
+          funcionalidad de este y de otros sitios web.
+        </p>
+        <p>
+          Para obtener orientación sobre la gestión de cookies en su navegador, consulte la documentación de
+          ayuda de su navegador (por ejemplo, Chrome, Safari, Firefox o Edge). Por lo general, también puede
+          eliminar las cookies existentes a través de la configuración de privacidad o historial de su navegador.
+        </p>
+
+        <h2>Cambios a esta política</h2>
+        <p>
+          Podemos actualizar esta Política de cookies periódicamente. La fecha de &ldquo;Última
+          actualización&rdquo; que figura al inicio de esta página indica cuándo entró en vigor la versión
+          actual.
+        </p>
+
+        <h2>Contacto</h2>
+        <p>Si tiene alguna pregunta sobre esta Política de cookies, comuníquese con nosotros:</p>
+        <ul>
+          <li><strong>Correo electrónico:</strong> <a href={`mailto:${site.email}`}>{site.email}</a></li>
+          <li><strong>WhatsApp:</strong> {site.whatsapp}</li>
+          <li><strong>Dirección:</strong> {site.address}</li>
+        </ul>
+        <p>
+          Documentos relacionados: <a href="/es/privacy/">Política de privacidad</a> &middot; <a href="/es/terms/">Términos de servicio</a> &middot; <a href="/es/disclaimer/">Aviso legal</a>.
+        </p>
+      </article>
+    </div>
+  </section>
+</BaseLayout>

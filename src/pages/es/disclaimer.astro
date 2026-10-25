@@ -1,0 +1,221 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { site } from '../../data/site';
+---
+
+<BaseLayout
+  title="Aviso legal"
+  description={`Aviso legal de ${site.companyName} (${site.brand}): el carácter de referencia de nuestra información de productos, las exenciones de responsabilidad en el comercio de exportación y los límites de nuestra responsabilidad.`}
+>
+  <section class="section">
+    <div class="container">
+      <article class="legal">
+        <h1>Aviso legal</h1>
+        <p class="updated">Última actualización: 25 de octubre de 2026</p>
+
+        <p>
+          Este Aviso legal establece las bases sobre las que <strong>{site.companyName}</strong> (&ldquo;{site.brand}&rdquo;,
+          &ldquo;nosotros&rdquo; o &ldquo;nuestro/a&rdquo;) publica información en{' '}
+          <strong>{site.domain}</strong>. Le rogamos que lo lea atentamente. Al utilizar este sitio web, usted
+          acepta y se adhiere a los términos de este Aviso legal.
+        </p>
+
+        <nav class="toc" aria-label="Contenido del Aviso legal">
+          <strong>Contenido</strong>
+          <ol>
+            <li>Información general únicamente</li>
+            <li>Las especificaciones de los productos tienen carácter de referencia</li>
+            <li>Exención de responsabilidad en materia de exportación y comercio</li>
+            <li>Ajuste y compatibilidad</li>
+            <li>Ausencia de asesoramiento profesional o técnico</li>
+            <li>Enlaces externos</li>
+            <li>Propiedad intelectual</li>
+            <li>Limitación de responsabilidad</li>
+            <li>Ausencia de garantía</li>
+            <li>Cambios a este Aviso legal</li>
+            <li>Contacto</li>
+          </ol>
+        </nav>
+
+        <h2>1. Información general únicamente</h2>
+        <p>
+          Todo el contenido de este sitio web, incluidas las descripciones de productos, los artículos técnicos,
+          las especificaciones, las cifras, las fotografías y la orientación de selección, se proporciona
+          únicamente con fines de información general y evaluación comercial preliminar. Está dirigido a
+          compradores profesionales, importadores y distribuidores, y no pretende constituir un asesoramiento en
+          el que deba confiar sin una verificación independiente.
+        </p>
+        <p>
+          Si bien realizamos esfuerzos razonables para mantener la información de este sitio web precisa,
+          completa y actualizada, no ofrecemos declaraciones ni garantías de ningún tipo, expresas o implícitas,
+          sobre la exactitud, fiabilidad, disponibilidad o integridad del contenido, y cualquier confianza que
+          usted deposite en dicho contenido es estrictamente bajo su propio riesgo.
+        </p>
+        <p>
+          El sitio web se actualiza periódicamente y su contenido puede estar desactualizado en un momento dado.
+          No tenemos obligación alguna de actualizar ninguna información, y no manifestamos que el sitio web
+          refleje el estado más reciente de productos, precios o disponibilidad en el momento en que usted lo
+          consulta. Confirme siempre los datos vigentes directamente con nosotros antes de tomar una decisión.
+        </p>
+
+        <h2>2. Las especificaciones de los productos tienen carácter de referencia</h2>
+        <p>
+          Las especificaciones, dimensiones, materiales, valores de eficiencia de filtración, detalles de
+          embalaje, cantidades mínimas de pedido, plazos de entrega, certificaciones y demás datos técnicos que
+          se muestran en este sitio web son <strong>orientativos y tienen carácter de referencia</strong>. Pueden
+          basarse en valores representativos o de referencia y no se garantiza que reflejen la versión de
+          producción actual exacta de ningún producto.
+        </p>
+        <p>
+          La <strong>especificación autoritativa de cualquier pedido es la hoja de especificaciones formal y la
+          factura proforma confirmada</strong> que emitimos para ese pedido específico, según lo acordado con
+          usted por escrito. En caso de discrepancia entre el contenido del sitio web y un documento formal,
+          prevalecerá el documento formal. Antes de realizar un pedido, usted debe obtener y verificar una hoja
+          de especificaciones vigente y, cuando corresponda, una muestra de preproducción.
+        </p>
+        <p>
+          Cuando este sitio web indique porcentajes de eficiencia de filtración, clasificaciones en micras,
+          dimensiones u otros datos de rendimiento, dichos valores deben entenderse como objetivos nominales
+          verificados conforme a la norma de ensayo pertinente (por ejemplo, ISO 5011, SAE J726 o ISO 4548,
+          según corresponda). El rendimiento real depende del producto específico, de su aplicación y de las
+          condiciones de uso.
+        </p>
+        <h3>2.1 Certificación y cumplimiento</h3>
+        <p>
+          Las referencias en este sitio web a certificaciones, sistemas de gestión de calidad o normas de
+          cumplimiento (como ISO 9001, IATF 16949, CE o RoHS) describen los marcos conforme a los cuales
+          operamos y la documentación que proporcionamos. No constituyen una garantía de que un certificado
+          concreto esté vigente, tenga alcance para un producto específico o sea aceptado en su mercado de
+          destino. El estado de certificación específico y los informes de ensayo se confirman por pedido, y la
+          verificación de las aprobaciones del mercado de destino es responsabilidad del importador.
+        </p>
+        <h3>2.2 Ausencia de garantía derivada del contenido del sitio web</h3>
+        <p>
+          Nada de lo dispuesto en este sitio web constituye una garantía o aval sobre el rendimiento, la
+          comerciabilidad o la idoneidad para un fin determinado de ningún producto. Los términos de garantía,
+          cuando correspondan, se establecen únicamente en el contrato de venta o en la factura proforma de cada
+          pedido, y están sujetos a las exclusiones y condiciones indicadas en dicho documento. El contenido del
+          sitio web no es, y no debe tratarse como, una garantía de ningún tipo.
+        </p>
+        <h3>2.3 Datos de ensayo y cifras de rendimiento</h3>
+        <p>
+          Cuando este sitio web cite porcentajes de eficiencia, relaciones beta, clasificaciones en micras o
+          cifras de capacidad de retención de polvo, dichos valores son nominales y corresponden a condiciones de
+          ensayo de laboratorio conforme a la norma indicada. El rendimiento en condiciones reales se ve
+          influido por la aplicación, el entorno operativo, el intervalo de servicio y el estado del vehículo o
+          la máquina, y puede diferir de la cifra nominal. Confirme el informe de ensayo y la especificación
+          aplicables para el SKU exacto antes de basarse en cualquier cifra de rendimiento.
+        </p>
+
+        <h2>3. Exención de responsabilidad en materia de exportación y comercio</h2>
+        <p>
+          {site.brand} es un fabricante exportador y no garantiza que ningún producto cumpla los requisitos
+          normativos, de seguridad, de etiquetado o de certificación de un mercado de destino en particular. Los
+          importadores y distribuidores son los únicos responsables de:
+        </p>
+        <ul>
+          <li>Determinar que los productos son adecuados y legales para su venta en el mercado de destino;</li>
+          <li>Obtener las licencias, aprobaciones o certificaciones de importación necesarias;</li>
+          <li>Cumplir todas las leyes aplicables en materia de importación, aduanas, aranceles, seguridad, medio ambiente y etiquetado;</li>
+          <li>Confirmar los códigos SA (HS), los aranceles y cualquier medida antidumping o de restricción comercial que pueda ser aplicable.</li>
+        </ul>
+        <p>
+          La información de este sitio web sobre mercados objetivo, códigos SA (HS) o certificaciones se
+          proporciona únicamente como orientación general y no constituye asesoramiento legal, aduanero ni
+          normativo. Cuando corresponda, debe buscar asesoramiento independiente de profesionales calificados.
+        </p>
+        <h3>3.1 Códigos SA (HS), aranceles y tarifas</h3>
+        <p>
+          Los códigos SA (HS) que se muestran en este sitio web se proporcionan como una conveniencia y se basan
+          en nuestra comprensión de la clasificación del producto. Pueden no reflejar las reclasificaciones de
+          las autoridades aduaneras, los cambios en los programas arancelarios ni la clasificación aplicada en un
+          mercado de destino específico. Usted es responsable de confirmar la clasificación correcta, el tipo de
+          arancel y cualquier medida antidumping, compensatoria o de salvaguardia aplicable ante las autoridades
+          aduaneras pertinentes antes de la importación. No asumimos responsabilidad alguna por aranceles,
+          tarifas, sanciones o demoras derivadas de la clasificación.
+        </p>
+
+        <h2>4. Ajuste y compatibilidad</h2>
+        <p>
+          Los filtros automotrices y los componentes relacionados son críticos en cuanto al ajuste. Un producto
+          dimensional o funcionalmente incompatible con un vehículo, motor, transmisión o cárter específico puede
+          fallar y, en algunos casos, causar daños. Es su responsabilidad confirmar que cualquier producto que
+          solicite sea el correcto para su aplicación prevista, utilizando números OE, planos técnicos, muestras
+          y, cuando sea necesario, orientación profesional de montaje. No somos responsables de las pérdidas
+          derivadas de un ajuste incorrecto, una aplicación inadecuada o el uso de un producto fuera de su
+          aplicación prevista. En particular, un filtro que no asiente o que no coincida con su motor,
+          transmisión o cárter puede fallar sin previo aviso.
+        </p>
+
+        <h2>5. Ausencia de asesoramiento profesional o técnico</h2>
+        <p>
+          Nada de lo dispuesto en este sitio web constituye asesoramiento de ingeniería, legal, normativo,
+          financiero o de otra índole profesional. El contenido está redactado desde una perspectiva general de
+          exportación y compras y puede no abordar las circunstancias específicas de su mercado o aplicación.
+          Debe consultar a profesionales debidamente calificados antes de tomar decisiones basadas en este
+          contenido.
+        </p>
+
+        <h2>6. Enlaces externos</h2>
+        <p>
+          Este sitio web puede contener enlaces a sitios web o recursos de terceros. Dichos enlaces se
+          proporcionan únicamente por conveniencia. No tenemos control sobre el contenido de los sitios de
+          terceros y no asumimos responsabilidad alguna por ellos ni por cualquier pérdida o daño que pueda
+          derivarse de su uso. Un enlace no implica aprobación o respaldo.
+        </p>
+
+        <h2>7. Propiedad intelectual</h2>
+        <p>
+          Salvo que se indique lo contrario, el contenido de este sitio web es propiedad de {site.companyName}
+          o está licenciado a su favor y está protegido por las leyes de propiedad intelectual. Usted no puede
+          reproducirlo ni distribuirlo sin nuestro consentimiento previo por escrito. Las marcas comerciales y
+          los números de pieza de terceros mencionados en este sitio web son propiedad de sus respectivos
+          titulares y se citan únicamente con fines de identificación y referencia cruzada; dichas referencias no
+          implican afiliación ni respaldo alguno.
+        </p>
+
+        <h2>8. Limitación de responsabilidad</h2>
+        <p>
+          En la máxima medida permitida por la ley, {site.companyName} y sus directivos, empleados y agentes no
+          serán responsables de ninguna pérdida o daño, ya sea directo, indirecto, incidental, especial,
+          consecuente o punitivo, que surja de su uso o confianza en este sitio web o su contenido, o en relación
+          con ellos, incluidos, entre otros, la pérdida de beneficios, ingresos, oportunidades de negocio, datos
+          o fondo de comercio. Esta limitación se aplica con independencia de que la reclamación se base en
+          contrato, responsabilidad extracontractual (incluida la negligencia), disposición legal o cualquier
+          otra causa, incluso si se nos hubiera advertido de la posibilidad de tales daños.
+        </p>
+        <p>
+          Nada de lo dispuesto en este Aviso legal excluye o limita ninguna responsabilidad que no pueda
+          excluirse o limitarse conforme a la legislación aplicable.
+        </p>
+
+        <h2>9. Ausencia de garantía</h2>
+        <p>
+          Este sitio web se proporciona &ldquo;tal cual&rdquo; y &ldquo;según disponibilidad&rdquo;. No
+          garantizamos que el sitio web sea ininterrumpido, seguro o esté libre de errores o componentes dañinos,
+          y declinamos todas las garantías en la máxima medida permitida por la ley. Podemos modificar, suspender
+          o interrumpir el sitio web o cualquier parte del mismo en cualquier momento y sin previo aviso.
+        </p>
+
+        <h2>10. Cambios a este Aviso legal</h2>
+        <p>
+          Podemos revisar este Aviso legal periódicamente. La fecha de &ldquo;Última actualización&rdquo; que
+          figura al inicio de esta página indica cuándo entró en vigor la versión actual. El uso continuado del
+          sitio web después de la publicación de los cambios constituye la aceptación del Aviso legal revisado.
+        </p>
+
+        <h2>11. Contacto</h2>
+        <p>Si tiene alguna pregunta sobre este Aviso legal, comuníquese con nosotros:</p>
+        <ul>
+          <li><strong>Correo electrónico:</strong> <a href={`mailto:${site.email}`}>{site.email}</a></li>
+          <li><strong>WhatsApp:</strong> {site.whatsapp}</li>
+          <li><strong>Teléfono:</strong> {site.phone}</li>
+          <li><strong>Dirección:</strong> {site.address}</li>
+        </ul>
+        <p>
+          Documentos relacionados: <a href="/es/privacy/">Política de privacidad</a> &middot; <a href="/es/terms/">Términos de servicio</a> &middot; <a href="/es/cookies/">Política de cookies</a>.
+        </p>
+      </article>
+    </div>
+  </section>
+</BaseLayout>

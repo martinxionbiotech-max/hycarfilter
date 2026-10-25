@@ -1,0 +1,207 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { site } from '../../data/site';
+---
+
+<BaseLayout
+  title="Política de privacidad"
+  description={`Política de privacidad de ${site.companyName} (${site.brand}): qué información recopilamos a través de este sitio web, cómo la utilizamos y qué derechos tiene sobre sus datos.`}
+>
+  <section class="section">
+    <div class="container">
+      <article class="legal">
+        <h1>Política de privacidad</h1>
+        <p class="updated">Última actualización: 25 de octubre de 2026</p>
+
+        <p>
+          Esta Política de privacidad explica cómo <strong>{site.companyName}</strong> (&ldquo;{site.brand}&rdquo;,
+          &ldquo;nosotros&rdquo; o &ldquo;nuestro/a&rdquo;) recopila, utiliza, almacena y protege la
+          información personal cuando usted visita <strong>{site.domain}</strong> o se comunica con nosotros a
+          través de este sitio web, por correo electrónico o por aplicaciones de mensajería. Somos un fabricante
+          y exportador de filtros automotrices orientado al comercio entre empresas (B2B), con sede en el
+          condado de Qinghe, ciudad de Xingtai, provincia de Hebei, China.
+        </p>
+        <p>
+          Tratamos su información con cuidado y solo recopilamos lo necesario para responder a su consulta y,
+          cuando corresponda, para hacer negocios con usted. Le recomendamos leer esta política para comprender
+          sus derechos y cómo ejercerlos.
+        </p>
+
+        <nav class="toc" aria-label="Contenido de la política">
+          <strong>Contenido</strong>
+          <ol>
+            <li>Quiénes somos</li>
+            <li>Información que recopilamos</li>
+            <li>Cómo utilizamos su información</li>
+            <li>Cómo compartimos su información</li>
+            <li>Transferencias internacionales de datos</li>
+            <li>Conservación de datos</li>
+            <li>Seguridad de su información</li>
+            <li>Sus derechos</li>
+            <li>Cookies y tecnologías similares</li>
+            <li>Privacidad de los menores</li>
+            <li>Cambios a esta política</li>
+            <li>Cómo contactarnos</li>
+          </ol>
+        </nav>
+
+        <h2>1. Quiénes somos</h2>
+        <p>
+          <strong>{site.companyName}</strong> es una empresa profesional de fabricación de filtros automotrices
+          que integra producción, investigación y desarrollo, ventas y servicio posventa. Nos especializamos en
+          filtros de aire automotrices, filtros de cabina, filtros de aceite, filtros de combustible, escobillas
+          de limpiaparabrisas, mallas de filtro de transmisión y luces LED, atendiendo a compradores de
+          exportación bajo modalidad OEM / ODM / marca privada.
+        </p>
+        <p>
+          Nuestro domicilio registrado y operativo es {site.address}. Puede comunicarse con nosotros a través de{' '}
+          <a href={`mailto:${site.email}`}>{site.email}</a> o por WhatsApp al {site.whatsapp}.
+        </p>
+
+        <h2>2. Información que recopilamos</h2>
+        <p>
+          Recopilamos información de dos maneras: información que usted nos proporciona directamente e
+          información técnica limitada que se recopila automáticamente cuando navega por el sitio web.
+        </p>
+        <h3>2.1 Información que usted proporciona directamente</h3>
+        <p>Cuando envía un formulario de consulta, nos escribe un correo electrónico o nos envía un mensaje por WhatsApp, podemos recopilar:</p>
+        <ul>
+          <li>Su nombre o el nombre de su persona de contacto;</li>
+          <li>El nombre de su empresa (si lo proporciona);</li>
+          <li>Su dirección de correo electrónico;</li>
+          <li>Su número de teléfono, móvil o de WhatsApp (si lo proporciona);</li>
+          <li>Su país o mercado objetivo (si lo proporciona);</li>
+          <li>El contenido de su mensaje, que puede incluir modelos de producto, números OE, tipos de vehículo, mercados objetivo, cantidades de pedido y cualquier otro detalle que decida compartir.</li>
+        </ul>
+        <p>
+          El formulario de consulta de nuestro sitio web solo solicita los campos que están marcados. No está
+          obligado a proporcionar más de lo necesario para que podamos responder a su solicitud. Nuestro sitio
+          web no recopila datos de tarjetas de pago; los pagos, si los hubiera, se gestionan por separado a
+          través de canales que usted acuerde con nosotros por escrito.
+        </p>
+        <h3>2.2 Información recopilada automáticamente</h3>
+        <p>
+          Al igual que la mayoría de los sitios web, nuestra infraestructura de alojamiento puede registrar
+          automáticamente datos técnicos limitados cuando usted accede al sitio. Esto puede incluir su dirección
+          IP, el tipo y la versión del navegador, el tipo de dispositivo, el sistema operativo, la página de
+          referencia, las páginas visitadas y la fecha y hora de cada solicitud. Esta información se utiliza
+          para mantener la seguridad del sitio web, diagnosticar problemas técnicos y comprender el uso
+          agregado. No se utiliza para crear un perfil personal de usted, ni la empleamos para tomar decisiones
+          que produzcan efectos legales o de importancia similar respecto de usted mediante medios totalmente
+          automatizados.
+        </p>
+
+        <h2>3. Cómo utilizamos su información</h2>
+        <p>Utilizamos la información que recopilamos para los siguientes fines:</p>
+        <ul>
+          <li><strong>Para responder a consultas.</strong> Para contestar sus preguntas, preparar cotizaciones y dar seguimiento a solicitudes de productos, muestras, precios, MOQ, plazos de entrega y certificaciones.</li>
+          <li><strong>Para cumplir una relación comercial.</strong> Para procesar aprobaciones de muestras, pedidos, producción, embalaje, logística y servicio posventa cuando usted decida hacer negocios con nosotros.</li>
+          <li><strong>Para comunicarnos con usted.</strong> Para enviarle la información que haya solicitado y —solo cuando esté permitido— actualizaciones ocasionales sobre nuevos productos o servicios relevantes para su negocio.</li>
+          <li><strong>Para mejorar el sitio web.</strong> Para comprender cómo se utiliza el sitio y corregir errores.</li>
+          <li><strong>Para cumplir obligaciones legales.</strong> Para cumplir con la legislación aplicable, responder a solicitudes legítimas y proteger nuestros derechos y la seguridad de nuestros sistemas.</li>
+        </ul>
+        <h3>Bases legales del tratamiento</h3>
+        <p>
+          Tratamos su información personal sobre una o más de las siguientes bases legales: (a) su
+          consentimiento, que puede retirar en cualquier momento; (b) la necesidad del tratamiento para adoptar
+          medidas a petición suya antes de celebrar un contrato con usted, o para ejecutarlo; (c) el cumplimiento
+          de una obligación legal que nos resulte aplicable; y (d) nuestros intereses comerciales legítimos en
+          responder a consultas, desarrollar nuestras relaciones comerciales y mantener la seguridad de nuestros
+          sistemas, siempre que dichos intereses no prevalezcan indebidamente sobre sus derechos y libertades.
+        </p>
+
+        <h2>4. Cómo compartimos su información</h2>
+        <p>No vendemos ni alquilamos su información personal a terceros. Solo la compartimos en las siguientes circunstancias limitadas:</p>
+        <ul>
+          <li><strong>Proveedores de servicios.</strong> Podemos recurrir a terceros para alojar nuestro sitio web, procesar correos electrónicos o dar soporte a las comunicaciones. Estos proveedores solo tratan su información siguiendo nuestras instrucciones y bajo obligaciones de confidencialidad y seguridad.</li>
+          <li><strong>Socios de cumplimiento.</strong> Cuando sea necesario para completar un pedido, podemos compartir los datos de envío con agentes de carga, transportistas, agentes de aduanas o nuestros socios bancarios y logísticos, en la medida necesaria para ejecutar la transacción.</li>
+          <li><strong>Obligaciones legales y seguridad.</strong> Podemos divulgar información cuando creamos de buena fe que la divulgación es exigida por la ley, la normativa o un proceso legal, o que es necesaria para proteger los derechos, la propiedad o la seguridad de nuestra empresa, de nuestros clientes o del público.</li>
+          <li><strong>Transferencias comerciales.</strong> En caso de fusión, adquisición o venta de activos, su información puede transferirse como parte de esa operación, con sujeción a las mismas protecciones aquí descritas.</li>
+        </ul>
+
+        <h2>5. Transferencias internacionales de datos</h2>
+        <p>
+          {site.brand} tiene su sede en China y atiende a clientes de todo el mundo. Si usted se comunica con
+          nosotros desde fuera de China, la información que proporcione se transferirá a China y allí se tratará.
+          Adoptamos medidas razonables para garantizar que dicha transferencia se realice de forma segura y que
+          su información siga recibiendo un nivel de protección coherente con esta política. Al utilizar el sitio
+          web y comunicarse con nosotros, usted comprende y consiente esta transferencia.
+        </p>
+
+        <h2>6. Conservación de datos</h2>
+        <p>
+          Conservamos la información personal únicamente durante el tiempo necesario para cumplir los fines
+          descritos en esta política, salvo que la ley exija o permita un periodo de conservación más prolongado.
+          En la práctica:
+        </p>
+        <ul>
+          <li>La correspondencia de consultas se conserva mientras la consulta está activa y durante un periodo razonable posterior para permitir el seguimiento;</li>
+          <li>Los registros de transacciones y pedidos se conservan durante el tiempo que exijan las leyes contables, fiscales y comerciales;</li>
+          <li>Los registros técnicos se conservan durante un periodo breve con fines de seguridad y diagnóstico, y luego se eliminan o agregan.</li>
+        </ul>
+
+        <h2>7. Seguridad de su información</h2>
+        <p>
+          Adoptamos medidas técnicas y organizativas razonables para proteger su información contra el acceso, la
+          alteración, la divulgación o la destrucción no autorizados. Estas incluyen controles de acceso que
+          limitan la información personal a los empleados que la necesitan para desempeñar su función (por
+          ejemplo, ventas o atención al cliente) y el uso de proveedores de alojamiento de buena reputación y con
+          parches de seguridad. Revisamos periódicamente nuestras prácticas de seguridad. Sin embargo, ningún
+          método de transmisión por internet ni de almacenamiento electrónico es completamente seguro, y no
+          podemos garantizar una seguridad absoluta.
+        </p>
+
+        <h2>8. Sus derechos</h2>
+        <p>Según el lugar donde se encuentre, es posible que tenga derecho a:</p>
+        <ul>
+          <li><strong>Acceso</strong> — solicitar una copia de la información personal que tenemos sobre usted;</li>
+          <li><strong>Rectificación</strong> — pedirnos corregir información inexacta o incompleta;</li>
+          <li><strong>Supresión</strong> — pedirnos eliminar información personal en determinadas circunstancias;</li>
+          <li><strong>Oposición o restricción</strong> — oponerse a, o solicitar la restricción de, determinados tratamientos;</li>
+          <li><strong>Portabilidad de datos</strong> — solicitar que la información se proporcione en un formato estructurado y legible por máquina cuando este derecho sea aplicable;</li>
+          <li><strong>Exclusión de marketing</strong> — pedirnos que dejemos de contactarle con fines de marketing en cualquier momento.</li>
+        </ul>
+        <p>
+          Para ejercer cualquiera de estos derechos, comuníquese con nosotros a través de{' '}
+          <a href={`mailto:${site.email}`}>{site.email}</a> o de {site.whatsapp}. Responderemos en un plazo
+          razonable y, cuando una solicitud sea denegada conforme a la legislación aplicable, le explicaremos
+          los motivos.
+        </p>
+
+        <h2>9. Cookies y tecnologías similares</h2>
+        <p>
+          Este sitio web utiliza un número reducido de cookies y tecnologías similares para funcionar
+          correctamente y comprender el uso agregado. Para obtener una explicación completa de las cookies que
+          utilizamos y cómo gestionarlas, consulte nuestra <a href="/es/cookies/">Política de cookies</a>.
+        </p>
+
+        <h2>10. Privacidad de los menores</h2>
+        <p>
+          Este sitio web es un sitio de comercio entre empresas (B2B) destinado a adultos que actúan en calidad
+          profesional. No recopilamos conscientemente información personal de menores. Si cree que un menor nos
+          ha proporcionado información personal, comuníquese con nosotros y la eliminaremos.
+        </p>
+
+        <h2>11. Cambios a esta política</h2>
+        <p>
+          Podemos actualizar esta Política de privacidad periódicamente para reflejar cambios en nuestras
+          prácticas, tecnología, requisitos legales o en los servicios que ofrecemos. Cuando lo hagamos,
+          revisaremos la fecha de &ldquo;Última actualización&rdquo; que figura al inicio de esta página. Le
+          recomendamos revisar esta página de forma periódica.
+        </p>
+
+        <h2>12. Cómo contactarnos</h2>
+        <p>Si tiene alguna pregunta o inquietud sobre esta Política de privacidad o sobre nuestras prácticas de datos, comuníquese con nosotros:</p>
+        <ul>
+          <li><strong>Correo electrónico:</strong> <a href={`mailto:${site.email}`}>{site.email}</a></li>
+          <li><strong>WhatsApp:</strong> {site.whatsapp}</li>
+          <li><strong>Teléfono:</strong> {site.phone}</li>
+          <li><strong>Dirección:</strong> {site.address}</li>
+        </ul>
+        <p>
+          Documentos relacionados: <a href="/es/terms/">Términos de servicio</a> &middot; <a href="/es/disclaimer/">Aviso legal</a> &middot; <a href="/es/cookies/">Política de cookies</a>.
+        </p>
+      </article>
+    </div>
+  </section>
+</BaseLayout>
