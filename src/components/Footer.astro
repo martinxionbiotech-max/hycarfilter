@@ -5,11 +5,11 @@ import { site, nav, complianceLinks } from '../data/site';
 <footer class="footer">
   <div class="container">
     <div class="footer__grid">
-      <div class="footer__col">
+      <div class="footer__col footer__col--brand">
         <p class="footer__brand">
-          <span class="logo__mark">HC</span> {site.brand}
+          <span class="footer__mark">HC</span> {site.brand}
         </p>
-        <p class="muted small">
+        <p class="footer__desc">
           {site.positioning}
         </p>
       </div>
@@ -41,38 +41,81 @@ import { site, nav, complianceLinks } from '../data/site';
 
     <div class="footer__bottom">
       <span>© {new Date().getFullYear()} {site.companyName}. All rights reserved.</span>
-      <span class="muted small">SINCE {site.since}</span>
+      <span class="footer__since">SINCE {site.since}</span>
     </div>
   </div>
 </footer>
 
 <style>
   .footer {
-    background: var(--brand-ink);
-    color: #dbe4ee;
-    padding: 3rem 0 1.5rem;
-    margin-top: 3rem;
+    background: var(--navy-900);
+    color: #C3D0DE;
+    padding: 4rem 0 1.75rem;
+    margin-top: 4rem;
   }
-  .footer a { color: #dbe4ee; }
-  .footer a:hover { color: #fff; }
+  .footer a { color: #C3D0DE; transition: color var(--t-fast) var(--ease); }
+  .footer a:hover { color: var(--orange-400); }
+
   .footer__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
+    grid-template-columns: 1.6fr 1fr 1.2fr 1fr;
+    gap: 2.5rem;
   }
-  .footer__brand { font-size: 1.15rem; font-weight: 700; color: #fff; }
-  .footer .logo__mark {
-    display: inline-flex; align-items: center; justify-content: center;
-    width: 30px; height: 30px; border-radius: 8px;
-    background: var(--brand); color: #fff; font-weight: 800;
-    margin-right: 0.3rem;
+
+  .footer__brand {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin: 0 0 0.75rem;
   }
-  .footer h4 { color: #fff; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 0.8rem; }
-  .footer__list { list-style: none; margin: 0; padding: 0; font-size: 0.92rem; }
-  .footer__list li { margin-bottom: 0.45rem; }
-  .footer__bottom {
-    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;
-    margin-top: 2.5rem; padding-top: 1.25rem; border-top: 1px solid rgba(255,255,255,0.14);
+  .footer__mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, var(--orange-500), var(--orange-600));
+    color: #fff;
+    font-weight: 800;
     font-size: 0.85rem;
+  }
+  .footer__desc { font-size: 0.9rem; color: #9FB0C1; max-width: 34ch; }
+
+  .footer h4 {
+    color: #fff;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--orange-500);
+    display: inline-block;
+  }
+  .footer__list { list-style: none; margin: 0; padding: 0; font-size: 0.92rem; }
+  .footer__list li { margin-bottom: 0.5rem; }
+
+  .footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 3rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    font-size: 0.85rem;
+    color: #8FA0B2;
+  }
+  .footer__since { letter-spacing: 0.06em; }
+
+  @media (max-width: 820px) {
+    .footer__grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  }
+  @media (max-width: 520px) {
+    .footer__grid { grid-template-columns: 1fr; }
+    .footer__col--brand { order: -1; }
   }
 </style>

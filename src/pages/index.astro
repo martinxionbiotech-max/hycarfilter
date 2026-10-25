@@ -36,7 +36,7 @@ const strengths = [
         </p>
         <p class="hero__cta">
           <a class="btn btn--primary" href="/products/">Explore Products</a>
-          <a class="btn btn--outline" href="/factory/">Inside Our Factory</a>
+          <a class="btn btn--ghost" href="/factory/">Inside Our Factory</a>
         </p>
         <p class="hero__stats small muted">
           <strong>7</strong> categories · <strong>{totalSkus}</strong> seed SKUs · ISO 9001 / IATF 16949
@@ -44,8 +44,18 @@ const strengths = [
       </div>
       <div class="hero__panel">
         <div class="hero__card">
-          <strong>OEM &amp; ODM</strong>
-          <p class="small muted">Customize your exclusive filtration solution — from air to fuel.</p>
+          <img
+            class="hero__img"
+            src={`${originImages.prefix}${originImages.about}`}
+            alt={`${site.brand} automotive filter manufacturing`}
+            width="640"
+            height="400"
+            loading="eager"
+          />
+          <div class="hero__card-body">
+            <strong>OEM &amp; ODM</strong>
+            <p>Customize your exclusive filtration solution — from air to fuel.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -98,26 +108,57 @@ const strengths = [
 </BaseLayout>
 
 <style>
-  .hero { background: linear-gradient(135deg, #0d1b2a 0%, #0e3a5c 60%, #0e6eb8 100%); color: #fff; padding: 5rem 0; }
-  .hero__inner { display: grid; grid-template-columns: 1.5fr 1fr; gap: 2.5rem; align-items: center; }
-  .hero h1 { color: #fff; font-size: clamp(2rem, 4.5vw, 3.2rem); }
-  .hero__accent { color: #ffd08a; }
-  .hero .lede { color: #d8e5f1; font-size: 1.1rem; }
-  .hero .chip { background: rgba(255,255,255,0.12); color: #fff; border-color: rgba(255,255,255,0.25); }
-  .hero__cta { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.5rem; }
-  .hero__stats { color: #c3d4e4; margin-top: 1.5rem; }
+  .hero {
+    background:
+      radial-gradient(600px 360px at 85% 10%, rgba(232, 98, 44, 0.18), transparent 60%),
+      linear-gradient(135deg, var(--navy-950) 0%, var(--navy-800) 55%, var(--navy-700) 100%);
+    color: #fff;
+    padding: 5rem 0 5.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .hero__inner { display: grid; grid-template-columns: 1.45fr 1fr; gap: 3rem; align-items: center; }
+  .hero h1 { color: #fff; font-size: clamp(2rem, 4.6vw, 3.3rem); margin-bottom: 0.5rem; }
+  .hero__accent { color: var(--orange-400); }
+  .hero .lede { color: var(--navy-100); font-size: 1.12rem; max-width: 34ch; }
+  .hero .chip { background: rgba(255,255,255,0.1); color: #fff; border-color: rgba(255,255,255,0.22); }
+  .hero__cta { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.75rem; }
+  .hero__stats { color: var(--navy-100); margin-top: 1.75rem; }
   .hero__stats strong { color: #fff; }
   .hero__panel { display: flex; justify-content: center; }
   .hero__card {
-    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2);
-    border-radius: 14px; padding: 2rem; max-width: 320px; backdrop-filter: blur(4px);
+    position: relative;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.16);
+    border-radius: var(--radius-lg);
+    padding: 0.75rem;
+    max-width: 440px;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
   }
-  .hero__card strong { font-size: 1.4rem; color: #fff; display: block; margin-bottom: 0.5rem; }
-  .hero__card p { color: #cfe0ef; }
+  .hero__img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: 9px;
+  }
+  .hero__card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0.9rem 0.7rem 0.6rem;
+  }
+  .hero__card-body strong { font-size: 1.15rem; color: #fff; }
+  .hero__card-body p { color: var(--navy-100); margin: 0; font-size: 0.9rem; }
 
   .cat-card { display: block; color: var(--brand-ink); }
   .cat-card:hover { color: var(--brand-ink); }
-  .cat-card__img { width: 64px; height: 42px; object-fit: contain; border: 1px solid var(--line); border-radius: 6px; background: #fff; margin-bottom: 0.6rem; }
+  .cat-card__img {
+    width: 64px; height: 42px; object-fit: contain;
+    border: 1px solid var(--line); border-radius: 6px; background: #fff;
+    margin-bottom: 0.6rem;
+    transition: transform var(--t-med) var(--ease), border-color var(--t-med) var(--ease);
+  }
+  .cat-card:hover .cat-card__img { transform: scale(1.06); border-color: var(--orange-400); }
   .cat-card__code { display: inline-block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.5px; color: var(--brand); margin-bottom: 0.4rem; }
   .cat-card h3 { margin-bottom: 0.3em; }
   .cat-card p { margin: 0; }
