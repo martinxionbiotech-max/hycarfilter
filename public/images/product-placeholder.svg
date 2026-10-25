@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420" role="img" aria-label="Product placeholder">
+  <rect width="640" height="420" fill="#f4f7fb"/>
+  <rect x="8" y="8" width="624" height="404" rx="16" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+  <g stroke="#0e6eb8" stroke-width="6" fill="none" transform="translate(260,120)">
+    <rect x="12" y="24" width="96" height="72" rx="8"/>
+    <line x1="12" y1="46" x2="108" y2="46"/>
+    <line x1="12" y1="68" x2="108" y2="68"/>
+  </g>
+  <text x="320" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#0d1b2a">Product image</text>
+  <text x="320" y="336" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="600" fill="#0e6eb8">hycarfilter · placeholder</text>
+</svg>
