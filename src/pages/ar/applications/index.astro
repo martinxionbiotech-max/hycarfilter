@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import InquiryCta from '../../../components/InquiryCta.astro';
+import { applicationScenes } from '../../../data/applicationScenes';
+import { originImages } from '../../../data/originImages';
+import { content } from '../../../i18n/content';
+import { ui } from '../../../i18n/ui';
+
+const loc = content.ar;
+const u = ui.ar;
+---
+
+<BaseLayout
+  title="التطبيقات — أين تعمل فلاترنا"
+  description="فلاتر hycarfilter عبر أربعة قطاعات تطبيقية: سيارات الركاب، المركبات التجارية، آلات البناء والآلات الزراعية — لكل منها دليل توريد كامل."
+>
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h1>{u.applications}</h1>
+        <p class="lede">
+          تتصرف فئة الفلتر نفسها بشكل مختلف بين القطاعات. إليك كيف نطابق المنتج مع دورة التشغيل —
+          ليشترى المستورد الدرجة المناسبة للسوق المناسب، لا أرخص رقم قطعة فقط.
+        </p>
+      </div>
+
+      <img class="scene-index-img" src={`${originImages.prefix}${originImages.factorySections.production[0]}`} alt="خط إنتاج فلاتر السيارات من hycarfilter — نظرة عامة على تطبيقات الفلاتر" loading="lazy" />
+
+      <div class="grid grid--2">
+        {applicationScenes.map((s) => (
+          <a class="card scene-card" href={`/ar/applications/${s.slug}/`}>
+            <h3>{s.icon} {loc.scenes[s.slug].title}</h3>
+            <p class="muted">{loc.scenes[s.slug].lede}</p>
+            <p class="small" style="margin:0.8rem 0 0.4rem"><strong>مزيج الفلاتر المعتاد:</strong></p>
+            <ul class="small">
+              {loc.scenes[s.slug].filters.slice(0, 4).map((f) => <li>{f}</li>)}
+            </ul>
+            <p class="small muted" style="margin:0.8rem 0 0">{u.readFullGuide}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <InquiryCta
+    title="أخبرنا بقطاعك المستهدف"
+    sub="نوصي بدرجات الفلاتر والتغليف المناسبين لمركبات سوقك ودورات تشغيلها."
+  />
+</BaseLayout>
+
+<style>
+  .scene-card { display: block; color: var(--brand-ink); }
+  .scene-card:hover { color: var(--brand-ink); }
+  .scene-card ul { margin: 0.3rem 0 0; padding-left: 1.1rem; color: var(--ink-soft); }
+  .scene-card li { margin-bottom: 0.2rem; }
+  .scene-index-img {
+    width: 100%; max-width: 520px; aspect-ratio: 4 / 3; object-fit: contain;
+    border: 1px solid var(--line); border-radius: 10px; background: #fff;
+    padding: 0.6rem; margin: 0.5rem 0 1.5rem;
+  }
+</style>

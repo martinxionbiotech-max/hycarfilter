@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import InquiryCta from '../../../components/InquiryCta.astro';
+import { applicationScenes } from '../../../data/applicationScenes';
+import { originImages } from '../../../data/originImages';
+import { content } from '../../../i18n/content';
+import { ui } from '../../../i18n/ui';
+
+const loc = content.es;
+const u = ui.es;
+---
+
+<BaseLayout
+  title="Aplicaciones — Dónde trabajan nuestros filtros"
+  description="Filtros hycarfilter en cuatro segmentos de aplicación: automóviles de pasajeros, vehículos comerciales, maquinaria de construcción y maquinaria agrícola — cada uno con una guía de compra completa."
+>
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h1>{u.applications}</h1>
+        <p class="lede">
+          La misma categoría de filtro se comporta de forma distinta entre segmentos. Así es como
+          emparejamos el producto con el ciclo de trabajo — para que el importador compre el grado correcto
+          para el mercado correcto, no solo el número de pieza más barato.
+        </p>
+      </div>
+
+      <img class="scene-index-img" src={`${originImages.prefix}${originImages.factorySections.production[0]}`} alt="Línea de producción de filtros automotrices hycarfilter — resumen de aplicaciones de filtros" loading="lazy" />
+
+      <div class="grid grid--2">
+        {applicationScenes.map((s) => (
+          <a class="card scene-card" href={`/es/applications/${s.slug}/`}>
+            <h3>{s.icon} {loc.scenes[s.slug].title}</h3>
+            <p class="muted">{loc.scenes[s.slug].lede}</p>
+            <p class="small" style="margin:0.8rem 0 0.4rem"><strong>Mezcla típica de filtros:</strong></p>
+            <ul class="small">
+              {loc.scenes[s.slug].filters.slice(0, 4).map((f) => <li>{f}</li>)}
+            </ul>
+            <p class="small muted" style="margin:0.8rem 0 0">{u.readFullGuide}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <InquiryCta
+    title="Cuéntanos tu segmento objetivo"
+    sub="Recomendamos los grados de filtro y el embalaje adecuados para los vehículos y ciclos de trabajo de tu mercado."
+  />
+</BaseLayout>
+
+<style>
+  .scene-card { display: block; color: var(--brand-ink); }
+  .scene-card:hover { color: var(--brand-ink); }
+  .scene-card ul { margin: 0.3rem 0 0; padding-left: 1.1rem; color: var(--ink-soft); }
+  .scene-card li { margin-bottom: 0.2rem; }
+  .scene-index-img {
+    width: 100%; max-width: 520px; aspect-ratio: 4 / 3; object-fit: contain;
+    border: 1px solid var(--line); border-radius: 10px; background: #fff;
+    padding: 0.6rem; margin: 0.5rem 0 1.5rem;
+  }
+</style>

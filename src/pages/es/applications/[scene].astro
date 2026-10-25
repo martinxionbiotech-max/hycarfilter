@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import InquiryCta from '../../../components/InquiryCta.astro';
+import { applicationScenes } from '../../../data/applicationScenes';
+import { content } from '../../../i18n/content';
+import { ui, t } from '../../../i18n/ui';
+
+const loc = content.es;
+const u = ui.es;
+
+export function getStaticPaths() {
+  return applicationScenes.map((s) => ({ params: { scene: s.slug } }));
+}
+
+const { scene } = Astro.params;
+const data = applicationScenes.find((s) => s.slug === scene);
+
+if (!data) {
+  return Astro.redirect('/es/applications/');
+}
+
+const sc = loc.scenes[data.slug];
+---
+
+<BaseLayout
+  title={`Aplicaciones de ${sc.title}`}
+  description={`Aplicaciones de filtros ${sc.title} de hycarfilter: ciclo de trabajo, mezcla típica de filtros y qué debe verificar un comprador para este segmento.`}
+>
+  <section class="section">
+    <div class="container">
+      <p class="small muted"><a href="/es/applications/">{u.applications}</a> &rsaquo; {sc.title}</p>
+      <div class="section-head">
+        <h1>{data.icon} {sc.title}</h1>
+        <p class="lede">{sc.lede}</p>
+      </div>
+
+      <img class="scene-hero" src={`/images/origin-images/${data.image}`} alt={`${sc.title} — aplicación de filtros automotrices`} loading="lazy" />
+
+      {sc.body.map((p) => <p>{p}</p>)}
+
+      <h2>{u.typicalFilterMix}</h2>
+      <ul>
+        {sc.filters.map((f) => <li>{f}</li>)}
+      </ul>
+
+      <h2>{u.procurementPoints}</h2>
+      <p class="muted small">{u.buyerShouldVerifySegment}</p>
+      <div class="grid grid--2">
+        {sc.procurementPoints.map((pt) => (
+          <div class="card">
+            <h3>{pt.title}</h3>
+            <p class="muted" style="margin:0">{pt.text}</p>
+          </div>
+        ))}
+      </div>
+
+      <h2>{u.relatedCategories}</h2>
+      <div class="grid grid--4 mt-2">
+        {sc.relatedCategories.map((c) => (
+          <a class="card scene-card" href={`/es/products/${c.slug}/`}>
+            <span class="chip">{c.slug.toUpperCase()}</span>
+            <h3 style="margin:0.5rem 0 0">{c.label}</h3>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <InquiryCta
+    title={t(u.sourcingFor, sc.title)}
+    sub={u.sceneCtaSub}
+  />
+</BaseLayout>
+
+<style>
+  .scene-card { display: block; color: var(--brand-ink); }
+  .scene-card:hover { color: var(--brand-ink); }
+  ul { margin: 0 0 1em; padding-left: 1.4rem; }
+  li { margin-bottom: 0.35rem; }
+  .scene-hero {
+    width: 100%; max-width: 520px; aspect-ratio: 4 / 3; object-fit: contain;
+    border: 1px solid var(--line); border-radius: 10px; background: #fff;
+    padding: 0.6rem; margin: 0.5rem 0 1.5rem;
+  }
+</style>
