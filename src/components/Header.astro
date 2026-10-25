@@ -10,6 +10,7 @@ const u = currentLocale === 'ar' || currentLocale === 'es' ? ui[currentLocale] :
 
 const norm = (p: string) => (p.endsWith('/') ? p : `${p}/`);
 const cur = norm(currentPath);
+const is404 = cur === '/404/' || cur === '/ar/404/' || cur === '/es/404/';
 const isActive = (href: string) => {
   const target = norm(localizedPath(href, currentLocale));
   if (target === '/') return cur === '/';
@@ -56,7 +57,7 @@ const navLabel = (href: string, fallback: string): string => {
           {locales.map((l) => (
             <li>
               <a
-                href={localizedHref(currentPath, l)}
+                href={localizedHref(is404 ? '/' : currentPath, l)}
                 class={l === currentLocale ? 'lang-switch__link is-active' : 'lang-switch__link'}
                 hreflang={l}
                 lang={localeMeta[l].lang}

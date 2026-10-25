@@ -21,9 +21,11 @@ interface Props {
   dir?: 'ltr' | 'rtl';
   /** Page-level hreflang alternates; when omitted, auto-generated from the URL. */
   alternates?: Alternate[];
+  /** Suppress canonical + hreflang and mark the page noindex (404 pages). */
+  noindex?: boolean;
 }
 
-const { title, description, lang, dir, alternates } = Astro.props;
+const { title, description, lang, dir, alternates, noindex } = Astro.props;
 
 const currentLocale = getLocaleFromPath(Astro.url.pathname);
 const locale = localeMeta[currentLocale];
@@ -55,13 +57,14 @@ const finalAlternates = alternates ?? hreflangAlternates(Astro.url.pathname, sit
     <title>{fullTitle}</title>
     <meta name="description" content={metaDescription} />
     <meta name="generator" content={Astro.generator} />
+    {noindex ? <meta name="robots" content="noindex, follow" /> : null}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={metaDescription} />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={site.brand} />
-    <link rel="canonical" href={canonical} />
-    {finalAlternates?.map((a) => (
+    {!noindex && <link rel="canonical" href={canonical} />}
+    {!noindex && finalAlternates?.map((a) => (
       <link rel="alternate" hreflang={a.lang} href={a.href} />
     ))}
   </head>

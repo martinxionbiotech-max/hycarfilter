@@ -35,6 +35,10 @@ export interface UIStrings {
   sitemap: string;
   contact: string;
   legal: string;
+  dataEcosystem: string;
+  dataSubsite: string;
+  techSubsite: string;
+  marketSubsite: string;
   allRightsReserved: string;
   since: string;
   // whatsapp
@@ -186,6 +190,10 @@ const ar: UIStrings = {
   sitemap: 'خريطة الموقع',
   contact: 'التواصل',
   legal: 'قانوني',
+  dataEcosystem: 'منظومة البيانات',
+  dataSubsite: 'قاعدة البيانات',
+  techSubsite: 'التقنية',
+  marketSubsite: 'رؤى السوق',
   allRightsReserved: 'جميع الحقوق محفوظة.',
   since: 'منذ',
   waLabel: 'تواصل معنا الآن',
@@ -328,6 +336,10 @@ const es: UIStrings = {
   sitemap: 'Mapa del sitio',
   contact: 'Contacto',
   legal: 'Legal',
+  dataEcosystem: 'Ecosistema de datos',
+  dataSubsite: 'Datos',
+  techSubsite: 'Tecnología',
+  marketSubsite: 'Perspectivas de mercado',
   allRightsReserved: 'Todos los derechos reservados.',
   since: 'DESDE',
   waLabel: 'Chatea con nosotros ahora',

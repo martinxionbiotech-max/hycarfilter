@@ -6,6 +6,7 @@ import { categoryContent } from '../../data/categoryContent';
 import { procurementConcerns, extraFaqs } from '../../data/procurementContent';
 import { originImages } from '../../data/originImages';
 import { categoryKeywords } from '../../data/categoryKeywords';
+import { blogPosts } from '../../data/blogPosts';
 
 const categories = productsData.categories;
 const products = productsData.products;
@@ -75,6 +76,9 @@ if (sku) {
   hasDim = !!dims.length_mm || !!dims.width_mm || !!dims.height_mm || !!dims.outer_diameter_mm || !!dims.inner_diameter_mm;
   hasFitting = !!dims.thread || !!dims.gasket;
 }
+
+const relSlug = cat ? cat.slug : skuCat ? skuCat.slug : null;
+const relatedPosts = relSlug ? blogPosts.filter((p) => p.relatedCategory === relSlug).slice(0, 3) : [];
 ---
 
 {
@@ -167,6 +171,21 @@ if (sku) {
               <p>{f.a}</p>
             </details>
           ))}
+
+          {relatedPosts.length > 0 ? (
+            <div class="mt-2">
+              <h2>Related Reading</h2>
+              <div class="grid grid--2">
+                {relatedPosts.map((p) => (
+                  <a class="card blog-card" href={`/blog/${p.slug}/`}>
+                    <span class="chip">{p.topicLabel}</span>
+                    <h3 style="margin:0.5rem 0 0.2rem">{p.title}</h3>
+                    <p class="small muted" style="margin:0">{p.excerpt}</p>
+                  </a>
+                ))}
+              </div>
+            </div>
+          ) : null}
         </div>
       </section>
 
@@ -306,6 +325,21 @@ if (sku) {
               </div>
             </div>
           ) : null}
+
+          {relatedPosts.length > 0 ? (
+            <div class="mt-2">
+              <h2>Related Reading</h2>
+              <div class="grid grid--2">
+                {relatedPosts.map((p) => (
+                  <a class="card blog-card" href={`/blog/${p.slug}/`}>
+                    <span class="chip">{p.topicLabel}</span>
+                    <h3 style="margin:0.5rem 0 0.2rem">{p.title}</h3>
+                    <p class="small muted" style="margin:0">{p.excerpt}</p>
+                  </a>
+                ))}
+              </div>
+            </div>
+          ) : null}
         </div>
       </section>
 
@@ -326,6 +360,8 @@ if (sku) {
   .sku-gallery__img { width: 100%; aspect-ratio: 1 / 1; object-fit: contain; background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 0.5rem; }
   .sku-card { display: block; color: var(--brand-ink); }
   .sku-card:hover { color: var(--brand-ink); }
+  .blog-card { display: block; color: var(--brand-ink); }
+  .blog-card:hover { color: var(--brand-ink); }
   @media (max-width: 820px) {
     .cat-head { grid-template-columns: 1fr; }
     .cat-hero { justify-self: start; }
