@@ -48,8 +48,8 @@ const certFramework = [
       </div>
 
       <div class="factory-gallery grid grid--2 mb-2">
-        {originImages.factory.map((img) => (
-          <img class="factory-photo" src={`${originImages.prefix}${img}`} alt={`${site.brand} factory & production`} loading="lazy" />
+        {originImages.factory.map((img, i) => (
+          <img class="factory-photo" src={`${originImages.prefix}${img}`} alt={`${site.brand} factory & production — photo ${i + 1}`} loading="lazy" />
         ))}
       </div>
 
@@ -77,8 +77,8 @@ const certFramework = [
         ))}
       </div>
       <div class="factory-strip mt-2">
-        {originImages.factorySections.production.map((img) => (
-          <img class="factory-strip__img" src={`${originImages.prefix}${img}`} alt={`${site.brand} production line`} loading="lazy" />
+        {originImages.factorySections.production.map((img, i) => (
+          <img class="factory-strip__img" src={`${originImages.prefix}${img}`} alt={`${site.brand} filter production line — photo ${i + 1}`} loading="lazy" />
         ))}
       </div>
     </div>
@@ -100,7 +100,7 @@ const certFramework = [
       </div>
       <div class="factory-strip mt-2">
         {originImages.factorySections.qc.map((img) => (
-          <img class="factory-strip__img factory-strip__img--doc" src={`${originImages.prefix}${img}`} alt={`${site.brand} business license`} loading="lazy" />
+          <img class="factory-strip__img factory-strip__img--doc" src={`${originImages.prefix}${img}`} alt={`${site.brand} quality control — business license & certification`} loading="lazy" />
         ))}
       </div>
     </div>
@@ -121,8 +121,8 @@ const certFramework = [
         ))}
       </div>
       <div class="factory-strip mt-2">
-        {originImages.factorySections.warehouse.map((img) => (
-          <img class="factory-strip__img" src={`${originImages.prefix}${img}`} alt={`${site.brand} packing & warehousing`} loading="lazy" />
+        {originImages.factorySections.warehouse.map((img, i) => (
+          <img class="factory-strip__img" src={`${originImages.prefix}${img}`} alt={`${site.brand} export packing & warehousing — photo ${i + 1}`} loading="lazy" />
         ))}
       </div>
     </div>

@@ -5,6 +5,7 @@ import productsData from '../../data/products.json';
 import { categoryContent } from '../../data/categoryContent';
 import { procurementConcerns, extraFaqs } from '../../data/procurementContent';
 import { originImages } from '../../data/originImages';
+import { categoryKeywords } from '../../data/categoryKeywords';
 
 const categories = productsData.categories;
 const products = productsData.products;
@@ -92,7 +93,7 @@ if (sku) {
               <h1>{cat.name_en} <span class="muted" style="font-size:0.6em;font-weight:600">/ {cat.name_zh}</span></h1>
               <p class="lede">{content.intro}</p>
             </div>
-            <img class="cat-hero" src={`${originImages.prefix}${originImages.categoryProduct[cat.code]}`} alt={`${cat.name_en} — product range`} loading="lazy" />
+            <img class="cat-hero" src={`${originImages.prefix}${originImages.categoryProduct[cat.code]}`} alt={`${cat.name_en} product line — ${categoryKeywords[cat.code]}`} loading="lazy" />
           </div>
 
           <h2>Selection Guide</h2>
@@ -193,7 +194,7 @@ if (sku) {
           <img
             class="sku-hero"
             src={`${originImages.prefix}${originImages.categoryProduct[sku.category]}`}
-            alt={`${sku.model} — ${sku.name_en}`}
+            alt={`${sku.model} ${sku.name_en} — ${skuCat.name_en} photo`}
             loading="lazy"
           />
 
@@ -207,11 +208,11 @@ if (sku) {
                   sample photos for a matched SKU.
                 </p>
                 <div class="sku-gallery__grid">
-                  {skuGallery.map((img) => (
+                  {skuGallery.map((img, i) => (
                     <img
                       class="sku-gallery__img"
                       src={`${originImages.prefix}${img}`}
-                      alt={`${skuCat.name_en} product reference`}
+                      alt={`${skuCat.name_en} product photo ${i + 1} — ${categoryKeywords[sku.category]}`}
                       loading="lazy"
                     />
                   ))}

@@ -47,7 +47,7 @@ function fmtDate(iso: string): string {
               <div class="grid grid--2">
                 {posts.map((p) => (
                   <a class="card post-card" href={`/blog/${p.slug}/`}>
-                    <img class="post-card__img" src={`${originImages.prefix}${originImages.blogImages[p.slug]?.cover ?? ''}`} alt={p.title} loading="lazy" />
+                    <img class="post-card__img" src={`${originImages.prefix}${originImages.blogImages[p.slug]?.cover ?? ''}`} alt={`${p.title} — automotive filter guide cover`} loading="lazy" />
                     <span class="chip">{p.topicLabel}</span>
                     <h3>{p.title}</h3>
                     <p class="small muted" style="margin:0 0 0.6rem">{p.excerpt}</p>

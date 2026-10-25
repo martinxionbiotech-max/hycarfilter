@@ -45,7 +45,7 @@ function fmtDate(iso: string): string {
       <img
         class="post-cover"
         src={`${originImages.prefix}${postImages.cover}`}
-        alt={post.title}
+        alt={`${post.title} — automotive filter guide cover`}
         loading="eager"
       />
 
@@ -58,7 +58,7 @@ function fmtDate(iso: string): string {
               <img
                 class="post-inline"
                 src={`${originImages.prefix}${postImages.interior[i]}`}
-                alt={`${post.title} — ${s.heading || 'illustration'}`}
+                alt={`${s.heading || post.title} — ${post.topicLabel}`}
                 loading="lazy"
               />
             ) : null}

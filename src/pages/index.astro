@@ -4,6 +4,7 @@ import InquiryCta from '../components/InquiryCta.astro';
 import { site } from '../data/site';
 import productsData from '../data/products.json';
 import { originImages } from '../data/originImages';
+import { categoryKeywords } from '../data/categoryKeywords';
 
 const categories = productsData.categories;
 const totalSkus = productsData.products.length;
@@ -72,7 +73,7 @@ const strengths = [
         {
           categories.map((c) => (
             <a class="card cat-card" href={`/products/${c.slug}/`}>
-              <img class="cat-card__img" src={`${originImages.prefix}${originImages.categoryProduct[c.code]}`} alt={`${c.name_en} — product range`} loading="lazy" />
+              <img class="cat-card__img" src={`${originImages.prefix}${originImages.categoryProduct[c.code]}`} alt={`${c.name_en} product range — ${categoryKeywords[c.code]}`} loading="lazy" />
               <span class="cat-card__code">{c.code.toUpperCase()}</span>
               <h3>{c.name_en}</h3>
               <p class="small muted">{c.tagline}</p>
@@ -130,8 +131,8 @@ const strengths = [
         </div>
       </div>
       <div class="faq-strip">
-        {originImages.homeFaq.map((img) => (
-          <img class="faq-strip__img" src={`${originImages.prefix}${img}`} alt={`${site.brand} product FAQ`} loading="lazy" />
+        {originImages.homeFaq.map((img, i) => (
+          <img class="faq-strip__img" src={`${originImages.prefix}${img}`} alt={`${site.brand} automotive filter FAQ — image ${i + 1}`} loading="lazy" />
         ))}
       </div>
     </div>
