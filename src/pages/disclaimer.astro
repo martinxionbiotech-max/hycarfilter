@@ -1,12 +1,211 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site';
 ---
 
-<BaseLayout title="Disclaimer" description="Hycarfilter disclaimer placeholder.">
+<BaseLayout
+  title="Disclaimer"
+  description={`Disclaimer for ${site.companyName} (${site.brand}) — the reference nature of our product information, export trade disclaimers, and the limits of our liability.`}
+>
   <section class="section">
     <div class="container">
-      <h1>Disclaimer</h1>
-      <p class="muted">Placeholder. Full disclaimer will be finalized in a later compliance batch.</p>
+      <article class="legal">
+        <h1>Disclaimer</h1>
+        <p class="updated">Last updated: 25 October 2026</p>
+
+        <p>
+          This Disclaimer sets out the basis on which <strong>{site.companyName}</strong> (&ldquo;{site.brand}&rdquo;,
+          &ldquo;we&rdquo;, &ldquo;us&rdquo; or &ldquo;our&rdquo;) publishes information on{' '}
+          <strong>{site.domain}</strong>. Please read it carefully. By using this website, you accept and agree
+          to the terms of this Disclaimer.
+        </p>
+
+        <nav class="toc" aria-label="Disclaimer contents">
+          <strong>Contents</strong>
+          <ol>
+            <li>General information only</li>
+            <li>Product specifications are reference in nature</li>
+            <li>Export and trade disclaimer</li>
+            <li>Fitment and compatibility</li>
+            <li>No professional or technical advice</li>
+            <li>External links</li>
+            <li>Intellectual property</li>
+            <li>Limitation of liability</li>
+            <li>No warranty</li>
+            <li>Changes to this Disclaimer</li>
+            <li>Contact us</li>
+          </ol>
+        </nav>
+
+        <h2>1. General information only</h2>
+        <p>
+          All content on this website, including product descriptions, technical articles, specifications,
+          figures, photographs and selection guidance, is provided for general information and preliminary
+          business-evaluation purposes only. It is directed at professional buyers, importers and distributors
+          and is not intended to amount to advice on which you should rely without independent verification.
+        </p>
+        <p>
+          While we make reasonable efforts to keep the information on this website accurate, complete and
+          current, we make no representations or warranties of any kind, express or implied, about the accuracy,
+          reliability, availability or completeness of the content, and any reliance you place on such content
+          is strictly at your own risk.
+        </p>
+        <p>
+          The website is updated from time to time and its content may be out of date at any given moment. We are
+          under no obligation to update any information, and we do not represent that the website reflects the
+          very latest product, pricing or availability state at the time you view it. Always confirm current
+          details with us directly before making a decision.
+        </p>
+
+        <h2>2. Product specifications are reference in nature</h2>
+        <p>
+          The specifications, dimensions, materials, filtration-efficiency figures, packaging details, minimum
+          order quantities, lead times, certifications and other technical data shown on this website are
+          <strong>indicative and reference in nature</strong>. They may be based on representative or seed
+          values and are not guaranteed to reflect the exact current production version of any product.
+        </p>
+        <p>
+          The <strong>authoritative specification for any order is the formal specification sheet and the
+          confirmed proforma invoice</strong> that we issue for that specific order, as agreed with you in
+          writing. In the event of any inconsistency between website content and a formal document, the formal
+          document prevails. Before placing an order, you must obtain and verify a current specification sheet
+          and, where applicable, a pre-production sample.
+        </p>
+        <p>
+          Where this website states filtration-efficiency percentages, micron ratings, dimensions or other
+          performance data, such values should be understood as nominal targets verified against the relevant
+          test standard (for example ISO 5011, SAE J726 or ISO 4548, as applicable). Actual performance depends
+          on the specific product, its application and the conditions of use.
+        </p>
+        <h3>2.1 Certification and compliance</h3>
+        <p>
+          References on this website to certifications, quality-management systems or compliance standards (such
+          as ISO 9001, IATF 16949, CE or RoHS) describe the frameworks we operate to and the documentation we
+          provide. They are not a guarantee that any particular certificate is current, in scope for a specific
+          product, or accepted in your destination market. Specific certification status and test reports are
+          confirmed per order, and destination-market approvals are the importer&rsquo;s responsibility to verify.
+        </p>
+        <h3>2.2 No warranty from website content</h3>
+        <p>
+          Nothing on this website constitutes a warranty or guarantee of any product&rsquo;s performance,
+          merchantability or fitness for a particular purpose. Warranty terms, where they apply, are set out
+          solely in the sales contract or proforma invoice for each order, and are subject to the exclusions and
+          conditions stated in that document. Website content is not, and should not be treated as, a warranty
+          of any kind.
+        </p>
+        <h3>2.3 Test data and performance figures</h3>
+        <p>
+          Where this website quotes efficiency percentages, beta ratios, micron ratings or dust-holding figures,
+          those values are nominal and refer to laboratory test conditions under the stated standard. Real-world
+          performance is influenced by the application, the operating environment, the service interval and the
+          condition of the vehicle or machine, and may differ from the nominal figure. Confirm the applicable
+          test report and specification for the exact SKU before relying on any performance figure.
+        </p>
+
+        <h2>3. Export and trade disclaimer</h2>
+        <p>
+          {site.brand} is an export manufacturer and does not guarantee that any product complies with the
+          regulatory, safety, labelling or certification requirements of any particular destination market.
+          Importers and distributors are solely responsible for:
+        </p>
+        <ul>
+          <li>Determining that products are suitable and lawful for sale in the destination market;</li>
+          <li>Obtaining any necessary import licences, approvals or certifications;</li>
+          <li>Complying with all applicable import, customs, tariff, safety, environmental and labelling laws;</li>
+          <li>Confirming HS codes, duties and any anti-dumping or trade-restriction measures that may apply.</li>
+        </ul>
+        <p>
+          Information on this website about target markets, HS codes or certifications is provided for general
+          guidance only and does not constitute legal, customs or regulatory advice. You should seek independent
+          advice from qualified professionals where appropriate.
+        </p>
+        <h3>3.1 HS codes, duties and tariffs</h3>
+        <p>
+          HS codes shown on this website are provided as a convenience and are based on our understanding of the
+          product classification. They may not reflect reclassification by customs authorities, changes in tariff
+          schedules, or the classification applied in a specific destination market. You are responsible for
+          confirming the correct classification, duty rate and any applicable anti-dumping, countervailing or
+          safeguard measures with the relevant customs authorities before import. We accept no liability for
+          duties, tariffs, penalties or delays arising from classification.
+        </p>
+
+        <h2>4. Fitment and compatibility</h2>
+        <p>
+          Automotive filters and related components are fitment-critical. A product that is dimensionally or
+          functionally incompatible with a specific vehicle, engine, transmission or housing can fail and, in
+          some cases, cause damage. It is your responsibility to confirm that any product you order is correct
+          for its intended application, using OE numbers, technical drawings, samples and, where necessary,
+          professional fitting guidance. We are not liable for losses arising from incorrect fitment,
+          misapplication or use of a product outside its intended application. In particular, a filter that
+          does not seat or does not match its engine, transmission or housing can fail without warning.
+        </p>
+
+        <h2>5. No professional or technical advice</h2>
+        <p>
+          Nothing on this website constitutes engineering, legal, regulatory, financial or other professional
+          advice. Content is written from a general export and procurement perspective and may not address the
+          specific circumstances of your market or application. You should consult appropriately qualified
+          professionals before making decisions based on this content.
+        </p>
+
+        <h2>6. External links</h2>
+        <p>
+          This website may contain links to third-party websites or resources. These links are provided for
+          convenience only. We have no control over the content of third-party sites and accept no responsibility
+          for them or for any loss or damage that may arise from your use of them. A link does not imply
+          endorsement.
+        </p>
+
+        <h2>7. Intellectual property</h2>
+        <p>
+          Unless otherwise stated, the content of this website is owned by or licensed to {site.companyName}
+          and is protected by intellectual property laws. You may not reproduce or distribute it without our
+          prior written consent. Third-party trade marks and part numbers mentioned on this website are the
+          property of their respective owners and are referenced for identification and cross-referencing
+          purposes only; such references do not imply any affiliation or endorsement.
+        </p>
+
+        <h2>8. Limitation of liability</h2>
+        <p>
+          To the fullest extent permitted by law, {site.companyName} and its officers, employees and agents
+          shall not be liable for any loss or damage, whether direct, indirect, incidental, special,
+          consequential or punitive, arising out of or in connection with your use of, or reliance on, this
+          website or its content, including but not limited to loss of profits, revenue, business opportunity,
+          data or goodwill. This limitation applies whether the claim is based in contract, tort (including
+          negligence), statute or otherwise, even if we have been advised of the possibility of such damages.
+        </p>
+        <p>
+          Nothing in this Disclaimer excludes or limits any liability that cannot be excluded or limited under
+          applicable law.
+        </p>
+
+        <h2>9. No warranty</h2>
+        <p>
+          This website is provided on an &ldquo;as is&rdquo; and &ldquo;as available&rdquo; basis. We do not
+          warrant that the website will be uninterrupted, secure or free from errors or harmful components, and
+          we disclaim all warranties to the fullest extent permitted by law. We may modify, suspend or
+          discontinue the website or any part of it at any time without notice.
+        </p>
+
+        <h2>10. Changes to this Disclaimer</h2>
+        <p>
+          We may revise this Disclaimer from time to time. The &ldquo;Last updated&rdquo; date at the top of this
+          page indicates when the current version took effect. Your continued use of the website after changes
+          are posted constitutes acceptance of the revised Disclaimer.
+        </p>
+
+        <h2>11. Contact us</h2>
+        <p>If you have any questions about this Disclaimer, please contact us:</p>
+        <ul>
+          <li><strong>Email:</strong> <a href={`mailto:${site.email}`}>{site.email}</a></li>
+          <li><strong>WhatsApp:</strong> {site.whatsapp}</li>
+          <li><strong>Mobile:</strong> {site.mobile}</li>
+          <li><strong>Address:</strong> {site.address}</li>
+        </ul>
+        <p>
+          Related documents: <a href="/privacy/">Privacy Policy</a> &middot; <a href="/terms/">Terms of Service</a> &middot; <a href="/cookies/">Cookie Policy</a>.
+        </p>
+      </article>
     </div>
   </section>
 </BaseLayout>

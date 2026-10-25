@@ -19,13 +19,15 @@ export const nav = [
   { label: 'Home', href: '/' },
   { label: 'Products', href: '/products/' },
   { label: 'Applications', href: '/applications/' },
+  { label: 'Factory', href: '/factory/' },
   { label: 'About', href: '/about/' },
   { label: 'Blog', href: '/blog/' },
   { label: 'Contact', href: '/contact/' },
 ];
 
 export const complianceLinks = [
-  { label: 'Privacy Policy', href: '/privacy/', placeholder: true },
-  { label: 'Terms of Service', href: '/terms/', placeholder: true },
-  { label: 'Disclaimer', href: '/disclaimer/', placeholder: true },
+  { label: 'Privacy Policy', href: '/privacy/' },
+  { label: 'Terms of Service', href: '/terms/' },
+  { label: 'Disclaimer', href: '/disclaimer/' },
+  { label: 'Cookie Policy', href: '/cookies/' },
 ];

@@ -148,6 +148,20 @@ details.faq {
 details.faq summary { cursor: pointer; font-weight: 600; }
 details.faq p { margin: 0.6rem 0 0; color: var(--ink-soft); }
 
+/* Legal / compliance pages */
+.legal { max-width: 780px; }
+.legal h2 { margin-top: 2rem; }
+.legal h3 { margin-top: 1.5rem; font-size: 1.05rem; }
+.legal ul, .legal ol { margin: 0 0 1em; padding-left: 1.4rem; }
+.legal li { margin-bottom: 0.4rem; }
+.legal .updated { color: var(--ink-soft); font-size: 0.9rem; }
+.legal a { text-decoration: underline; }
+.legal .toc {
+  background: var(--bg-soft); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 1rem 1.4rem; margin-bottom: 2rem;
+}
+.legal .toc ol { margin: 0.4rem 0 0; }
+
 /* Utility */
 .muted { color: var(--ink-soft); }
 .small { font-size: 0.88rem; }

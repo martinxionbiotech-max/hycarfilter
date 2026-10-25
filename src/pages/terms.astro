@@ -1,12 +1,212 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site';
 ---
 
-<BaseLayout title="Terms of Service" description="Hycarfilter terms of service placeholder.">
+<BaseLayout
+  title="Terms of Service"
+  description={`Terms of Service for ${site.companyName} (${site.brand}) — the conditions that govern your use of this website and the basis on which we provide product information and quotations.`}
+>
   <section class="section">
     <div class="container">
-      <h1>Terms of Service</h1>
-      <p class="muted">Placeholder. Full terms will be finalized in a later compliance batch.</p>
+      <article class="legal">
+        <h1>Terms of Service</h1>
+        <p class="updated">Last updated: 25 October 2026</p>
+
+        <p>
+          These Terms of Service (&ldquo;Terms&rdquo;) govern your access to and use of{' '}
+          <strong>{site.domain}</strong>, the website of <strong>{site.companyName}</strong>{' '}
+          (&ldquo;{site.brand}&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo; or &ldquo;our&rdquo;). By accessing or
+          using this website, you agree to be bound by these Terms. If you do not agree, please do not use the
+          website.
+        </p>
+        <p>
+          This website is a business-to-business resource. It presents product information, technical guidance
+          and company details for professional buyers, importers and distributors of automotive filters. It is
+          not a consumer online shop, and no binding sales contract is formed by using the website or
+          submitting an inquiry.
+        </p>
+
+        <nav class="toc" aria-label="Terms contents">
+          <strong>Contents</strong>
+          <ol>
+            <li>Acceptance of these Terms</li>
+            <li>Who may use the website</li>
+            <li>Nature of the website content</li>
+            <li>Inquiries, quotations and orders</li>
+            <li>Products, specifications and samples</li>
+            <li>Pricing and payment</li>
+            <li>Intellectual property</li>
+            <li>Acceptable use</li>
+            <li>Disclaimers and limitation of liability</li>
+            <li>Indemnification</li>
+            <li>Governing law and dispute resolution</li>
+            <li>Changes to these Terms</li>
+            <li>Contact us</li>
+          </ol>
+        </nav>
+
+        <h2>1. Acceptance of these Terms</h2>
+        <p>
+          By accessing the website, you confirm that you have read and understood these Terms and that you agree
+          to comply with them. We may update these Terms from time to time; the version published on this page
+          will always be the current version. Your continued use of the website after changes are posted
+          constitutes acceptance of the revised Terms.
+        </p>
+
+        <h2>2. Who may use the website</h2>
+        <p>
+          This website is intended for use by individuals acting in a professional or commercial capacity, such
+          as buyers, importers, distributors, wholesalers and fleet operators. You must be at least 18 years of
+          age to use the website and to submit information through it.
+        </p>
+
+        <h2>3. Nature of the website content</h2>
+        <p>
+          The content on this website — including product descriptions, technical articles, specifications,
+          photographs, diagrams and selection guidance — is provided for <strong>general information and
+          preliminary evaluation purposes only</strong>. It is not a binding offer of sale. While we take care
+          to keep the content accurate and current, we do not guarantee that it is complete, error-free or
+          up to date at all times.
+        </p>
+        <p>
+          In particular, product specifications, dimensions, materials, filtration efficiency figures, packaging
+          details, minimum order quantities, lead times and certifications shown on this website are indicative
+          and subject to confirmation. The <strong>formal specification sheet and the confirmed proforma
+          invoice</strong> issued by us for a specific order take precedence over any website content in the
+          event of any inconsistency. Please see our <a href="/disclaimer/">Disclaimer</a> for further detail.
+        </p>
+
+        <h2>4. Inquiries, quotations and orders</h2>
+        <p>
+          Submitting an inquiry through our website or by email or messaging application does not create a
+          contract and does not oblige us to supply any product. A quotation issued by us is an invitation to
+          treat, not a binding offer, and is valid only for the period stated on it. An order becomes binding
+          only when we confirm acceptance in writing, typically by means of a signed proforma invoice or
+          purchase confirmation.
+        </p>
+        <p>
+          You are responsible for ensuring that the information you provide to us — including OE numbers,
+          vehicle types, target markets, quantities and any technical requirements — is accurate and complete.
+          We rely on that information when preparing quotations and manufacturing products.
+        </p>
+
+        <h2>5. Products, specifications and samples</h2>
+        <p>
+          Our products are manufactured to the specifications we agree with you in writing. Where a
+          pre-production sample is required, we will provide it for your approval; you should verify dimensions,
+          fitment, media, seal and packaging before approving mass production. Once a sample is approved, we
+          will manufacture the confirmed order against that approval.
+        </p>
+        <p>
+          Product specifications are subject to change without notice as part of continuous improvement, provided
+          that any change to a confirmed order is agreed with you in writing before production. Photographs and
+          images on this website are for illustration and may not reflect the exact appearance of the current
+          production version.
+        </p>
+        <h3>5.1 Warranty and after-sales</h3>
+        <p>
+          Warranty terms are set out in the sales contract or proforma invoice for each order. As a general
+          reference, our products carry a warranty period of one year from delivery, excluding vulnerable and
+          consumable parts; specific terms and exclusions are confirmed with the salesperson for the product in
+          question. After-sales support is provided in accordance with the agreed terms; where on-site support
+          is required, any travel, accommodation and related costs are agreed separately between the parties.
+          Nothing on this website constitutes a warranty, and no warranty is created except as expressly set out
+          in a signed written agreement.
+        </p>
+
+        <h2>6. Pricing and payment</h2>
+        <p>
+          Prices are quoted on a case-by-case basis and may be expressed in a currency agreed between the
+          parties. Unless otherwise stated in writing, payment terms follow the arrangement common in
+          international trade: an initial deposit to confirm the order, with the balance payable before
+          shipment. Specific payment terms, delivery terms (such as Incoterms) and the allocation of freight,
+          insurance and duties are agreed in the proforma invoice or sales contract for each order. Unless a
+          credit arrangement has been agreed in writing, production typically begins after receipt of the agreed
+          deposit, and the balance is payable before release of the shipment.
+        </p>
+
+        <h2>7. Intellectual property</h2>
+        <p>
+          The website and its content, including text, articles, graphics, logos, data tables and the overall
+          design, are owned by or licensed to {site.companyName} and are protected by applicable intellectual
+          property laws. You may view and print pages for your own internal business use, but you may not
+          reproduce, republish, distribute, modify or commercially exploit any content without our prior written
+          consent. The <strong>{site.brand}</strong> name and associated marks are our trade marks; nothing on
+          this website grants you any licence to use them.
+        </p>
+
+        <h2>8. Acceptable use</h2>
+        <p>You agree not to:</p>
+        <ul>
+          <li>Use the website in any way that is unlawful, fraudulent or harmful;</li>
+          <li>Attempt to gain unauthorised access to the website, its servers or any connected systems;</li>
+          <li>Introduce or transmit malicious code, viruses or harmful material;</li>
+          <li>Scrape, crawl or harvest content in a manner that places unreasonable load on our systems or breaches these Terms;</li>
+          <li>Misrepresent your identity or your affiliation with any person or organisation;</li>
+          <li>Use the website to send unsolicited communications or to infringe the rights of others.</li>
+        </ul>
+
+        <h2>9. Disclaimers and limitation of liability</h2>
+        <p>
+          To the fullest extent permitted by law, the website and its content are provided on an &ldquo;as
+          is&rdquo; and &ldquo;as available&rdquo; basis without warranties of any kind, whether express or
+          implied, including but not limited to warranties of merchantability, fitness for a particular purpose,
+          accuracy and non-infringement.
+        </p>
+        <p>
+          To the fullest extent permitted by law, {site.companyName} and its officers, employees and agents
+          shall not be liable for any indirect, incidental, special, consequential or punitive damages, or for
+          any loss of profits, revenue, data or goodwill, arising out of or in connection with your use of the
+          website or your reliance on its content, even if advised of the possibility of such damages. Nothing in
+          these Terms excludes or limits liability that cannot be excluded or limited under applicable law.
+        </p>
+        <p>
+          Because product specifications are reference in nature, you must not rely on website content as a
+          substitute for a formal specification sheet or for your own verification of fitment and compatibility.
+        </p>
+
+        <h2>10. Indemnification</h2>
+        <p>
+          You agree to indemnify and hold harmless {site.companyName} and its officers, employees and agents
+          from and against any claims, liabilities, damages, losses and expenses (including reasonable legal
+          fees) arising out of or in connection with your breach of these Terms or your misuse of the website.
+        </p>
+
+        <h2>11. Governing law and dispute resolution</h2>
+        <p>
+          These Terms are governed by and construed in accordance with the laws of the People&rsquo;s Republic of
+          China, without regard to its conflict-of-law principles. Any dispute arising out of or in connection
+          with these Terms or your use of the website shall first be attempted to be resolved amicably through
+          negotiation. Where a dispute cannot be resolved by negotiation, it shall be submitted to the competent
+          court having jurisdiction over the location of {site.companyName}, unless mandatory law provides
+          otherwise.
+        </p>
+        <p>
+          If any provision of these Terms is held to be invalid or unenforceable, that provision shall be
+          severed and the remaining provisions shall continue in full force and effect. These Terms, together
+          with our Privacy Policy and Disclaimer, constitute the entire agreement between you and us regarding
+          your use of the website and supersede any prior agreements on that subject.
+        </p>
+
+        <h2>12. Changes to these Terms</h2>
+        <p>
+          We may revise these Terms at any time by updating this page. The &ldquo;Last updated&rdquo; date at the
+          top of this page indicates when the current version took effect. It is your responsibility to review
+          these Terms periodically.
+        </p>
+
+        <h2>13. Contact us</h2>
+        <p>Questions about these Terms should be directed to:</p>
+        <ul>
+          <li><strong>Email:</strong> <a href={`mailto:${site.email}`}>{site.email}</a></li>
+          <li><strong>WhatsApp:</strong> {site.whatsapp}</li>
+          <li><strong>Address:</strong> {site.address}</li>
+        </ul>
+        <p>
+          Related documents: <a href="/privacy/">Privacy Policy</a> &middot; <a href="/disclaimer/">Disclaimer</a> &middot; <a href="/cookies/">Cookie Policy</a>.
+        </p>
+      </article>
     </div>
   </section>
 </BaseLayout>
