@@ -24,7 +24,7 @@ import { originImages } from '../../data/originImages';
       <div class="grid grid--2">
         {applicationScenes.map((s) => (
           <a class="card scene-card" href={`/applications/${s.slug}/`}>
-            <h3>{s.icon} {s.title} <span class="muted" style="font-size:0.7em;font-weight:600">/ {s.zh}</span></h3>
+            <h3>{s.icon} {s.title}</h3>
             <p class="muted">{s.lede}</p>
             <p class="small" style="margin:0.8rem 0 0.4rem"><strong>Typical filter mix:</strong></p>
             <ul class="small">

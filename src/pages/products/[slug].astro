@@ -80,7 +80,7 @@ if (sku) {
 {
   isCategory ? (
     <BaseLayout
-      title={`${cat.name_en} (${cat.name_zh})`}
+      title={`${cat.name_en}`}
       description={`${cat.name_en} selection guide and SKU table from hycarfilter. ${cat.tagline}`}
     >
       <section class="section">
@@ -90,7 +90,7 @@ if (sku) {
           </p>
           <div class="cat-head">
             <div>
-              <h1>{cat.name_en} <span class="muted" style="font-size:0.6em;font-weight:600">/ {cat.name_zh}</span></h1>
+              <h1>{cat.name_en}</h1>
               <p class="lede">{content.intro}</p>
             </div>
             <img class="cat-hero" src={`${originImages.prefix}${originImages.categoryProduct[cat.code]}`} alt={`${cat.name_en} product line — ${categoryKeywords[cat.code]}`} loading="lazy" />
@@ -187,7 +187,7 @@ if (sku) {
           </p>
           <div class="section-head">
             <p class="chip">{sku.model} · {sku.series}</p>
-            <h1>{sku.name_en} <span class="muted" style="font-size:0.6em;font-weight:600">/ {sku.name_zh}</span></h1>
+            <h1>{sku.name_en}</h1>
             <p class="lede">{lead}</p>
           </div>
 
