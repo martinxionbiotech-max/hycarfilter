@@ -11,11 +11,18 @@ const facts = [
   { k: 'Model', v: 'OEM / ODM / private label' },
   { k: 'Quality', v: 'ISO 9001 · IATF 16949 (framework)' },
 ];
+
+const values = [
+  { title: 'Proof over adjectives', text: 'We lead with verifiable details — a one-piece drawn shell, a calibrated bypass valve, a 100% airtightness check — and back them with samples and test reports you can inspect before you commit.' },
+  { title: 'Fitment before price', text: 'A filter that does not seat or does not match the engine is a return, or worse. We anchor every order on OE cross-referencing and sample approval before we talk about cost.' },
+  { title: 'The market decides the grade', text: 'A desert market and a temperate market need different media. We match product to the target market\u2019s dust load, fuel quality and climate rather than shipping a one-size-fits-all SKU.' },
+  { title: 'Consistency across every page', text: 'One dataset, one set of facts. The specification you read here is the same value we quote, ship and document across our product, data and technical resources.' },
+];
 ---
 
 <BaseLayout
   title="About Us"
-  description="About hycarfilter: a professional automotive filter manufacturer and exporter since 2013, based in the Qinghe filter industry cluster, Hebei, China."
+  description={`About ${site.brand}: a professional automotive filter manufacturer and exporter since 2013, based in the Qinghe filter industry cluster, Hebei, China — our story, positioning and editorial philosophy.`}
 >
   <section class="section">
     <div class="container">
@@ -24,7 +31,8 @@ const facts = [
         <p class="lede">
           {site.companyNameShort} is a professional filter manufacturing company integrating production,
           research and development, sales and after-sales service. We specialize in automotive air filters,
-          cabin filters, oil filters, fuel filters, wipers, transmission filter screens and LED headlights.
+          cabin filters, oil filters, fuel filters, wiper blades, transmission filter screens and LED headlights —
+          and we build every line for export.
         </p>
       </div>
 
@@ -37,14 +45,58 @@ const facts = [
         ))}
       </div>
 
-      <p class="muted">
-        Headquartered in the Qinghe County filter industry cluster of Xingtai, Hebei — one of China's densest
-        automotive-filter production bases — {site.brand} is positioned for export with an OEM/ODM model.
-        We are known in the industry for rapid development, high-end quality and dependable service.
+      <h2>Our story</h2>
+      <p>
+        {site.brand} is headquartered in the Qinghe County filter industry cluster of Xingtai, Hebei — one of
+        China&rsquo;s densest automotive-filter production bases, where materials, tooling, media and finishing
+        capacity sit within a tight supply radius. From that base we have built a company that designs,
+        manufactures and ships seven filter categories under an OEM / ODM / private-label model.
       </p>
-      <p class="muted small">
-        <em>Note: this page carries placeholder company details inherited from the source site pending final
-        legal-entity confirmation.</em>
+      <p>
+        The logic of our range is the logic of the export buyer. A distributor consolidating a container does not
+        want to buy air filters from one factory, oil filters from a second and cabin filters from a third. They
+        want one supplier who understands the full filtration system — and who can speak precisely about media
+        grade, bypass calibration, seal rebound, water separation and dust-holding. That is the role we play.
+      </p>
+
+      <h2>Our positioning</h2>
+      <p>
+        We are a <strong>filter manufacturer and exporter</strong>, not a trading pass-through. That distinction
+        matters because it changes the conversation: instead of quoting the cheapest SKU, we can talk about the
+        construction details that decide reliability, and we can customize media, branding, packaging and
+        documentation to a specific market and a specific buyer.
+      </p>
+      <p>
+        Our positioning is anchored on verifiable quality. A one-piece drawn steel shell, hydraulic-tapped
+        threads, calibrated bypass and anti-drainback valves, high/low-temperature-resilient seals, thermoset
+        plastisol end caps, composite high-temperature media and nano-fiber filtration — these are the details we
+        build into the product and the details a serious buyer can check. Where certification is involved, we state
+        the framework we operate to and confirm specific status per order and destination.
+      </p>
+
+      <h2>How we think about content</h2>
+      <p>
+        We publish this website as a resource for procurement decisions, not as recycled marketing copy. Every
+        article and specification page is written from the exporter&rsquo;s side of the table: what a buyer should
+        verify, where the real failure modes are, and how to match a product to a market instead of chasing the
+        lowest price. You will find our editorial notes signed where we take a position — and where a fact is a
+        reference value rather than a confirmed specification, we say so.
+      </p>
+      <div class="grid grid--2 mt-2">
+        {values.map((v) => (
+          <div class="card">
+            <h3>{v.title}</h3>
+            <p class="muted" style="margin:0">{v.text}</p>
+          </div>
+        ))}
+      </div>
+
+      <p class="muted small mt-2">
+        <em>
+          Note: company details on this page are maintained in a single source of truth and reflect the
+          information provided by {site.companyNameShort}. Contact and legal-entity details are confirmed with
+          the owner before any formal commitment; see our <a href="/disclaimer/">Disclaimer</a>.
+        </em>
       </p>
     </div>
   </section>

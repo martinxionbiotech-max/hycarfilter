@@ -1,11 +1,26 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { site } from '../data/site';
+
+const rfq = [
+  { title: 'Product & model', text: 'The filter category and, where known, the OE number or our SKU model (for example hy-af-nano).' },
+  { title: 'Target vehicle or engine', text: 'Vehicle make, model, year and engine — or the transmission model for transmission filters.' },
+  { title: 'Target market', text: 'The country or region you sell into, so we can match media, grade and certifications to its conditions.' },
+  { title: 'Quantity & packaging', text: 'Estimated quantity, MOQ, private-label or neutral packing, and any carton requirements.' },
+  { title: 'Certification needs', text: 'Any destination-market approvals or test reports you require before shipment.' },
+];
+
+const process = [
+  { step: '1', title: 'Send your inquiry', text: 'Submit the form, or reach us on WhatsApp. Include your OE number, model or target market.' },
+  { step: '2', title: 'We match the SKU', text: 'We confirm fitment against our SKU table and cross-reference, and advise on the right grade for your market.' },
+  { step: '3', title: 'Sample & spec sheet', text: 'We provide a spec sheet and, where needed, a pre-production sample for your approval.' },
+  { step: '4', title: 'Quote & confirm', text: 'You approve the sample; we issue the proforma invoice and production lead time, then ship.' },
+];
 ---
 
 <BaseLayout
   title="Contact & Inquiry"
-  description="Contact hycarfilter for filter quotes: email, WhatsApp and address. Send your OE number, target vehicle or market for a fast quote."
+  description="Contact hycarfilter for filter quotes: email, WhatsApp and address. Send your OE number, target vehicle or market for a fast quote — with RFQ guidance."
 >
   <section class="section">
     <div class="container">
@@ -28,16 +43,55 @@ import { site } from '../data/site';
         <div class="card">
           <h2>Inquiry Form</h2>
           <p class="muted small">
-            Form is a placeholder for the skeleton; wiring to a form backend / CRM happens in a later phase.
+            Complete what you can — the more detail, the faster and more accurate the quote. You can also email or
+            WhatsApp us directly.
           </p>
-          <form class="form" action="/contact/" method="post" onsubmit="return false;">
+          <form class="form" action={`mailto:${site.email}`} method="post" enctype="text/plain">
             <label>Name<input type="text" name="name" placeholder="Your name" /></label>
+            <label>Company<input type="text" name="company" placeholder="Your company (optional)" /></label>
             <label>Email *<input type="email" name="email" placeholder="you@company.com" required /></label>
             <label>WhatsApp<input type="text" name="whatsapp" placeholder="+xx ..." /></label>
-            <label>Message *<textarea name="message" rows="4" placeholder="Model / OE number / target market..." required></textarea></label>
-            <button class="btn btn--primary" type="submit">Submit</button>
+            <label>Message *<textarea name="message" rows="4" placeholder="Model / OE number / target market / quantity..." required></textarea></label>
+            <button class="btn btn--primary" type="submit">Send Inquiry</button>
           </form>
+          <p class="muted small" style="margin:0.8rem 0 0">
+            Submitting opens your email client. For direct messages, use <a href={site.whatsappLink} target="_blank" rel="nofollow noopener">WhatsApp</a>.
+          </p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head">
+        <h2>What to include in your RFQ</h2>
+        <p class="lede">A complete inquiry gets a complete quote. These five details are what we need to match the right SKU.</p>
+      </div>
+      <div class="grid grid--2">
+        {rfq.map((r) => (
+          <div class="card">
+            <h3>{r.title}</h3>
+            <p class="muted" style="margin:0">{r.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>How an inquiry becomes an order</h2>
+      </div>
+      <div class="grid grid--4">
+        {process.map((p) => (
+          <div class="card">
+            <span class="chip">{p.step}</span>
+            <h3 style="margin-top:0.5rem">{p.title}</h3>
+            <p class="small muted" style="margin:0">{p.text}</p>
+          </div>
+        ))}
       </div>
     </div>
   </section>

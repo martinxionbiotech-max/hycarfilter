@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import InquiryCta from '../../components/InquiryCta.astro';
+import { applicationScenes } from '../../data/applicationScenes';
+
+export function getStaticPaths() {
+  return applicationScenes.map((s) => ({ params: { scene: s.slug } }));
+}
+
+const { scene } = Astro.params;
+const data = applicationScenes.find((s) => s.slug === scene);
+
+if (!data) {
+  return Astro.redirect('/applications/');
+}
+---
+
+<BaseLayout
+  title={`${data.title} Applications`}
+  description={`${data.title} filter applications from hycarfilter: the duty cycle, typical filter mix, and what a buyer should verify for this segment.`}
+>
+  <section class="section">
+    <div class="container">
+      <p class="small muted"><a href="/applications/">Applications</a> &rsaquo; {data.title}</p>
+      <div class="section-head">
+        <h1>{data.icon} {data.title} <span class="muted" style="font-size:0.55em;font-weight:600">/ {data.zh}</span></h1>
+        <p class="lede">{data.lede}</p>
+      </div>
+
+      {data.body.map((p) => <p>{p}</p>)}
+
+      <h2>Typical Filter Mix</h2>
+      <ul>
+        {data.filters.map((f) => <li>{f}</li>)}
+      </ul>
+
+      <h2>Procurement Points for This Segment</h2>
+      <p class="muted small">What a buyer should verify before committing an order in this segment.</p>
+      <div class="grid grid--2">
+        {data.procurementPoints.map((pt) => (
+          <div class="card">
+            <h3>{pt.title}</h3>
+            <p class="muted" style="margin:0">{pt.text}</p>
+          </div>
+        ))}
+      </div>
+
+      <h2>Related Categories</h2>
+      <div class="grid grid--4 mt-2">
+        {data.relatedCategories.map((c) => (
+          <a class="card scene-card" href={`/products/${c.slug}/`}>
+            <span class="chip">{c.slug.toUpperCase()}</span>
+            <h3 style="margin:0.5rem 0 0">{c.label}</h3>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <InquiryCta
+    title={`Sourcing for ${data.title.toLowerCase()}?`}
+    sub="Tell us your target vehicles and duty cycle — we recommend the right grades and packaging."
+  />
+</BaseLayout>
+
+<style>
+  .scene-card { display: block; color: var(--brand-ink); }
+  .scene-card:hover { color: var(--brand-ink); }
+  ul { margin: 0 0 1em; padding-left: 1.4rem; }
+  li { margin-bottom: 0.35rem; }
+</style>
