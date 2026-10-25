@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import InquiryCta from '../components/InquiryCta.astro';
 import { site } from '../data/site';
+import { originImages } from '../data/originImages';
 
 const facts = [
   { k: 'Founded', v: 'SINCE 2013' },
@@ -35,6 +36,8 @@ const values = [
           and we build every line for export.
         </p>
       </div>
+
+      <img class="about-hero" src={`${originImages.prefix}${originImages.about}`} alt={`${site.brand} manufacturing`} loading="eager" />
 
       <div class="grid grid--2 mb-2">
         {facts.map((f) => (
@@ -103,3 +106,7 @@ const values = [
 
   <InquiryCta title="Want to know our factory?" sub="Ask for a factory tour, sample pack, or quality certificate." />
 </BaseLayout>
+
+<style>
+  .about-hero { width: 100%; max-height: 360px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--line); margin-bottom: 2rem; }
+</style>

@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import InquiryCta from '../../components/InquiryCta.astro';
 import productsData from '../../data/products.json';
 import { blogPosts } from '../../data/blogPosts';
+import { originImages } from '../../data/originImages';
 
 export function getStaticPaths() {
   return blogPosts.map((p) => ({ params: { slug: p.slug } }));
@@ -40,6 +41,13 @@ function fmtDate(iso: string): string {
         </p>
       </div>
 
+      <img
+        class="post-cover"
+        src={`${originImages.prefix}${originImages.blogCover[post.topic]}`}
+        alt={post.title}
+        loading="eager"
+      />
+
       {
         post.sections.map((s) => (
           <section class="post-section">
@@ -73,6 +81,7 @@ function fmtDate(iso: string): string {
 <style>
   .container--narrow { max-width: 780px; }
   .post-section { margin-bottom: 1.5rem; }
+  .post-cover { width: 100%; max-height: 360px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--line); margin-bottom: 1.5rem; }
   .post-section h2 { margin-bottom: 0.4em; }
   .related { margin-top: 2.5rem; }
   .related-card { display: block; color: var(--brand-ink); max-width: 360px; }

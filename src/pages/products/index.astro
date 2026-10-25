@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import InquiryCta from '../../components/InquiryCta.astro';
 import productsData from '../../data/products.json';
+import { originImages } from '../../data/originImages';
 
 const categories = productsData.categories;
 const products = productsData.products;
@@ -26,7 +27,7 @@ const countByCategory = (code: string) => products.filter((p) => p.category === 
         {
           categories.map((c) => (
             <a class="card cat-card" href={`/products/${c.slug}/`}>
-              <img class="cat-card__img" src={`/images/categories/${c.slug}.svg`} alt={`${c.name_en} placeholder`} width="64" height="42" loading="lazy" />
+              <img class="cat-card__img" src={`${originImages.prefix}${originImages.categoryIcon[c.code]}`} alt={c.name_en} width="64" height="42" loading="lazy" />
               <span class="chip">{c.code.toUpperCase()}</span>
               <h3>{c.name_en}</h3>
               <p class="small muted">{c.name_zh}</p>

@@ -4,6 +4,7 @@ import InquiryCta from '../../components/InquiryCta.astro';
 import productsData from '../../data/products.json';
 import { categoryContent } from '../../data/categoryContent';
 import { procurementConcerns, extraFaqs } from '../../data/procurementContent';
+import { originImages } from '../../data/originImages';
 
 const categories = productsData.categories;
 const products = productsData.products;
@@ -89,7 +90,7 @@ if (sku) {
               <h1>{cat.name_en} <span class="muted" style="font-size:0.6em;font-weight:600">/ {cat.name_zh}</span></h1>
               <p class="lede">{content.intro}</p>
             </div>
-            <img class="cat-icon" src={`/images/categories/${cat.slug}.svg`} alt={`${cat.name_en} placeholder`} width="200" height="131" loading="lazy" />
+            <img class="cat-icon" src={`${originImages.prefix}${originImages.categoryIcon[cat.code]}`} alt={cat.name_en} width="200" height="131" loading="lazy" />
           </div>
 
           <h2>Selection Guide</h2>
@@ -189,8 +190,8 @@ if (sku) {
 
           <img
             class="sku-hero"
-            src="/images/product-placeholder.svg"
-            alt={`${sku.model} product placeholder`}
+            src={`${originImages.prefix}${originImages.categoryProduct[sku.category]}`}
+            alt={`${sku.model} — ${sku.name_en}`}
             width="320"
             height="210"
             loading="lazy"

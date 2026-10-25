@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import InquiryCta from '../components/InquiryCta.astro';
 import { site } from '../data/site';
+import { originImages } from '../data/originImages';
 
 const processes = [
   { title: 'Filter media & pleating', text: 'Cellulose, composite, nano-fiber and activated-carbon media are selected by application, then pleated to controlled density. Pleat count and media area directly set dust-holding capacity and service life.' },
@@ -44,6 +45,12 @@ const certFramework = [
           one of China&rsquo;s densest automotive-filter production bases. We run integrated production,
           research and development, quality control and export logistics for seven filter categories.
         </p>
+      </div>
+
+      <div class="factory-gallery grid grid--2 mb-2">
+        {originImages.factory.map((img) => (
+          <img class="factory-photo" src={`${originImages.prefix}${img}`} alt={`${site.brand} factory & production`} loading="lazy" />
+        ))}
       </div>
 
       <div class="grid grid--2 mb-2">
@@ -142,3 +149,7 @@ const certFramework = [
     sub="Ask for a factory tour, a sample pack, or the quality certificates and test reports for your category."
   />
 </BaseLayout>
+
+<style>
+  .factory-photo { width: 100%; height: 240px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--line); }
+</style>

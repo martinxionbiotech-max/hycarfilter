@@ -1,14 +1,16 @@
 # assets/ — hongying OSS image re-fetch
 
-**Status: BLOCKED (2026-10-25)**
+**Status: RESOLVED (2026-10-25)**
 
-`omo-oss-image.thefastimg.com` returns HTTP 567 ("http 403") on every direct request —
-scheme (http/https), User-Agent, Referer and IPv4/IPv6 were all tried; the CDN enforces an
-anti-hotlink block that rejects non-browser origin fetches. GitHub reachability (HTTP 200)
-confirms this is a CDN-side block, not a network outage.
+The original block was on `omo-oss-image.thefastimg.com` (HTTP 567 "http 403" anti-hotlink to
+every direct request — scheme / UA / Referer / IPv4 / IPv6 all tried). The sibling CDN mirror
+**`omo-oss-image2.thefastimg.com`** serves the same portal instance without the block.
 
-**Fallback plan (per P1 doc):** placeholder images + Seedream regeneration in a later phase.
+- 123 / 123 origin images recovered and landed at `public/images/origin-images/`.
+- Seated same-position into the main site (see `docs/image-placement-map.md`).
+- Fetch script: `scripts/fetch-origin-images.mjs`.
 
 **Reference:**
 - `docs/assets/hongying-oss-refetch-list.txt` — 123 original OSS URLs + ref counts.
-- `docs/assets/uuid-category-map.md` — UUID → category/page mapping for re-seating once images are available.
+- `docs/assets/uuid-category-map.md` — UUID → category/page mapping.
+- `docs/assets/images-map.json` — source URL → local path + DOM context.
