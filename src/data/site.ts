@@ -1,26 +1,28 @@
 // Central site config — single source for brand/contact facts (kept consistent site-wide).
 export const site = {
   brand: 'hycarfilter',
-  companyName: 'Qinghe County Huiying Auto Parts Co., Ltd.',
-  companyNameShort: 'Huiying Auto Parts',
+  companyName: 'Qinghe County Hongying Auto Parts Co., Ltd.',
+  companyNameShort: 'Hongying Auto Parts',
   domain: 'hycarfilter.com', // placeholder domain
   since: 2013,
-  // Verified legal entity (E-E-A-T disclosure) — sourced from China public business
-  // registry via Sogou search results aggregating Tianyancha + the Hebei 2023 Q4
-  // technology-based SME list. Retrieved 2026-10-25. Zero fabrication: Baidu Baike
-  // has no entry for this entity; the official registry profile on Baidu Aiqicha
-  // (user-provided) serves as the authoritative citation.
+  // Verified legal entity (E-E-A-T disclosure) — sourced from the authoritative Baidu
+  // Aiqicha official registry profile (user-provided), retrieved 2026-10-25. Zero
+  // fabrication: every field below matches the registry record for
+  // 清河县宏盈汽车零部件有限公司 (Qinghe County Hongying Auto Parts Co., Ltd.).
   entity: {
-    legalName: 'Qinghe County Huiying Auto Parts Co., Ltd.',
-    legalNameZh: '清河县汇盈汽车零部件有限公司',
-    creditCode: '91130534MA0958NT84',
-    addressCn: '河北省邢台市清河县闽江街以北、九华山路以西',
+    legalName: 'Qinghe County Hongying Auto Parts Co., Ltd.',
+    legalNameZh: '清河县宏盈汽车零部件有限公司',
+    creditCode: '91130534MAD6454E17',
+    addressCn: '河北省邢台市清河县漓江街106号',
     sameAs: 'https://aiqicha.baidu.com/company_detail_49854926859922',
-    foundedDate: '2017-10-10',
-    legalRepZh: '刘风秀',
-    registeredCapital: '100万元人民币',
+    foundedDate: '2023-11-28',
+    legalRepZh: '简长宏',
+    registeredCapital: '500万元人民币',
     businessScopeZh:
-      '汽车零部件及配件制造；汽车零配件零售；农业机械制造；农业机械销售；货物进出口',
+      '汽车零部件及配件制造；汽车零配件批发；汽车零配件零售',
+    companyType: '有限责任公司(自然人独资)',
+    registryPhone: '13930925240',
+    registryEmail: 'hy@hongyingfilter.com',
   },
   tagline: 'Filter manufacturer & exporter',
   taglineAr: 'مُصنّع ومُصدّر الفلاتر',

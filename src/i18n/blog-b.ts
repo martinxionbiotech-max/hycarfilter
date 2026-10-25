@@ -14,7 +14,7 @@ export const blogI18nB: {
         {
           heading: 'جناحنا في Automechanika Shanghai',
           paragraphs: [
-            'شاركت شركة Qinghe County Huiying Auto Parts Co., Ltd. (hycarfilter) في معرض Automechanika Shanghai 2025، الذي أُقيم في الفترة من 26 إلى 29 نوفمبر في مركز المعارض والمؤتمرات الوطني. وكان جناحنا في القاعة 1.1، الجناح A17، حيث عرضنا خطوط فلاتر الهواء والمقصورة والزيت والوقود، والمسّاحات، ومصافي فلاتر ناقل الحركة، وإضاءة LED على المشترين من مختلف أسواق التصدير.',
+            'شاركت شركة Qinghe County Hongying Auto Parts Co., Ltd. (hycarfilter) في معرض Automechanika Shanghai 2025، الذي أُقيم في الفترة من 26 إلى 29 نوفمبر في مركز المعارض والمؤتمرات الوطني. وكان جناحنا في القاعة 1.1، الجناح A17، حيث عرضنا خطوط فلاتر الهواء والمقصورة والزيت والوقود، والمسّاحات، ومصافي فلاتر ناقل الحركة، وإضاءة LED على المشترين من مختلف أسواق التصدير.',
             'يُعد المعرض نقطة التقاء رئيسية لمشتري قطع الغيار والمشتري OEM في أنحاء آسيا والشرق الأوسط وأفريقيا وغيرها. وبالنسبة لنا، فهو المكان الذي نضع فيه العينات المادية بين يدي المشتري — حيث يمكن رؤية ولمس الهيكل الفولاذي المسحوب من قطعة واحدة، وصمام التجاوز المُعاير، ومانع التسرب عالي المرونة، وليس مجرد قراءتها في ورقة مواصفات.',
           ],
         },
@@ -259,7 +259,7 @@ export const blogI18nB: {
         {
           heading: 'Nuestro stand en Automechanika Shanghai',
           paragraphs: [
-            'Qinghe County Huiying Auto Parts Co., Ltd. (hycarfilter) exhibió en Automechanika Shanghai 2025, celebrada del 26 al 29 de noviembre en el Centro Nacional de Exposiciones y Convenciones. Nuestro stand se ubicó en el Pabellón 1.1, Stand A17, donde mostramos nuestras líneas de filtros de aire, habitáculo, aceite y combustible, escobillas limpiaparabrisas, mallas de filtro de transmisión e iluminación LED a compradores de todos los mercados de exportación.',
+            'Qinghe County Hongying Auto Parts Co., Ltd. (hycarfilter) exhibió en Automechanika Shanghai 2025, celebrada del 26 al 29 de noviembre en el Centro Nacional de Exposiciones y Convenciones. Nuestro stand se ubicó en el Pabellón 1.1, Stand A17, donde mostramos nuestras líneas de filtros de aire, habitáculo, aceite y combustible, escobillas limpiaparabrisas, mallas de filtro de transmisión e iluminación LED a compradores de todos los mercados de exportación.',
             'La feria es un punto de encuentro clave para compradores del mercado de reposición y OEM de Asia, Oriente Medio, África y más allá. Para nosotros es el lugar donde poner muestras físicas en manos del comprador — donde una carcasa estampada de una sola pieza, una válvula de derivación calibrada y un sello de alto rebote se pueden ver y tocar, no solo leer en una ficha técnica.',
           ],
         },

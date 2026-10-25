@@ -48,8 +48,8 @@ const siteUrl = Astro.site?.toString() ?? 'https://hycarfilter.com';
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const finalAlternates = alternates ?? hreflangAlternates(Astro.url.pathname, siteUrl);
 
-// Organization JSON-LD — legal entity (E-E-A-T). `sameAs` is emitted only when a
-// verifiable authority profile exists (Baidu Baike entry not found as of 2026-10-25).
+// Organization JSON-LD — legal entity (E-E-A-T). `sameAs` points to the authoritative
+// Baidu Aiqicha official registry profile (retrieved 2026-10-25).
 const orgJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
@@ -63,7 +63,7 @@ const orgJsonLd = {
     addressCountry: 'CN',
     addressRegion: '河北省',
     addressLocality: '邢台市清河县',
-    streetAddress: '闽江街以北、九华山路以西',
+    streetAddress: '漓江街106号',
   },
   ...(site.entity.sameAs ? { sameAs: [site.entity.sameAs] } : {}),
 };
