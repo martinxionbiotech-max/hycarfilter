@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import InquiryCta from '../../components/InquiryCta.astro';
+import productsData from '../../data/products.json';
+import { blogPosts } from '../../data/blogPosts';
+
+export function getStaticPaths() {
+  return blogPosts.map((p) => ({ params: { slug: p.slug } }));
+}
+
+const { slug } = Astro.params;
+const post = blogPosts.find((p) => p.slug === slug);
+
+if (!post) {
+  return Astro.redirect('/blog/');
+}
+
+const relatedCat = productsData.categories.find((c) => c.slug === post.relatedCategory);
+
+function fmtDate(iso: string): string {
+  return new Date(iso + 'T00:00:00Z').toLocaleDateString('en-US', {
+    year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC',
+  });
+}
+---
+
+<BaseLayout
+  title={post.title}
+  description={post.excerpt}
+>
+  <article class="section">
+    <div class="container container--narrow">
+      <p class="small muted"><a href="/blog/">Blog</a> &rsaquo; {post.topicLabel}</p>
+      <div class="section-head">
+        <p class="chip">{post.topicLabel}</p>
+        <h1>{post.title}</h1>
+        <p class="lede">{post.excerpt}</p>
+        <p class="small muted">
+          {fmtDate(post.date)} · {post.readMinutes} min read
+        </p>
+      </div>
+
+      {
+        post.sections.map((s) => (
+          <section class="post-section">
+            {s.heading ? <h2>{s.heading}</h2> : null}
+            {s.paragraphs.map((p) => <p>{p}</p>)}
+          </section>
+        ))
+      }
+
+      {
+        relatedCat ? (
+          <div class="related">
+            <p class="muted small">Related product line:</p>
+            <a class="card related-card" href={`/products/${relatedCat.slug}/`}>
+              <span class="chip">{relatedCat.code.toUpperCase()}</span>
+              <h3>{relatedCat.name_en}</h3>
+              <p class="small muted" style="margin:0">{relatedCat.tagline}</p>
+            </a>
+          </div>
+        ) : null
+      }
+    </div>
+  </article>
+
+  <InquiryCta
+    title="Ready to source filters?"
+    sub="Tell us your model, OE number, or target market — we reply within 24 hours."
+  />
+</BaseLayout>
+
+<style>
+  .container--narrow { max-width: 780px; }
+  .post-section { margin-bottom: 1.5rem; }
+  .post-section h2 { margin-bottom: 0.4em; }
+  .related { margin-top: 2.5rem; }
+  .related-card { display: block; color: var(--brand-ink); max-width: 360px; }
+  .related-card:hover { color: var(--brand-ink); }
+  .related-card h3 { margin: 0.5rem 0 0.2rem; }
+</style>

@@ -26,12 +26,13 @@ const countByCategory = (code: string) => products.filter((p) => p.category === 
         {
           categories.map((c) => (
             <a class="card cat-card" href={`/products/${c.slug}/`}>
+              <img class="cat-card__img" src={`/images/categories/${c.slug}.svg`} alt={`${c.name_en} placeholder`} width="64" height="42" loading="lazy" />
               <span class="chip">{c.code.toUpperCase()}</span>
               <h3>{c.name_en}</h3>
               <p class="small muted">{c.name_zh}</p>
               <p class="small" style="margin:0">{c.tagline}</p>
               <p class="small muted" style="margin-top:0.6rem">
-                <strong>{countByCategory(c.code)}</strong> seed SKUs · HS {c.hs_code}
+                <strong>{countByCategory(c.code)}</strong> SKUs · HS {c.hs_code}
               </p>
             </a>
           ))
@@ -49,5 +50,6 @@ const countByCategory = (code: string) => products.filter((p) => p.category === 
 <style>
   .cat-card { display: block; color: var(--brand-ink); }
   .cat-card:hover { color: var(--brand-ink); }
+  .cat-card__img { width: 64px; height: 42px; object-fit: contain; border: 1px solid var(--line); border-radius: 6px; background: #fff; margin-bottom: 0.6rem; }
   .cat-card h3 { margin: 0.5rem 0 0.2rem; }
 </style>

@@ -20,7 +20,7 @@ export const nav = [
   { label: 'Products', href: '/products/' },
   { label: 'Applications', href: '/applications/' },
   { label: 'About', href: '/about/' },
-  { label: 'Blog', href: '/blog/', placeholder: true },
+  { label: 'Blog', href: '/blog/' },
   { label: 'Contact', href: '/contact/' },
 ];
 

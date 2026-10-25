@@ -1,23 +1,74 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import InquiryCta from '../../components/InquiryCta.astro';
+import { blogPosts } from '../../data/blogPosts';
+
+const topics = ['air', 'oil', 'cabin', 'fuel', 'news'];
+const topicTitles: Record<string, string> = {
+  air: 'Air Filter',
+  oil: 'Oil Filter',
+  cabin: 'Cabin Filter',
+  fuel: 'Fuel Filter',
+  news: 'Company News',
+};
+
+function fmtDate(iso: string): string {
+  return new Date(iso + 'T00:00:00Z').toLocaleDateString('en-US', {
+    year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC',
+  });
+}
 ---
 
 <BaseLayout
   title="Blog"
-  description="Hycarfilter blog — filter knowledge, maintenance and selection content. Coming in Phase 3."
+  description="Hycarfilter blog — filter knowledge, maintenance and sourcing content rewritten for export and procurement decision-makers."
 >
   <section class="section">
     <div class="container">
       <div class="section-head">
         <h1>Blog</h1>
         <p class="lede">
-          Filter knowledge, maintenance and sourcing content — consolidated into four topic clusters
-          (air / oil / cabin / fuel filters) plus company news. Coming in Phase 3.
+          Filter knowledge, maintenance and sourcing content — original deep dives written for
+          export buyers and procurement decision-makers, not recycled marketing copy.
         </p>
       </div>
-      <div class="card center muted">
-        <p style="margin:0">Content cluster under construction. Check back soon.</p>
-      </div>
+
+      {
+        topics.map((topic) => {
+          const posts = blogPosts.filter((p) => p.topic === topic);
+          if (posts.length === 0) return null;
+          return (
+            <div class="topic-block">
+              <h2>{topicTitles[topic]}</h2>
+              <div class="grid grid--2">
+                {posts.map((p) => (
+                  <a class="card post-card" href={`/blog/${p.slug}/`}>
+                    <span class="chip">{p.topicLabel}</span>
+                    <h3>{p.title}</h3>
+                    <p class="small muted" style="margin:0 0 0.6rem">{p.excerpt}</p>
+                    <p class="small muted" style="margin:0">
+                      {fmtDate(p.date)} · {p.readMinutes} min read
+                    </p>
+                  </a>
+                ))}
+              </div>
+            </div>
+          );
+        })
+      }
     </div>
   </section>
+
+  <InquiryCta
+    title="Questions about a specific filter?"
+    sub="Our editorial team writes for procurement decisions — send us your market or OE number and we'll match the right SKU."
+  />
 </BaseLayout>
+
+<style>
+  .topic-block { margin-bottom: 2.5rem; }
+  .post-card { display: block; color: var(--brand-ink); }
+  .post-card:hover { color: var(--brand-ink); }
+  .post-card h3 { margin: 0.5rem 0 0.4rem; font-size: 1.1rem; }
+  .post-card .chip { margin-bottom: 0.2rem; }
+</style>
