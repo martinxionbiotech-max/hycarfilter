@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-25T08:43:31.638Z",
+  "generatedAt": "2026-10-25T11:23:38.376Z",
   "mirrorFiles": 172,
   "uniqueCdnRefs": 151,
-  "downloaded": 123,
-  "missingCount": 28,
-  "unusedCount": 0,
-  "coveredCount": 123,
+  "downloaded": 146,
+  "missingCount": 6,
+  "unusedCount": 1,
+  "coveredCount": 145,
   "byType": {
     "about": {
       "total": 9,
@@ -21,7 +21,7 @@
     },
     "home": {
       "total": 31,
-      "missing": 8
+      "missing": 6
     },
     "policy": {
       "total": 8,
@@ -29,7 +29,7 @@
     },
     "qualification": {
       "total": 9,
-      "missing": 7
+      "missing": 6
     },
     "service": {
       "total": 9,
@@ -57,7 +57,7 @@
     },
     "product-detail": {
       "total": 117,
-      "missing": 19
+      "missing": 6
     },
     "blog-detail": {
       "total": 9,
@@ -65,7 +65,7 @@
     },
     "blog-list": {
       "total": 16,
-      "missing": 12
+      "missing": 6
     }
   },
   "missing": [
@@ -1250,279 +1250,10 @@
         "taglist.html",
         "video.html"
       ]
-    },
-    {
-      "uuid": "c9b13651-5a3f-47ac-9cf6-bb0c26ee8b3b",
-      "alt": "OEM&ODM",
-      "title": "OEM&ODM",
-      "types": [
-        "home"
-      ],
-      "pageCount": 1,
-      "pages": [
-        "index.html"
-      ]
-    },
-    {
-      "uuid": "a2f9a70b-5c0b-463d-8f0d-a3b94685d03a",
-      "alt": "PRODUCT FAQ",
-      "title": "PRODUCT FAQ",
-      "types": [
-        "home"
-      ],
-      "pageCount": 1,
-      "pages": [
-        "index.html"
-      ]
-    },
-    {
-      "uuid": "e5ca537e-3754-4988-af6f-5392bda05685",
-      "alt": "Business license",
-      "title": "Business license",
-      "types": [
-        "qualification"
-      ],
-      "pageCount": 1,
-      "pages": [
-        "qualification.html"
-      ]
-    },
-    {
-      "uuid": "c8ffe624-8bf7-432c-a11a-4096868e9914",
-      "alt": "LED Lights",
-      "title": "LED Lights",
-      "types": [
-        "product-detail"
-      ],
-      "pageCount": 1,
-      "pages": [
-        "Products_details/1438822215527903232.html"
-      ]
-    },
-    {
-      "uuid": "e6461061-0cb5-4e1b-b054-81d1a1b7ec68",
-      "alt": "LED Lights",
-      "title": "LED Lights",
-      "types": [
-        "product-detail"
-      ],
-      "pageCount": 2,
-      "pages": [
-        "Products_details/1438822215527903232.html",
-        "Products_details/17.html"
-      ]
-    },
-    {
-      "uuid": "8f1308f7-3244-4107-9f91-2dde0481b616",
-      "alt": "Air Filter",
-      "title": "Air Filter",
-      "types": [
-        "product-detail"
-      ],
-      "pageCount": 1,
-      "pages": [
-        "Products_details/1438833556041191424.html"
-      ]
-    },
-    {
-      "uuid": "f2bfc75f-45ae-4fe4-bb6f-80d1890dac74",
-      "alt": "Cabin Filter",
-      "title": "Cabin Filter",
-      "types": [
-        "product-detail"
-      ],
-      "pageCount": 1,
-      "pages": [
-        "Products_details/1438839853347975168.html"
-      ]
-    },
-    {
-      "uuid": "cf67c48f-3cd0-41da-8e54-1d47a7424bba",
-      "alt": "Wiper",
-      "title": "Wiper",
-      "types": [
-        "product-detail"
-      ],
-      "pageCount": 1,
-      "pages": [
-        "Products_details/1438847957888618496.html"
-      ]
-    },
-    {
-      "uuid": "3c7d6d2b-87e5-41a7-be6a-65b92afce3b3",
-      "alt": "LED Lights",
-      "title": "LED Lights",
-      "types": [
-        "product-detail"
-      ],
-      "pageCount": 1,
-      "pages": [
-        "Products_details/17.html"
-      ]
-    },
-    {
-      "uuid": "6340f52e-0e5b-47a5-a15d-42a61217e6d8",
-      "alt": "LED Lights",
-      "title": "LED Lights",
-      "types": [
-        "product-detail"
-      ],
-      "pageCount": 1,
-      "pages": [
-        "Products_details/17.html"
-      ]
-    },
-    {
-      "uuid": "59659eea-c64b-4533-acfb-2efcb151c0aa",
-      "alt": "LED Lights",
-      "title": "LED Lights",
-      "types": [
-        "product-detail"
-      ],
-      "pageCount": 1,
-      "pages": [
-        "Products_details/17.html"
-      ]
-    },
-    {
-      "uuid": "f586c7fb-3eda-4bb1-8f1b-0886b4fa06ce",
-      "alt": "Oil Filter",
-      "title": "Oil Filter",
-      "types": [
-        "product-detail"
-      ],
-      "pageCount": 1,
-      "pages": [
-        "Products_details/23.html"
-      ]
-    },
-    {
-      "uuid": "2a3db409-fc3b-428b-b514-584f8410f2f8",
-      "alt": "Oil Filter",
-      "title": "Oil Filter",
-      "types": [
-        "product-detail"
-      ],
-      "pageCount": 1,
-      "pages": [
-        "Products_details/24.html"
-      ]
-    },
-    {
-      "uuid": "922fa2ff-32a7-469d-bfb1-1616803d5298",
-      "alt": "Wiper",
-      "title": "Wiper",
-      "types": [
-        "product-detail"
-      ],
-      "pageCount": 1,
-      "pages": [
-        "Products_details/61.html"
-      ]
-    },
-    {
-      "uuid": "312ff2b0-e6d4-4c69-8b22-4e907ba1ddaa",
-      "alt": "Wiper",
-      "title": "Wiper",
-      "types": [
-        "product-detail"
-      ],
-      "pageCount": 1,
-      "pages": [
-        "Products_details/61.html"
-      ]
-    },
-    {
-      "uuid": "d2f6b791-cb32-4065-a77d-7358b0ac5953",
-      "alt": "Wiper",
-      "title": "Wiper",
-      "types": [
-        "product-detail"
-      ],
-      "pageCount": 1,
-      "pages": [
-        "Products_details/61.html"
-      ]
-    },
-    {
-      "uuid": "ea3923ad-93a0-4718-a394-895d38634236",
-      "alt": "The Unsung Hero: How Cabin Filters Keep Us Breathing Easy",
-      "title": "The Unsung Hero: How Cabin Filters Keep Us Breathing Easy",
-      "types": [
-        "blog-list"
-      ],
-      "pageCount": 2,
-      "pages": [
-        "Blog/1724994144148738048-24-8.html",
-        "Blog/3365-24-8.html"
-      ]
-    },
-    {
-      "uuid": "7196ac0d-221a-49d4-88d3-37f97f26dc18",
-      "alt": "The Unsung Hero of Your Car: Understanding Cabin Filters",
-      "title": "The Unsung Hero of Your Car: Understanding Cabin Filters",
-      "types": [
-        "blog-list"
-      ],
-      "pageCount": 2,
-      "pages": [
-        "Blog/1724994144148738048-24-8.html",
-        "Blog/3365-24-8.html"
-      ]
-    },
-    {
-      "uuid": "047574a3-46ac-4a06-8b2b-c736b7f2b309",
-      "alt": "Unveiling the Mysteries of Cabin Filter: Your Car's Unsung Hero",
-      "title": "Unveiling the Mysteries of Cabin Filter: Your Car's Unsung Hero",
-      "types": [
-        "blog-list"
-      ],
-      "pageCount": 2,
-      "pages": [
-        "Blog/1724994144148738048-24-8.html",
-        "Blog/3365-24-8.html"
-      ]
-    },
-    {
-      "uuid": "364aae57-01b9-48fe-b38c-985916569234",
-      "alt": "What are the symptoms of a dirty car air filter?",
-      "title": "What are the symptoms of a dirty car air filter?",
-      "types": [
-        "blog-list"
-      ],
-      "pageCount": 2,
-      "pages": [
-        "Blog/1724994144148738048-24-8.html",
-        "Blog/3365-24-8.html"
-      ]
-    },
-    {
-      "uuid": "fce8bf7b-4d51-4ee9-a2ce-4697f7baadcf",
-      "alt": "Do you need to replace your intake filter",
-      "title": "Do you need to replace your intake filter",
-      "types": [
-        "blog-list"
-      ],
-      "pageCount": 2,
-      "pages": [
-        "Blog/1724994144148738048-24-8.html",
-        "Blog/3365-24-8.html"
-      ]
-    },
-    {
-      "uuid": "069e18cf-11e1-4ae2-96f1-6e4a0cb079bd",
-      "alt": "All the information you need to know about automotive fuel filters",
-      "title": "All the information you need to know about automotive fuel filters",
-      "types": [
-        "blog-list"
-      ],
-      "pageCount": 2,
-      "pages": [
-        "Blog/1724994144148738048-24-8.html",
-        "Blog/3365-24-8.html"
-      ]
     }
   ],
-  "unused": [],
+  "unused": [
+    "8f490fe4-35cd-4f5e-bac9-d61c3e92bc8a"
+  ],
   "nonUuidOss": []
 }

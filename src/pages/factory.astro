@@ -99,8 +99,8 @@ const certFramework = [
         ))}
       </div>
       <div class="factory-strip mt-2">
-        {originImages.factorySections.qc.map((img) => (
-          <img class="factory-strip__img factory-strip__img--doc" src={`${originImages.prefix}${img}`} alt={`${site.brand} quality control — business license & certification`} loading="lazy" />
+        {originImages.factorySections.qc.map((img, i) => (
+          <img class={i === 0 ? 'factory-strip__img factory-strip__img--doc' : 'factory-strip__img'} src={`${originImages.prefix}${img}`} alt={`${site.brand} quality control — ${i === 0 ? 'business license & certification' : `inspection ${i}`}`} loading="lazy" />
         ))}
       </div>
     </div>
@@ -146,6 +146,13 @@ const certFramework = [
         ))}
       </div>
 
+      <img class="cert-banner mt-2" src={`${originImages.prefix}${originImages.qualification.banner}`} alt={`${site.brand} qualification & certification banner`} loading="lazy" />
+      <div class="cert-grid mt-2">
+        {originImages.qualification.docs.map((img, i) => (
+          <img class={i === 0 ? 'cert-grid__img cert-grid__img--doc' : 'cert-grid__img'} src={`${originImages.prefix}${img}`} alt={`${site.brand} certification & business license — ${i + 1}`} loading="lazy" />
+        ))}
+      </div>
+
       <div class="opinion">
         <strong>What we verify, not just what we claim</strong>
         <p style="margin:0.5rem 0 0">
@@ -170,4 +177,8 @@ const certFramework = [
   .factory-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.75rem; }
   .factory-strip__img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 8px; border: 1px solid var(--line); background: #fff; }
   .factory-strip__img--doc { aspect-ratio: auto; max-height: 280px; object-fit: contain; }
+  .cert-banner { width: 100%; height: auto; max-height: 220px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--line); }
+  .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+  .cert-grid__img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 8px; border: 1px solid var(--line); background: #fff; }
+  .cert-grid__img--doc { aspect-ratio: auto; max-height: 340px; object-fit: contain; }
 </style>

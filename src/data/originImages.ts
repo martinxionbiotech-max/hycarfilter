@@ -253,10 +253,34 @@ export const originImages = {
   /** about-page secondary image (source company/exhibition news photo) */
   aboutSecondary: '1eaabb71-10ce-4847-9876-fffe10613231.jpg',
 
-  /** factory/about "ABOUTUS" images (source home about block) */
+  /** factory/about "ABOUTUS" images (source home about block + factory tour stills) */
   factory: [
     '7ec71d28-e246-44a5-8e43-ab909117a173.png',
     '97066cc1-a1c5-4aba-96fc-bceef649db16.png',
+    '4f312703-985c-49a7-8b80-f644e664af0b.jpg',
+    'f8f1f0ca-d2b4-4be4-a3eb-ddaa6099da4d.jpg',
+    '0dc4d6ba-549e-4d82-9ab8-a97a76581256.jpg',
+    '24eadad0-c41b-420c-a4fb-cfc3c6aff058.jpg',
+  ],
+
+  /**
+   * factory tour video stills (source video.html "Corporate Video", 12 frames).
+   * These are the source site's real factory/workshop/warehouse footage and are
+   * reused across the /factory/ page sections below.
+   */
+  factoryTour: [
+    '4f312703-985c-49a7-8b80-f644e664af0b.jpg',
+    'f8f1f0ca-d2b4-4be4-a3eb-ddaa6099da4d.jpg',
+    '0dc4d6ba-549e-4d82-9ab8-a97a76581256.jpg',
+    '24eadad0-c41b-420c-a4fb-cfc3c6aff058.jpg',
+    '049b6b15-cc77-4b97-8e66-0493e9239e77.jpg',
+    '6436649d-9ada-428e-926a-0225ed359c29.jpg',
+    'f490ba1b-d974-441a-90f0-4c71e54a2177.jpg',
+    '593e6c21-73d3-4665-ba34-70b2c211ef99.jpg',
+    'fde4f07d-f104-42ed-bde4-5e819ebbd8dc.jpg',
+    '1a5d87d4-73eb-4b9f-a899-34313531ce20.jpg',
+    '3b68e5a1-93f7-4650-ac34-d13ac70ca7ed.jpg',
+    'b6f8f6b6-33e3-4faf-b65d-3fee27614d70.jpg',
   ],
 
   /** factory page — production / quality-control / warehousing image groups */
@@ -266,19 +290,35 @@ export const originImages = {
       'd84f52c2-1235-46e4-b399-884c7938c1ad.jpeg',
       'bdc84421-4418-4eeb-836c-18186dcaf8aa.jpg',
       '5183dc2f-d3b7-41e1-9f4d-cea7e821bf4b.jpeg',
+      'f490ba1b-d974-441a-90f0-4c71e54a2177.jpg',
+      '3b68e5a1-93f7-4650-ac34-d13ac70ca7ed.jpg',
     ],
     qc: [
       'e5ca537e-3754-4988-af6f-5392bda05685.jpg',
+      '593e6c21-73d3-4665-ba34-70b2c211ef99.jpg',
+      '6436649d-9ada-428e-926a-0225ed359c29.jpg',
     ],
     warehouse: [
       '499befda-1218-40cd-af5a-068fb4087fef.jpeg',
       '2a3db409-fc3b-428b-b514-584f8410f2f8.jpg',
       'c8ffe624-8bf7-432c-a11a-4096868e9914.jpg',
+      '1a5d87d4-73eb-4b9f-a899-34313531ce20.jpg',
+      'fde4f07d-f104-42ed-bde4-5e819ebbd8dc.jpg',
     ],
   } as Record<string, string[]>,
 
-  /** business license (source Qualification.html) — shown in factory certification block */
-  qualification: 'e5ca537e-3754-4988-af6f-5392bda05685.jpg',
+  /**
+   * certification group (source Qualification.html) — business license + page
+   * banner + supporting factory frames, rendered as the /factory/ cert grid.
+   */
+  qualification: {
+    banner: '8f490fe4-35cd-4f5e-bac9-d61c3e92bc8a.jpg',
+    docs: [
+      'e5ca537e-3754-4988-af6f-5392bda05685.jpg',
+      '049b6b15-cc77-4b97-8e66-0493e9239e77.jpg',
+      'b6f8f6b6-33e3-4faf-b65d-3fee27614d70.jpg',
+    ],
+  },
 
   /** home hero — source home slide2 background (alt "OEM&ODM") */
   homeOem: 'c9b13651-5a3f-47ac-9cf6-bb0c26ee8b3b.jpg',
