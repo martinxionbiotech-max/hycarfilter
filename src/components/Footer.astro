@@ -67,7 +67,7 @@ const positioning = currentLocale === 'ar' ? site.positioningAr : currentLocale 
         <ul class="footer__list">
           <li>{site.address}</li>
           <li><a href={`mailto:${site.email}`}>{site.email}</a></li>
-          <li><a href={site.whatsappLink} target="_blank" rel="nofollow noopener">WhatsApp {site.whatsapp}</a></li>
+          <li><a class="wa-btn" href={site.whatsappLink} target="_blank" rel="nofollow noopener">💬 {u?.formWhatsappBtn ?? 'Chat on WhatsApp Now'}</a></li>
           <li><a href={`tel:${site.phone}`}>{site.phone}</a></li>
         </ul>
       </div>
