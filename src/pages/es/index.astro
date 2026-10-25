@@ -1,42 +1,72 @@
 ---
-// /es/ — Spanish homepage placeholder (framework validation batch A).
-// Structure complete; content pending translation (TODO-i18n) in batch B.
+// /es/ — Spanish homepage (full translation, batch B).
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import InquiryCta from '../../components/InquiryCta.astro';
-import TodoBanner from '../../components/TodoBanner.astro';
 import { site } from '../../data/site';
 import productsData from '../../data/products.json';
-import { hreflangAlternates } from '../../i18n';
+import { originImages } from '../../data/originImages';
+import { categoryKeywords } from '../../data/categoryKeywords';
+import { content } from '../../i18n/content';
 
+const loc = content.es;
 const categories = productsData.categories;
 const totalSkus = productsData.products.length;
-const siteUrl = Astro.site?.toString() ?? 'https://hycarfilter.com';
-const alternates = hreflangAlternates('/', siteUrl);
+
+const strengths = [
+  { title: 'Carcasa de acero estampada en una pieza', text: 'Bote hermético formado en un solo embutido — sin soldaduras en el lado de presión.' },
+  { title: 'Prueba de hermeticidad al 100%', text: 'Cada filtro pasa una verificación completa de hermeticidad antes de empacar, no por muestreo de lote.' },
+  { title: 'Roscas roscadas hidráulicamente', text: 'Roscas de precisión que garantizan un montaje limpio y repetible sin cruce de rosca.' },
+  { title: 'Válvula de derivación y antirretorno calibradas', text: 'La válvula de derivación abre a una presión definida; la antirretorno mantiene el aceite en su sitio en arranques en frío.' },
+  { title: 'Sellos resistentes a altas/bajas temperaturas', text: 'Los anillos de sellado conservan la recuperación y la integridad de -40 °C a +150 °C.' },
+  { title: 'Tapas extremas de plastisol termoestable', text: 'El plastisol termocurado adhiere el medio a las tapas para un núcleo rígido y resistente al colapso.' },
+  { title: 'Medio compuesto de alta temperatura', text: 'La fibra compuesta carbonizada soporta calor sostenido sin colapsar el medio.' },
+  { title: 'Filtración con nanofibras', text: 'Poros finos y gran captura de polvo elevan la eficiencia y prolongan la vida útil.' },
+];
+
+const faqs = [
+  { q: '¿Cuáles son sus cantidades mínimas de pedido?', a: 'El pedido mínimo varía por categoría — normalmente 500–1.000 pzas para filtros y escobillas, y 200 pzas para iluminación LED. Los pedidos de contenedor mixto se pueden consolidar entre categorías para llenar un contenedor con eficiencia.' },
+  { q: '¿Ofrecen OEM / ODM y marca privada?', a: 'Sí. Personalizamos medio, marca, embalaje y documentación para tu mercado, y enviamos bajo tu marca con tu especificación.' },
+  { q: '¿Puedo obtener muestras e informes de prueba primero?', a: 'Entregamos muestras de preproducción para aprobación, más informes de prueba según ISO 5011 / SAE J726 (aire) e ISO 4548 (aceite) para que verifiques el rendimiento antes de comprometerte.' },
+  { q: '¿Cuál es su plazo de entrega?', a: 'El plazo estándar de producción es de 15–25 días según la categoría y el tamaño del pedido. Confirmamos una fecha firme al confirmar el pedido y te informamos durante la producción.' },
+];
 ---
 
 <BaseLayout
-  title="Automotive Filter Manufacturer & Exporter"
-  description="Hycarfilter is a Qinghe-based automotive filter manufacturer & exporter: air, cabin, oil, fuel filters, wipers, transmission screens and LED lights. OEM/ODM, ISO 9001 / IATF 16949."
-  alternates={alternates}
+  title="Fabricante y exportador de filtros automotrices"
+  description="Hycarfilter es un fabricante y exportador de filtros automotrices con sede en Qinghe: filtros de aire, habitáculo, aceite y combustible, escobillas, mallas de transmisión y luces LED. OEM/ODM, ISO 9001 / IATF 16949."
 >
-  <TodoBanner locale="es" />
-
   <section class="hero">
     <div class="container hero__inner">
       <div class="hero__copy">
-        <p class="chip">SINCE {site.since} · Qinghe, China</p>
-        <h1>Automotive Filter Manufacturer<br /><span class="hero__accent">&amp; Exporter</span></h1>
+        <p class="chip">DESDE {site.since} · Qinghe, China</p>
+        <h1>Fabricante de filtros automotrices<br /><span class="hero__accent">y exportador</span></h1>
         <p class="lede">
-          From air to fuel — {site.brand} guards every step of your journey. We design and export
-          seven filter categories with OEM/ODM capability, built in the Qinghe filter industry cluster.
+          Del aire al combustible: {site.brand} protege cada paso de tu recorrido. Diseñamos y exportamos
+          siete categorías de filtros con capacidad OEM/ODM, en el clúster industrial de filtros de Qinghe.
         </p>
         <p class="hero__cta">
-          <a class="btn btn--primary" href="/es/products/air-filter/">Explore Products</a>
-          <a class="btn btn--ghost" href="/factory/">Inside Our Factory</a>
+          <a class="btn btn--primary" href="/es/products/">Explorar productos</a>
+          <a class="btn btn--ghost" href="/es/factory/">Dentro de nuestra fábrica</a>
         </p>
         <p class="hero__stats small muted">
-          <strong>7</strong> categories · <strong>{totalSkus}</strong> seed SKUs · ISO 9001 / IATF 16949
+          <strong>7</strong> categorías · <strong>{totalSkus}</strong> referencias · ISO 9001 / IATF 16949
         </p>
+      </div>
+      <div class="hero__panel">
+        <div class="hero__card">
+          <img
+            class="hero__img"
+            src={`${originImages.prefix}${originImages.homeOem}`}
+            alt={`Filtros automotrices OEM y ODM de ${site.brand}`}
+            width="640"
+            height="400"
+            loading="eager"
+          />
+          <div class="hero__card-body">
+            <strong>OEM &amp; ODM</strong>
+            <p>Personaliza tu solución de filtración exclusiva — del aire al combustible.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -44,19 +74,62 @@ const alternates = hreflangAlternates('/', siteUrl);
   <section class="section">
     <div class="container">
       <div class="section-head">
-        <h2>Seven Product Categories</h2>
-        <p class="lede">Specializing in automotive air, cabin, oil and fuel filters, wipers, transmission filter screens and LED headlights.</p>
+        <h2>Siete categorías de productos</h2>
+        <p class="lede">Especialistas en filtros de aire, habitáculo, aceite y combustible, escobillas, mallas de transmisión y faros LED.</p>
       </div>
       <div class="grid grid--4">
         {
           categories.map((c) => (
             <a class="card cat-card" href={`/es/products/${c.slug}/`}>
+              <img class="cat-card__img" src={`${originImages.prefix}${originImages.categoryProduct[c.code]}`} alt={`Gama de productos ${loc.categories[c.code].name} — ${categoryKeywords[c.code]}`} loading="lazy" />
               <span class="cat-card__code">{c.code.toUpperCase()}</span>
-              <h3>{c.name_en}</h3>
-              <p class="small muted">{c.tagline}</p>
+              <h3>{loc.categories[c.code].name}</h3>
+              <p class="small muted">{loc.categories[c.code].tagline}</p>
             </a>
           ))
         }
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head">
+        <h2>La solidez de fábrica que puedes verificar</h2>
+        <p class="lede">Los detalles que separan un filtro de exportación fiable de uno barato — incorporados en cada unidad {site.brand}.</p>
+      </div>
+      <div class="grid grid--2">
+        {strengths.map((s) => (
+          <div class="card">
+            <h3>{s.title}</h3>
+            <p class="muted" style="margin:0">{s.text}</p>
+          </div>
+        ))}
+      </div>
+      <p class="center mt-2">
+        <a class="btn btn--brand" href="/es/factory/">Ver líneas de producción, control de calidad y capacidad de exportación &rarr;</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Preguntas frecuentes de producto</h2>
+        <p class="lede">Las preguntas que más hacen los compradores de exportación — respondidas de antemano.</p>
+      </div>
+      <div class="grid grid--2 mb-2">
+        {faqs.map((f) => (
+          <div class="card">
+            <h3>{f.q}</h3>
+            <p class="muted" style="margin:0">{f.a}</p>
+          </div>
+        ))}
+      </div>
+      <div class="faq-strip">
+        {originImages.homeFaq.map((img, i) => (
+          <img class="faq-strip__img" src={`${originImages.prefix}${img}`} alt={`Preguntas frecuentes de filtros automotrices ${site.brand} — imagen ${i + 1}`} loading="lazy" />
+        ))}
       </div>
     </div>
   </section>
@@ -73,6 +146,7 @@ const alternates = hreflangAlternates('/', siteUrl);
     padding: 5rem 0 5.5rem;
     border-bottom: 1px solid rgba(255,255,255,0.06);
   }
+  .hero__inner { display: grid; grid-template-columns: 1.45fr 1fr; gap: 3rem; align-items: center; }
   .hero h1 { color: #fff; font-size: clamp(2rem, 4.6vw, 3.3rem); margin-bottom: 0.5rem; }
   .hero__accent { color: var(--orange-400); }
   .hero .lede { color: var(--navy-100); font-size: 1.12rem; max-width: 34ch; }
@@ -80,7 +154,40 @@ const alternates = hreflangAlternates('/', siteUrl);
   .hero__cta { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.75rem; }
   .hero__stats { color: var(--navy-100); margin-top: 1.75rem; }
   .hero__stats strong { color: #fff; }
+  .hero__panel { display: flex; justify-content: center; }
+  .hero__card {
+    position: relative;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.16);
+    border-radius: var(--radius-lg);
+    padding: 0.75rem;
+    max-width: 440px;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+  }
+  .hero__img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 9px; }
+  .hero__card-body { display: flex; flex-direction: column; gap: 0.2rem; padding: 0.9rem 0.7rem 0.6rem; }
+  .hero__card-body strong { font-size: 1.15rem; color: #fff; }
+  .hero__card-body p { color: var(--navy-100); margin: 0; font-size: 0.9rem; }
+
   .cat-card { display: block; color: var(--brand-ink); }
   .cat-card:hover { color: var(--brand-ink); }
+  .cat-card__img {
+    width: 100%; aspect-ratio: 4 / 3; object-fit: contain;
+    border: 1px solid var(--line); border-radius: 8px; background: #fff;
+    padding: 0.5rem; margin-bottom: 0.75rem;
+    transition: transform var(--t-med) var(--ease), border-color var(--t-med) var(--ease);
+  }
+  .cat-card:hover .cat-card__img { transform: scale(1.06); border-color: var(--orange-400); }
   .cat-card__code { display: inline-block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.5px; color: var(--brand); margin-bottom: 0.4rem; }
+  .cat-card h3 { margin-bottom: 0.3em; }
+  .cat-card p { margin: 0; }
+
+  .faq-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.75rem; }
+  .faq-strip__img { width: 100%; max-height: 180px; object-fit: contain; background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 0.4rem; }
+
+  @media (max-width: 820px) {
+    .hero__inner { grid-template-columns: 1fr; }
+    .hero__panel { display: none; }
+  }
 </style>
