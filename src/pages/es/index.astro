@@ -1,0 +1,86 @@
+---
+// /es/ — Spanish homepage placeholder (framework validation batch A).
+// Structure complete; content pending translation (TODO-i18n) in batch B.
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import InquiryCta from '../../components/InquiryCta.astro';
+import TodoBanner from '../../components/TodoBanner.astro';
+import { site } from '../../data/site';
+import productsData from '../../data/products.json';
+import { hreflangAlternates } from '../../i18n';
+
+const categories = productsData.categories;
+const totalSkus = productsData.products.length;
+const siteUrl = Astro.site?.toString() ?? 'https://hycarfilter.com';
+const alternates = hreflangAlternates('/', siteUrl);
+---
+
+<BaseLayout
+  title="Automotive Filter Manufacturer & Exporter"
+  description="Hycarfilter is a Qinghe-based automotive filter manufacturer & exporter: air, cabin, oil, fuel filters, wipers, transmission screens and LED lights. OEM/ODM, ISO 9001 / IATF 16949."
+  alternates={alternates}
+>
+  <TodoBanner locale="es" />
+
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__copy">
+        <p class="chip">SINCE {site.since} · Qinghe, China</p>
+        <h1>Automotive Filter Manufacturer<br /><span class="hero__accent">&amp; Exporter</span></h1>
+        <p class="lede">
+          From air to fuel — {site.brand} guards every step of your journey. We design and export
+          seven filter categories with OEM/ODM capability, built in the Qinghe filter industry cluster.
+        </p>
+        <p class="hero__cta">
+          <a class="btn btn--primary" href="/es/products/air-filter/">Explore Products</a>
+          <a class="btn btn--ghost" href="/factory/">Inside Our Factory</a>
+        </p>
+        <p class="hero__stats small muted">
+          <strong>7</strong> categories · <strong>{totalSkus}</strong> seed SKUs · ISO 9001 / IATF 16949
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Seven Product Categories</h2>
+        <p class="lede">Specializing in automotive air, cabin, oil and fuel filters, wipers, transmission filter screens and LED headlights.</p>
+      </div>
+      <div class="grid grid--4">
+        {
+          categories.map((c) => (
+            <a class="card cat-card" href={`/es/products/${c.slug}/`}>
+              <span class="cat-card__code">{c.code.toUpperCase()}</span>
+              <h3>{c.name_en}</h3>
+              <p class="small muted">{c.tagline}</p>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <InquiryCta />
+</BaseLayout>
+
+<style>
+  .hero {
+    background:
+      radial-gradient(600px 360px at 85% 10%, rgba(232, 98, 44, 0.18), transparent 60%),
+      linear-gradient(135deg, var(--navy-950) 0%, var(--navy-800) 55%, var(--navy-700) 100%);
+    color: #fff;
+    padding: 5rem 0 5.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .hero h1 { color: #fff; font-size: clamp(2rem, 4.6vw, 3.3rem); margin-bottom: 0.5rem; }
+  .hero__accent { color: var(--orange-400); }
+  .hero .lede { color: var(--navy-100); font-size: 1.12rem; max-width: 34ch; }
+  .hero .chip { background: rgba(255,255,255,0.1); color: #fff; border-color: rgba(255,255,255,0.22); }
+  .hero__cta { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.75rem; }
+  .hero__stats { color: var(--navy-100); margin-top: 1.75rem; }
+  .hero__stats strong { color: #fff; }
+  .cat-card { display: block; color: var(--brand-ink); }
+  .cat-card:hover { color: var(--brand-ink); }
+  .cat-card__code { display: inline-block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.5px; color: var(--brand); margin-bottom: 0.4rem; }
+</style>

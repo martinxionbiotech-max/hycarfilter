@@ -5,9 +5,12 @@ import { site } from '../data/site';
 import productsData from '../data/products.json';
 import { originImages } from '../data/originImages';
 import { categoryKeywords } from '../data/categoryKeywords';
+import { hreflangAlternates } from '../i18n';
 
 const categories = productsData.categories;
 const totalSkus = productsData.products.length;
+const siteUrl = Astro.site?.toString() ?? 'https://hycarfilter.com';
+const alternates = hreflangAlternates('/', siteUrl);
 
 const strengths = [
   { title: 'One-piece drawn steel shell', text: 'Leak-proof canister formed in a single draw — no welded seams on the pressure side.' },
@@ -24,6 +27,7 @@ const strengths = [
 <BaseLayout
   title="Automotive Filter Manufacturer & Exporter"
   description="Hycarfilter is a Qinghe-based automotive filter manufacturer & exporter: air, cabin, oil, fuel filters, wipers, transmission screens and LED lights. OEM/ODM, ISO 9001 / IATF 16949."
+  alternates={alternates}
 >
   <!-- HERO -->
   <section class="hero">

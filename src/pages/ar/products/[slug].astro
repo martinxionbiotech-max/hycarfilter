@@ -1,0 +1,138 @@
+---
+// /ar/products/[slug] — Arabic product/category placeholder (batch A).
+// Only two validation slugs are emitted: the air-filter category and the
+// hy-af-nano SKU. Content is English pending translation (TODO-i18n).
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import InquiryCta from '../../../components/InquiryCta.astro';
+import TodoBanner from '../../../components/TodoBanner.astro';
+import productsData from '../../../data/products.json';
+import { categoryContent } from '../../../data/categoryContent';
+
+const categories = productsData.categories;
+const products = productsData.products;
+
+export function getStaticPaths() {
+  // Framework validation: one category + one SKU.
+  return [
+    { params: { slug: 'air-filter' } },
+    { params: { slug: 'hy-af-nano' } },
+  ];
+}
+
+const { slug } = Astro.params;
+
+const cat = categories.find((c) => c.slug === slug);
+const sku = products.find((p) => p.model === slug);
+
+if (!cat && !sku) {
+  return Astro.redirect('/ar/');
+}
+
+const v = (x: any): string => (x === null || x === undefined || x === '') ? '—' : String(x);
+
+function dimsSummary(p: any): string {
+  const d = p.dimensions;
+  const parts: string[] = [];
+  if (d.length_mm) parts.push(`${d.length_mm}mm`);
+  if (d.width_mm) parts.push(`${d.width_mm}mm`);
+  if (d.height_mm) parts.push(`H${d.height_mm}mm`);
+  if (d.outer_diameter_mm) parts.push(`OD${d.outer_diameter_mm}mm`);
+  if (d.thread) parts.push(d.thread);
+  return parts.join(' \u00d7 ') || '—';
+}
+
+const isCategory = !!cat;
+let content: any = null;
+let skus: any[] = [];
+if (cat) {
+  content = categoryContent[cat.code];
+  skus = products.filter((p) => p.category === cat.code);
+}
+const skuCat = sku ? categories.find((c) => c.code === sku.category) : null;
+const lead = sku
+  ? `${sku.name_en}, positioned for ${sku.target_markets.join(', ')}.`
+  : '';
+---
+
+{
+  isCategory ? (
+    <BaseLayout title={`${cat.name_en}`} description={`${cat.name_en} selection guide and SKU table from hycarfilter. ${cat.tagline}`}>
+      <TodoBanner locale="ar" />
+      <section class="section">
+        <div class="container">
+          <p class="small muted"><a href="/products/">Products</a> &rsaquo; {cat.name_en}</p>
+          <div class="section-head">
+            <h1>{cat.name_en}</h1>
+            <p class="lede">{content.intro}</p>
+          </div>
+
+          <h2>SKU Table</h2>
+          <div class="table-wrap">
+            <table class="spec">
+              <thead>
+                <tr>
+                  <th>Model</th>
+                  <th>Series</th>
+                  <th>Dimensions</th>
+                  <th>Filtration Efficiency</th>
+                  <th>Media</th>
+                  <th>Applicable Vehicles</th>
+                  <th>Carton Qty</th>
+                  <th>MOQ</th>
+                </tr>
+              </thead>
+              <tbody>
+                {skus.map((p) => (
+                  <tr>
+                    <td><strong>{p.model}</strong></td>
+                    <td>{p.series}</td>
+                    <td>{dimsSummary(p)}</td>
+                    <td>{v(p.filtration_efficiency)}</td>
+                    <td>{p.media}</td>
+                    <td>{p.applicable_vehicles.join(', ')}</td>
+                    <td>{p.packing.carton_qty}</td>
+                    <td>{p.moq}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <InquiryCta title={`Request a ${cat.name_en} quote`} sub="Send your OE number, target vehicle, or market — we match the right SKU and provide a full spec sheet." />
+    </BaseLayout>
+  ) : (
+    <BaseLayout title={`${sku.model} — ${sku.name_en}`} description={`${sku.model} ${sku.name_en} spec sheet — from hycarfilter.`}>
+      <TodoBanner locale="ar" />
+      <section class="section">
+        <div class="container">
+          <p class="small muted"><a href="/products/">Products</a> &rsaquo; <a href={`/ar/products/${skuCat.slug}/`}>{skuCat.name_en}</a> &rsaquo; {sku.model}</p>
+          <div class="section-head">
+            <p class="chip">{sku.model} · {sku.series}</p>
+            <h1>{sku.name_en}</h1>
+            <p class="lede">{lead}</p>
+          </div>
+
+          <h2>Specification</h2>
+          <div class="table-wrap">
+            <table class="spec">
+              <tbody>
+                <tr><th>Model</th><td>{sku.model}</td><th>Brand</th><td>{sku.brand}</td></tr>
+                <tr><th>Category</th><td>{skuCat.name_en}</td><th>Series</th><td>{sku.series}</td></tr>
+                <tr><th>Filtration Efficiency</th><td>{v(sku.filtration_efficiency)}</td><th>Media</th><td>{sku.media}</td></tr>
+                <tr><th>Housing</th><td>{v(sku.materials.housing)}</td><th>Media Material</th><td>{v(sku.materials.media_material)}</td></tr>
+                <tr><th>Applicable Vehicles</th><td colspan="3">{sku.applicable_vehicles.join(', ')}</td></tr>
+                <tr><th>OE Numbers</th><td colspan="3">{sku.oe_numbers.join(', ')}</td></tr>
+                <tr><th>Cross Reference</th><td colspan="3">{sku.cross_reference.join(', ')}</td></tr>
+                <tr><th>Carton Qty</th><td>{sku.packing.carton_qty} pcs</td><th>Net Weight</th><td>{sku.packing.net_weight_kg} kg/unit</td></tr>
+                <tr><th>MOQ</th><td>{sku.moq} pcs</td><th>Lead Time</th><td>{sku.lead_time_days} days</td></tr>
+                <tr><th>Certifications</th><td>{sku.certifications.join(', ')}</td><th>HS Code</th><td>{sku.hs_code}</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <InquiryCta title={`Request a ${sku.model} quote`} sub={`Send us your OE number or target vehicle — we confirm fitment for ${sku.model} and provide the full spec sheet.`} />
+    </BaseLayout>
+  )
+}

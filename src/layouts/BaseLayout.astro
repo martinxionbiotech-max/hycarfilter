@@ -1,25 +1,43 @@
 ---
-// BaseLayout — shared shell (head, header, footer)
+// BaseLayout — shared shell (head, header, footer, lang/dir + hreflang)
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import WhatsAppFloat from '../components/WhatsAppFloat.astro';
 import { site } from '../data/site';
+import { getLocaleFromPath, localeMeta } from '../i18n';
+
+interface Alternate {
+  lang: string;
+  href: string;
+}
 
 interface Props {
   title: string;
   description?: string;
+  /** Override <html lang> (defaults to the active locale). */
+  lang?: string;
+  /** Override <html dir> (defaults to the active locale). */
+  dir?: 'ltr' | 'rtl';
+  /** Page-level hreflang alternates (used by the localized homepage). */
+  alternates?: Alternate[];
 }
 
-const { title, description } = Astro.props;
+const { title, description, lang, dir, alternates } = Astro.props;
+
+const locale = localeMeta[getLocaleFromPath(Astro.url.pathname)];
+const htmlLang = lang ?? locale.lang;
+const htmlDir = dir ?? locale.dir;
+
 const fullTitle = `${title} | ${site.brand} — ${site.tagline}`;
 const metaDescription =
   description ||
   `${site.brand} is a professional automotive filter manufacturer and exporter (air, cabin, oil, fuel filters, wipers, transmission screens, LED lights).`;
+const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={htmlLang} dir={htmlDir}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -31,7 +49,10 @@ const metaDescription =
     <meta property="og:description" content={metaDescription} />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={site.brand} />
-    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <link rel="canonical" href={canonical} />
+    {alternates?.map((a) => (
+      <link rel="alternate" hreflang={a.lang} href={a.href} />
+    ))}
   </head>
   <body>
     <Header />

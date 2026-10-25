@@ -367,6 +367,33 @@ details.faq p { margin: 0.6rem 0 0; color: var(--ink-soft); }
 .center { text-align: center; }
 
 /* =========================================================================
+   RTL (Arabic) — basic adaptation
+   ========================================================================= */
+[dir="rtl"] { direction: rtl; }
+[dir="rtl"] body { text-align: right; }
+[dir="rtl"] .opinion {
+  border-left: none;
+  border-right: 4px solid var(--orange-500);
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+[dir="rtl"] details.faq summary::before { margin-right: 0; margin-left: 0.4rem; }
+[dir="rtl"] .legal .toc {
+  border-left: none;
+  border-right: 4px solid var(--orange-500);
+}
+[dir="rtl"] .legal ul,
+[dir="rtl"] .legal ol,
+[dir="rtl"] ul:not([class]),
+[dir="rtl"] ol:not([class]) {
+  padding-left: 0;
+  padding-right: 1.4rem;
+}
+[dir="rtl"] .table-wrap,
+[dir="rtl"] table.spec th,
+[dir="rtl"] table.spec td { text-align: right; }
+[dir="rtl"] .cta__actions { justify-content: flex-start; }
+
+/* =========================================================================
    Accessibility
    ========================================================================= */
 @media (prefers-reduced-motion: reduce) {

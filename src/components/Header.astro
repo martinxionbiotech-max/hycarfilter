@@ -1,7 +1,11 @@
 ---
 import { nav, site } from '../data/site';
+import { localeMeta, getLocaleFromPath, localizedHref, locales } from '../i18n';
 
 const currentPath = Astro.url.pathname;
+const currentLocale = getLocaleFromPath(currentPath);
+const currentNative = localeMeta[currentLocale].nativeLabel;
+
 const isActive = (href: string) =>
   href === '/' ? currentPath === '/' : currentPath.startsWith(href);
 ---
@@ -15,6 +19,35 @@ const isActive = (href: string) =>
         <small>filter manufacturer &amp; exporter</small>
       </span>
     </a>
+
+    <div class="lang-switch">
+      <details class="lang-switch__menu">
+        <summary class="lang-switch__toggle" aria-label="Change language">
+          <svg class="lang-switch__globe" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+            <path fill="none" stroke="currentColor" stroke-width="1.6" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm-2 2.2A15.2 15.2 0 0 1 12 4a15.2 15.2 0 0 1 2 .2M2 12h20M4.2 7h15.6M4.2 17h15.6M10 4.2A15.2 15.2 0 0 0 10 19.8A15.2 15.2 0 0 0 14 4.2 15.2 15.2 0 0 0 14 19.8" />
+          </svg>
+          <span class="lang-switch__current">{currentNative}</span>
+          <svg class="lang-switch__chevron" viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+            <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6" />
+          </svg>
+        </summary>
+        <ul class="lang-switch__list">
+          {locales.map((l) => (
+            <li>
+              <a
+                href={localizedHref(currentPath, l)}
+                class={l === currentLocale ? 'lang-switch__link is-active' : 'lang-switch__link'}
+                hreflang={l}
+                lang={localeMeta[l].lang}
+                dir={localeMeta[l].dir}
+              >
+                {localeMeta[l].nativeLabel}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </details>
+    </div>
 
     <input type="checkbox" id="nav-toggle" class="nav-toggle" />
     <label for="nav-toggle" class="nav-toggle-btn" aria-label="Toggle navigation">
@@ -75,6 +108,60 @@ const isActive = (href: string) =>
   .logo__text { display: flex; flex-direction: column; line-height: 1.12; }
   .logo__text strong { font-size: 1.12rem; letter-spacing: 0.2px; }
   .logo__text small { font-size: 0.7rem; color: var(--navy-100); }
+
+  /* --- Language switcher --- */
+  .lang-switch { margin-left: auto; position: relative; }
+  .lang-switch__menu { position: relative; }
+  .lang-switch__toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.5rem 0.7rem;
+    border-radius: 8px;
+    color: var(--navy-100);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+    transition: color var(--t-fast) var(--ease), background var(--t-fast) var(--ease);
+  }
+  .lang-switch__toggle::-webkit-details-marker { display: none; }
+  .lang-switch__toggle:hover { color: #fff; background: rgba(255, 255, 255, 0.08); }
+  .lang-switch__globe { flex: none; color: var(--orange-400); }
+  .lang-switch__chevron { flex: none; transition: transform var(--t-fast) var(--ease); }
+  .lang-switch__menu[open] .lang-switch__chevron { transform: rotate(180deg); }
+
+  .lang-switch__list {
+    position: absolute;
+    top: calc(100% + 0.4rem);
+    right: 0;
+    min-width: 9.5rem;
+    margin: 0;
+    padding: 0.35rem;
+    list-style: none;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    box-shadow: var(--shadow-lg);
+    z-index: 60;
+  }
+  .lang-switch__link {
+    display: block;
+    padding: 0.5rem 0.7rem;
+    border-radius: 7px;
+    color: var(--brand-ink);
+    font-size: 0.92rem;
+    text-align: left;
+  }
+  .lang-switch__link:hover { background: var(--bg-soft); color: var(--brand); }
+  .lang-switch__link.is-active {
+    color: var(--orange-600);
+    font-weight: 700;
+    background: var(--orange-050);
+  }
+  [dir="rtl"] .lang-switch__list { right: auto; left: 0; }
+  [dir="rtl"] .lang-switch__link { text-align: right; }
 
   .nav { display: flex; align-items: center; gap: 0.2rem; }
   .nav__link {
