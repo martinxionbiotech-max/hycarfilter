@@ -405,3 +405,13 @@ details.faq p { margin: 0.6rem 0 0; color: var(--ink-soft); }
     animation-duration: 0.01ms !important;
   }
 }
+
+/* WhatsApp contact button */
+.wa-btn {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: #25D366; color: #fff; font-weight: 700;
+  padding: 0.65rem 1.1rem; border-radius: 999px;
+  text-decoration: none; margin-top: 0.3rem;
+  transition: background var(--t-med) var(--ease), transform var(--t-med) var(--ease);
+}
+.wa-btn:hover { background: #1EBE5D; color: #fff; transform: translateY(-1px); }

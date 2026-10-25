@@ -149,6 +149,7 @@ export interface UIStrings {
   formDirectNote: string;
   formEmailLabel: string;
   formWhatsappWechatLabel: string;
+  formWhatsappBtn: string;
   formPhoneLabel: string;
   formAddressLabel: string;
   // 404
@@ -297,6 +298,7 @@ const ar: UIStrings = {
   formDirectNote: 'سيؤدي الإرسال إلى فتح عميل البريد الإلكتروني لديك. للمراسلة المباشرة، استخدم واتساب.',
   formEmailLabel: 'البريد الإلكتروني',
   formWhatsappWechatLabel: 'واتساب / ويتشات',
+  formWhatsappBtn: 'تواصل عبر واتساب',
   formPhoneLabel: 'الهاتف',
   formAddressLabel: 'العنوان',
   notFound: '404 — الصفحة غير موجودة',
@@ -438,6 +440,7 @@ const es: UIStrings = {
   formDirectNote: 'Al enviar se abrirá tu cliente de correo. Para mensajes directos, usa WhatsApp.',
   formEmailLabel: 'Correo electrónico',
   formWhatsappWechatLabel: 'WhatsApp / WeChat',
+  formWhatsappBtn: 'Chatea por WhatsApp',
   formPhoneLabel: 'Teléfono',
   formAddressLabel: 'Dirección',
   notFound: '404 — Página no encontrada',
