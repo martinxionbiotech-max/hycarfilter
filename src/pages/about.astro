@@ -39,6 +39,8 @@ const values = [
 
       <img class="about-hero" src={`${originImages.prefix}${originImages.about}`} alt={`${site.brand} manufacturing`} loading="eager" />
 
+      <img class="about-secondary" src={`${originImages.prefix}${originImages.aboutSecondary}`} alt={`${site.brand} at Automechanika Shanghai exhibition`} loading="lazy" />
+
       <div class="grid grid--2 mb-2">
         {facts.map((f) => (
           <div class="card">
@@ -109,4 +111,5 @@ const values = [
 
 <style>
   .about-hero { width: 100%; max-height: 360px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--line); margin-bottom: 2rem; }
+  .about-secondary { width: 100%; max-height: 300px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--line); margin-bottom: 2rem; }
 </style>

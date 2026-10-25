@@ -76,6 +76,11 @@ const certFramework = [
           </div>
         ))}
       </div>
+      <div class="factory-strip mt-2">
+        {originImages.factorySections.production.map((img) => (
+          <img class="factory-strip__img" src={`${originImages.prefix}${img}`} alt={`${site.brand} production line`} loading="lazy" />
+        ))}
+      </div>
     </div>
   </section>
 
@@ -93,6 +98,11 @@ const certFramework = [
           </div>
         ))}
       </div>
+      <div class="factory-strip mt-2">
+        {originImages.factorySections.qc.map((img) => (
+          <img class="factory-strip__img factory-strip__img--doc" src={`${originImages.prefix}${img}`} alt={`${site.brand} business license`} loading="lazy" />
+        ))}
+      </div>
     </div>
   </section>
 
@@ -108,6 +118,11 @@ const certFramework = [
             <h3>{l.title}</h3>
             <p class="muted" style="margin:0">{l.text}</p>
           </div>
+        ))}
+      </div>
+      <div class="factory-strip mt-2">
+        {originImages.factorySections.warehouse.map((img) => (
+          <img class="factory-strip__img" src={`${originImages.prefix}${img}`} alt={`${site.brand} packing & warehousing`} loading="lazy" />
         ))}
       </div>
     </div>
@@ -152,4 +167,7 @@ const certFramework = [
 
 <style>
   .factory-photo { width: 100%; height: 240px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--line); }
+  .factory-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.75rem; }
+  .factory-strip__img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 8px; border: 1px solid var(--line); background: #fff; }
+  .factory-strip__img--doc { aspect-ratio: auto; max-height: 280px; object-fit: contain; }
 </style>

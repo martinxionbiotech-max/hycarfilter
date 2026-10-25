@@ -61,3 +61,40 @@
 - **源站站点 chrome 图**（logo `52bc733a`/`ceb3a35a`、全站水印 `3e656741`、UI 小图标 `2ece800d`/`3b5af20a`/`443b0bc6`/`e3bbe47f`/`f36be03b`）已抓取但**不落位**——属源站品牌/UI 素材，新站用自有 favicon + CSS，不复用。
 - **首页 hero**：源站 hero 是视频（`omo-oss-video110...mp4`）非图片；slide2 背景图 `c9b13651` 不在 123 清单内（原扫描漏列）。新站首页 hero 保留 CSS 渐变 + 文案，不引图。
 - **视频页 12 张缩略图**（`cms/vedio/*.jpg`）已抓取，新站暂无 video 落地页，暂不落位。
+
+---
+
+## 6. 补充批（2026-10-25 · origin-images-supplement）
+
+首批 123/123 落盘后缺口盘点（151 唯一 CDN 引用 vs 已落盘 123）发现 22 张内容图未覆盖（另 6 张为站点 chrome，不落位）。本批补抓 22/22，落盘总图 123 → **145**。详见 `docs/origin-image-supplement-report.md`。
+
+### 6.1 产品图库（SKU 详情页多图展示）
+
+每品类完整图库（源 88 产品详情页按品类归组去重）落到 22 SKU 详情页「Product Gallery」区块；`sku-hero` 仍用品类代表图。
+
+| 品类 | 图库张数 | 本批补抓 UUID |
+|---|---|---|
+| af（Air） | 31 | `8f1308f7` |
+| cf（Cabin） | 32 | `f2bfc75f` |
+| of（Oil） | 10 | `f586c7fb` · `2a3db409` |
+| ff（Fuel） | 12 | —（首批全量） |
+| wb（Wiper） | 5 | `cf67c48f` · `922fa2ff` · `312ff2b0` · `d2f6b791` |
+| tf（Transmission） | 5 | —（首批全量） |
+| led（LED） | 6 | `c8ffe624` · `e6461061` · `3c7d6d2b` · `6340f52e` · `59659eea` |
+
+### 6.2 博客内图（20 篇改写博客）
+
+20 篇每篇 1 封面 + 1–2 张内文图（`blogImages` per-slug）。本批补抓 6 张文章封面：
+
+- air：`364aae57`（脏滤芯症状）· `fce8bf7b`（进气滤芯）
+- cabin：`ea3923ad` · `7196ac0d` · `047574a3`（三篇 cabin 软文）
+- fuel：`069e18cf`（燃油滤信息）
+
+### 6.3 实力页 / 首页 / About 剩余区块
+
+| 位置 | 本批补抓 UUID | 说明 |
+|---|---|---|
+| /factory/ 质检区（营业执照） | `e5ca537e` | 源 Qualification.html |
+| 首页 hero（OEM&ODM） | `c9b13651` | 源首页 slide2 背景 |
+| 首页 Product FAQ | `a2f9a70b` | 源首页 FAQ 区块（+复用 `10b8a92d`） |
+| /about/ 第二图（展会） | —（复用 `1eaabb71`） | 源公司新闻图 |
