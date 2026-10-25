@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import InquiryCta from '../../../components/InquiryCta.astro';
+import productsData from '../../../data/products.json';
+import { originImages } from '../../../data/originImages';
+import { categoryKeywords } from '../../../data/categoryKeywords';
+import { site } from '../../../data/site';
+import { content } from '../../../i18n/content';
+import { ui } from '../../../i18n/ui';
+
+const loc = content.es;
+const u = ui.es;
+const categories = productsData.categories;
+const products = productsData.products;
+const countByCategory = (code: string) => products.filter((p) => p.category === code).length;
+---
+
+<BaseLayout
+  title="Productos — Catálogo de filtros"
+  description="Explora las siete categorías de filtros de hycarfilter: aire, habitáculo, aceite, combustible, escobillas, mallas de transmisión y luces LED. Cada categoría enlaza a su tabla de referencias y guía de selección."
+>
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h1>{u.products}</h1>
+        <p class="lede">
+          Siete categorías de filtros, cada una con una tabla de referencias canónica. Las especificaciones se
+          definen una sola vez en un único conjunto de datos y se referencian en toda la red hycarfilter — los
+          valores que ves aquí son los valores que cotizamos.
+        </p>
+      </div>
+
+      <img
+        class="products-lead"
+        src={`${originImages.prefix}${originImages.factorySections.production[0]}`}
+        alt={`Línea de producción de filtros ${site.brand} — imagen principal del catálogo de productos`}
+        loading="lazy"
+      />
+
+      <div class="grid grid--3">
+        {
+          categories.map((c) => (
+            <a class="card cat-card" href={`/es/products/${c.slug}/`}>
+              <img class="cat-card__img" src={`${originImages.prefix}${originImages.categoryProduct[c.code]}`} alt={`Foto del producto ${loc.categories[c.code].name} — ${categoryKeywords[c.code]}`} loading="lazy" />
+              <span class="chip">{c.code.toUpperCase()}</span>
+              <h3>{loc.categories[c.code].name}</h3>
+              <p class="small" style="margin:0">{loc.categories[c.code].tagline}</p>
+              <p class="small muted" style="margin-top:0.6rem">
+                <strong>{countByCategory(c.code)}</strong> referencias · SA {c.hs_code}
+              </p>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <InquiryCta
+    title="¿No encuentras tu modelo?"
+    sub="Envíanos tu número OE o vehículo objetivo — lo comparamos con nuestra tabla de referencias y la gama OEM/ODM personalizada."
+  />
+</BaseLayout>
+
+<style>
+  .products-lead {
+    display: block; width: 100%; max-width: 720px; aspect-ratio: 16 / 9; object-fit: cover;
+    border: 1px solid var(--line); border-radius: var(--radius); background: #fff;
+    margin: 0 auto 2rem;
+  }
+  .cat-card { display: block; color: var(--brand-ink); }
+  .cat-card:hover { color: var(--brand-ink); }
+  .cat-card__img {
+    width: 100%; aspect-ratio: 4 / 3; object-fit: contain;
+    border: 1px solid var(--line); border-radius: 8px; background: #fff;
+    padding: 0.5rem; margin-bottom: 0.6rem;
+    transition: transform var(--t-med) var(--ease), border-color var(--t-med) var(--ease);
+  }
+  .cat-card:hover .cat-card__img { transform: scale(1.05); border-color: var(--orange-400); }
+  .cat-card h3 { margin: 0.5rem 0 0.2rem; }
+</style>

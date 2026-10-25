@@ -1,22 +1,21 @@
 ---
-// /ar/products/[slug] — Arabic product/category placeholder (batch A).
-// Only two validation slugs are emitted: the air-filter category and the
-// hy-af-nano SKU. Content is English pending translation (TODO-i18n).
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import InquiryCta from '../../../components/InquiryCta.astro';
-import TodoBanner from '../../../components/TodoBanner.astro';
 import productsData from '../../../data/products.json';
-import { categoryContent } from '../../../data/categoryContent';
+import { originImages } from '../../../data/originImages';
+import { categoryKeywords } from '../../../data/categoryKeywords';
+import { content, packingI18n } from '../../../i18n/content';
+import { ui, t } from '../../../i18n/ui';
 
+const loc = content.ar;
+const u = ui.ar;
 const categories = productsData.categories;
 const products = productsData.products;
 
 export function getStaticPaths() {
-  // Framework validation: one category + one SKU.
-  return [
-    { params: { slug: 'air-filter' } },
-    { params: { slug: 'hy-af-nano' } },
-  ];
+  const catPaths = productsData.categories.map((c) => ({ params: { slug: c.slug } }));
+  const skuPaths = productsData.products.map((p) => ({ params: { slug: p.model } }));
+  return [...catPaths, ...skuPaths];
 }
 
 const { slug } = Astro.params;
@@ -42,97 +41,293 @@ function dimsSummary(p: any): string {
 }
 
 const isCategory = !!cat;
-let content: any = null;
+
+let catContent: any = null;
 let skus: any[] = [];
+let catConcerns: any[] = [];
+let moreFaqs: any[] = [];
 if (cat) {
-  content = categoryContent[cat.code];
+  catContent = loc.categoryContent[cat.code];
   skus = products.filter((p) => p.category === cat.code);
+  catConcerns = loc.concerns[cat.code] ?? [];
+  moreFaqs = loc.extraFaqs[cat.code] ?? [];
 }
-const skuCat = sku ? categories.find((c) => c.code === sku.category) : null;
-const lead = sku
-  ? `${sku.name_en}, positioned for ${sku.target_markets.join(', ')}.`
-  : '';
+
+let skuCat: any = null;
+let skuLoc: any = null;
+let skuContent: any = null;
+let skuConcerns: any[] = [];
+let siblings: any[] = [];
+let skuGallery: string[] = [];
+let lead = '';
+let dims: any = null;
+let hasDim = false;
+let hasFitting = false;
+if (sku) {
+  skuCat = categories.find((c) => c.code === sku.category);
+  skuLoc = loc.products[sku.model];
+  skuContent = loc.categoryContent[sku.category];
+  skuConcerns = loc.concerns[sku.category] ?? [];
+  siblings = products.filter((p) => p.category === sku.category && p.model !== sku.model);
+  skuGallery = originImages.categoryGallery[sku.category] || [];
+  const markets = skuLoc.target_markets ?? [];
+  const mediaPart = skuLoc.media ? ` بوسيط ترشيح ${skuLoc.media}` : '';
+  lead = `${skuLoc.name}${mediaPart}${markets.length ? ' — مُوجّه لأسواق: ' + markets.join('، ') : ''}.`;
+  dims = sku.dimensions;
+  hasDim = !!dims.length_mm || !!dims.width_mm || !!dims.height_mm || !!dims.outer_diameter_mm || !!dims.inner_diameter_mm;
+  hasFitting = !!dims.thread || !!dims.gasket;
+}
 ---
 
 {
   isCategory ? (
-    <BaseLayout title={`${cat.name_en}`} description={`${cat.name_en} selection guide and SKU table from hycarfilter. ${cat.tagline}`}>
-      <TodoBanner locale="ar" />
+    <BaseLayout
+      title={`${loc.categories[cat.code].name}`}
+      description={`دليل اختيار ${loc.categories[cat.code].name} وجدول الموديلات من hycarfilter. ${loc.categories[cat.code].tagline}`}
+    >
       <section class="section">
         <div class="container">
-          <p class="small muted"><a href="/products/">Products</a> &rsaquo; {cat.name_en}</p>
-          <div class="section-head">
-            <h1>{cat.name_en}</h1>
-            <p class="lede">{content.intro}</p>
+          <p class="small muted">
+            <a href="/ar/products/">{u.products}</a> &rsaquo; {loc.categories[cat.code].name}
+          </p>
+          <div class="cat-head">
+            <div>
+              <h1>{loc.categories[cat.code].name}</h1>
+              <p class="lede">{catContent.intro}</p>
+            </div>
+            <img class="cat-hero" src={`${originImages.prefix}${originImages.categoryProduct[cat.code]}`} alt={`خط منتجات ${loc.categories[cat.code].name} — ${categoryKeywords[cat.code]}`} loading="lazy" />
           </div>
 
-          <h2>SKU Table</h2>
+          <h2>{u.selectionGuide}</h2>
+          <div class="grid grid--2 mb-2">
+            {catContent.selection.map((s: any) => (
+              <div class="card">
+                <h3>{s.title}</h3>
+                <p class="muted" style="margin:0">{s.text}</p>
+              </div>
+            ))}
+          </div>
+
+          <h2>{u.skuTable}</h2>
+          <p class="muted small">
+            {t(u.canonicalValues, cat.hs_code)}
+          </p>
           <div class="table-wrap">
             <table class="spec">
               <thead>
                 <tr>
-                  <th>Model</th>
-                  <th>Series</th>
-                  <th>Dimensions</th>
-                  <th>Filtration Efficiency</th>
-                  <th>Media</th>
-                  <th>Applicable Vehicles</th>
-                  <th>Carton Qty</th>
-                  <th>MOQ</th>
+                  <th>{u.thModel}</th>
+                  <th>{u.thSeries}</th>
+                  <th>{u.thDimensions}</th>
+                  <th>{u.thFiltrationEfficiency}</th>
+                  <th>{u.thMedia}</th>
+                  <th>{u.thApplicableVehicles}</th>
+                  <th>{u.thCartonQty}</th>
+                  <th>{u.thMoq}</th>
+                  <th>{u.thDetails}</th>
                 </tr>
               </thead>
               <tbody>
                 {skus.map((p) => (
                   <tr>
                     <td><strong>{p.model}</strong></td>
-                    <td>{p.series}</td>
+                    <td>{loc.products[p.model].series}</td>
                     <td>{dimsSummary(p)}</td>
                     <td>{v(p.filtration_efficiency)}</td>
-                    <td>{p.media}</td>
-                    <td>{p.applicable_vehicles.join(', ')}</td>
+                    <td>{loc.products[p.model].media}</td>
+                    <td>{loc.products[p.model].applicable_vehicles.join(', ')}</td>
                     <td>{p.packing.carton_qty}</td>
                     <td>{p.moq}</td>
+                    <td><a href={`/ar/products/${p.model}/`}>{u.viewDetails}</a></td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
+
+          <h2>{u.procurementConcerns}</h2>
+          <p class="muted small">{u.buyerShouldVerify}</p>
+          <div class="grid grid--2">
+            {catConcerns.map((c) => (
+              <div class="card">
+                <h3>{c.title}</h3>
+                <p class="muted" style="margin:0">{c.text}</p>
+              </div>
+            ))}
+          </div>
+
+          <div class="opinion">
+            <strong>{catContent.opinion.title}</strong>
+            <p style="margin:0.5rem 0 0">{catContent.opinion.body}</p>
+            <p class="byline">{u.procurementNote}</p>
+          </div>
+
+          <h2>{u.procurementQa}</h2>
+          {[...catContent.faqs, ...moreFaqs].map((f) => (
+            <details class="faq">
+              <summary>{f.q}</summary>
+              <p>{f.a}</p>
+            </details>
+          ))}
         </div>
       </section>
-      <InquiryCta title={`Request a ${cat.name_en} quote`} sub="Send your OE number, target vehicle, or market — we match the right SKU and provide a full spec sheet." />
+
+      <InquiryCta
+        title={t(u.requestQuote, loc.categories[cat.code].name)}
+        sub={u.categoryCtaSub}
+      />
     </BaseLayout>
   ) : (
-    <BaseLayout title={`${sku.model} — ${sku.name_en}`} description={`${sku.model} ${sku.name_en} spec sheet — from hycarfilter.`}>
-      <TodoBanner locale="ar" />
+    <BaseLayout
+      title={`${sku.model} — ${skuLoc.name}`}
+      description={`ورقة مواصفات ${sku.model} ${skuLoc.name}: الأبعاد، كفاءة الترشيح، وسيط الترشيح، المواد، التغليف، الحد الأدنى للطلب، المهلة، الشهادات ورمز HS — من hycarfilter.`}
+    >
       <section class="section">
         <div class="container">
-          <p class="small muted"><a href="/products/">Products</a> &rsaquo; <a href={`/ar/products/${skuCat.slug}/`}>{skuCat.name_en}</a> &rsaquo; {sku.model}</p>
+          <p class="small muted">
+            <a href="/ar/products/">{u.products}</a> &rsaquo; <a href={`/ar/products/${skuCat.slug}/`}>{loc.categories[skuCat.code].name}</a> &rsaquo; {sku.model}
+          </p>
           <div class="section-head">
-            <p class="chip">{sku.model} · {sku.series}</p>
-            <h1>{sku.name_en}</h1>
+            <p class="chip">{sku.model} · {skuLoc.series}</p>
+            <h1>{skuLoc.name}</h1>
             <p class="lede">{lead}</p>
           </div>
 
-          <h2>Specification</h2>
+          <img
+            class="sku-hero"
+            src={`${originImages.prefix}${originImages.categoryProduct[sku.category]}`}
+            alt={`${sku.model} ${skuLoc.name} — صورة ${loc.categories[skuCat.code].name}`}
+            loading="lazy"
+          />
+
+          {
+            skuGallery.length > 0 ? (
+              <div class="sku-gallery mb-2">
+                <h2>{u.productGallery}</h2>
+                <p class="muted small">
+                  {t(u.galleryNote.replace('{n}', String(skuGallery.length)), loc.categories[skuCat.code].name)}
+                </p>
+                <div class="sku-gallery__grid">
+                  {skuGallery.map((img, i) => (
+                    <img
+                      class="sku-gallery__img"
+                      src={`${originImages.prefix}${img}`}
+                      alt={`صورة منتج ${loc.categories[skuCat.code].name} ${i + 1} — ${categoryKeywords[sku.category]}`}
+                      loading="lazy"
+                    />
+                  ))}
+                </div>
+              </div>
+            ) : null
+          }
+
+          <h2>{u.specification}</h2>
+          <p class="muted small">{u.canonicalValuesSku}</p>
           <div class="table-wrap">
             <table class="spec">
               <tbody>
-                <tr><th>Model</th><td>{sku.model}</td><th>Brand</th><td>{sku.brand}</td></tr>
-                <tr><th>Category</th><td>{skuCat.name_en}</td><th>Series</th><td>{sku.series}</td></tr>
-                <tr><th>Filtration Efficiency</th><td>{v(sku.filtration_efficiency)}</td><th>Media</th><td>{sku.media}</td></tr>
-                <tr><th>Housing</th><td>{v(sku.materials.housing)}</td><th>Media Material</th><td>{v(sku.materials.media_material)}</td></tr>
-                <tr><th>Applicable Vehicles</th><td colspan="3">{sku.applicable_vehicles.join(', ')}</td></tr>
-                <tr><th>OE Numbers</th><td colspan="3">{sku.oe_numbers.join(', ')}</td></tr>
-                <tr><th>Cross Reference</th><td colspan="3">{sku.cross_reference.join(', ')}</td></tr>
-                <tr><th>Carton Qty</th><td>{sku.packing.carton_qty} pcs</td><th>Net Weight</th><td>{sku.packing.net_weight_kg} kg/unit</td></tr>
-                <tr><th>MOQ</th><td>{sku.moq} pcs</td><th>Lead Time</th><td>{sku.lead_time_days} days</td></tr>
-                <tr><th>Certifications</th><td>{sku.certifications.join(', ')}</td><th>HS Code</th><td>{sku.hs_code}</td></tr>
+                <tr><th>{u.lblModel}</th><td>{sku.model}</td><th>{u.lblBrand}</th><td>{sku.brand}</td></tr>
+                <tr><th>{u.lblCategory}</th><td><a href={`/ar/products/${skuCat.slug}/`}>{loc.categories[skuCat.code].name}</a></td><th>{u.lblSeries}</th><td>{skuLoc.series}</td></tr>
+                <tr><th>{u.thFiltrationEfficiency}</th><td>{v(sku.filtration_efficiency)}</td><th>{u.thMedia}</th><td>{skuLoc.media}</td></tr>
+                {hasDim ? (
+                  <tr>
+                    <th>{u.lblDimensions}</th>
+                    <td colspan="3">
+                      {[
+                        dims.length_mm ? `${u.length} ${dims.length_mm} ${u.unitMm}` : null,
+                        dims.width_mm ? `${u.width} ${dims.width_mm} ${u.unitMm}` : null,
+                        dims.height_mm ? `${u.height} ${dims.height_mm} ${u.unitMm}` : null,
+                        dims.outer_diameter_mm ? `${u.outerDiameter} ${dims.outer_diameter_mm} ${u.unitMm}` : null,
+                        dims.inner_diameter_mm ? `${u.innerDiameter} ${dims.inner_diameter_mm} ${u.unitMm}` : null,
+                      ].filter(Boolean).join(' · ') || '—'}
+                    </td>
+                  </tr>
+                ) : null}
+                {hasFitting ? (
+                  <tr>
+                    <th>{u.lblThreadGasket}</th>
+                    <td colspan="3">
+                      {[dims.thread ? `${u.thread} ${dims.thread}` : null, dims.gasket ? `${u.gasket} ${dims.gasket}` : null].filter(Boolean).join(' · ')}
+                    </td>
+                  </tr>
+                ) : null}
+                <tr><th>{u.lblHousing}</th><td>{v(skuLoc.materials.housing)}</td><th>{u.lblMediaMaterial}</th><td>{v(skuLoc.materials.media_material)}</td></tr>
+                <tr><th>{u.lblEndCap}</th><td>{v(skuLoc.materials.endcap)}</td><th>{u.lblSeal}</th><td>{v(skuLoc.materials.seal)}</td></tr>
+                <tr><th>{u.lblApplicableVehicles}</th><td colspan="3">{skuLoc.applicable_vehicles.join(', ')}</td></tr>
+                <tr><th>{u.lblOeNumbers}</th><td colspan="3">{sku.oe_numbers.join(', ')}</td></tr>
+                <tr><th>{u.lblCrossReference}</th><td colspan="3">{sku.cross_reference.join(', ')}</td></tr>
+                <tr><th>{u.lblInnerBox}</th><td>{packingI18n.ar[sku.packing.inner_box] ?? sku.packing.inner_box}</td><th>{u.lblOuterCarton}</th><td>{packingI18n.ar[sku.packing.outer_carton] ?? sku.packing.outer_carton}</td></tr>
+                <tr><th>{u.thCartonQty}</th><td>{sku.packing.carton_qty} {u.unitPcs}</td><th>{u.lblNetWeight}</th><td>{sku.packing.net_weight_kg} {u.unitKgPerUnit}</td></tr>
+                <tr><th>{u.thMoq}</th><td>{sku.moq} {u.unitPcs}</td><th>{u.lblLeadTime}</th><td>{sku.lead_time_days} {u.unitDays}</td></tr>
+                <tr><th>{u.lblCertifications}</th><td>{sku.certifications.join(', ')}</td><th>{u.lblHsCode}</th><td>{sku.hs_code}</td></tr>
+                <tr><th>{u.lblTargetMarkets}</th><td colspan="3">{skuLoc.target_markets.join(', ')}</td></tr>
               </tbody>
             </table>
           </div>
+
+          <h2>{u.procurementConcernsFor}</h2>
+          <p class="muted small">{t(u.realWorries, loc.categories[skuCat.code].name)}</p>
+          <div class="grid grid--2">
+            {skuConcerns.map((c) => (
+              <div class="card">
+                <h3>{c.title}</h3>
+                <p class="muted" style="margin:0">{c.text}</p>
+              </div>
+            ))}
+          </div>
+
+          <h2>{u.selectionGuide}</h2>
+          <div class="grid grid--2 mb-2">
+            {skuContent.selection.map((s: any) => (
+              <div class="card">
+                <h3>{s.title}</h3>
+                <p class="muted" style="margin:0">{s.text}</p>
+              </div>
+            ))}
+          </div>
+
+          <div class="opinion">
+            <strong>{skuContent.opinion.title}</strong>
+            <p style="margin:0.5rem 0 0">{skuContent.opinion.body}</p>
+            <p class="byline">{u.procurementNote}</p>
+          </div>
+
+          {siblings.length > 0 ? (
+            <div class="mt-2">
+              <h2>{t(u.relatedSkus, loc.categories[skuCat.code].name)}</h2>
+              <div class="grid grid--3">
+                {siblings.map((s) => (
+                  <a class="card sku-card" href={`/ar/products/${s.model}/`}>
+                    <span class="chip">{s.model}</span>
+                    <h3 style="margin:0.5rem 0 0.2rem">{loc.products[s.model].series}</h3>
+                    <p class="small muted" style="margin:0">{loc.products[s.model].name}</p>
+                  </a>
+                ))}
+              </div>
+            </div>
+          ) : null}
         </div>
       </section>
-      <InquiryCta title={`Request a ${sku.model} quote`} sub={`Send us your OE number or target vehicle — we confirm fitment for ${sku.model} and provide the full spec sheet.`} />
+
+      <InquiryCta
+        title={t(u.requestModelQuote, sku.model)}
+        sub={t(u.skuCtaSub, sku.model)}
+      />
     </BaseLayout>
   )
 }
+
+<style>
+  code { background: var(--bg-soft); padding: 0.1rem 0.35rem; border-radius: 4px; font-size: 0.85em; }
+  .cat-head { display: grid; grid-template-columns: 1.5fr 1fr; gap: 2rem; align-items: center; margin-bottom: 2rem; }
+  .cat-hero { width: 100%; max-width: 480px; aspect-ratio: 4 / 3; object-fit: contain; justify-self: end; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; padding: 0.5rem; }
+  .sku-hero { width: 100%; max-width: 640px; aspect-ratio: 3 / 2; object-fit: contain; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; padding: 0.5rem; margin-bottom: 2rem; }
+  .sku-gallery__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 0.75rem; }
+  .sku-gallery__img { width: 100%; aspect-ratio: 1 / 1; object-fit: contain; background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 0.5rem; }
+  .sku-card { display: block; color: var(--brand-ink); }
+  .sku-card:hover { color: var(--brand-ink); }
+  @media (max-width: 820px) {
+    .cat-head { grid-template-columns: 1fr; }
+    .cat-hero { justify-self: start; }
+  }
+</style>

@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import InquiryCta from '../../../components/InquiryCta.astro';
+import productsData from '../../../data/products.json';
+import { originImages } from '../../../data/originImages';
+import { categoryKeywords } from '../../../data/categoryKeywords';
+import { site } from '../../../data/site';
+import { content } from '../../../i18n/content';
+import { ui } from '../../../i18n/ui';
+
+const loc = content.ar;
+const u = ui.ar;
+const categories = productsData.categories;
+const products = productsData.products;
+const countByCategory = (code: string) => products.filter((p) => p.category === code).length;
+---
+
+<BaseLayout
+  title="المنتجات — كتالوج الفلاتر"
+  description="تصفح فئات الفلاتر السبع من hycarfilter: فلاتر الهواء والمقصورة والزيت والوقود، المسّاحات، مصافي ناقل الحركة ومصابيح LED. كل فئة ترتبط بجدول موديلاتها ودليل الاختيار."
+>
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h1>{u.products}</h1>
+        <p class="lede">
+          سبع فئات من الفلاتر، لكل منها جدول موديلات مرجعي. تُعرَّف المواصفات مرة واحدة في مجموعة بيانات
+          واحدة ويُشار إليها عبر شبكة hycarfilter — القيم التي تراها هنا هي القيم التي نعرضها في عروض الأسعار.
+        </p>
+      </div>
+
+      <img
+        class="products-lead"
+        src={`${originImages.prefix}${originImages.factorySections.production[0]}`}
+        alt={`خط إنتاج فلاتر ${site.brand} — صورة رئيسية لكتالوج المنتجات`}
+        loading="lazy"
+      />
+
+      <div class="grid grid--3">
+        {
+          categories.map((c) => (
+            <a class="card cat-card" href={`/ar/products/${c.slug}/`}>
+              <img class="cat-card__img" src={`${originImages.prefix}${originImages.categoryProduct[c.code]}`} alt={`صورة منتج ${loc.categories[c.code].name} — ${categoryKeywords[c.code]}`} loading="lazy" />
+              <span class="chip">{c.code.toUpperCase()}</span>
+              <h3>{loc.categories[c.code].name}</h3>
+              <p class="small" style="margin:0">{loc.categories[c.code].tagline}</p>
+              <p class="small muted" style="margin-top:0.6rem">
+                <strong>{countByCategory(c.code)}</strong> موديلًا · HS {c.hs_code}
+              </p>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <InquiryCta
+    title="ألا تجد موديلك؟"
+    sub="أرسل رقم OE أو المركبة المستهدفة — نطابقه مع جدول موديلاتنا ومجموعة OEM/ODM المخصصة."
+  />
+</BaseLayout>
+
+<style>
+  .products-lead {
+    display: block; width: 100%; max-width: 720px; aspect-ratio: 16 / 9; object-fit: cover;
+    border: 1px solid var(--line); border-radius: var(--radius); background: #fff;
+    margin: 0 auto 2rem;
+  }
+  .cat-card { display: block; color: var(--brand-ink); }
+  .cat-card:hover { color: var(--brand-ink); }
+  .cat-card__img {
+    width: 100%; aspect-ratio: 4 / 3; object-fit: contain;
+    border: 1px solid var(--line); border-radius: 8px; background: #fff;
+    padding: 0.5rem; margin-bottom: 0.6rem;
+    transition: transform var(--t-med) var(--ease), border-color var(--t-med) var(--ease);
+  }
+  .cat-card:hover .cat-card__img { transform: scale(1.05); border-color: var(--orange-400); }
+  .cat-card h3 { margin: 0.5rem 0 0.2rem; }
+</style>
