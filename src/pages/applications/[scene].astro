@@ -27,6 +27,8 @@ if (!data) {
         <p class="lede">{data.lede}</p>
       </div>
 
+      <img class="scene-hero" src={`/images/origin-images/${data.image}`} alt={`${data.title} filter applications`} loading="lazy" />
+
       {data.body.map((p) => <p>{p}</p>)}
 
       <h2>Typical Filter Mix</h2>
@@ -68,4 +70,9 @@ if (!data) {
   .scene-card:hover { color: var(--brand-ink); }
   ul { margin: 0 0 1em; padding-left: 1.4rem; }
   li { margin-bottom: 0.35rem; }
+  .scene-hero {
+    width: 100%; max-width: 520px; aspect-ratio: 4 / 3; object-fit: contain;
+    border: 1px solid var(--line); border-radius: 10px; background: #fff;
+    padding: 0.6rem; margin: 0.5rem 0 1.5rem;
+  }
 </style>

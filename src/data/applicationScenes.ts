@@ -8,6 +8,7 @@ export interface ProcurementPoint {
 
 export interface ApplicationScene {
   slug: string;
+  image: string;
   title: string;
   zh: string;
   icon: string;
@@ -21,6 +22,7 @@ export interface ApplicationScene {
 export const applicationScenes: ApplicationScene[] = [
   {
     slug: 'passenger-cars',
+    image: '83a2ef0c-a319-41da-8c5d-48427cf81a15.jpeg',
     title: 'Passenger Cars',
     zh: '乘用车',
     icon: '🚗',
@@ -46,6 +48,7 @@ export const applicationScenes: ApplicationScene[] = [
   },
   {
     slug: 'commercial-vehicles',
+    image: 'fc713f63-b89e-42f1-ad35-71a1de675151.png',
     title: 'Commercial Vehicles',
     zh: '商用车',
     icon: '🚚',
@@ -71,6 +74,7 @@ export const applicationScenes: ApplicationScene[] = [
   },
   {
     slug: 'construction-machinery',
+    image: '31b16d90-dc76-4124-ae0b-83660fbef46a.jpg',
     title: 'Construction Machinery',
     zh: '工程机械',
     icon: '🚜',
@@ -96,6 +100,7 @@ export const applicationScenes: ApplicationScene[] = [
   },
   {
     slug: 'agricultural-machinery',
+    image: '3984ca85-ac40-4db9-9b0a-c54b7e0a40d6.jpg',
     title: 'Agricultural Machinery',
     zh: '农机',
     icon: '🌾',

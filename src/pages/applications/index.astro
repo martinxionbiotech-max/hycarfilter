@@ -18,6 +18,8 @@ import { applicationScenes } from '../../data/applicationScenes';
         </p>
       </div>
 
+      <img class="scene-index-img" src={`${originImages.prefix}${originImages.factorySections.production[0]}`} alt="hycarfilter filter production — applications" loading="lazy" />
+
       <div class="grid grid--2">
         {applicationScenes.map((s) => (
           <a class="card scene-card" href={`/applications/${s.slug}/`}>
@@ -45,4 +47,9 @@ import { applicationScenes } from '../../data/applicationScenes';
   .scene-card:hover { color: var(--brand-ink); }
   .scene-card ul { margin: 0.3rem 0 0; padding-left: 1.1rem; color: var(--ink-soft); }
   .scene-card li { margin-bottom: 0.2rem; }
+  .scene-index-img {
+    width: 100%; max-width: 520px; aspect-ratio: 4 / 3; object-fit: contain;
+    border: 1px solid var(--line); border-radius: 10px; background: #fff;
+    padding: 0.6rem; margin: 0.5rem 0 1.5rem;
+  }
 </style>
