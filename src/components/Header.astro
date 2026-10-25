@@ -1,28 +1,49 @@
 ---
 import { nav, site } from '../data/site';
-import { localeMeta, getLocaleFromPath, localizedHref, locales } from '../i18n';
+import { localeMeta, getLocaleFromPath, localizedHref, localizedPath, locales } from '../i18n';
+import { ui } from '../i18n/ui';
 
 const currentPath = Astro.url.pathname;
 const currentLocale = getLocaleFromPath(currentPath);
 const currentNative = localeMeta[currentLocale].nativeLabel;
+const u = currentLocale === 'ar' || currentLocale === 'es' ? ui[currentLocale] : null;
 
-const isActive = (href: string) =>
-  href === '/' ? currentPath === '/' : currentPath.startsWith(href);
+const norm = (p: string) => (p.endsWith('/') ? p : `${p}/`);
+const cur = norm(currentPath);
+const isActive = (href: string) => {
+  const target = norm(localizedPath(href, currentLocale));
+  if (target === '/') return cur === '/';
+  return cur === target || cur.startsWith(target);
+};
+
+const navLabel = (href: string, fallback: string): string => {
+  if (!u) return fallback;
+  const map: Record<string, string> = {
+    '/': u.nav.home,
+    '/products/': u.nav.products,
+    '/applications/': u.nav.applications,
+    '/factory/': u.nav.factory,
+    '/about/': u.nav.about,
+    '/blog/': u.nav.blog,
+    '/contact/': u.nav.contact,
+  };
+  return map[href] ?? fallback;
+};
 ---
 
 <header class="header">
   <div class="container header__inner">
-    <a href="/" class="logo" aria-label={`${site.brand} — home`}>
+    <a href="/" class="logo" aria-label={u ? u.logoHome : `${site.brand} — home`}>
       <span class="logo__mark">HC</span>
       <span class="logo__text">
         <strong>{site.brand}</strong>
-        <small>filter manufacturer &amp; exporter</small>
+        <small>{u ? u.logoTagline : 'filter manufacturer &amp; exporter'}</small>
       </span>
     </a>
 
     <div class="lang-switch">
       <details class="lang-switch__menu">
-        <summary class="lang-switch__toggle" aria-label="Change language">
+        <summary class="lang-switch__toggle" aria-label={u ? u.changeLanguage : 'Change language'}>
           <svg class="lang-switch__globe" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
             <path fill="none" stroke="currentColor" stroke-width="1.6" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm-2 2.2A15.2 15.2 0 0 1 12 4a15.2 15.2 0 0 1 2 .2M2 12h20M4.2 7h15.6M4.2 17h15.6M10 4.2A15.2 15.2 0 0 0 10 19.8A15.2 15.2 0 0 0 14 4.2 15.2 15.2 0 0 0 14 19.8" />
           </svg>
@@ -50,7 +71,7 @@ const isActive = (href: string) =>
     </div>
 
     <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-    <label for="nav-toggle" class="nav-toggle-btn" aria-label="Toggle navigation">
+    <label for="nav-toggle" class="nav-toggle-btn" aria-label={u ? u.toggleNav : 'Toggle navigation'}>
       <span class="nav-toggle-btn__bar"></span>
       <span class="nav-toggle-btn__bar"></span>
       <span class="nav-toggle-btn__bar"></span>
@@ -60,15 +81,15 @@ const isActive = (href: string) =>
       {
         nav.map((item) => (
           <a
-            href={item.href}
+            href={localizedPath(item.href, currentLocale)}
             class={isActive(item.href) ? 'nav__link is-active' : 'nav__link'}
             aria-current={isActive(item.href) ? 'page' : undefined}
           >
-            {item.label}
+            {navLabel(item.href, item.label)}
           </a>
         ))
       }
-      <a class="btn btn--primary nav__cta" href="/contact/">Get a Quote</a>
+      <a class="btn btn--primary nav__cta" href={localizedPath('/contact/', currentLocale)}>{u ? u.getQuote : 'Get a Quote'}</a>
     </nav>
   </div>
 </header>

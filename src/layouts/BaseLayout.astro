@@ -5,7 +5,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import WhatsAppFloat from '../components/WhatsAppFloat.astro';
 import { site } from '../data/site';
-import { getLocaleFromPath, localeMeta } from '../i18n';
+import { getLocaleFromPath, localeMeta, hreflangAlternates } from '../i18n';
 
 interface Alternate {
   lang: string;
@@ -19,21 +19,32 @@ interface Props {
   lang?: string;
   /** Override <html dir> (defaults to the active locale). */
   dir?: 'ltr' | 'rtl';
-  /** Page-level hreflang alternates (used by the localized homepage). */
+  /** Page-level hreflang alternates; when omitted, auto-generated from the URL. */
   alternates?: Alternate[];
 }
 
 const { title, description, lang, dir, alternates } = Astro.props;
 
-const locale = localeMeta[getLocaleFromPath(Astro.url.pathname)];
+const currentLocale = getLocaleFromPath(Astro.url.pathname);
+const locale = localeMeta[currentLocale];
 const htmlLang = lang ?? locale.lang;
 const htmlDir = dir ?? locale.dir;
 
-const fullTitle = `${title} | ${site.brand} — ${site.tagline}`;
+const tagline =
+  currentLocale === 'ar' ? site.taglineAr : currentLocale === 'es' ? site.taglineEs : site.tagline;
+
+const fullTitle = `${title} | ${site.brand} — ${tagline}`;
 const metaDescription =
   description ||
-  `${site.brand} is a professional automotive filter manufacturer and exporter (air, cabin, oil, fuel filters, wipers, transmission screens, LED lights).`;
+  (currentLocale === 'ar'
+    ? `${site.brand} هو مُصنّع ومُصدّر احترافي لفلاتر السيارات (هواء، مقصورة، زيت، وقود، مسّاحات، مصافي ناقل الحركة ومصابيح LED).`
+    : currentLocale === 'es'
+      ? `${site.brand} es un fabricante y exportador profesional de filtros automotrices (aire, habitáculo, aceite, combustible, escobillas, mallas de transmisión y luces LED).`
+      : `${site.brand} is a professional automotive filter manufacturer and exporter (air, cabin, oil, fuel filters, wipers, transmission screens, LED lights).`);
+
+const siteUrl = Astro.site?.toString() ?? 'https://hycarfilter.com';
 const canonical = new URL(Astro.url.pathname, Astro.site);
+const finalAlternates = alternates ?? hreflangAlternates(Astro.url.pathname, siteUrl);
 ---
 
 <!doctype html>
@@ -50,7 +61,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={site.brand} />
     <link rel="canonical" href={canonical} />
-    {alternates?.map((a) => (
+    {finalAlternates?.map((a) => (
       <link rel="alternate" hreflang={a.lang} href={a.href} />
     ))}
   </head>

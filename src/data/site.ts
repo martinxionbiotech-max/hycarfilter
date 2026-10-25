@@ -6,7 +6,11 @@ export const site = {
   domain: 'hycarfilter.com', // placeholder domain
   since: 2013,
   tagline: 'Filter manufacturer & exporter',
+  taglineAr: 'مُصنّع ومُصدّر الفلاتر',
+  taglineEs: 'Fabricante y exportador de filtros',
   positioning: 'Automotive filter manufacturer & exporter from the Qinghe filter industry cluster.',
+  positioningAr: 'مُصنّع ومُصدّر لفلاتر السيارات من تجمّع صناعة الفلاتر في تشينغخه.',
+  positioningEs: 'Fabricante y exportador de filtros automotrices del clúster industrial de filtros de Qinghe.',
   address: 'No. 106 Lijiang Street, Qinghe County, Xingtai City, Hebei Province, China',
   addressZh: '河北省邢台市清河县漓江街 106 号',
   email: 'martin@hycarfilter.com',

@@ -1,26 +1,33 @@
 ---
 // Inquiry CTA band — reuse across pages.
 import { site } from '../data/site';
+import { getLocaleFromPath, localizedPath } from '../i18n';
+import { ui } from '../i18n/ui';
 
 interface Props {
   title?: string;
   sub?: string;
 }
 
-const { title = 'Ready to source filters?', sub = 'Tell us your model, OE number, or target market — we reply within 24 hours.' } = Astro.props;
+const currentLocale = getLocaleFromPath(Astro.url.pathname);
+const u = currentLocale === 'ar' || currentLocale === 'es' ? ui[currentLocale] : null;
+
+const { title, sub } = Astro.props;
+const resolvedTitle = title ?? (u ? u.ctaTitle : 'Ready to source filters?');
+const resolvedSub = sub ?? (u ? u.ctaSub : 'Tell us your model, OE number, or target market — we reply within 24 hours.');
 ---
 
 <section class="cta">
   <div class="container">
     <div class="cta__panel">
       <div class="cta__copy">
-        <p class="cta__eyebrow">Get a quote</p>
-        <h2>{title}</h2>
-        <p class="cta__sub">{sub}</p>
+        <p class="cta__eyebrow">{u ? u.ctaEyebrow : 'Get a quote'}</p>
+        <h2>{resolvedTitle}</h2>
+        <p class="cta__sub">{resolvedSub}</p>
       </div>
       <p class="cta__actions">
-        <a class="btn btn--primary" href="/contact/">Send an Inquiry</a>
-        <a class="btn btn--ghost" href={site.whatsappLink} target="_blank" rel="nofollow noopener">WhatsApp Us</a>
+        <a class="btn btn--primary" href={localizedPath('/contact/', currentLocale)}>{u ? u.sendInquiry : 'Send an Inquiry'}</a>
+        <a class="btn btn--ghost" href={site.whatsappLink} target="_blank" rel="nofollow noopener">{u ? u.whatsappUs : 'WhatsApp Us'}</a>
       </p>
     </div>
   </div>

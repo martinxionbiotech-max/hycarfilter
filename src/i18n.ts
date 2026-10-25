@@ -62,17 +62,13 @@ export function localizedPath(path: string, locale: Locale): string {
 }
 
 // ---------------------------------------------------------------------------
-// Routes that currently have real ar/es equivalents (framework validation batch).
-// Any other path falls back to the localized homepage in the switcher so the
-// control never points at a 404 while translation is still pending.
+// Full translation is complete (batch B): every route has ar/es equivalents.
+// The switcher therefore deep-links to the equivalent page in the target locale.
 // ---------------------------------------------------------------------------
-const localizedRoutes = new Set(['/', '/products/air-filter/', '/products/hy-af-nano/']);
 
-/** Switcher href: deep-link when a localized version exists, else home. */
+/** Switcher href: deep-link to the equivalent page in the target locale. */
 export function localizedHref(path: string, locale: Locale): string {
-  const norm = stripLocalePrefix(path);
-  if (localizedRoutes.has(norm)) return localizedPath(norm, locale);
-  return locale === 'en' ? '/' : `/${locale}/`;
+  return localizedPath(stripLocalePrefix(path), locale);
 }
 
 /** Standard hreflang alternates for a given root path (three-way + x-default). */

@@ -1,5 +1,46 @@
 ---
 import { site, nav, complianceLinks } from '../data/site';
+import { getLocaleFromPath, localizedPath } from '../i18n';
+import { ui } from '../i18n/ui';
+
+const currentLocale = getLocaleFromPath(Astro.url.pathname);
+const u = currentLocale === 'ar' || currentLocale === 'es' ? ui[currentLocale] : null;
+
+const navLabel = (href: string, fallback: string): string => {
+  if (!u) return fallback;
+  const map: Record<string, string> = {
+    '/': u.nav.home,
+    '/products/': u.nav.products,
+    '/applications/': u.nav.applications,
+    '/factory/': u.nav.factory,
+    '/about/': u.nav.about,
+    '/blog/': u.nav.blog,
+    '/contact/': u.nav.contact,
+  };
+  return map[href] ?? fallback;
+};
+
+const legalLabel = (href: string, fallback: string): string => {
+  if (!u) return fallback;
+  const map: Record<string, string> = {
+    '/privacy/': 'سياسة الخصوصية',
+    '/terms/': 'شروط الخدمة',
+    '/disclaimer/': 'إخلاء المسؤولية',
+    '/cookies/': 'سياسة ملفات تعريف الارتباط',
+  };
+  if (currentLocale === 'es') {
+    const esMap: Record<string, string> = {
+      '/privacy/': 'Política de privacidad',
+      '/terms/': 'Términos de servicio',
+      '/disclaimer/': 'Aviso legal',
+      '/cookies/': 'Política de cookies',
+    };
+    return esMap[href] ?? fallback;
+  }
+  return map[href] ?? fallback;
+};
+
+const positioning = currentLocale === 'ar' ? site.positioningAr : currentLocale === 'es' ? site.positioningEs : site.positioning;
 ---
 
 <footer class="footer">
@@ -10,19 +51,19 @@ import { site, nav, complianceLinks } from '../data/site';
           <span class="footer__mark">HC</span> {site.brand}
         </p>
         <p class="footer__desc">
-          {site.positioning}
+          {positioning}
         </p>
       </div>
 
       <div class="footer__col">
-        <h4>Sitemap</h4>
+        <h4>{u ? u.sitemap : 'Sitemap'}</h4>
         <ul class="footer__list">
-          {nav.map((i) => <li><a href={i.href}>{i.label}</a></li>)}
+          {nav.map((i) => <li><a href={localizedPath(i.href, currentLocale)}>{navLabel(i.href, i.label)}</a></li>)}
         </ul>
       </div>
 
       <div class="footer__col">
-        <h4>Contact</h4>
+        <h4>{u ? u.contact : 'Contact'}</h4>
         <ul class="footer__list">
           <li>{site.address}</li>
           <li><a href={`mailto:${site.email}`}>{site.email}</a></li>
@@ -32,15 +73,15 @@ import { site, nav, complianceLinks } from '../data/site';
       </div>
 
       <div class="footer__col">
-        <h4>Legal</h4>
+        <h4>{u ? u.legal : 'Legal'}</h4>
         <ul class="footer__list">
-          {complianceLinks.map((i) => <li><a href={i.href}>{i.label}</a></li>)}
+          {complianceLinks.map((i) => <li><a href={localizedPath(i.href, currentLocale)}>{legalLabel(i.href, i.label)}</a></li>)}
         </ul>
       </div>
     </div>
 
     <div class="footer__bottom">
-      <span>© {new Date().getFullYear()} {site.companyName}. All rights reserved.</span>
+      <span>© {new Date().getFullYear()} {site.companyName}. {u ? u.allRightsReserved : 'All rights reserved.'}</span>
       <span class="footer__since">SINCE {site.since}</span>
     </div>
   </div>
