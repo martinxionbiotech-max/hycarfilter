@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import InquiryCta from '../../../components/InquiryCta.astro';
+import { blogPosts } from '../../../data/blogPosts';
+import { originImages } from '../../../data/originImages';
+import { content } from '../../../i18n/content';
+import { ui } from '../../../i18n/ui';
+
+const loc = content.es;
+const u = ui.es;
+
+const topics = ['air', 'oil', 'cabin', 'fuel', 'wiper', 'transmission', 'led', 'news'];
+
+function fmtDate(iso: string): string {
+  return new Date(iso + 'T00:00:00Z').toLocaleDateString('es', {
+    year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC',
+  });
+}
+---
+
+<BaseLayout
+  title="Blog"
+  description="Blog de hycarfilter — conocimiento sobre filtros, mantenimiento y contenido de abastecimiento, reescrito para decisores de exportación y compras."
+>
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h1>{u.blog}</h1>
+        <p class="lede">
+          Conocimiento sobre filtros, mantenimiento y abastecimiento — análisis profundos originales
+          escritos para compradores de exportación y decisores de compras, no texto de marketing reciclado.
+        </p>
+      </div>
+
+      {
+        topics.map((topic) => {
+          const posts = blogPosts.filter((p) => p.topic === topic);
+          if (posts.length === 0) return null;
+          return (
+            <div class="topic-block">
+              <h2>{u.blogTopicTitles[topic]}</h2>
+              <div class="grid grid--2">
+                {posts.map((p) => (
+                  <a class="card post-card" href={`/es/blog/${p.slug}/`}>
+                    <img class="post-card__img" src={`${originImages.prefix}${originImages.blogImages[p.slug]?.cover ?? ''}`} alt={`${loc.blog[p.slug].title} — portada de guía de filtros automotrices`} loading="lazy" />
+                    <span class="chip">{loc.blog[p.slug].topicLabel}</span>
+                    <h3>{loc.blog[p.slug].title}</h3>
+                    <p class="small muted" style="margin:0 0 0.6rem">{loc.blog[p.slug].excerpt}</p>
+                    <p class="small muted" style="margin:0">
+                      {fmtDate(p.date)} · {p.readMinutes} {u.minRead}
+                    </p>
+                  </a>
+                ))}
+              </div>
+            </div>
+          );
+        })
+      }
+    </div>
+  </section>
+
+  <InquiryCta
+    title="¿Preguntas sobre un filtro concreto?"
+    sub="Nuestro equipo editorial escribe para decisiones de compra — envíanos tu mercado o número OE y encontraremos la referencia correcta."
+  />
+</BaseLayout>
+
+<style>
+  .topic-block { margin-bottom: 2.5rem; }
+  .post-card { display: block; color: var(--brand-ink); }
+  .post-card:hover { color: var(--brand-ink); }
+  .post-card h3 { margin: 0.5rem 0 0.4rem; font-size: 1.1rem; }
+  .post-card .chip { margin-bottom: 0.2rem; }
+  .post-card__img {
+    width: 100%; height: 150px; object-fit: cover; border-radius: 8px;
+    border: 1px solid var(--line); margin-bottom: 0.6rem;
+    transition: transform var(--t-med) var(--ease), border-color var(--t-med) var(--ease);
+  }
+  .post-card:hover .post-card__img { transform: scale(1.03); border-color: var(--orange-400); }
+</style>

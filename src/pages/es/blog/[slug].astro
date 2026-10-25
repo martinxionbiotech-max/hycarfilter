@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import InquiryCta from '../../../components/InquiryCta.astro';
+import productsData from '../../../data/products.json';
+import { blogPosts } from '../../../data/blogPosts';
+import { originImages } from '../../../data/originImages';
+import { content } from '../../../i18n/content';
+import { ui } from '../../../i18n/ui';
+
+const loc = content.es;
+const u = ui.es;
+
+export function getStaticPaths() {
+  return blogPosts.map((p) => ({ params: { slug: p.slug } }));
+}
+
+const { slug } = Astro.params;
+const post = blogPosts.find((p) => p.slug === slug);
+
+if (!post) {
+  return Astro.redirect('/es/blog/');
+}
+
+const postLoc = loc.blog[post.slug];
+const relatedCat = productsData.categories.find((c) => c.slug === post.relatedCategory);
+const postImages = originImages.blogImages[post.slug];
+
+function fmtDate(iso: string): string {
+  return new Date(iso + 'T00:00:00Z').toLocaleDateString('es', {
+    year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC',
+  });
+}
+---
+
+<BaseLayout
+  title={postLoc.title}
+  description={postLoc.excerpt}
+>
+  <article class="section">
+    <div class="container container--narrow">
+      <p class="small muted"><a href="/es/blog/">{u.blog}</a> &rsaquo; {postLoc.topicLabel}</p>
+      <div class="section-head">
+        <p class="chip">{postLoc.topicLabel}</p>
+        <h1>{postLoc.title}</h1>
+        <p class="lede">{postLoc.excerpt}</p>
+        <p class="small muted">
+          {fmtDate(post.date)} · {post.readMinutes} {u.minRead}
+        </p>
+      </div>
+
+      <img
+        class="post-cover"
+        src={`${originImages.prefix}${postImages.cover}`}
+        alt={`${postLoc.title} — portada de guía de filtros automotrices`}
+        loading="eager"
+      />
+
+      {
+        postLoc.sections.map((s, i) => (
+          <section class="post-section">
+            {s.heading ? <h2>{s.heading}</h2> : null}
+            {s.paragraphs.map((p) => <p>{p}</p>)}
+            {postImages.interior[i] ? (
+              <img
+                class="post-inline"
+                src={`${originImages.prefix}${postImages.interior[i]}`}
+                alt={`${s.heading || postLoc.title} — ${postLoc.topicLabel}`}
+                loading="lazy"
+              />
+            ) : null}
+          </section>
+        ))
+      }
+
+      {
+        relatedCat ? (
+          <div class="related">
+            <p class="muted small">{u.relatedProductLine}</p>
+            <a class="card related-card" href={`/es/products/${relatedCat.slug}/`}>
+              <span class="chip">{relatedCat.code.toUpperCase()}</span>
+              <h3>{loc.categories[relatedCat.code].name}</h3>
+              <p class="small muted" style="margin:0">{loc.categories[relatedCat.code].tagline}</p>
+            </a>
+          </div>
+        ) : null
+      }
+    </div>
+  </article>
+
+  <InquiryCta
+    title="¿Listo para adquirir filtros?"
+    sub="Cuéntanos tu modelo, número OE o mercado objetivo — respondemos en 24 horas."
+  />
+</BaseLayout>
+
+<style>
+  .container--narrow { max-width: 780px; }
+  .post-section { margin-bottom: 1.5rem; }
+  .post-cover { width: 100%; max-height: 360px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--line); margin-bottom: 1.5rem; }
+  .post-inline { display: block; width: 100%; max-height: 320px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--line); margin: 1rem 0; }
+  .post-section h2 { margin-bottom: 0.4em; }
+  .related { margin-top: 2.5rem; }
+  .related-card { display: block; color: var(--brand-ink); max-width: 360px; }
+  .related-card:hover { color: var(--brand-ink); }
+  .related-card h3 { margin: 0.5rem 0 0.2rem; }
+</style>
