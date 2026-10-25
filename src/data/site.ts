@@ -8,13 +8,14 @@ export const site = {
   // Verified legal entity (E-E-A-T disclosure) — sourced from China public business
   // registry via Sogou search results aggregating Tianyancha + the Hebei 2023 Q4
   // technology-based SME list. Retrieved 2026-10-25. Zero fabrication: Baidu Baike
-  // has no entry for this entity, so `sameAs` is intentionally left empty.
+  // has no entry for this entity; the official registry profile on Baidu Aiqicha
+  // (user-provided) serves as the authoritative citation.
   entity: {
     legalName: 'Qinghe County Huiying Auto Parts Co., Ltd.',
     legalNameZh: '清河县汇盈汽车零部件有限公司',
     creditCode: '91130534MA0958NT84',
     addressCn: '河北省邢台市清河县闽江街以北、九华山路以西',
-    sameAs: '',
+    sameAs: 'https://aiqicha.baidu.com/company_detail_49854926859922',
     foundedDate: '2017-10-10',
     legalRepZh: '刘风秀',
     registeredCapital: '100万元人民币',
