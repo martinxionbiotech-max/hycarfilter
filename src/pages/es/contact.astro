@@ -1,0 +1,112 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { site } from '../../data/site';
+import { ui } from '../../i18n/ui';
+
+const u = ui.es;
+
+const rfq = [
+  { title: 'Producto y modelo', text: 'La categoría de filtro y, cuando se conozca, el número OE o nuestra referencia (por ejemplo hy-af-nano).' },
+  { title: 'Vehículo o motor objetivo', text: 'Marca, modelo, año y motor del vehículo — o el modelo de transmisión para filtros de transmisión.' },
+  { title: 'Mercado objetivo', text: 'El país o región al que vendes, para emparejar medio, grado y certificaciones con sus condiciones.' },
+  { title: 'Cantidad y embalaje', text: 'Cantidad estimada, pedido mínimo, embalaje de marca privada o neutro, y cualquier requisito de caja.' },
+  { title: 'Necesidades de certificación', text: 'Cualquier aprobación del mercado de destino o informe de prueba que requieras antes del embarque.' },
+];
+
+const process = [
+  { step: '1', title: 'Envía tu consulta', text: 'Envía el formulario o contáctanos por WhatsApp. Incluye tu número OE, modelo o mercado objetivo.' },
+  { step: '2', title: 'Emparejamos la referencia', text: 'Confirmamos la compatibilidad contra nuestra tabla y referencia cruzada, y aconsejamos el grado correcto para tu mercado.' },
+  { step: '3', title: 'Muestra y ficha técnica', text: 'Entregamos una ficha técnica y, cuando se necesite, una muestra de preproducción para tu aprobación.' },
+  { step: '4', title: 'Cotización y confirmación', text: 'Apruebas la muestra; emitimos la factura proforma y el plazo de producción, y luego enviamos.' },
+];
+---
+
+<BaseLayout
+  title="Contacto y consulta"
+  description="Contacta con hycarfilter para cotizaciones de filtros: correo, WhatsApp y dirección. Envía tu número OE, vehículo o mercado objetivo para una cotización rápida — con guía de RFQ."
+>
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h1>Contáctanos</h1>
+        <p class="lede">Envía tu modelo, número OE o mercado objetivo — respondemos en 24 horas.</p>
+      </div>
+
+      <div class="grid grid--2">
+        <div>
+          <h2>{u.getInTouch}</h2>
+          <ul class="contact-list">
+            <li><strong>{u.formEmailLabel}</strong><br /><a href={`mailto:${site.email}`}>{site.email}</a></li>
+            <li><strong>{u.formWhatsappWechatLabel}</strong><br /><a href={site.whatsappLink} target="_blank" rel="nofollow noopener">{site.whatsapp}</a></li>
+            <li><strong>{u.formPhoneLabel}</strong><br /><a href={`tel:${site.phone}`}>{site.phone}</a></li>
+            <li><strong>{u.formAddressLabel}</strong><br />{site.address}</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>{u.inquiryForm}</h2>
+          <p class="muted small">
+            {u.inquiryFormNote}
+          </p>
+          <form class="form" action={`mailto:${site.email}`} method="post" enctype="text/plain">
+            <label>{u.formName}<input type="text" name="name" placeholder={u.formNamePlaceholder} /></label>
+            <label>{u.formCompany}<input type="text" name="company" placeholder={u.formCompanyPlaceholder} /></label>
+            <label>{u.formEmail}<input type="email" name="email" placeholder={u.formEmailPlaceholder} required /></label>
+            <label>{u.formWhatsapp}<input type="text" name="whatsapp" placeholder={u.formWhatsappPlaceholder} /></label>
+            <label>{u.formMessage}<textarea name="message" rows="4" placeholder={u.formMessagePlaceholder} required></textarea></label>
+            <button class="btn btn--primary" type="submit">{u.formSubmit}</button>
+          </form>
+          <p class="muted small" style="margin:0.8rem 0 0">
+            {u.formDirectNote} <a href={site.whatsappLink} target="_blank" rel="nofollow noopener">WhatsApp</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head">
+        <h2>Qué incluir en tu RFQ</h2>
+        <p class="lede">Una consulta completa obtiene una cotización completa. Estos cinco datos son los que necesitamos para emparejar la referencia correcta.</p>
+      </div>
+      <div class="grid grid--2">
+        {rfq.map((r) => (
+          <div class="card">
+            <h3>{r.title}</h3>
+            <p class="muted" style="margin:0">{r.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Cómo una consulta se convierte en pedido</h2>
+      </div>
+      <div class="grid grid--4">
+        {process.map((p) => (
+          <div class="card">
+            <span class="chip">{p.step}</span>
+            <h3 style="margin-top:0.5rem">{p.title}</h3>
+            <p class="small muted" style="margin:0">{p.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .contact-list { list-style: none; padding: 0; margin: 0; }
+  .contact-list li { margin-bottom: 1.1rem; }
+  .form { display: flex; flex-direction: column; gap: 0.9rem; }
+  .form label { display: flex; flex-direction: column; gap: 0.3rem; font-size: 0.9rem; font-weight: 600; }
+  .form input, .form textarea {
+    padding: 0.6rem 0.7rem; border: 1px solid var(--line); border-radius: 8px;
+    font: inherit; font-weight: 400;
+  }
+  .form input:focus, .form textarea:focus { outline: 2px solid var(--accent); outline-offset: 0; border-color: var(--accent); }
+</style>

@@ -1,0 +1,173 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import InquiryCta from '../../components/InquiryCta.astro';
+import { site } from '../../data/site';
+import { originImages } from '../../data/originImages';
+
+const processes = [
+  { title: 'Medio filtrante y plegado', text: 'Los medios de celulosa, compuesto, nanofibras y carbón activado se seleccionan por aplicación y se pliegan con densidad controlada. El número de pliegues y el área del medio definen directamente la capacidad de retención de polvo y la vida útil.' },
+  { title: 'Unión y curado de tapas extremas', text: 'El medio se adhiere a las tapas extremas con plastisol termoestable o PU y se termocura para lograr un núcleo rígido y resistente al colapso que mantiene su forma bajo presión y calor sostenidos.' },
+  { title: 'Ensamblaje de filtros roscados', text: 'Los filtros roscados de aceite y combustible se ensamblan en líneas dedicadas con carcasas de acero estampadas en una pieza, válvulas de derivación calibradas y antirretorno, y luego se sellan y prueban.' },
+  { title: 'Líneas de paneles y elementos', text: 'Los elementos de aire, habitáculo y panel se cortan, pliegan, enmarcan y sellan con tolerancia dimensional — el detalle que decide si un elemento asienta limpio y sella sin derivación.' },
+];
+
+const qc = [
+  { title: 'Inspección de entrada (IQC)', text: 'El medio crudo, el acero, el caucho, el plastisol y los herrajes se verifican contra especificación antes de entrar a producción, para atrapar un lote malo antes de que se convierta en un filtro malo.' },
+  { title: 'Inspección en proceso (IPQC)', text: 'Los parámetros críticos — integridad de pliegues, resistencia de unión, calidad de rosca, calibración de válvulas — se verifican en estaciones de línea durante el ensamblaje.' },
+  { title: 'Inspección final y hermeticidad', text: 'Cada filtro terminado pasa una verificación completa de hermeticidad, y el producto terminado se muestrea según AQL antes de empacar. Es verificación de cobertura total, no muestreo de lote.' },
+  { title: 'Inspección de exportación (OQC)', text: 'Las verificaciones previas al embarque cubren embalaje, etiquetado, resistencia de caja, volumen de palet y documentación, para que el producto llegue según lo especificado.' },
+];
+
+const logistics = [
+  { title: 'Embalaje sellado con control de humedad', text: 'Los elementos se sellan en bolsas con desecante; las carcasas de acero se protegen con película de aceite interna y papel VCI. El medio de carbón se aísla de solventes y humedad para evitar la presaturación.' },
+  { title: 'Cajas y palets de grado exportación', text: 'Las cajas de doble pared y de 5 capas con refuerzo de esquinas y separadores protegen paneles livianos, carcasas abollables y hojas largas durante el apilado en contenedor y el flete marítimo.' },
+  { title: 'Carga consolidada y mixta', text: 'Los pedidos de múltiples referencias y contenedor mixto se consolidan por categoría y destino, optimizando cantidad y volumen de cajas para mantener bajo el costo de flete por unidad.' },
+];
+
+const certFramework = [
+  { title: 'Gestión de calidad — ISO 9001', text: 'Operamos bajo un marco de gestión de calidad ISO 9001 que cubre producción, inspección y servicio posventa.' },
+  { title: 'Automotriz — IATF 16949 (marco)', text: 'Alineamos nuestras prácticas de calidad automotriz con el marco IATF 16949 para programas OEM/ODM; el estado de certificación específico se confirma por pedido y mercado.' },
+  { title: 'Cumplimiento de producto — CE / RoHS', text: 'Los productos LED llevan documentación CE y RoHS como base; las aprobaciones del mercado de destino se confirman antes del embarque cuando se requiere.' },
+  { title: 'Estándares de prueba — ISO / SAE', text: 'Las afirmaciones de rendimiento se verifican contra estándares relevantes como ISO 5011 / SAE J726 (aire) e ISO 4548 (aceite), con informes de prueba disponibles para proyectos OEM.' },
+];
+---
+
+<BaseLayout
+  title="Nuestra fábrica — Producción, calidad y capacidad de exportación"
+  description={`Dentro de la fábrica de ${site.brand}: líneas de producción, control de calidad, embalaje de exportación y el marco de certificación detrás de nuestros filtros automotrices. Con sede en el clúster industrial de filtros de Qinghe.`}
+>
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h1>Nuestra fábrica</h1>
+        <p class="lede">
+          {site.companyNameShort} tiene su sede en el clúster industrial de filtros del condado de Qinghe, Xingtai,
+          Hebei — una de las bases de producción de filtros automotrices más densas de China. Gestionamos producción,
+          investigación y desarrollo, control de calidad y logística de exportación integrados para siete categorías de filtros.
+        </p>
+      </div>
+
+      <div class="factory-gallery grid grid--2 mb-2">
+        {originImages.factory.map((img, i) => (
+          <img class="factory-photo" src={`${originImages.prefix}${img}`} alt={`Fábrica y producción de ${site.brand} — foto ${i + 1}`} loading="lazy" />
+        ))}
+      </div>
+
+      <div class="grid grid--2 mb-2">
+        <div class="card"><h3>Fundada</h3><p class="muted" style="margin:0">DESDE {site.since}</p></div>
+        <div class="card"><h3>Ubicación</h3><p class="muted" style="margin:0">{site.address}</p></div>
+        <div class="card"><h3>Modelo de negocio</h3><p class="muted" style="margin:0">OEM / ODM / marca privada</p></div>
+        <div class="card"><h3>Categorías</h3><p class="muted" style="margin:0">Aire · Habitáculo · Aceite · Combustible · Escobillas · Mallas de transmisión · LED</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head">
+        <h2>Líneas de producción</h2>
+        <p class="lede">Siete categorías, producidas en líneas dedicadas con los procesos que definen la calidad del filtro.</p>
+      </div>
+      <div class="grid grid--2">
+        {processes.map((p) => (
+          <div class="card">
+            <h3>{p.title}</h3>
+            <p class="muted" style="margin:0">{p.text}</p>
+          </div>
+        ))}
+      </div>
+      <div class="factory-strip mt-2">
+        {originImages.factorySections.production.map((img, i) => (
+          <img class="factory-strip__img" src={`${originImages.prefix}${img}`} alt={`Línea de producción de filtros ${site.brand} — foto ${i + 1}`} loading="lazy" />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Control de calidad</h2>
+        <p class="lede">Una cadena de inspección de cuatro etapas, de la materia prima a la caja empacada.</p>
+      </div>
+      <div class="grid grid--2">
+        {qc.map((q) => (
+          <div class="card">
+            <h3>{q.title}</h3>
+            <p class="muted" style="margin:0">{q.text}</p>
+          </div>
+        ))}
+      </div>
+      <div class="factory-strip mt-2">
+        {originImages.factorySections.qc.map((img) => (
+          <img class="factory-strip__img factory-strip__img--doc" src={`${originImages.prefix}${img}`} alt={`Control de calidad de ${site.brand} — licencia comercial y certificación`} loading="lazy" />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head">
+        <h2>Almacenamiento y embalaje de exportación</h2>
+        <p class="lede">Protegiendo el producto desde nuestro piso hasta el almacén de destino.</p>
+      </div>
+      <div class="grid grid--3">
+        {logistics.map((l) => (
+          <div class="card">
+            <h3>{l.title}</h3>
+            <p class="muted" style="margin:0">{l.text}</p>
+          </div>
+        ))}
+      </div>
+      <div class="factory-strip mt-2">
+        {originImages.factorySections.warehouse.map((img, i) => (
+          <img class="factory-strip__img" src={`${originImages.prefix}${img}`} alt={`Embalaje de exportación y almacenamiento de ${site.brand} — foto ${i + 1}`} loading="lazy" />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Marco de certificación</h2>
+        <p class="lede">
+          Los estándares con los que construimos. El estado de certificación específico y los informes de prueba se
+          confirman por pedido y mercado de destino.
+        </p>
+      </div>
+      <div class="grid grid--2">
+        {certFramework.map((c) => (
+          <div class="card">
+            <h3>{c.title}</h3>
+            <p class="muted" style="margin:0">{c.text}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="opinion">
+        <strong>Lo que verificamos, no solo lo que afirmamos</strong>
+        <p style="margin:0.5rem 0 0">
+          Una fábrica de filtros se gana la confianza con pruebas, no con adjetivos. Por eso nuestro posicionamiento
+          lidera con detalles verificables — una carcasa estampada en una pieza, una válvula de derivación calibrada,
+          una verificación de hermeticidad al 100% — y con informes de prueba y muestras que puedes inspeccionar antes
+          de comprometerte. Preferimos mostrarte la construcción antes que pedirte que confíes en una afirmación.
+        </p>
+        <p class="byline">— editorial de {site.brand} · nota de fábrica</p>
+      </div>
+    </div>
+  </section>
+
+  <InquiryCta
+    title="¿Quieres ver la fábrica?"
+    sub="Solicita un recorrido por la fábrica, un paquete de muestras o los certificados de calidad e informes de prueba de tu categoría."
+  />
+</BaseLayout>
+
+<style>
+  .factory-photo { width: 100%; height: 240px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--line); }
+  .factory-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.75rem; }
+  .factory-strip__img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 8px; border: 1px solid var(--line); background: #fff; }
+  .factory-strip__img--doc { aspect-ratio: auto; max-height: 280px; object-fit: contain; }
+</style>

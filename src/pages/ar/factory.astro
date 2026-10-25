@@ -1,0 +1,171 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import InquiryCta from '../../components/InquiryCta.astro';
+import { site } from '../../data/site';
+import { originImages } from '../../data/originImages';
+
+const processes = [
+  { title: 'وسيط الترشيح والطيّ', text: 'تُختار وسائط السليلوز والمركّب والألياف النانوية والكربون النشط حسب التطبيق، ثم تُطوى بكثافة مضبوطة. يحدد عدد الطيّات ومساحة الوسيط سعة الاحتفاظ بالغبار وعمر الخدمة مباشرة.' },
+  { title: 'لصق الأغطية الطرفية والمعالجة', text: 'يُلصق وسيط الترشيح بالأغطية الطرفية باستخدام بلاستيسول ترموست أو PU ويُعالج حرارياً للحصول على قلب صلب مقاوم للانهيار يحافظ على شكله تحت الضغط والحرارة المستمرين.' },
+  { title: 'تجميع الفلاتر الدوّارة', text: 'تُجمَّع فلاتر الزيت والوقود الدوّارة على خطوط مخصصة بهياكل فولاذية مسحوبة قطعة واحدة، وصمامات تجاوز معايرة وصمامات منع ارتداد، ثم تُختم وتُختبر.' },
+  { title: 'خطوط العناصر اللوحية', text: 'تُقص عناصر الهواء والمقصورة واللوحية وتُطوى وتُؤطَّر وتُختم وفق تفاوت أبعادي دقيق — وهو التفصيل الذي يحدد ما إذا كان العنصر يستقر بنظافة ويُحكم الإغلاق دون تسرب جانبي.' },
+];
+
+const qc = [
+  { title: 'الفحص الوارد (IQC)', text: 'تُفحص الوسائط الخام والفولاذ والمطاط والبلاستيسول والملحقات مقابل المواصفات قبل دخول الإنتاج، لتُضبط الدفعة السيئة قبل أن تصبح فلتراً سيئاً.' },
+  { title: 'الفحص أثناء العملية (IPQC)', text: 'تُتحقق المعلمات الحرجة — سلامة الطيّات، قوة اللصق، جودة السنون، معايرة الصمامات — في محطات الخط أثناء التجميع.' },
+  { title: 'الفحص النهائي والإحكام الهوائي', text: 'يجتاز كل فلتر مكتمل فحص إحكام هوائي كامل، وتُعاين البضاعة الجاهزة وفق AQL قبل التغليف. هذا تحقق بتغطية كاملة، لا فحصاً بالعيّنات.' },
+  { title: 'فحص التصدير (OQC)', text: 'تغطي فحوصات ما قبل الشحن التغليف والملصقات وقوة الكرتون وحجم البالتة والوثائق، ليصل المنتج مطابقاً للمواصفات.' },
+];
+
+const logistics = [
+  { title: 'تغليف محكم الغلق ومضبوط الرطوبة', text: 'تُغلق العناصر في أكياس بلاستيكية مع مادة مجففة؛ وتُحمى العلب الفولاذية بطبقة زيت داخلية وورق VCI. ويُعزل وسيط الكربون عن المذيبات والرطوبة لمنع التشبع المسبق.' },
+  { title: 'كراتين وبالتات بمواصفات التصدير', text: 'تحمي الكراتين مزدوجة الجدار وخماسية الطبقات مع تقوية الزوايا والفواصل الألواح الخفيفة والعلب القابلة للانبعاج والشفرات الطويلة خلال تكديس الحاويات والشحن البحري.' },
+  { title: 'تحميل مجمّع ومختلط', text: 'تُجمَّع طلبات الموديلات المتعددة والحاويات المختلطة حسب الفئة والوجهة، مع تحسين عدد الكراتين وحجمها لإبقاء تكلفة الشحن للوحدة منخفضة.' },
+];
+
+const certFramework = [
+  { title: 'إدارة الجودة — ISO 9001', text: 'نعمل وفق إطار إدارة جودة ISO 9001 يغطي الإنتاج والفحص وخدمة ما بعد البيع.' },
+  { title: 'قطاع السيارات — IATF 16949 (الإطار)', text: 'نواءم ممارسات جودة السيارات مع إطار IATF 16949 لبرامج OEM/ODM؛ ويُؤكد وضع الشهادة المحدد لكل طلب وسوق.' },
+  { title: 'امتثال المنتج — CE / RoHS', text: 'تحمل منتجات LED وثائق CE وRoHS كحد أدنى؛ وتُؤكد موافقات سوق الوجهة قبل الشحن حيث يُطلب ذلك.' },
+  { title: 'معايير الاختبار — ISO / SAE', text: 'تُتحقق ادعاءات الأداء مقابل المعايير ذات الصلة مثل ISO 5011 / SAE J726 (للهواء) وISO 4548 (للزيت)، مع توفير تقارير الاختبار لمشاريع OEM.' },
+];
+---
+
+<BaseLayout
+  title="مصنعنا — الإنتاج والجودة وقدرة التصدير"
+  description={`داخل مصنع ${site.brand}: خطوط الإنتاج ومراقبة الجودة والتغليف للتصدير وإطار الشهادات خلف فلاتر السيارات لدينا. مقرّه في تجمّع صناعة الفلاتر بتشينغخه.`}
+>
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h1>مصنعنا</h1>
+        <p class="lede">
+          تقع {site.companyNameShort} في تجمّع صناعة الفلاتر بمحافظة تشينغخه في شينغتاي بمقاطعة خبي —
+          إحدى أكثف قواعد إنتاج فلاتر السيارات في الصين. ندير إنتاجاً وبحثاً وتطويراً ومراقبة جودة
+          ولوجستيات تصدير متكاملة لسبع فئات من الفلاتر.
+        </p>
+      </div>
+
+      <div class="factory-gallery grid grid--2 mb-2">
+        {originImages.factory.map((img, i) => (
+          <img class="factory-photo" src={`${originImages.prefix}${img}`} alt={`مصنع وإنتاج ${site.brand} — صورة ${i + 1}`} loading="lazy" />
+        ))}
+      </div>
+
+      <div class="grid grid--2 mb-2">
+        <div class="card"><h3>التأسيس</h3><p class="muted" style="margin:0">منذ {site.since}</p></div>
+        <div class="card"><h3>الموقع</h3><p class="muted" style="margin:0">{site.address}</p></div>
+        <div class="card"><h3>نموذج العمل</h3><p class="muted" style="margin:0">OEM / ODM / علامة خاصة</p></div>
+        <div class="card"><h3>الفئات</h3><p class="muted" style="margin:0">هواء · مقصورة · زيت · وقود · مسّاحات · مصافي ناقل الحركة · LED</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head">
+        <h2>خطوط الإنتاج</h2>
+        <p class="lede">سبع فئات، تُنتج على خطوط مخصصة بعمليات تحدد جودة الفلتر.</p>
+      </div>
+      <div class="grid grid--2">
+        {processes.map((p) => (
+          <div class="card">
+            <h3>{p.title}</h3>
+            <p class="muted" style="margin:0">{p.text}</p>
+          </div>
+        ))}
+      </div>
+      <div class="factory-strip mt-2">
+        {originImages.factorySections.production.map((img, i) => (
+          <img class="factory-strip__img" src={`${originImages.prefix}${img}`} alt={`خط إنتاج فلاتر ${site.brand} — صورة ${i + 1}`} loading="lazy" />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>مراقبة الجودة</h2>
+        <p class="lede">سلسلة فحص من أربع مراحل، من المواد الخام إلى الكرتون المعبأ.</p>
+      </div>
+      <div class="grid grid--2">
+        {qc.map((q) => (
+          <div class="card">
+            <h3>{q.title}</h3>
+            <p class="muted" style="margin:0">{q.text}</p>
+          </div>
+        ))}
+      </div>
+      <div class="factory-strip mt-2">
+        {originImages.factorySections.qc.map((img) => (
+          <img class="factory-strip__img factory-strip__img--doc" src={`${originImages.prefix}${img}`} alt={`مراقبة جودة ${site.brand} — رخصة العمل والشهادات`} loading="lazy" />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container">
+      <div class="section-head">
+        <h2>التخزين والتغليف للتصدير</h2>
+        <p class="lede">حماية المنتج من أرضية مصنعنا إلى مستودع الوجهة.</p>
+      </div>
+      <div class="grid grid--3">
+        {logistics.map((l) => (
+          <div class="card">
+            <h3>{l.title}</h3>
+            <p class="muted" style="margin:0">{l.text}</p>
+          </div>
+        ))}
+      </div>
+      <div class="factory-strip mt-2">
+        {originImages.factorySections.warehouse.map((img, i) => (
+          <img class="factory-strip__img" src={`${originImages.prefix}${img}`} alt={`تغليف وتخزين التصدير لدى ${site.brand} — صورة ${i + 1}`} loading="lazy" />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>إطار الشهادات</h2>
+        <p class="lede">
+          المعايير التي نبني وفقها. يُؤكد وضع الشهادة المحدد وتقارير الاختبار لكل طلب وسوق وجهة.
+        </p>
+      </div>
+      <div class="grid grid--2">
+        {certFramework.map((c) => (
+          <div class="card">
+            <h3>{c.title}</h3>
+            <p class="muted" style="margin:0">{c.text}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="opinion">
+        <strong>ما نتحقق منه، لا ما ندّعيه فقط</strong>
+        <p style="margin:0.5rem 0 0">
+          يكسب مصنع الفلاتر الثقة بالإثبات لا بالصفات. لذلك يتقدم تمركزنا بالتفاصيل القابلة للتحقق —
+          هيكل مسحوب قطعة واحدة، صمام تجاوز معاير، فحص إحكام هوائي بنسبة 100% — وبالتقارير والعيّنات
+          التي يمكنك فحصها قبل الالتزام. نفضّل أن نريك البناء على أن نطلب منك تصديق ادعاء بالثقة.
+        </p>
+        <p class="byline">— هيئة تحرير {site.brand} · ملاحظة المصنع</p>
+      </div>
+    </div>
+  </section>
+
+  <InquiryCta
+    title="تريد رؤية المصنع؟"
+    sub="اطلب جولة في المصنع أو حزمة عيّنات أو شهادات الجودة وتقارير الاختبار الخاصة بفئتك."
+  />
+</BaseLayout>
+
+<style>
+  .factory-photo { width: 100%; height: 240px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--line); }
+  .factory-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.75rem; }
+  .factory-strip__img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 8px; border: 1px solid var(--line); background: #fff; }
+  .factory-strip__img--doc { aspect-ratio: auto; max-height: 280px; object-fit: contain; }
+</style>

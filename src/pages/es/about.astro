@@ -1,0 +1,118 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import InquiryCta from '../../components/InquiryCta.astro';
+import { site } from '../../data/site';
+import { originImages } from '../../data/originImages';
+
+const facts = [
+  { k: 'Fundada', v: 'DESDE 2013' },
+  { k: 'Ubicación', v: 'Condado de Qinghe, Xingtai, Hebei — clúster industrial de filtros de China' },
+  { k: 'Actividad', v: 'Fabricación, I+D, ventas y servicio posventa' },
+  { k: 'Categorías', v: 'Aire · Habitáculo · Aceite · Combustible · Escobillas · Mallas de transmisión · LED' },
+  { k: 'Modelo', v: 'OEM / ODM / marca privada' },
+  { k: 'Calidad', v: 'ISO 9001 · IATF 16949 (marco)' },
+];
+
+const values = [
+  { title: 'Pruebas antes que adjetivos', text: 'Lideramos con detalles verificables — carcasa estampada en una pieza, válvula de derivación calibrada, verificación de hermeticidad al 100% — y los respaldamos con muestras e informes de prueba que puedes inspeccionar antes de comprometerte.' },
+  { title: 'Compatibilidad antes que precio', text: 'Un filtro que no asienta o no coincide con el motor es una devolución, o algo peor. Anclamos cada pedido en la referencia cruzada OE y la aprobación de muestra antes de hablar de costo.' },
+  { title: 'El mercado decide el grado', text: 'Un mercado desértico y uno templado necesitan medios distintos. Emparejamos el producto con la carga de polvo, la calidad del combustible y el clima del mercado objetivo, en lugar de enviar una referencia única para todos.' },
+  { title: 'Consistencia en cada página', text: 'Un conjunto de datos, un conjunto de hechos. La especificación que lees aquí es el mismo valor que cotizamos, enviamos y documentamos en nuestros recursos de producto, datos y técnica.' },
+];
+---
+
+<BaseLayout
+  title="Nosotros"
+  description={`Acerca de ${site.brand}: fabricante y exportador profesional de filtros automotrices desde 2013, con sede en el clúster industrial de filtros de Qinghe, Hebei, China — nuestra historia, posicionamiento y filosofía editorial.`}
+>
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h1>Acerca de {site.brand}</h1>
+        <p class="lede">
+          {site.companyNameShort} es una empresa profesional de fabricación de filtros que integra producción,
+          investigación y desarrollo, ventas y servicio posventa. Nos especializamos en filtros de aire,
+          habitáculo, aceite y combustible, escobillas limpiaparabrisas, mallas de transmisión y faros LED —
+          y construimos cada línea para la exportación.
+        </p>
+      </div>
+
+      <img class="about-hero" src={`${originImages.prefix}${originImages.about}`} alt={`Instalación de fabricación de filtros ${site.brand} — Qinghe, Hebei`} loading="eager" />
+
+      <img class="about-secondary" src={`${originImages.prefix}${originImages.aboutSecondary}`} alt={`${site.brand} en la feria Automechanika Shanghai`} loading="lazy" />
+
+      <div class="grid grid--2 mb-2">
+        {facts.map((f) => (
+          <div class="card">
+            <h3>{f.k}</h3>
+            <p class="muted" style="margin:0">{f.v}</p>
+          </div>
+        ))}
+      </div>
+
+      <h2>Nuestra historia</h2>
+      <p>
+        {site.brand} tiene su sede en el clúster industrial de filtros del condado de Qinghe, Xingtai, Hebei — una
+        de las bases de producción de filtros automotrices más densas de China, donde materiales, herramental,
+        medios y capacidad de acabado están a un radio de suministro corto. Desde esa base construimos una empresa
+        que diseña, fabrica y envía siete categorías de filtros bajo un modelo OEM / ODM / marca privada.
+      </p>
+      <p>
+        La lógica de nuestra gama es la lógica del comprador de exportación. Un distribuidor que consolida un
+        contenedor no quiere comprar filtros de aire en una fábrica, filtros de aceite en otra y filtros de
+        habitáculo en una tercera. Quiere un proveedor que entienda el sistema de filtración completo — y que
+        pueda hablar con precisión sobre grado de medio, calibración de derivación, recuperación de sello,
+        separación de agua y retención de polvo. Ese es el papel que desempeñamos.
+      </p>
+
+      <h2>Nuestro posicionamiento</h2>
+      <p>
+        Somos un <strong>fabricante y exportador de filtros</strong>, no un intermediario comercial. Esa distinción
+        importa porque cambia la conversación: en lugar de cotizar la referencia más barata, podemos hablar de los
+        detalles de construcción que definen la fiabilidad, y personalizar medio, marca, embalaje y documentación
+        para un mercado y un comprador específicos.
+      </p>
+      <p>
+        Nuestro posicionamiento se ancla en una calidad verificable. Carcasa de acero estampada en una pieza,
+        roscas roscadas hidráulicamente, válvulas de derivación y antirretorno calibradas, sellos resistentes a
+        altas/bajas temperaturas, tapas extremas de plastisol termoestable, medio compuesto de alta temperatura y
+        filtración con nanofibras — esos son los detalles que incorporamos al producto y que un comprador serio
+        puede verificar. Donde interviene la certificación, declaramos el marco con el que operamos y confirmamos
+        el estado específico por pedido y destino.
+      </p>
+
+      <h2>Cómo pensamos el contenido</h2>
+      <p>
+        Publicamos este sitio como un recurso para decisiones de compra, no como texto de marketing reciclado. Cada
+        artículo y página de especificaciones está escrito desde el lado del exportador: qué debe verificar un
+        comprador, dónde están los modos de fallo reales y cómo emparejar un producto con un mercado en lugar de
+        perseguir el precio más bajo. Encontrarás nuestras notas editoriales firmadas donde tomamos una posición —
+        y donde un dato es un valor de referencia y no una especificación confirmada, lo decimos.
+      </p>
+      <div class="grid grid--2 mt-2">
+        {values.map((v) => (
+          <div class="card">
+            <h3>{v.title}</h3>
+            <p class="muted" style="margin:0">{v.text}</p>
+          </div>
+        ))}
+      </div>
+
+      <p class="muted small mt-2">
+        <em>
+          Nota: los datos de la empresa en esta página se mantienen en una única fuente de verdad y reflejan la
+          información proporcionada por {site.companyNameShort}. Los datos de contacto y de entidad legal se
+          confirman con el propietario antes de cualquier compromiso formal; consulta nuestro{' '}
+          <a href="/es/disclaimer/">Aviso legal</a>.
+        </em>
+      </p>
+    </div>
+  </section>
+
+  <InquiryCta title="¿Quieres conocer nuestra fábrica?" sub="Solicita un recorrido, un paquete de muestras o un certificado de calidad." />
+</BaseLayout>
+
+<style>
+  .about-hero { width: 100%; max-height: 360px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--line); margin-bottom: 2rem; }
+  .about-secondary { width: 100%; max-height: 300px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--line); margin-bottom: 2rem; }
+</style>

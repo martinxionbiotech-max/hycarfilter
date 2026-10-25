@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { ui } from '../../i18n/ui';
+
+const u = ui.ar;
+---
+
+<BaseLayout title={u.notFound}>
+  <section class="section">
+    <div class="container center">
+      <h1>{u.notFound}</h1>
+      <p class="lede">{u.notFoundText}</p>
+      <p><a class="btn btn--brand" href="/ar/">{u.backToHome}</a></p>
+    </div>
+  </section>
+</BaseLayout>
