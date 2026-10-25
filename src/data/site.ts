@@ -9,10 +9,10 @@ export const site = {
   positioning: 'Automotive filter manufacturer & exporter from the Qinghe filter industry cluster.',
   address: 'No. 106 Lijiang Street, Qinghe County, Xingtai City, Hebei Province, China',
   addressZh: '河北省邢台市清河县漓江街 106 号',
-  email: 'hy@hongyingfilter.com', // placeholder contact (keep as-is until owner updates)
-  whatsapp: '+86-19133499777',
-  mobile: '+86-13930925240',
-  whatsappLink: 'https://api.whatsapp.com/send?phone=8619133499777&text=Hello',
+  email: 'martin@hycarfilter.com',
+  phone: '+86 13323237275',
+  whatsapp: '+86 13323237275',
+  whatsappLink: 'https://wa.me/8613323237275',
 };
 
 export const nav = [
