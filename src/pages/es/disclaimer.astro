@@ -5,17 +5,17 @@ import { site } from '../../data/site';
 
 <BaseLayout
   title="Aviso legal"
-  description={`Aviso legal de ${site.companyName} (${site.brand}): el carácter de referencia de nuestra información de productos, las exenciones de responsabilidad en el comercio de exportación y los límites de nuestra responsabilidad.`}
+  description={`Aviso legal de ${site.companyName} (${site.brand}): el carácter de referencia de nuestra información de productos, las estimaciones de precios y costos, las exenciones de responsabilidad en el comercio de exportación y los límites de nuestra responsabilidad.`}
 >
   <section class="section">
     <div class="container">
       <article class="legal">
         <h1>Aviso legal</h1>
-        <p class="updated">Última actualización: 25 de octubre de 2026</p>
+        <p class="updated">Última actualización: 26 de octubre de 2026</p>
 
         <p>
-          Este Aviso legal establece las bases sobre las que <strong>{site.companyName}</strong> (&ldquo;{site.brand}&rdquo;,
-          &ldquo;nosotros&rdquo; o &ldquo;nuestro/a&rdquo;) publica información en{' '}
+          Este Aviso legal establece las bases sobre las que <strong>{site.companyName}</strong> (&ldquo;{site.entity.legalNameZh}&rdquo;,
+          &ldquo;{site.brand}&rdquo;, &ldquo;nosotros&rdquo; o &ldquo;nuestro/a&rdquo;) publica información en{' '}
           <strong>{site.domain}</strong>. Le rogamos que lo lea atentamente. Al utilizar este sitio web, usted
           acepta y se adhiere a los términos de este Aviso legal.
         </p>
@@ -25,10 +25,12 @@ import { site } from '../../data/site';
           <ol>
             <li>Información general únicamente</li>
             <li>Las especificaciones de los productos tienen carácter de referencia</li>
+            <li>Precios y estimaciones de costos</li>
             <li>Exención de responsabilidad en materia de exportación y comercio</li>
             <li>Ajuste y compatibilidad</li>
             <li>Ausencia de asesoramiento profesional o técnico</li>
             <li>Enlaces externos</li>
+            <li>Errores y omisiones</li>
             <li>Propiedad intelectual</li>
             <li>Limitación de responsabilidad</li>
             <li>Ausencia de garantía</li>
@@ -49,7 +51,8 @@ import { site } from '../../data/site';
           Si bien realizamos esfuerzos razonables para mantener la información de este sitio web precisa,
           completa y actualizada, no ofrecemos declaraciones ni garantías de ningún tipo, expresas o implícitas,
           sobre la exactitud, fiabilidad, disponibilidad o integridad del contenido, y cualquier confianza que
-          usted deposite en dicho contenido es estrictamente bajo su propio riesgo.
+          usted deposite en dicho contenido es estrictamente bajo su propio riesgo. Usted es responsable de su
+          uso de este sitio web y de cualquier decisión que adopte basándose en él.
         </p>
         <p>
           El sitio web se actualiza periódicamente y su contenido puede estar desactualizado en un momento dado.
@@ -107,7 +110,23 @@ import { site } from '../../data/site';
           aplicables para el SKU exacto antes de basarse en cualquier cifra de rendimiento.
         </p>
 
-        <h2>3. Exención de responsabilidad en materia de exportación y comercio</h2>
+        <h2>3. Precios y estimaciones de costos</h2>
+        <p>
+          Cualquier precio, cantidad mínima de pedido, plazo de entrega, estimación de flete, arancel, tarifa o
+          cifra de costo en destino que se muestre en este sitio web es una <strong>estimación orientativa de
+          referencia únicamente</strong> y no constituye una cotización, una oferta de venta ni una declaración
+          sobre el costo final. Los precios varían en función de las especificaciones, las cantidades, los costos
+          de materias primas y componentes, los tipos de cambio, el embalaje, las condiciones de entrega y el
+          destino, y por lo tanto están sujetos a cambios sin previo aviso.
+        </p>
+        <p>
+          El precio final, las condiciones de pago y las condiciones de entrega de cualquier pedido se
+          establecen exclusivamente en la factura proforma o el contrato de venta escritos que emitimos para ese
+          pedido específico. No debe confiar en ninguna cifra del sitio web como precio firme; obtenga siempre
+          una cotización escrita de nuestra parte antes de adoptar una decisión de compra.
+        </p>
+
+        <h2>4. Exención de responsabilidad en materia de exportación y comercio</h2>
         <p>
           {site.brand} es un fabricante exportador y no garantiza que ningún producto cumpla los requisitos
           normativos, de seguridad, de etiquetado o de certificación de un mercado de destino en particular. Los
@@ -124,7 +143,7 @@ import { site } from '../../data/site';
           proporciona únicamente como orientación general y no constituye asesoramiento legal, aduanero ni
           normativo. Cuando corresponda, debe buscar asesoramiento independiente de profesionales calificados.
         </p>
-        <h3>3.1 Códigos SA (HS), aranceles y tarifas</h3>
+        <h3>4.1 Códigos SA (HS), aranceles y tarifas</h3>
         <p>
           Los códigos SA (HS) que se muestran en este sitio web se proporcionan como una conveniencia y se basan
           en nuestra comprensión de la clasificación del producto. Pueden no reflejar las reclasificaciones de
@@ -135,7 +154,7 @@ import { site } from '../../data/site';
           tarifas, sanciones o demoras derivadas de la clasificación.
         </p>
 
-        <h2>4. Ajuste y compatibilidad</h2>
+        <h2>5. Ajuste y compatibilidad</h2>
         <p>
           Los filtros automotrices y los componentes relacionados son críticos en cuanto al ajuste. Un producto
           dimensional o funcionalmente incompatible con un vehículo, motor, transmisión o cárter específico puede
@@ -147,7 +166,7 @@ import { site } from '../../data/site';
           transmisión o cárter puede fallar sin previo aviso.
         </p>
 
-        <h2>5. Ausencia de asesoramiento profesional o técnico</h2>
+        <h2>6. Ausencia de asesoramiento profesional o técnico</h2>
         <p>
           Nada de lo dispuesto en este sitio web constituye asesoramiento de ingeniería, legal, normativo,
           financiero o de otra índole profesional. El contenido está redactado desde una perspectiva general de
@@ -156,7 +175,7 @@ import { site } from '../../data/site';
           contenido.
         </p>
 
-        <h2>6. Enlaces externos</h2>
+        <h2>7. Enlaces externos</h2>
         <p>
           Este sitio web puede contener enlaces a sitios web o recursos de terceros. Dichos enlaces se
           proporcionan únicamente por conveniencia. No tenemos control sobre el contenido de los sitios de
@@ -164,7 +183,17 @@ import { site } from '../../data/site';
           derivarse de su uso. Un enlace no implica aprobación o respaldo.
         </p>
 
-        <h2>7. Propiedad intelectual</h2>
+        <h2>8. Errores y omisiones</h2>
+        <p>
+          A pesar de nuestro cuidado, la información de este sitio web puede contener errores tipográficos,
+          técnicos o descriptivos, inexactitudes u omisiones, incluso en las especificaciones de productos, las
+          imágenes, las cifras de precios u otros datos. No garantizamos que el contenido esté libre de errores y
+          nos reservamos el derecho a corregir cualquier error, inexactitud u omisión y a cambiar o actualizar la
+          información en cualquier momento y sin previo aviso. Renunciamos a cualquier responsabilidad por tales
+          errores en la máxima medida permitida por la ley.
+        </p>
+
+        <h2>9. Propiedad intelectual</h2>
         <p>
           Salvo que se indique lo contrario, el contenido de este sitio web es propiedad de {site.companyName}
           o está licenciado a su favor y está protegido por las leyes de propiedad intelectual. Usted no puede
@@ -179,7 +208,7 @@ import { site } from '../../data/site';
           únicamente con fines de explicación visual. Cuando aparecen dichas imágenes, se indican en consecuencia.
         </p>
 
-        <h2>8. Limitación de responsabilidad</h2>
+        <h2>10. Limitación de responsabilidad</h2>
         <p>
           En la máxima medida permitida por la ley, {site.companyName} y sus directivos, empleados y agentes no
           serán responsables de ninguna pérdida o daño, ya sea directo, indirecto, incidental, especial,
@@ -194,7 +223,7 @@ import { site } from '../../data/site';
           excluirse o limitarse conforme a la legislación aplicable.
         </p>
 
-        <h2>9. Ausencia de garantía</h2>
+        <h2>11. Ausencia de garantía</h2>
         <p>
           Este sitio web se proporciona &ldquo;tal cual&rdquo; y &ldquo;según disponibilidad&rdquo;. No
           garantizamos que el sitio web sea ininterrumpido, seguro o esté libre de errores o componentes dañinos,
@@ -202,19 +231,20 @@ import { site } from '../../data/site';
           o interrumpir el sitio web o cualquier parte del mismo en cualquier momento y sin previo aviso.
         </p>
 
-        <h2>10. Cambios a este Aviso legal</h2>
+        <h2>12. Cambios a este Aviso legal</h2>
         <p>
           Podemos revisar este Aviso legal periódicamente. La fecha de &ldquo;Última actualización&rdquo; que
           figura al inicio de esta página indica cuándo entró en vigor la versión actual. El uso continuado del
           sitio web después de la publicación de los cambios constituye la aceptación del Aviso legal revisado.
         </p>
 
-        <h2>11. Contacto</h2>
+        <h2>13. Contacto</h2>
         <p>Si tiene alguna pregunta sobre este Aviso legal, comuníquese con nosotros:</p>
         <ul>
+          <li><strong>Operador:</strong> {site.companyName} ({site.entity.legalNameZh})</li>
           <li><strong>Correo electrónico:</strong> <a href={`mailto:${site.email}`}>{site.email}</a></li>
-          <li><strong>WhatsApp:</strong> {site.whatsapp}</li>
           <li><strong>Teléfono:</strong> {site.phone}</li>
+          <li><strong>WhatsApp:</strong> {site.whatsapp}</li>
           <li><strong>Dirección:</strong> {site.address}</li>
         </ul>
         <p>

@@ -5,13 +5,13 @@ import { site } from '../data/site';
 
 <BaseLayout
   title="Privacy Policy"
-  description={`Privacy Policy for ${site.companyName} (${site.brand}) — what information we collect through this website, how we use it, and the rights you have over your data.`}
+  description={`Privacy Policy for ${site.companyName} (${site.brand}) — what information we collect through this website, how we use it, the rights you have over your data under GDPR and CCPA, and how to contact us.`}
 >
   <section class="section">
     <div class="container">
       <article class="legal">
         <h1>Privacy Policy</h1>
-        <p class="updated">Last updated: 25 October 2026</p>
+        <p class="updated">Last updated: 26 October 2026</p>
 
         <p>
           This Privacy Policy explains how <strong>{site.companyName}</strong> (&ldquo;{site.brand}&rdquo;,
@@ -36,7 +36,8 @@ import { site } from '../data/site';
             <li>International data transfers</li>
             <li>Data retention</li>
             <li>Security of your information</li>
-            <li>Your rights</li>
+            <li>Your rights under the GDPR and similar laws</li>
+            <li>Notice to California residents (CCPA / CPRA)</li>
             <li>Cookies and similar technologies</li>
             <li>Children&rsquo;s privacy</li>
             <li>Changes to this policy</li>
@@ -46,14 +47,16 @@ import { site } from '../data/site';
 
         <h2>1. Who we are</h2>
         <p>
-          <strong>{site.companyName}</strong> is a professional automotive filter manufacturing company that
-          integrates production, research and development, sales and after-sales service. We specialize in
-          automotive air filters, cabin filters, oil filters, fuel filters, wiper blades, transmission filter
-          screens and LED lights, serving export buyers on an OEM / ODM / private-label basis.
+          <strong>{site.companyName}</strong> (&ldquo;{site.entity.legalNameZh}&rdquo;) is the operator of this
+          website. It is a professional automotive filter manufacturing company that integrates production,
+          research and development, sales and after-sales service. We specialize in automotive air filters,
+          cabin filters, oil filters, fuel filters, wiper blades, transmission filter screens and LED lights,
+          serving export buyers on an OEM / ODM / private-label basis.
         </p>
         <p>
-          Our registered and operating address is {site.address}. You can reach us at{' '}
-          <a href={`mailto:${site.email}`}>{site.email}</a> or by WhatsApp at {site.whatsapp}.
+          Our registered and operating address is {site.address}. Our unified social credit code is{' '}
+          {site.entity.creditCode}. You can reach us at <a href={`mailto:${site.email}`}>{site.email}</a>, by
+          phone at {site.phone}, or by WhatsApp at {site.whatsapp}.
         </p>
 
         <h2>2. Information we collect</h2>
@@ -120,8 +123,15 @@ import { site } from '../data/site';
           {site.brand} is based in China and serves customers worldwide. If you contact us from outside
           China, the information you provide will be transferred to and processed in China. We take reasonable
           steps to ensure that any such transfer is carried out securely and that your information continues to
-          receive a level of protection consistent with this policy. By using the website and contacting us,
-          you understand and consent to this transfer.
+          receive a level of protection consistent with this policy.
+        </p>
+        <p>
+          Where the law applicable to you requires a specific transfer mechanism, we rely on one or more of the
+          following, as appropriate: (a) the transfer being necessary for the performance of a contract with
+          you or for steps taken at your request before entering into a contract; (b) your explicit consent;
+          or (c) appropriate safeguards such as standard contractual clauses or confidentiality and security
+          obligations imposed on the recipient. By using the website and contacting us, you understand and
+          consent to this transfer.
         </p>
 
         <h2>6. Data retention</h2>
@@ -130,65 +140,118 @@ import { site } from '../data/site';
           this policy, unless a longer retention period is required or permitted by law. In practice:
         </p>
         <ul>
-          <li>Inquiry correspondence is retained while the inquiry is active and for a reasonable period afterwards to allow follow-up;</li>
-          <li>Transaction and order records are retained for as long as required by accounting, tax and commercial law;</li>
-          <li>Technical logs are retained for a short period for security and diagnostics, then deleted or aggregated.</li>
+          <li><strong>Inquiry correspondence</strong> is retained while the inquiry is active and for up to 24 months after our last contact with you, to allow follow-up, after which it is reviewed for deletion or aggregation;</li>
+          <li><strong>Transaction and order records</strong> are retained for the period required by accounting, tax and commercial law (which may be several years), after which they are securely deleted or archived;</li>
+          <li><strong>Technical and security logs</strong> are retained for a short period (typically up to 90 days) for security and diagnostics, then deleted or aggregated;</li>
+          <li><strong>Marketing communications</strong> are retained until you withdraw your consent or opt out, after which we stop sending them (though we may retain a suppression record to honour your request).</li>
         </ul>
+        <p>
+          Where we no longer need personal information for the purposes described here, we delete or anonymise it
+          in a secure manner.
+        </p>
 
         <h2>7. Security of your information</h2>
         <p>
           We take reasonable technical and organisational measures to protect your information against
-          unauthorised access, alteration, disclosure or destruction. These include access controls that limit
-          personal information to employees who need it to perform their role (for example, sales or customer
-          service), and the use of reputable, security-patched hosting. We review our security practices
-          periodically. However, no method of transmission over
-          the internet or method of electronic storage is completely secure, and we cannot guarantee absolute
-          security.
+          unauthorised access, alteration, disclosure or destruction. These include:
+        </p>
+        <ul>
+          <li>Access controls that limit personal information to employees who need it to perform their role (for example, sales or customer service);</li>
+          <li>Encryption of data in transit (for example, HTTPS / TLS) and, where applicable, at rest;</li>
+          <li>The use of reputable, security-patched hosting and the application of security updates;</li>
+          <li>Confidentiality obligations and data-protection awareness for relevant staff;</li>
+          <li>Periodic review of our security practices.</li>
+        </ul>
+        <p>
+          However, no method of transmission over the internet or method of electronic storage is completely
+          secure, and we cannot guarantee absolute security.
         </p>
 
-        <h2>8. Your rights</h2>
-        <p>Depending on where you are located, you may have the right to:</p>
+        <h2>8. Your rights under the GDPR and similar laws</h2>
+        <p>
+          Depending on where you are located, and subject to the conditions and exemptions in applicable law,
+          you may have the following rights:
+        </p>
         <ul>
           <li><strong>Access</strong> — request a copy of the personal information we hold about you;</li>
-          <li><strong>Correct</strong> — ask us to correct inaccurate or incomplete information;</li>
-          <li><strong>Delete</strong> — ask us to delete personal information in certain circumstances;</li>
-          <li><strong>Object or restrict</strong> — object to, or request restriction of, certain processing;</li>
-          <li><strong>Data portability</strong> — request that information be provided in a structured, machine-readable format where this right applies;</li>
-          <li><strong>Opt out of marketing</strong> — ask us to stop contacting you for marketing purposes at any time.</li>
+          <li><strong>Rectification</strong> — ask us to correct inaccurate or incomplete information;</li>
+          <li><strong>Erasure (&ldquo;right to be forgotten&rdquo;)</strong> — ask us to delete personal information in certain circumstances;</li>
+          <li><strong>Restriction</strong> — ask us to restrict the processing of your information in certain circumstances;</li>
+          <li><strong>Data portability</strong> — request that your information be provided to you, or to another controller, in a structured, commonly used and machine-readable format where this right applies;</li>
+          <li><strong>Objection</strong> — object to processing based on our legitimate interests, including processing for direct marketing;</li>
+          <li><strong>Withdraw consent</strong> — where we rely on your consent, withdraw it at any time (this does not affect the lawfulness of processing carried out before withdrawal);</li>
+          <li><strong>Automated decision-making</strong> — not to be subject to a decision based solely on automated processing that produces legal or similarly significant effects concerning you. We do not carry out such decision-making;</li>
+          <li><strong>Lodge a complaint</strong> — complain to your local data protection supervisory authority if you believe our processing of your information infringes applicable law.</li>
         </ul>
         <p>
           To exercise any of these rights, contact us at{' '}
-          <a href={`mailto:${site.email}`}>{site.email}</a> or {site.whatsapp}. We will respond within a
-          reasonable time and, where a request is declined under applicable law, explain why.
+          <a href={`mailto:${site.email}`}>{site.email}</a>, by phone at {site.phone}, or by WhatsApp at{' '}
+          {site.whatsapp}. We will respond within the timeframes required by applicable law and, where a request
+          is declined, explain why.
         </p>
 
-        <h2>9. Cookies and similar technologies</h2>
+        <h2>9. Notice to California residents (CCPA / CPRA)</h2>
+        <p>
+          If you are a resident of California, USA, the California Consumer Privacy Act, as amended (the
+          &ldquo;CCPA&rdquo;/&ldquo;CPRA&rdquo;), may provide you with certain additional rights. This section
+          supplements the rest of this policy.
+        </p>
+        <p><strong>Categories of personal information we collect.</strong> In the 12 months preceding the date of this policy, we have collected the following categories of personal information, in each case only as described in Section 2 and only for the business-to-business purposes described in Section 3:</p>
+        <ul>
+          <li>Identifiers (for example, name, email address, telephone or WhatsApp number);</li>
+          <li>Commercial information (for example, products of interest, order details, sample and quotation records);</li>
+          <li>Internet or other electronic network activity (for example, IP address, browser type, pages visited);</li>
+          <li>Professional or employment-related information (for example, company name and job title, if you provide them).</li>
+        </ul>
+        <p>
+          <strong>We do not sell your personal information</strong> and we do not &ldquo;share&rdquo; it for
+          cross-context behavioural advertising, as those terms are defined under California law, and we have
+          not done so in the preceding 12 months.
+        </p>
+        <p><strong>Your California rights.</strong> Subject to applicable law, you may have the right to:</p>
+        <ul>
+          <li><strong>Know / access</strong> — request that we disclose the categories and specific pieces of personal information we have collected about you;</li>
+          <li><strong>Delete</strong> — request deletion of personal information we have collected from you, subject to certain exceptions;</li>
+          <li><strong>Correct</strong> — request correction of inaccurate personal information;</li>
+          <li><strong>Opt out of sale or sharing</strong> — though this right is not triggered because we do not sell or share personal information as defined above;</li>
+          <li><strong>Non-discrimination</strong> — not to be discriminated against for exercising your privacy rights.</li>
+        </ul>
+        <p>
+          You may exercise these rights yourself or through an authorised agent. To do so, contact us at{' '}
+          <a href={`mailto:${site.email}`}>{site.email}</a> or by phone at {site.phone}. We will verify your
+          request before responding, and we will not discriminate against you for exercising your rights.
+        </p>
+
+        <h2>10. Cookies and similar technologies</h2>
         <p>
           This website uses a small number of cookies and similar technologies to function correctly and to
-          understand aggregate usage. For a full explanation of the cookies we use and how to manage them,
-          please see our <a href="/cookies/">Cookie Policy</a>.
+          understand aggregate usage. We do not use cookies for targeted advertising, and we do not sell data
+          collected through cookies. For a full explanation of the cookies we use, the consent mechanism and
+          how to manage them, please see our <a href="/cookies/">Cookie Policy</a>.
         </p>
 
-        <h2>10. Children&rsquo;s privacy</h2>
+        <h2>11. Children&rsquo;s privacy</h2>
         <p>
           This website is a business-to-business site intended for adults acting in a professional capacity.
-          We do not knowingly collect personal information from children. If you believe a child has provided
-          us with personal information, contact us and we will delete it.
+          We do not knowingly collect personal information from children under 16 years of age. If you believe
+          a child has provided us with personal information, contact us and we will delete it.
         </p>
 
-        <h2>11. Changes to this policy</h2>
+        <h2>12. Changes to this policy</h2>
         <p>
           We may update this Privacy Policy from time to time to reflect changes in our practices, technology,
           legal requirements or the services we offer. When we do, we will revise the &ldquo;Last updated&rdquo;
-          date at the top of this page. We encourage you to review this page periodically.
+          date at the top of this page. Where changes are material, we will take reasonable steps to draw them
+          to your attention. We encourage you to review this page periodically.
         </p>
 
-        <h2>12. How to contact us</h2>
-        <p>If you have any questions or concerns about this Privacy Policy or our data practices, please contact us:</p>
+        <h2>13. How to contact us</h2>
+        <p>If you have any questions or concerns about this Privacy Policy or our data practices, or if you wish to exercise any of your rights, please contact us:</p>
         <ul>
+          <li><strong>Operator:</strong> {site.companyName} ({site.entity.legalNameZh})</li>
           <li><strong>Email:</strong> <a href={`mailto:${site.email}`}>{site.email}</a></li>
-          <li><strong>WhatsApp:</strong> {site.whatsapp}</li>
           <li><strong>Phone:</strong> {site.phone}</li>
+          <li><strong>WhatsApp:</strong> {site.whatsapp}</li>
           <li><strong>Address:</strong> {site.address}</li>
         </ul>
         <p>

@@ -356,6 +356,33 @@ details.faq p { margin: 0.6rem 0 0; color: var(--ink-soft); }
 }
 .legal .toc ol { margin: 0.5rem 0 0; }
 .legal .toc li { margin-bottom: 0.3rem; }
+.legal table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  font-size: 0.9rem;
+  margin: 0 0 1.2em;
+}
+.legal table caption {
+  text-align: left;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--ink-soft);
+}
+.legal table th,
+.legal table td {
+  border: 1px solid var(--line);
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+.legal table thead th {
+  background: var(--navy-800);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+.legal table tbody tr:nth-child(even) td { background: var(--bg-tint); }
 
 /* =========================================================================
    Utilities
@@ -391,6 +418,9 @@ details.faq p { margin: 0.6rem 0 0; color: var(--ink-soft); }
 [dir="rtl"] .table-wrap,
 [dir="rtl"] table.spec th,
 [dir="rtl"] table.spec td { text-align: right; }
+[dir="rtl"] .legal table caption,
+[dir="rtl"] .legal table th,
+[dir="rtl"] .legal table td { text-align: right; }
 [dir="rtl"] .cta__actions { justify-content: flex-start; }
 
 /* =========================================================================

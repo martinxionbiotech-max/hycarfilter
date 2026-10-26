@@ -5,18 +5,18 @@ import { site } from '../../data/site';
 
 <BaseLayout
   title="Política de cookies"
-  description={`Política de cookies de ${site.companyName} (${site.brand}): qué son las cookies, cuáles utiliza este sitio web y cómo gestionarlas.`}
+  description={`Política de cookies de ${site.companyName} (${site.brand}): qué son las cookies, qué categorías utiliza este sitio web, cómo funciona el consentimiento y cómo gestionarlas o excluirse de ellas.`}
 >
   <section class="section">
     <div class="container">
       <article class="legal">
         <h1>Política de cookies</h1>
-        <p class="updated">Última actualización: 25 de octubre de 2026</p>
+        <p class="updated">Última actualización: 26 de octubre de 2026</p>
 
         <p>
-          Esta Política de cookies explica cómo <strong>{site.companyName}</strong> (&ldquo;{site.brand}&rdquo;,
-          &ldquo;nosotros&rdquo; o &ldquo;nuestro/a&rdquo;) utiliza cookies y tecnologías similares en{' '}
-          <strong>{site.domain}</strong>. Debe leerse junto con nuestra{' '}
+          Esta Política de cookies explica cómo <strong>{site.companyName}</strong> (&ldquo;{site.entity.legalNameZh}&rdquo;,
+          &ldquo;{site.brand}&rdquo;, &ldquo;nosotros&rdquo; o &ldquo;nuestro/a&rdquo;) utiliza cookies y tecnologías
+          similares en <strong>{site.domain}</strong>. Debe leerse junto con nuestra{' '}
           <a href="/es/privacy/">Política de privacidad</a>.
         </p>
 
@@ -28,28 +28,72 @@ import { site } from '../../data/site';
           mecanismos basados en el navegador que cumplen funciones comparables.
         </p>
 
-        <h2>Cómo utilizamos las cookies</h2>
+        <h2>Cookies que utilizamos</h2>
         <p>
           Este sitio web es principalmente un sitio de información estático orientado al comercio entre empresas
           (B2B). Utiliza solo un conjunto limitado de cookies y tecnologías similares, que se dividen en las
-          siguientes categorías:
+          siguientes categorías. Las describimos honestamente a continuación y no utilizamos cookies para
+          publicidad dirigida.
         </p>
-        <ul>
-          <li>
-            <strong>Estrictamente necesarias / funcionales.</strong> Son necesarias para que el sitio web
-            funcione correctamente, como recordar el estado básico de la sesión o las preferencias. Sin ellas,
-            es posible que algunas partes del sitio no funcionen como se espera.
-          </li>
-          <li>
-            <strong>Analíticas / de rendimiento.</strong> Cuando están habilitadas, nos ayudan a comprender el
-            uso agregado —por ejemplo, qué páginas se visitan y cómo se desplazan los visitantes por el sitio—
-            para poder mejorar el contenido y la estructura. Esta información se agrega y no se utiliza para
-            identificarlo personalmente.
-          </li>
-        </ul>
+
+        <table>
+          <caption>Categorías de cookies utilizadas en este sitio web</caption>
+          <thead>
+            <tr>
+              <th>Categoría</th>
+              <th>Finalidad</th>
+              <th>¿Se utiliza en este sitio?</th>
+              <th>¿Requiere consentimiento?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Estrictamente necesarias</strong></td>
+              <td>Necesarias para que el sitio web funcione de forma correcta y segura, como el equilibrio de carga, el estado de la sesión y la funcionalidad básica.</td>
+              <td>Sí</td>
+              <td>No (exentas conforme a la legislación aplicable)</td>
+            </tr>
+            <tr>
+              <td><strong>Funcionales / de preferencias</strong></td>
+              <td>Recordar las elecciones que usted realiza, como el idioma o una preferencia de visualización, para mejorar su experiencia.</td>
+              <td>Sí (de forma limitada)</td>
+              <td>Sí, cuando no sean estrictamente necesarias</td>
+            </tr>
+            <tr>
+              <td><strong>Analíticas / de rendimiento</strong></td>
+              <td>Comprender el uso agregado —qué páginas se visitan y cómo se desplazan los visitantes por el sitio— para mejorar el contenido y la estructura. La información se agrega y no se utiliza para identificarlo personalmente.</td>
+              <td>Solo cuando están habilitadas (no se establecen por defecto)</td>
+              <td>Sí</td>
+            </tr>
+            <tr>
+              <td><strong>Publicitarias / de segmentación</strong></td>
+              <td>Elaborar un perfil para mostrarle publicidad en otros sitios web o compartir datos para segmentación publicitaria entre sitios.</td>
+              <td><strong>No</strong> — no utilizamos cookies publicitarias ni de segmentación</td>
+              <td>No aplicable</td>
+            </tr>
+          </tbody>
+        </table>
         <p>
-          No utilizamos cookies para publicidad dirigida en este sitio web y no vendemos a terceros los datos
-          recopilados mediante cookies.
+          No utilizamos cookies para publicidad dirigida en este sitio web y no vendemos ni &ldquo;compartimos&rdquo;
+          (para publicidad conductual entre contextos) los datos recopilados mediante cookies. Dado que este
+          sitio web no establece cookies no esenciales por defecto, no se coloca ninguna cookie publicitaria ni
+          de elaboración de perfiles en su dispositivo cuando lo navega.
+        </p>
+
+        <h2>Consentimiento y sus opciones</h2>
+        <p>
+          Conforme a la legislación aplicable, las cookies estrictamente necesarias no requieren consentimiento
+          porque son esenciales para el funcionamiento del sitio web. Para cualquier cookie no esencial —como las
+          de analítica o rendimiento— obtenemos su consentimiento antes de establecerlas.
+        </p>
+        <p>
+          En la actualidad, este sitio web no establece cookies de analítica ni de otro tipo no esencial por
+          defecto, por lo que no se requiere ningún banner de consentimiento para la navegación ordinaria. Si en
+          el futuro introducimos cookies no esenciales, actualizaremos esta política y proporcionaremos un
+          mecanismo claro (como un banner de cookies o un centro de preferencias) a través del cual podrá dar,
+          rechazar o retirar su consentimiento antes de que se establezcan dichas cookies. Puede retirar su
+          consentimiento en cualquier momento eliminando las cookies a través de la configuración de su navegador,
+          como se describe a continuación.
         </p>
 
         <h2>Servicios de terceros</h2>
@@ -60,7 +104,7 @@ import { site } from '../../data/site';
           revisar esas políticas cuando aparezcan dichos servicios.
         </p>
 
-        <h2>Gestión de cookies</h2>
+        <h2>Gestión y exclusión de cookies</h2>
         <p>
           La mayoría de los navegadores web le permiten controlar las cookies a través de su configuración. Por
           lo general, puede optar por bloquear todas las cookies, bloquear las cookies de terceros o eliminar las
@@ -68,9 +112,11 @@ import { site } from '../../data/site';
           funcionalidad de este y de otros sitios web.
         </p>
         <p>
-          Para obtener orientación sobre la gestión de cookies en su navegador, consulte la documentación de
-          ayuda de su navegador (por ejemplo, Chrome, Safari, Firefox o Edge). Por lo general, también puede
-          eliminar las cookies existentes a través de la configuración de privacidad o historial de su navegador.
+          Para obtener orientación sobre la gestión o eliminación de cookies en su navegador, consulte la
+          documentación de ayuda de su navegador (por ejemplo, Chrome, Safari, Firefox o Edge). Por lo general,
+          también puede eliminar las cookies existentes a través de la configuración de privacidad o historial de
+          su navegador. Además, puede ajustar la configuración de &ldquo;No rastrear&rdquo; (Do Not Track) o de
+          control global de privacidad de su navegador cuando este los admita.
         </p>
 
         <h2>Cambios a esta política</h2>
@@ -83,7 +129,9 @@ import { site } from '../../data/site';
         <h2>Contacto</h2>
         <p>Si tiene alguna pregunta sobre esta Política de cookies, comuníquese con nosotros:</p>
         <ul>
+          <li><strong>Operador:</strong> {site.companyName} ({site.entity.legalNameZh})</li>
           <li><strong>Correo electrónico:</strong> <a href={`mailto:${site.email}`}>{site.email}</a></li>
+          <li><strong>Teléfono:</strong> {site.phone}</li>
           <li><strong>WhatsApp:</strong> {site.whatsapp}</li>
           <li><strong>Dirección:</strong> {site.address}</li>
         </ul>

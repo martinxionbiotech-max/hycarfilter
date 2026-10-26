@@ -5,18 +5,18 @@ import { site } from '../data/site';
 
 <BaseLayout
   title="Terms of Service"
-  description={`Terms of Service for ${site.companyName} (${site.brand}) — the conditions that govern your use of this website and the basis on which we provide product information and quotations.`}
+  description={`Terms of Service for ${site.companyName} (${site.brand}) — the conditions that govern your use of this website, the licence granted to you, and the basis on which we provide product information and quotations.`}
 >
   <section class="section">
     <div class="container">
       <article class="legal">
         <h1>Terms of Service</h1>
-        <p class="updated">Last updated: 25 October 2026</p>
+        <p class="updated">Last updated: 26 October 2026</p>
 
         <p>
           These Terms of Service (&ldquo;Terms&rdquo;) govern your access to and use of{' '}
-          <strong>{site.domain}</strong>, the website of <strong>{site.companyName}</strong>{' '}
-          (&ldquo;{site.brand}&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo; or &ldquo;our&rdquo;). By accessing or
+          <strong>{site.domain}</strong>, the website of <strong>{site.companyName}</strong> (&ldquo;{site.entity.legalNameZh}&rdquo;,
+          &ldquo;{site.brand}&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo; or &ldquo;our&rdquo;). By accessing or
           using this website, you agree to be bound by these Terms. If you do not agree, please do not use the
           website.
         </p>
@@ -33,13 +33,15 @@ import { site } from '../data/site';
             <li>Acceptance of these Terms</li>
             <li>Who may use the website</li>
             <li>Nature of the website content</li>
+            <li>Licence to use the website</li>
+            <li>Prohibited uses</li>
             <li>Inquiries, quotations and orders</li>
             <li>Products, specifications and samples</li>
             <li>Pricing and payment</li>
             <li>Intellectual property</li>
-            <li>Acceptable use</li>
             <li>Disclaimers and limitation of liability</li>
             <li>Indemnification</li>
+            <li>Force majeure</li>
             <li>Governing law and dispute resolution</li>
             <li>Changes to these Terms</li>
             <li>Contact us</li>
@@ -58,7 +60,8 @@ import { site } from '../data/site';
         <p>
           This website is intended for use by individuals acting in a professional or commercial capacity, such
           as buyers, importers, distributors, wholesalers and fleet operators. You must be at least 18 years of
-          age to use the website and to submit information through it.
+          age to use the website and to submit information through it. By using the website, you represent that
+          you meet these requirements and that any information you submit is accurate.
         </p>
 
         <h2>3. Nature of the website content</h2>
@@ -77,13 +80,40 @@ import { site } from '../data/site';
           event of any inconsistency. Please see our <a href="/disclaimer/">Disclaimer</a> for further detail.
         </p>
 
-        <h2>4. Inquiries, quotations and orders</h2>
+        <h2>4. Licence to use the website</h2>
+        <p>
+          Subject to your compliance with these Terms, we grant you a limited, non-exclusive, non-transferable
+          and revocable licence to access and view the website and to download or print reasonable extracts of
+          its content for your own internal business evaluation. You must keep intact all copyright and
+          proprietary notices contained in any material you download or print.
+        </p>
+        <p>
+          This licence does not permit you to reproduce, republish, distribute, modify, create derivative works
+          from, publicly display or commercially exploit any content without our prior written consent. All
+          rights not expressly granted in these Terms are reserved to us and our licensors.
+        </p>
+
+        <h2>5. Prohibited uses</h2>
+        <p>You agree not to:</p>
+        <ul>
+          <li>Use the website in any way that is unlawful, fraudulent or harmful;</li>
+          <li>Attempt to gain unauthorised access to the website, its servers or any connected systems;</li>
+          <li>Introduce or transmit malicious code, viruses or harmful material;</li>
+          <li>Scrape, crawl or harvest content in a manner that places unreasonable load on our systems or breaches these Terms;</li>
+          <li>Misrepresent your identity or your affiliation with any person or organisation;</li>
+          <li>Use the website to send unsolicited communications or to infringe the rights of others;</li>
+          <li>Remove, obscure or alter any proprietary, copyright or trademark notices;</li>
+          <li>Use the website or its content to develop a competing product or service.</li>
+        </ul>
+
+        <h2>6. Inquiries, quotations and orders</h2>
         <p>
           Submitting an inquiry through our website or by email or messaging application does not create a
           contract and does not oblige us to supply any product. A quotation issued by us is an invitation to
           treat, not a binding offer, and is valid only for the period stated on it. An order becomes binding
           only when we confirm acceptance in writing, typically by means of a signed proforma invoice or
-          purchase confirmation.
+          purchase confirmation. Online website content is therefore not an offer or quotation; the terms of
+          any sale are set out exclusively in the written documents we issue and you sign for that transaction.
         </p>
         <p>
           You are responsible for ensuring that the information you provide to us — including OE numbers,
@@ -91,7 +121,7 @@ import { site } from '../data/site';
           We rely on that information when preparing quotations and manufacturing products.
         </p>
 
-        <h2>5. Products, specifications and samples</h2>
+        <h2>7. Products, specifications and samples</h2>
         <p>
           Our products are manufactured to the specifications we agree with you in writing. Where a
           pre-production sample is required, we will provide it for your approval; you should verify dimensions,
@@ -104,7 +134,7 @@ import { site } from '../data/site';
           images on this website are for illustration and may not reflect the exact appearance of the current
           production version.
         </p>
-        <h3>5.1 Warranty and after-sales</h3>
+        <h3>7.1 Warranty and after-sales</h3>
         <p>
           Warranty terms are set out in the sales contract or proforma invoice for each order. As a general
           reference, our products carry a warranty period of one year from delivery, excluding vulnerable and
@@ -115,7 +145,7 @@ import { site } from '../data/site';
           in a signed written agreement.
         </p>
 
-        <h2>6. Pricing and payment</h2>
+        <h2>8. Pricing and payment</h2>
         <p>
           Prices are quoted on a case-by-case basis and may be expressed in a currency agreed between the
           parties. Unless otherwise stated in writing, payment terms follow the arrangement common in
@@ -126,14 +156,14 @@ import { site } from '../data/site';
           deposit, and the balance is payable before release of the shipment.
         </p>
 
-        <h2>7. Intellectual property</h2>
+        <h2>9. Intellectual property</h2>
         <p>
           The website and its content, including text, articles, graphics, logos, data tables and the overall
           design, are owned by or licensed to {site.companyName} and are protected by applicable intellectual
-          property laws. You may view and print pages for your own internal business use, but you may not
-          reproduce, republish, distribute, modify or commercially exploit any content without our prior written
-          consent. The <strong>{site.brand}</strong> name and associated marks are our trade marks; nothing on
-          this website grants you any licence to use them.
+          property laws. The <strong>{site.brand}</strong> name and associated marks are trade marks of{' '}
+          {site.companyName}; nothing on this website grants you any licence to use them, and you may not use
+          them in connection with any product or service, or in any manner likely to cause confusion, without
+          our prior written consent.
         </p>
         <p>
           Certain images on this website are illustrative editorial imagery generated with AI image tools. They
@@ -141,18 +171,7 @@ import { site } from '../data/site';
           explanation. Where such imagery appears, it is labelled accordingly.
         </p>
 
-        <h2>8. Acceptable use</h2>
-        <p>You agree not to:</p>
-        <ul>
-          <li>Use the website in any way that is unlawful, fraudulent or harmful;</li>
-          <li>Attempt to gain unauthorised access to the website, its servers or any connected systems;</li>
-          <li>Introduce or transmit malicious code, viruses or harmful material;</li>
-          <li>Scrape, crawl or harvest content in a manner that places unreasonable load on our systems or breaches these Terms;</li>
-          <li>Misrepresent your identity or your affiliation with any person or organisation;</li>
-          <li>Use the website to send unsolicited communications or to infringe the rights of others.</li>
-        </ul>
-
-        <h2>9. Disclaimers and limitation of liability</h2>
+        <h2>10. Disclaimers and limitation of liability</h2>
         <p>
           To the fullest extent permitted by law, the website and its content are provided on an &ldquo;as
           is&rdquo; and &ldquo;as available&rdquo; basis without warranties of any kind, whether express or
@@ -171,40 +190,57 @@ import { site } from '../data/site';
           substitute for a formal specification sheet or for your own verification of fitment and compatibility.
         </p>
 
-        <h2>10. Indemnification</h2>
+        <h2>11. Indemnification</h2>
         <p>
           You agree to indemnify and hold harmless {site.companyName} and its officers, employees and agents
           from and against any claims, liabilities, damages, losses and expenses (including reasonable legal
-          fees) arising out of or in connection with your breach of these Terms or your misuse of the website.
+          fees) arising out of or in connection with your breach of these Terms, your misuse of the website, or
+          your violation of any third-party rights or applicable law in connection with your use of the website.
         </p>
 
-        <h2>11. Governing law and dispute resolution</h2>
+        <h2>12. Force majeure</h2>
+        <p>
+          Neither party shall be liable for any delay or failure to perform its obligations under these Terms or
+          any related agreement to the extent that such delay or failure results from circumstances beyond its
+          reasonable control, including but not limited to acts of God, natural disasters, fire, flood,
+          earthquake, epidemic or pandemic, war, terrorism, civil unrest, strikes or labour disputes, government
+          action, embargoes, or failures of transportation, utilities, telecommunications or the internet. The
+          affected party shall notify the other as soon as reasonably practicable and use reasonable efforts to
+          mitigate the effects of the event.
+        </p>
+
+        <h2>13. Governing law and dispute resolution</h2>
         <p>
           These Terms are governed by and construed in accordance with the laws of the People&rsquo;s Republic of
-          China, without regard to its conflict-of-law principles. Any dispute arising out of or in connection
-          with these Terms or your use of the website shall first be attempted to be resolved amicably through
-          negotiation. Where a dispute cannot be resolved by negotiation, it shall be submitted to the competent
-          court having jurisdiction over the location of {site.companyName}, unless mandatory law provides
-          otherwise.
+          China, without regard to its conflict-of-law principles. The governing law of any specific sales
+          contract may be agreed separately between the parties in writing. Any dispute arising out of or in
+          connection with these Terms or your use of the website shall first be attempted to be resolved
+          amicably through negotiation. Where a dispute cannot be resolved by negotiation, it shall be submitted
+          to the competent court having jurisdiction over the location of {site.companyName}, unless mandatory
+          law provides otherwise.
         </p>
         <p>
           If any provision of these Terms is held to be invalid or unenforceable, that provision shall be
           severed and the remaining provisions shall continue in full force and effect. These Terms, together
           with our Privacy Policy and Disclaimer, constitute the entire agreement between you and us regarding
-          your use of the website and supersede any prior agreements on that subject.
+          your use of the website and supersede any prior agreements on that subject. No waiver of any provision
+          shall be effective unless in writing, and a waiver of any breach shall not constitute a waiver of any
+          subsequent breach.
         </p>
 
-        <h2>12. Changes to these Terms</h2>
+        <h2>14. Changes to these Terms</h2>
         <p>
           We may revise these Terms at any time by updating this page. The &ldquo;Last updated&rdquo; date at the
           top of this page indicates when the current version took effect. It is your responsibility to review
           these Terms periodically.
         </p>
 
-        <h2>13. Contact us</h2>
+        <h2>15. Contact us</h2>
         <p>Questions about these Terms should be directed to:</p>
         <ul>
+          <li><strong>Operator:</strong> {site.companyName} ({site.entity.legalNameZh})</li>
           <li><strong>Email:</strong> <a href={`mailto:${site.email}`}>{site.email}</a></li>
+          <li><strong>Phone:</strong> {site.phone}</li>
           <li><strong>WhatsApp:</strong> {site.whatsapp}</li>
           <li><strong>Address:</strong> {site.address}</li>
         </ul>

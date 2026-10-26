@@ -5,13 +5,13 @@ import { site } from '../../data/site';
 
 <BaseLayout
   title="Política de privacidad"
-  description={`Política de privacidad de ${site.companyName} (${site.brand}): qué información recopilamos a través de este sitio web, cómo la utilizamos y qué derechos tiene sobre sus datos.`}
+  description={`Política de privacidad de ${site.companyName} (${site.brand}): qué información recopilamos a través de este sitio web, cómo la utilizamos, los derechos que tiene sobre sus datos conforme al RGPD y a la CCPA, y cómo contactarnos.`}
 >
   <section class="section">
     <div class="container">
       <article class="legal">
         <h1>Política de privacidad</h1>
-        <p class="updated">Última actualización: 25 de octubre de 2026</p>
+        <p class="updated">Última actualización: 26 de octubre de 2026</p>
 
         <p>
           Esta Política de privacidad explica cómo <strong>{site.companyName}</strong> (&ldquo;{site.brand}&rdquo;,
@@ -37,7 +37,8 @@ import { site } from '../../data/site';
             <li>Transferencias internacionales de datos</li>
             <li>Conservación de datos</li>
             <li>Seguridad de su información</li>
-            <li>Sus derechos</li>
+            <li>Sus derechos conforme al RGPD y leyes similares</li>
+            <li>Aviso para residentes de California (CCPA / CPRA)</li>
             <li>Cookies y tecnologías similares</li>
             <li>Privacidad de los menores</li>
             <li>Cambios a esta política</li>
@@ -47,15 +48,18 @@ import { site } from '../../data/site';
 
         <h2>1. Quiénes somos</h2>
         <p>
-          <strong>{site.companyName}</strong> es una empresa profesional de fabricación de filtros automotrices
-          que integra producción, investigación y desarrollo, ventas y servicio posventa. Nos especializamos en
-          filtros de aire automotrices, filtros de cabina, filtros de aceite, filtros de combustible, escobillas
-          de limpiaparabrisas, mallas de filtro de transmisión y luces LED, atendiendo a compradores de
-          exportación bajo modalidad OEM / ODM / marca privada.
+          <strong>{site.companyName}</strong> (&ldquo;{site.entity.legalNameZh}&rdquo;) es el operador de este
+          sitio web. Es una empresa profesional de fabricación de filtros automotrices que integra producción,
+          investigación y desarrollo, ventas y servicio posventa. Nos especializamos en filtros de aire
+          automotrices, filtros de cabina, filtros de aceite, filtros de combustible, escobillas de
+          limpiaparabrisas, mallas de filtro de transmisión y luces LED, atendiendo a compradores de exportación
+          bajo modalidad OEM / ODM / marca privada.
         </p>
         <p>
-          Nuestro domicilio registrado y operativo es {site.address}. Puede comunicarse con nosotros a través de{' '}
-          <a href={`mailto:${site.email}`}>{site.email}</a> o por WhatsApp al {site.whatsapp}.
+          Nuestro domicilio registrado y operativo es {site.address}. Nuestro código de crédito social unificado
+          es {site.entity.creditCode}. Puede comunicarse con nosotros a través de{' '}
+          <a href={`mailto:${site.email}`}>{site.email}</a>, por teléfono al {site.phone}, o por WhatsApp al{' '}
+          {site.whatsapp}.
         </p>
 
         <h2>2. Información que recopilamos</h2>
@@ -124,8 +128,15 @@ import { site } from '../../data/site';
           {site.brand} tiene su sede en China y atiende a clientes de todo el mundo. Si usted se comunica con
           nosotros desde fuera de China, la información que proporcione se transferirá a China y allí se tratará.
           Adoptamos medidas razonables para garantizar que dicha transferencia se realice de forma segura y que
-          su información siga recibiendo un nivel de protección coherente con esta política. Al utilizar el sitio
-          web y comunicarse con nosotros, usted comprende y consiente esta transferencia.
+          su información siga recibiendo un nivel de protección coherente con esta política.
+        </p>
+        <p>
+          Cuando la legislación que le resulte aplicable exija un mecanismo de transferencia específico, nos
+          basamos en uno o varios de los siguientes, según corresponda: (a) que la transferencia sea necesaria
+          para la ejecución de un contrato con usted o para la adopción de medidas a petición suya antes de
+          celebrar un contrato; (b) su consentimiento explícito; o (c) garantías adecuadas, como cláusulas
+          contractuales tipo u obligaciones de confidencialidad y seguridad impuestas al destinatario. Al
+          utilizar el sitio web y comunicarse con nosotros, usted comprende y consiente esta transferencia.
         </p>
 
         <h2>6. Conservación de datos</h2>
@@ -135,67 +146,120 @@ import { site } from '../../data/site';
           En la práctica:
         </p>
         <ul>
-          <li>La correspondencia de consultas se conserva mientras la consulta está activa y durante un periodo razonable posterior para permitir el seguimiento;</li>
-          <li>Los registros de transacciones y pedidos se conservan durante el tiempo que exijan las leyes contables, fiscales y comerciales;</li>
-          <li>Los registros técnicos se conservan durante un periodo breve con fines de seguridad y diagnóstico, y luego se eliminan o agregan.</li>
+          <li><strong>La correspondencia de consultas</strong> se conserva mientras la consulta está activa y hasta 24 meses después de nuestro último contacto con usted, para permitir el seguimiento, tras lo cual se revisa para su eliminación o agregación;</li>
+          <li><strong>Los registros de transacciones y pedidos</strong> se conservan durante el periodo que exijan las leyes contables, fiscales y comerciales (que puede ser de varios años), tras lo cual se eliminan o archivan de forma segura;</li>
+          <li><strong>Los registros técnicos y de seguridad</strong> se conservan durante un periodo breve (normalmente hasta 90 días) con fines de seguridad y diagnóstico, y luego se eliminan o agregan;</li>
+          <li><strong>Las comunicaciones de marketing</strong> se conservan hasta que usted retire su consentimiento o se excluya, tras lo cual dejamos de enviarlas (aunque podemos conservar un registro de supresión para atender su solicitud).</li>
         </ul>
+        <p>
+          Cuando ya no necesitamos la información personal para los fines aquí descritos, la eliminamos o
+          anonimizamos de forma segura.
+        </p>
 
         <h2>7. Seguridad de su información</h2>
         <p>
           Adoptamos medidas técnicas y organizativas razonables para proteger su información contra el acceso, la
-          alteración, la divulgación o la destrucción no autorizados. Estas incluyen controles de acceso que
-          limitan la información personal a los empleados que la necesitan para desempeñar su función (por
-          ejemplo, ventas o atención al cliente) y el uso de proveedores de alojamiento de buena reputación y con
-          parches de seguridad. Revisamos periódicamente nuestras prácticas de seguridad. Sin embargo, ningún
-          método de transmisión por internet ni de almacenamiento electrónico es completamente seguro, y no
-          podemos garantizar una seguridad absoluta.
+          alteración, la divulgación o la destrucción no autorizados. Estas incluyen:
+        </p>
+        <ul>
+          <li>Controles de acceso que limitan la información personal a los empleados que la necesitan para desempeñar su función (por ejemplo, ventas o atención al cliente);</li>
+          <li>Cifrado de los datos en tránsito (por ejemplo, HTTPS / TLS) y, cuando corresponda, en reposo;</li>
+          <li>El uso de proveedores de alojamiento de buena reputación y con parches de seguridad, y la aplicación de actualizaciones de seguridad;</li>
+          <li>Obligaciones de confidencialidad y concienciación sobre protección de datos para el personal pertinente;</li>
+          <li>Revisión periódica de nuestras prácticas de seguridad.</li>
+        </ul>
+        <p>
+          Sin embargo, ningún método de transmisión por internet ni de almacenamiento electrónico es
+          completamente seguro, y no podemos garantizar una seguridad absoluta.
         </p>
 
-        <h2>8. Sus derechos</h2>
-        <p>Según el lugar donde se encuentre, es posible que tenga derecho a:</p>
+        <h2>8. Sus derechos conforme al RGPD y leyes similares</h2>
+        <p>
+          Según el lugar donde se encuentre, y con sujeción a las condiciones y exenciones de la legislación
+          aplicable, es posible que tenga los siguientes derechos:
+        </p>
         <ul>
           <li><strong>Acceso</strong> — solicitar una copia de la información personal que tenemos sobre usted;</li>
           <li><strong>Rectificación</strong> — pedirnos corregir información inexacta o incompleta;</li>
-          <li><strong>Supresión</strong> — pedirnos eliminar información personal en determinadas circunstancias;</li>
-          <li><strong>Oposición o restricción</strong> — oponerse a, o solicitar la restricción de, determinados tratamientos;</li>
-          <li><strong>Portabilidad de datos</strong> — solicitar que la información se proporcione en un formato estructurado y legible por máquina cuando este derecho sea aplicable;</li>
-          <li><strong>Exclusión de marketing</strong> — pedirnos que dejemos de contactarle con fines de marketing en cualquier momento.</li>
+          <li><strong>Supresión (&ldquo;derecho al olvido&rdquo;)</strong> — pedirnos eliminar información personal en determinadas circunstancias;</li>
+          <li><strong>Restricción</strong> — pedirnos restringir el tratamiento de su información en determinadas circunstancias;</li>
+          <li><strong>Portabilidad de datos</strong> — solicitar que su información se le proporcione a usted, o a otro responsable, en un formato estructurado, de uso común y legible por máquina cuando este derecho sea aplicable;</li>
+          <li><strong>Oposición</strong> — oponerse al tratamiento basado en nuestros intereses legítimos, incluido el tratamiento con fines de marketing directo;</li>
+          <li><strong>Retirada del consentimiento</strong> — cuando nos basemos en su consentimiento, retirarlo en cualquier momento (sin que ello afecte a la licitud del tratamiento efectuado antes de la retirada);</li>
+          <li><strong>Decisiones automatizadas</strong> — no ser objeto de una decisión basada únicamente en un tratamiento automatizado que produzca efectos legales o de importancia similar respecto de usted. No llevamos a cabo tal toma de decisiones;</li>
+          <li><strong>Presentar una reclamación</strong> — reclamar ante su autoridad de control de protección de datos local si considera que nuestro tratamiento de su información infringe la legislación aplicable.</li>
         </ul>
         <p>
           Para ejercer cualquiera de estos derechos, comuníquese con nosotros a través de{' '}
-          <a href={`mailto:${site.email}`}>{site.email}</a> o de {site.whatsapp}. Responderemos en un plazo
-          razonable y, cuando una solicitud sea denegada conforme a la legislación aplicable, le explicaremos
-          los motivos.
+          <a href={`mailto:${site.email}`}>{site.email}</a>, por teléfono al {site.phone}, o por WhatsApp al{' '}
+          {site.whatsapp}. Responderemos dentro de los plazos exigidos por la legislación aplicable y, cuando
+          una solicitud sea denegada, le explicaremos los motivos.
         </p>
 
-        <h2>9. Cookies y tecnologías similares</h2>
+        <h2>9. Aviso para residentes de California (CCPA / CPRA)</h2>
+        <p>
+          Si usted es residente de California, EE. UU., la Ley de Privacidad del Consumidor de California, en su
+          versión modificada (la &ldquo;CCPA&rdquo;/&ldquo;CPRA&rdquo;), puede otorgarle ciertos derechos
+          adicionales. Esta sección complementa el resto de esta política.
+        </p>
+        <p><strong>Categorías de información personal que recopilamos.</strong> En los 12 meses anteriores a la fecha de esta política, hemos recopilado las siguientes categorías de información personal, en cada caso solo según se describe en la Sección 2 y únicamente para los fines comerciales entre empresas descritos en la Sección 3:</p>
+        <ul>
+          <li>Identificadores (por ejemplo, nombre, dirección de correo electrónico, número de teléfono o WhatsApp);</li>
+          <li>Información comercial (por ejemplo, productos de interés, detalles de pedido, registros de muestras y cotizaciones);</li>
+          <li>Actividad en internet u otras redes electrónicas (por ejemplo, dirección IP, tipo de navegador, páginas visitadas);</li>
+          <li>Información profesional o relacionada con el empleo (por ejemplo, nombre de la empresa y cargo, si los proporciona).</li>
+        </ul>
+        <p>
+          <strong>No vendemos su información personal</strong> y no la &ldquo;compartimos&rdquo; para publicidad
+          conductual entre contextos, tal como se definen dichos términos en la legislación de California, y no
+          lo hemos hecho en los 12 meses anteriores.
+        </p>
+        <p><strong>Sus derechos en California.</strong> Con sujeción a la legislación aplicable, es posible que tenga derecho a:</p>
+        <ul>
+          <li><strong>Conocer / acceder</strong> — solicitar que divulguemos las categorías y piezas específicas de información personal que hayamos recopilado sobre usted;</li>
+          <li><strong>Eliminar</strong> — solicitar la eliminación de la información personal que hayamos recopilado de usted, con sujeción a determinadas excepciones;</li>
+          <li><strong>Corregir</strong> — solicitar la corrección de información personal inexacta;</li>
+          <li><strong>Excluirse de la venta o compartición</strong> — aunque este derecho no se activa porque no vendemos ni compartimos información personal según lo definido anteriormente;</li>
+          <li><strong>No discriminación</strong> — no ser objeto de discriminación por ejercer sus derechos de privacidad.</li>
+        </ul>
+        <p>
+          Puede ejercer estos derechos por sí mismo o mediante un agente autorizado. Para ello, comuníquese con
+          nosotros a través de <a href={`mailto:${site.email}`}>{site.email}</a> o por teléfono al {site.phone}.
+          Verificaremos su solicitud antes de responder y no le discriminaremos por ejercer sus derechos.
+        </p>
+
+        <h2>10. Cookies y tecnologías similares</h2>
         <p>
           Este sitio web utiliza un número reducido de cookies y tecnologías similares para funcionar
-          correctamente y comprender el uso agregado. Para obtener una explicación completa de las cookies que
-          utilizamos y cómo gestionarlas, consulte nuestra <a href="/es/cookies/">Política de cookies</a>.
+          correctamente y comprender el uso agregado. No utilizamos cookies para publicidad dirigida y no
+          vendemos los datos recopilados mediante cookies. Para obtener una explicación completa de las cookies
+          que utilizamos, el mecanismo de consentimiento y cómo gestionarlas, consulte nuestra{' '}
+          <a href="/es/cookies/">Política de cookies</a>.
         </p>
 
-        <h2>10. Privacidad de los menores</h2>
+        <h2>11. Privacidad de los menores</h2>
         <p>
           Este sitio web es un sitio de comercio entre empresas (B2B) destinado a adultos que actúan en calidad
-          profesional. No recopilamos conscientemente información personal de menores. Si cree que un menor nos
-          ha proporcionado información personal, comuníquese con nosotros y la eliminaremos.
+          profesional. No recopilamos conscientemente información personal de menores de 16 años. Si cree que un
+          menor nos ha proporcionado información personal, comuníquese con nosotros y la eliminaremos.
         </p>
 
-        <h2>11. Cambios a esta política</h2>
+        <h2>12. Cambios a esta política</h2>
         <p>
           Podemos actualizar esta Política de privacidad periódicamente para reflejar cambios en nuestras
           prácticas, tecnología, requisitos legales o en los servicios que ofrecemos. Cuando lo hagamos,
-          revisaremos la fecha de &ldquo;Última actualización&rdquo; que figura al inicio de esta página. Le
+          revisaremos la fecha de &ldquo;Última actualización&rdquo; que figura al inicio de esta página. Cuando
+          los cambios sean sustanciales, adoptaremos medidas razonables para señalarlos a su atención. Le
           recomendamos revisar esta página de forma periódica.
         </p>
 
-        <h2>12. Cómo contactarnos</h2>
-        <p>Si tiene alguna pregunta o inquietud sobre esta Política de privacidad o sobre nuestras prácticas de datos, comuníquese con nosotros:</p>
+        <h2>13. Cómo contactarnos</h2>
+        <p>Si tiene alguna pregunta o inquietud sobre esta Política de privacidad o sobre nuestras prácticas de datos, o si desea ejercer alguno de sus derechos, comuníquese con nosotros:</p>
         <ul>
+          <li><strong>Operador:</strong> {site.companyName} ({site.entity.legalNameZh})</li>
           <li><strong>Correo electrónico:</strong> <a href={`mailto:${site.email}`}>{site.email}</a></li>
-          <li><strong>WhatsApp:</strong> {site.whatsapp}</li>
           <li><strong>Teléfono:</strong> {site.phone}</li>
+          <li><strong>WhatsApp:</strong> {site.whatsapp}</li>
           <li><strong>Dirección:</strong> {site.address}</li>
         </ul>
         <p>

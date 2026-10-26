@@ -5,17 +5,17 @@ import { site } from '../data/site';
 
 <BaseLayout
   title="Disclaimer"
-  description={`Disclaimer for ${site.companyName} (${site.brand}) — the reference nature of our product information, export trade disclaimers, and the limits of our liability.`}
+  description={`Disclaimer for ${site.companyName} (${site.brand}) — the reference nature of our product information, price and cost estimates, export trade disclaimers, and the limits of our liability.`}
 >
   <section class="section">
     <div class="container">
       <article class="legal">
         <h1>Disclaimer</h1>
-        <p class="updated">Last updated: 25 October 2026</p>
+        <p class="updated">Last updated: 26 October 2026</p>
 
         <p>
-          This Disclaimer sets out the basis on which <strong>{site.companyName}</strong> (&ldquo;{site.brand}&rdquo;,
-          &ldquo;we&rdquo;, &ldquo;us&rdquo; or &ldquo;our&rdquo;) publishes information on{' '}
+          This Disclaimer sets out the basis on which <strong>{site.companyName}</strong> (&ldquo;{site.entity.legalNameZh}&rdquo;,
+          &ldquo;{site.brand}&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo; or &ldquo;our&rdquo;) publishes information on{' '}
           <strong>{site.domain}</strong>. Please read it carefully. By using this website, you accept and agree
           to the terms of this Disclaimer.
         </p>
@@ -25,10 +25,12 @@ import { site } from '../data/site';
           <ol>
             <li>General information only</li>
             <li>Product specifications are reference in nature</li>
+            <li>Pricing and cost estimates</li>
             <li>Export and trade disclaimer</li>
             <li>Fitment and compatibility</li>
             <li>No professional or technical advice</li>
             <li>External links</li>
+            <li>Errors and omissions</li>
             <li>Intellectual property</li>
             <li>Limitation of liability</li>
             <li>No warranty</li>
@@ -48,7 +50,8 @@ import { site } from '../data/site';
           While we make reasonable efforts to keep the information on this website accurate, complete and
           current, we make no representations or warranties of any kind, express or implied, about the accuracy,
           reliability, availability or completeness of the content, and any reliance you place on such content
-          is strictly at your own risk.
+          is strictly at your own risk. You are responsible for your use of this website and for any decision
+          you take in reliance on it.
         </p>
         <p>
           The website is updated from time to time and its content may be out of date at any given moment. We are
@@ -102,7 +105,22 @@ import { site } from '../data/site';
           test report and specification for the exact SKU before relying on any performance figure.
         </p>
 
-        <h2>3. Export and trade disclaimer</h2>
+        <h2>3. Pricing and cost estimates</h2>
+        <p>
+          Any prices, minimum order quantities, lead times, freight estimates, duties, tariffs or landed-cost
+          figures shown on this website are <strong>indicative estimates for reference only</strong> and do not
+          constitute a quotation, an offer to sell, or a representation as to final cost. Prices vary with
+          specifications, quantities, raw-material and component costs, exchange rates, packaging, delivery terms
+          and destination, and are therefore subject to change without notice.
+        </p>
+        <p>
+          The final price, payment terms and delivery terms for any order are set out exclusively in the written
+          proforma invoice or sales contract we issue for that specific order. You should not rely on any
+          website figure as a firm price; always obtain a written quotation from us before making a purchasing
+          decision.
+        </p>
+
+        <h2>4. Export and trade disclaimer</h2>
         <p>
           {site.brand} is an export manufacturer and does not guarantee that any product complies with the
           regulatory, safety, labelling or certification requirements of any particular destination market.
@@ -119,7 +137,7 @@ import { site } from '../data/site';
           guidance only and does not constitute legal, customs or regulatory advice. You should seek independent
           advice from qualified professionals where appropriate.
         </p>
-        <h3>3.1 HS codes, duties and tariffs</h3>
+        <h3>4.1 HS codes, duties and tariffs</h3>
         <p>
           HS codes shown on this website are provided as a convenience and are based on our understanding of the
           product classification. They may not reflect reclassification by customs authorities, changes in tariff
@@ -129,7 +147,7 @@ import { site } from '../data/site';
           duties, tariffs, penalties or delays arising from classification.
         </p>
 
-        <h2>4. Fitment and compatibility</h2>
+        <h2>5. Fitment and compatibility</h2>
         <p>
           Automotive filters and related components are fitment-critical. A product that is dimensionally or
           functionally incompatible with a specific vehicle, engine, transmission or housing can fail and, in
@@ -140,7 +158,7 @@ import { site } from '../data/site';
           does not seat or does not match its engine, transmission or housing can fail without warning.
         </p>
 
-        <h2>5. No professional or technical advice</h2>
+        <h2>6. No professional or technical advice</h2>
         <p>
           Nothing on this website constitutes engineering, legal, regulatory, financial or other professional
           advice. Content is written from a general export and procurement perspective and may not address the
@@ -148,7 +166,7 @@ import { site } from '../data/site';
           professionals before making decisions based on this content.
         </p>
 
-        <h2>6. External links</h2>
+        <h2>7. External links</h2>
         <p>
           This website may contain links to third-party websites or resources. These links are provided for
           convenience only. We have no control over the content of third-party sites and accept no responsibility
@@ -156,7 +174,16 @@ import { site } from '../data/site';
           endorsement.
         </p>
 
-        <h2>7. Intellectual property</h2>
+        <h2>8. Errors and omissions</h2>
+        <p>
+          Despite our care, the information on this website may contain typographical, technical or descriptive
+          errors, inaccuracies or omissions, including in product specifications, images, pricing figures or
+          other data. We do not warrant that the content is error-free, and we reserve the right to correct any
+          errors, inaccuracies or omissions and to change or update information at any time without prior notice.
+          We disclaim any liability for such errors to the fullest extent permitted by law.
+        </p>
+
+        <h2>9. Intellectual property</h2>
         <p>
           Unless otherwise stated, the content of this website is owned by or licensed to {site.companyName}
           and is protected by intellectual property laws. You may not reproduce or distribute it without our
@@ -170,7 +197,7 @@ import { site } from '../data/site';
           explanation. Where such imagery appears, it is labelled accordingly.
         </p>
 
-        <h2>8. Limitation of liability</h2>
+        <h2>10. Limitation of liability</h2>
         <p>
           To the fullest extent permitted by law, {site.companyName} and its officers, employees and agents
           shall not be liable for any loss or damage, whether direct, indirect, incidental, special,
@@ -184,7 +211,7 @@ import { site } from '../data/site';
           applicable law.
         </p>
 
-        <h2>9. No warranty</h2>
+        <h2>11. No warranty</h2>
         <p>
           This website is provided on an &ldquo;as is&rdquo; and &ldquo;as available&rdquo; basis. We do not
           warrant that the website will be uninterrupted, secure or free from errors or harmful components, and
@@ -192,19 +219,20 @@ import { site } from '../data/site';
           discontinue the website or any part of it at any time without notice.
         </p>
 
-        <h2>10. Changes to this Disclaimer</h2>
+        <h2>12. Changes to this Disclaimer</h2>
         <p>
           We may revise this Disclaimer from time to time. The &ldquo;Last updated&rdquo; date at the top of this
           page indicates when the current version took effect. Your continued use of the website after changes
           are posted constitutes acceptance of the revised Disclaimer.
         </p>
 
-        <h2>11. Contact us</h2>
+        <h2>13. Contact us</h2>
         <p>If you have any questions about this Disclaimer, please contact us:</p>
         <ul>
+          <li><strong>Operator:</strong> {site.companyName} ({site.entity.legalNameZh})</li>
           <li><strong>Email:</strong> <a href={`mailto:${site.email}`}>{site.email}</a></li>
-          <li><strong>WhatsApp:</strong> {site.whatsapp}</li>
           <li><strong>Phone:</strong> {site.phone}</li>
+          <li><strong>WhatsApp:</strong> {site.whatsapp}</li>
           <li><strong>Address:</strong> {site.address}</li>
         </ul>
         <p>
