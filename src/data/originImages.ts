@@ -255,8 +255,8 @@ export const originImages = {
 
   /** factory/about "ABOUTUS" images (source home about block + factory tour stills) */
   factory: [
-    '7ec71d28-e246-44a5-8e43-ab909117a173.png',
-    '97066cc1-a1c5-4aba-96fc-bceef649db16.png',
+    '1eaabb71-10ce-4847-9876-fffe10613231.jpg',
+    '02d5c149-5c78-4de8-a72a-b5a58fa27960.jpg',
     '4f312703-985c-49a7-8b80-f644e664af0b.jpg',
     'f8f1f0ca-d2b4-4be4-a3eb-ddaa6099da4d.jpg',
     '0dc4d6ba-549e-4d82-9ab8-a97a76581256.jpg',
