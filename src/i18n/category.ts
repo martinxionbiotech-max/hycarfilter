@@ -15,7 +15,8 @@ export const categoryI18n: {
       intro:
         'فلتر الهواء هو خط الدفاع الأول للمحرك: فهو يمنع الغبار والرمال والجسيمات الكاشطة من الوصول إلى غرفة الاحتراق. فلتر الهواء الجيد غير ملحوظ في القيادة العادية ولا يُظهر قيمته إلا في الظروف القاسية — كثافة الغبار، الطرق الصحراوية، مواقع الإنشاء. بالنسبة للمشتري المصدِّر، نادرًا ما يتعلق القرار بالفلتر وحده؛ بل يتعلق بمطابقة درجة وسيط الترشيح وكثافة الطيّات مع طرق السوق المستهدف وجودة هوائه.',
       selection: [
-        { title: 'طابق وسيط الترشيح مع حمل الغبار', text: 'الأسواق الجافة المغبرة (الشرق الأوسط، شمال أفريقيا) تبرر وسيط ألياف نانوية أو وسيطًا عالي التحمل للغبار؛ أما الأسواق المعتدلة فيخدمها السليلوز القياسي جيدًا.' },
+        { title: 'طابق وسيط الترشيح مع حمل الغبار', text: 'في الأسواق الجافة المغبرة (الشرق الأوسط، شمال أفريقيا) قد يناسب وسيط الألياف النانوية أو وسيط عالي التحمل للغبار حمل الغبار؛ أما الأسواق المعتدلة فيخدمها السليلوز القياسي جيدًا. طابق الوسيط مع حمل الغبار وسعة احتجاز الغبار والمقاومة والتكلفة الإجمالية — لا مع مادة واحدة افتراضيًا.' },
+        { title: 'اقرأ الكفاءة مقابل معيار اختبار', text: 'النسبة وحدها ليست مواصفة. يجب أن تذكر الكفاءة طريقة الاختبار (ISO 5011 / SAE J726 للهواء) وغبار الاختبار وحجم الجسيمات؛ وإلا فهي رقم مرجعي لا نتيجة مقاسة. نذكر الكفاءة كمرجع تصميمي ونؤكدها لكل موديل عند الطلب.' },
         { title: 'افحص مانع التسرب', text: 'يجب أن ترتدّ حشية رغوة PU وتستقر بإحكام في الهيكل، وإلا يتجاوز الهواء غير المرشَّح عنصر الترشيح.' },
         { title: 'لوحي أم أسطواني', text: 'سيارات الركاب لوحية في الغالب؛ أما الشاحنات الخفيفة والحافلات والآلات فتستخدم غالبًا عناصر أسطوانية أو عناصر للخدمة الشاقة مع طبقة أمان.' },
         { title: 'عدد الطيّات مهم', text: 'كثافة الطيّات الأعلى تعني مساحة وسيط أكبر وعمر خدمة أطول لحجم الصندوق نفسه.' },
@@ -23,11 +24,11 @@ export const categoryI18n: {
       faqs: [
         { q: 'ما هو الحد الأدنى للطلب لديكم لفلاتر الهواء؟', a: 'تبدأ فلاتر الهواء اللوحية القياسية من 500 وحدة لكل موديل؛ أما العناصر الأسطوانية وعناصر الخدمة الشاقة فتبدأ من 200–300 وحدة. تُسعَّر القوالب المخصصة لأنماط OE الجديدة بشكل منفصل.' },
         { q: 'هل يمكنكم الإنتاج وفق رقم OE الخاص بي؟', a: 'نعم. أرسل لنا رقم OE وعيّنة أو رسمًا؛ نطابق الأبعاد ووسيط الترشيح ومانع التسرب، ونوفر عيّنة ما قبل الإنتاج للموافقة.' },
-        { q: 'كيف تمنعون تجاوز الهواء حول وسيط الترشيح؟', a: 'نستخدم حشيات رغوة PU أو حشيات مطاطية مختبرة من حيث الانضغاط الدائم، بالإضافة إلى فحوصات إحكام تامة بنسبة 100%، بحيث يتم التحقق من مانع التسرب في كل وحدة.' },
+        { q: 'كيف تمنعون تجاوز الهواء حول وسيط الترشيح؟', a: 'نستخدم حشيات رغوة PU أو حشيات مطاطية مختبرة من حيث الانضغاط الدائم، بالإضافة إلى التحقق من مانع التسرب كجزء من برنامج مراقبة الجودة قبل التغليف.' },
       ],
       opinion: {
-        title: 'السوق الصحراوي هو سوق ألياف نانوية',
-        body: 'بعد مقارنة أحمال الغبار عبر المناطق، رأيي الراسخ هو هذا: إذا كنت تبيع إلى الشرق الأوسط أو شمال أفريقيا، فتجاوز أرخص موديل سليلوز. فالغبار الصحراوي الناعم هو بالضبط ما تلتقطه طبقة الألياف النانوية بشكل أفضل، والمشترون هناك يفهمون مسبقًا أن فلتر الهواء المسدود عالي الغبار يقصّر عمر المحرك. إن تقديم فلتر هواء بألياف نانوية كخط «درجة صحراوية» هو أمر سليم تقنيًا وأكثر حدة تجاريًا من المنافسة على السعر وحده.',
+        title: 'الألياف النانوية إجابة واحدة للغبار، لا الخيار الافتراضي',
+        body: 'ما إذا كانت طبقة الألياف النانوية الخيار الصحيح لسوق صحراوي يعتمد على أكثر من المناخ: درجة الوسيط وكثافة الطيّات، وسعة احتجاز الغبار، ومقاومة التدفق، والكفاءة التي يتطلبها المحرك، والتكلفة الإجمالية للملكية. يمكن خدمة سوق عالي الغبار بطبقة ألياف نانوية أو بتصميم سليلوز عالي السعة مع طبقة أمان — والخيار الأفضل هو ما يلبي ميزانية الغبار والمقاومة للمحرك بأقل تكلفة إجمالية. نطابق الوسيط مع حمل الغبار المقاس وفاصل الصيانة المستهدف، وننصح بعدم الاقتصار على مادة واحدة افتراضيًا.',
       },
     },
     cf: {
@@ -54,14 +55,16 @@ export const categoryI18n: {
         'يزيل فلتر الزيت الغبار وبُرادة المعادن والكربون والسخام من زيت المحرك ويوصل زيتًا نظيفًا إلى العمود المرفقي والبيلات والأعمدة والكامات والشاحن التوربيني وحلقات المكبس. وهو الفلتر الأعلى تبعات في الكتالوج: ففلتر الزيت الفاشل يمكن أن يدمّر المحرك. لهذا السبب فإن فروق «الجيد مقابل الرخيص» — سحب العلبة، معايرة صمام التجاوز، ارتداد مانع التسرب — تهم هنا أكثر من أي مكان آخر.',
       selection: [
         { title: 'افحص سحب العلبة', text: 'الهيكل الفولاذي المسحوب من قطعة واحدة أقوى وأكثر مقاومة للتسرب من الهيكل الملحوم بالدرز أو الرقيق الجدران؛ وهو مؤشر موثوق على الجودة.' },
-        { title: 'تأكد من معايرة صمام التجاوز', text: 'يجب أن يفتح صمام التجاوز عند الضغط المحدد حتى يستمر تدفق الزيت إذا انسدّ الوسيط — ضغط الفتح الخاطئ يسبب تجويع المحرك أو تجاوزه.' },
+        { title: 'تأكد من معايرة صمام التجاوز', text: 'يفتح صمام التجاوز عند ضغط مرجعي OE/تصميمي معاير حتى يستمر تدفق الزيت إذا انسدّ الوسيط — ضغط الفتح الخاطئ يسبب تجويع المحرك أو تجاوزه. أكّد ضغط الفتح مقابل مواصفة OE قبل تقديم السعر.' },
+        { title: 'اقرأ الكفاءة كنسبة بيتا', text: '«≥90% @ 20µm» دون مرجع الاختبار هي رقم مرجعي لا مواصفة. كفاءة فلتر الزيت لا تكون ذات معنى إلا كنسبة بيتا وفق اختبار التمرير المتعدد ISO 4548 مع ذكر المستوى الميكروني ومرجع الاختبار. نذكرها كمرجع تصميمي ونؤكدها لكل موديل.' },
+        { title: '«Long-Life» مطابقة للوسيط لا وعد', text: 'فلتر الزيت «Long-Life» يعني وسيطًا مختارًا لفاصل تصريف أطول — ولا يعني بذاته تمديد فاصل تغيير الزيت. الفاصل الفعلي يعتمد على المحرك وجودة الزيت وظروف التشغيل، وتحدده مواصفة المركبة أو الزيت، لا اسم الوسيط.' },
         { title: 'تحقق من صمام منع التصريف', text: 'صمام منع التصريف يُبقي الزيت في الفلتر لتزييت بدء التشغيل البارد؛ وهو ضروري لتطبيقات التركيب الرأسي.' },
         { title: 'دوّار أم خرطوشة', text: 'الدوّار (Spin-On) علبة كاملة؛ أما عناصر الخرطوشة (مركبات الاتحاد الأوروبي/اليابان) فتستبدل الوسيط فقط. طابق تصميم OE لأسطول السوق المستهدف.' },
       ],
       faqs: [
-        { q: 'ماذا يحدث إذا فتح صمام تجاوز فلتر الزيت؟', a: 'عندما ينسدّ الوسيط أو يكون الزيت باردًا وسميكًا، يفتح صمام التجاوز للحفاظ على ضغط الزيت، ما يحمي المحرك من تجويع الزيت على حساب الترشيح المؤقت.' },
+        { q: 'ماذا يحدث إذا فتح صمام تجاوز فلتر الزيت، وما ضغط الفتح الذي تضبطونه؟', a: 'عندما ينسدّ الوسيط أو يكون الزيت باردًا وسميكًا، يفتح صمام التجاوز للحفاظ على ضغط الزيت، ما يحمي المحرك من تجويع الزيت على حساب الترشيح المؤقت. يُضبط ضغط الفتح وفق مرجع OE/تصميمي لكل محرك ويُؤكد لكل طلب.' },
         { q: 'ما هو الحد الأدنى للطلب لديكم لفلاتر الزيت؟', a: 'تبدأ فلاتر سيارات الركاب الدوّارة وفلاتر الخرطوشة من 1,000 وحدة لكل موديل؛ أما فلاتر الخدمة الشاقة فمن 500 وحدة.' },
-        { q: 'كيف تختبرون فلاتر الزيت؟', a: 'اختبار إحكام بنسبة 100%، واختبار ضغط الانفجار، ومعايرة ضغط فتح التجاوز، مع خيار تقارير اختبار ISO 4548 لمشاريع OEM.' },
+        { q: 'كيف تختبرون فلاتر الزيت؟', a: 'فحص الإحكام الهوائي كجزء من برنامج مراقبة الجودة، واختبار ضغط الانفجار، ومعايرة ضغط فتح التجاوز، مع توفر تقارير التمرير المتعدد ISO 4548 لمشاريع OEM. تُذكر الكفاءة كقيمة مرجعية حتى يُرفق معيار الاختبار.' },
       ],
       opinion: {
         title: 'روسيا وأسواق بدء التشغيل البارد تريد صمام منع تصريف أفضل',
@@ -150,7 +153,8 @@ export const categoryI18n: {
       intro:
         'El filtro de aire es la primera línea de defensa del motor: detiene el polvo, la arena y las partículas abrasivas antes de que lleguen a la cámara de combustión. Un buen filtro de aire pasa desapercibido en la conducción normal y solo demuestra su valor en condiciones severas: mucho polvo, caminos desérticos, obras de construcción. Para un comprador exportador, la decisión rara vez depende solo del filtro; depende de hacer coincidir el grado del medio filtrante y la densidad de pliegues con las carreteras y la calidad del aire del mercado objetivo.',
       selection: [
-        { title: 'Adapta el medio a la carga de polvo', text: 'Los mercados secos y polvorientos (Oriente Medio, Norte de África) justifican medios de nanofibras o de alto rendimiento ante polvo; los mercados templados se atienden bien con celulosa estándar.' },
+        { title: 'Adapta el medio a la carga de polvo', text: 'En los mercados secos y polvorientos (Oriente Medio, Norte de África) un medio de nanofibras o de alto rendimiento ante polvo puede encajar con la carga de polvo; los mercados templados se atienden bien con celulosa estándar. Empareje el medio con la carga de polvo, la capacidad de retención, la restricción y el costo total — no con un único material por defecto.' },
+        { title: 'Lea la eficiencia contra una norma de prueba', text: 'Un porcentaje por sí solo no es una especificación. La eficiencia debe citar el método de prueba (ISO 5011 / SAE J726 para aire), el polvo de prueba y el tamaño de partícula; de lo contrario es una cifra de referencia, no un resultado medido. Expresamos la eficiencia como referencia de diseño y la confirmamos por referencia cuando se solicita.' },
         { title: 'Revisa el sello', text: 'Una junta de espuma de PU debe recuperar su forma y asentar a ras en la carcasa; de lo contrario, el aire sin filtrar se desvía del elemento.' },
         { title: 'Panel vs redondo', text: 'Los automóviles son en su mayoría de tipo panel; los camiones ligeros, buses y maquinaria suelen usar elementos redondos o de servicio pesado con una capa de seguridad.' },
         { title: 'El número de pliegues importa', text: 'Una mayor densidad de pliegues significa más área de medio y una vida útil más larga para el mismo tamaño de caja.' },
@@ -158,11 +162,11 @@ export const categoryI18n: {
       faqs: [
         { q: '¿Cuál es su pedido mínimo para filtros de aire?', a: 'Los filtros de aire de panel estándar parten de 500 unidades por modelo; los elementos redondos y de servicio pesado parten de 200–300 unidades. El herramental personalizado para nuevos patrones OE se cotiza por separado.' },
         { q: '¿Pueden fabricar según mi número OE?', a: 'Sí. Envíenos el número OE y una muestra o dibujo; igualamos dimensiones, medio y sello, y entregamos una muestra de preproducción para su aprobación.' },
-        { q: '¿Cómo evitan que el aire se desvíe alrededor del medio?', a: 'Usamos juntas de espuma de PU o de caucho con prueba de deformación por compresión, más controles de hermeticidad al 100 %, de modo que el sello se verifica en cada unidad.' },
+        { q: '¿Cómo evitan que el aire se desvíe alrededor del medio?', a: 'Usamos juntas de espuma de PU o de caucho con prueba de deformación por compresión, más verificación del sello como parte de nuestro programa de calidad antes del embalaje.' },
       ],
       opinion: {
-        title: 'El mercado desértico es un mercado de nanofibras',
-        body: 'Tras comparar las cargas de polvo entre regiones, mi visión firme es esta: si vende hacia Oriente Medio o Norte de África, omita la referencia de celulosa más barata. El polvo desértico fino es exactamente lo que una capa de nanofibras capta mejor, y los compradores de allí ya entienden que un filtro de aire obstruido y cargado de polvo acorta la vida del motor. Posicionar un filtro de aire de nanofibras como una línea de «grado desértico» es técnicamente honesto y comercialmente más agudo que competir solo por precio.',
+        title: 'Las nanofibras son una respuesta al polvo, no la opción por defecto',
+        body: 'Que una capa de nanofibras sea la elección correcta para un mercado desértico depende de más que el clima: el grado del medio y la densidad de pliegues, la capacidad de retención de polvo, la restricción de flujo, la eficiencia que requiere el motor y el costo total de propiedad. Un mercado con mucho polvo puede atenderse con una capa de nanofibras o con un diseño de celulosa de alta capacidad con capa de seguridad — la mejor opción es la que cumple el presupuesto de polvo y restricción del motor al menor costo total. Emparejamos el medio con la carga de polvo medida y el intervalo de servicio objetivo, y recomendamos no optar por un único material por defecto.',
       },
     },
     cf: {
@@ -189,14 +193,16 @@ export const categoryI18n: {
         'El filtro de aceite elimina el polvo, las partículas metálicas, el carbón y el hollín del aceite del motor y entrega aceite limpio al cigüeñal, las bielas, los árboles de levas, el turbocompresor y los anillos del pistón. Es el filtro de mayores consecuencias del catálogo: un filtro de aceite fallido puede destruir un motor. Por eso las diferencias entre «bueno y barato» — embutición de la lata, calibración de la derivación, recuperación del sello — importan aquí más que en ningún otro lugar.',
       selection: [
         { title: 'Revise la embutición de la lata', text: 'Una carcasa de acero embutida de una pieza es más resistente y a prueba de fugas que una carcasa soldada por costura o de pared delgada; es una señal fiable de calidad.' },
-        { title: 'Confirme la calibración de la derivación', text: 'La válvula de derivación debe abrir a la presión especificada para que el flujo de aceite continúe si el medio se obstruye; una presión de apertura incorrecta priva al motor o lo desvía.' },
+        { title: 'Confirme la calibración de la derivación', text: 'La válvula de derivación abre a una presión de referencia OE/de diseño calibrada para que el flujo de aceite continúe si el medio se obstruye; una presión de apertura incorrecta priva al motor o lo desvía. Confirme la presión de apertura contra la especificación OE antes de cotizar.' },
+        { title: 'Lea la eficiencia como relación beta', text: 'Un «≥90% @ 20µm» sin referencia de prueba es una cifra de referencia, no una especificación. La eficiencia de un filtro de aceite solo tiene sentido como relación beta bajo la prueba multipaso ISO 4548, con el nivel de micras y la referencia de prueba adjuntos. La expresamos como referencia de diseño y la confirmamos por referencia.' },
+        { title: '«Long-Life» es una coincidencia de medio, no una promesa', text: 'Un filtro de aceite «Long-Life» significa un medio seleccionado para un intervalo de drenaje más largo: no extiende por sí solo el intervalo de cambio de aceite. El intervalo real depende del motor, la calidad del aceite y las condiciones de operación, y lo fija la especificación del vehículo o del aceite, no el nombre del medio.' },
         { title: 'Verifique el antirretorno', text: 'Una válvula antirretorno mantiene el aceite en el filtro para lubricar en el arranque en frío; es esencial en aplicaciones de montaje vertical.' },
         { title: 'Spin-on vs cartucho', text: 'El spin-on es una lata completa; los elementos de cartucho (vehículos UE/JP) reemplazan solo el medio. Iguale el diseño OE para la flota objetivo.' },
       ],
       faqs: [
-        { q: '¿Qué pasa si se abre la derivación del filtro de aceite?', a: 'Cuando el medio se obstruye o el aceite está frío y espeso, la válvula de derivación se abre para mantener la presión de aceite, protegiendo al motor de la falta de aceite a costa de una filtración temporal.' },
+        { q: '¿Qué pasa si se abre la derivación del filtro de aceite y qué presión de apertura configuran?', a: 'Cuando el medio se obstruye o el aceite está frío y espeso, la válvula de derivación se abre para mantener la presión de aceite, protegiendo al motor de la falta de aceite a costa de una filtración temporal. La presión de apertura se configura según una referencia OE/de diseño para cada motor y se confirma por pedido.' },
         { q: '¿Cuál es su pedido mínimo para filtros de aceite?', a: 'Los filtros spin-on y de cartucho para automóviles parten de 1.000 unidades por modelo; los filtros de servicio pesado, de 500 unidades.' },
-        { q: '¿Cómo prueban los filtros de aceite?', a: 'Prueba de hermeticidad al 100 %, prueba de presión de estallido y calibración de la presión de apertura de la derivación, con opción de informes de prueba ISO 4548 para proyectos OEM.' },
+        { q: '¿Cómo prueban los filtros de aceite?', a: 'Verificación de hermeticidad como parte de nuestro programa de calidad, prueba de presión de estallido y calibración de la presión de apertura de la derivación, con informes multipaso ISO 4548 disponibles para proyectos OEM. La eficiencia se expresa como valor de referencia hasta adjuntar la norma de prueba.' },
       ],
       opinion: {
         title: 'Rusia y los mercados de arranque en frío quieren una mejor válvula antirretorno',

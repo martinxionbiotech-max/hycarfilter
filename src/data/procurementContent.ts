@@ -183,7 +183,7 @@ export const extraFaqs: Record<string, FaqItem[]> = {
     },
     {
       q: 'How do you pack air filters for sea freight?',
-      a: 'We use 5-ply export cartons with corner reinforcement, sealed polybags with desiccant, and pallet cube optimized to keep freight cost per unit low. Carton compression strength is specified to survive container stacking.',
+      a: 'Our export packaging standard uses crush-resistant export cartons with corner protection, sealed polybags with desiccant for moisture-sensitive elements, and pallet cube optimized to keep freight cost per unit low. Carton compression strength is specified to survive container stacking.',
     },
     {
       q: 'Can I get a sample before mass production?',
@@ -206,20 +206,12 @@ export const extraFaqs: Record<string, FaqItem[]> = {
   ],
   of: [
     {
-      q: 'What tests do you run on oil filters?',
-      a: '100% airtightness, burst-pressure, and bypass opening-pressure calibration on every line, with ISO 4548 multi-pass reports available for OEM projects. Efficiency is stated as a beta ratio, not a bare percentage.',
-    },
-    {
       q: 'How do you protect steel canisters from rust in sea freight?',
       a: 'We use an internal oil film, sealed polybags and VCI (vapor-corrosion-inhibitor) paper inside double-wall cartons, so the can arrives clean even after weeks in a humid container.',
     },
     {
       q: 'Can you match a specific OE oil filter number?',
       a: 'Yes. Send the OE number and, ideally, a sample; we match thread, gasket, bypass setting, media and canister dimensions and provide a pre-production sample for approval.',
-    },
-    {
-      q: 'What bypass valve opening pressure do you set?',
-      a: 'The bypass opening pressure is calibrated to the OE specification for each engine, and every unit is tested. This keeps oil flowing if the media clogs or the oil is cold and thick, without bypassing filtration under normal conditions.',
     },
   ],
   ff: [

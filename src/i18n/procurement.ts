@@ -182,7 +182,7 @@ export const procurementI18n: {
         },
         {
           q: 'كيف تغلّفون فلاتر الهواء للشحن البحري؟',
-          a: 'نستخدم كراتين تصدير خماسية الطبقات مع تقوية الزوايا، وأكياسًا بلاستيكية محكمة مع مادة مجففة، وبالتة مُحسّنة المساحة لإبقاء تكلفة النقل للوحدة منخفضة. قوة انضغاط الكرتون محددة لتتحمل تراص الحاويات.',
+          a: 'معيار التغليف التصديري لدينا يستخدم كراتين تصدير مقاومة للسحق مع حماية الزوايا، وأكياسًا بلاستيكية محكمة مع مادة مجففة للعناصر الحساسة للرطوبة، وبالتة مُحسّنة المساحة لإبقاء تكلفة النقل للوحدة منخفضة. قوة انضغاط الكرتون محددة لتتحمل تراص الحاويات.',
         },
         {
           q: 'هل يمكنني الحصول على عينة قبل الإنتاج الكمي؟',
@@ -205,20 +205,12 @@ export const procurementI18n: {
       ],
       of: [
         {
-          q: 'ما الاختبارات التي تجرونها على فلاتر الزيت؟',
-          a: 'إحكام تام 100%، وضغط الانفجار، ومعايرة ضغط فتح صمام التجاوز على كل خط إنتاج، مع توفر تقارير التمرير المتعدد ISO 4548 للمشاريع بمستوى OEM. تُذكر الكفاءة كنسبة بيتا لا كنسبة مئوية مجردة.',
-        },
-        {
           q: 'كيف تحمون العلب الفولاذية من الصدأ في الشحن البحري؟',
           a: 'نستخدم طبقة زيت داخلية، وأكياسًا بلاستيكية محكمة، وورق VCI (مثبط التآكل بالبخار) داخل كراتين مزدوجة الجدار، لتصل العلبة نظيفة حتى بعد أسابيع في حاوية رطبة.',
         },
         {
           q: 'هل يمكنكم مطابقة رقم فلتر زيت OE محدد؟',
           a: 'نعم. أرسل رقم OE ويفضل عينة؛ نطابق السن والحشية وإعداد التجاوز ووسيط الترشيح وأبعاد العلبة ونوفر عينة ما قبل الإنتاج للاعتماد.',
-        },
-        {
-          q: 'ما ضغط فتح صمام التجاوز الذي تضبطونه؟',
-          a: 'يُعاير ضغط فتح صمام التجاوز وفق مواصفة OE لكل محرك، وتُختبَر كل وحدة. هذا يُبقي الزيت متدفقًا إذا انسد الوسيط أو كان الزيت باردًا كثيفًا، دون تجاوز الترشيح في الظروف العادية.',
         },
       ],
       ff: [
@@ -452,7 +444,7 @@ export const procurementI18n: {
         },
         {
           q: '¿Cómo embalan los filtros de aire para el flete marítimo?',
-          a: 'Usamos cajas de exportación de 5 capas con refuerzo en esquinas, bolsas selladas con desecante y pallets con volumen optimizado para mantener bajo el costo de flete por unidad. La resistencia a la compresión se especifica para sobrevivir el apilamiento en contenedor.',
+          a: 'Nuestro estándar de embalaje de exportación usa cajas de exportación resistentes al aplastamiento con protección de esquinas, bolsas selladas con desecante para elementos sensibles a la humedad y pallets con volumen optimizado para mantener bajo el costo de flete por unidad. La resistencia a la compresión se especifica para sobrevivir el apilamiento en contenedor.',
         },
         {
           q: '¿Puedo obtener una muestra antes de la producción en masa?',
@@ -475,20 +467,12 @@ export const procurementI18n: {
       ],
       of: [
         {
-          q: '¿Qué pruebas realizan en los filtros de aceite?',
-          a: '100% de hermeticidad, presión de estallido y calibración de la presión de apertura de la válvula de derivación en cada línea, con informes multipaso ISO 4548 disponibles para proyectos OEM. La eficiencia se expresa como relación beta, no como un porcentaje simple.',
-        },
-        {
           q: '¿Cómo protegen las carcasas de acero del óxido en el flete marítimo?',
           a: 'Usamos una película de aceite interior, bolsas selladas y papel VCI (inhibidor de corrosión por vapor) dentro de cajas de doble pared, para que la carcasa llegue limpia incluso después de semanas en un contenedor húmedo.',
         },
         {
           q: '¿Pueden igualar un número OE específico de filtro de aceite?',
           a: 'Sí. Envía el número OE y, idealmente, una muestra; igualamos rosca, junta, ajuste de derivación, medio y dimensiones de la carcasa y entregamos una muestra de preproducción para aprobación.',
-        },
-        {
-          q: '¿Qué presión de apertura de la válvula de derivación configuran?',
-          a: 'La presión de apertura se calibra según la especificación OE de cada motor, y cada unidad se prueba. Esto mantiene el flujo de aceite si el medio se obstruye o el aceite está frío y espeso, sin derivar la filtración en condiciones normales.',
         },
       ],
       ff: [

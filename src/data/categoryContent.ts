@@ -13,7 +13,8 @@ export const categoryContent: Record<string, CategoryContent> = {
     intro:
       'The air filter is the engine\u2019s first line of defense: it stops dust, sand and abrasive particles from reaching the combustion chamber. A good air filter is invisible in normal driving and only shows its worth in harsh conditions — high dust, desert roads, construction sites. For an export buyer, the decision is rarely about the filter alone; it is about matching media grade and pleat density to the target market\u2019s roads and air quality.',
     selection: [
-      { title: 'Match media to dust load', text: 'Dry, dusty markets (Middle East, North Africa) justify nano-fiber or high-dust media; temperate markets are well served by standard cellulose.' },
+      { title: 'Match media to dust load', text: 'In dry, dusty markets (Middle East, North Africa) a nano-fiber or high-dust media may fit the dust load; temperate markets are generally well served by standard cellulose. Match the media to dust load, dust-holding capacity, restriction and total cost — not to a single material by default.' },
+      { title: 'Read efficiency against a test standard', text: 'A percentage alone is not a specification. Efficiency should cite the test method (ISO 5011 / SAE J726 for air), the test dust and the particle size; otherwise it is a reference number, not a measured result. We state efficiency as a design reference and confirm it per SKU on request.' },
       { title: 'Check the seal', text: 'A PU-foam gasket must rebound and sit flush in the housing, otherwise unfiltered air bypasses the element.' },
       { title: 'Panel vs round', text: 'Passenger cars are mostly panel-type; light trucks, buses and machinery often use round or heavy-duty elements with a safety layer.' },
       { title: 'Pleat count matters', text: 'Higher pleat density means more media area and longer service life for the same box size.' },
@@ -21,12 +22,12 @@ export const categoryContent: Record<string, CategoryContent> = {
     faqs: [
       { q: 'What is your MOQ for air filters?', a: 'Standard panel air filters start at 500 units per model; heavy-duty and round elements start at 200\u2013300 units. Custom tooling for new OE patterns is quoted separately.' },
       { q: 'Can you produce to my OE number?', a: 'Yes. Send us the OE number and a sample or drawing; we match dimensions, media and seal, and provide a pre-production sample for approval.' },
-      { q: 'How do you prevent air bypass around the media?', a: 'We use PU-foam or rubber gaskets that are compression-set tested, plus 100% airtightness checks, so the seal is verified on every unit.' },
+      { q: 'How do you prevent air bypass around the media?', a: 'We use PU-foam or rubber gaskets that are compression-set tested, plus seal verification as part of our QC program, so the seal is checked before packing.' },
     ],
     opinion: {
-      title: 'The desert market is a nano-fiber market',
+      title: 'Nano-fiber is one answer to dust, not the default',
       body:
-        'After comparing dust loads across regions, my strong view is this: if you are selling into the Middle East or North Africa, skip the cheapest cellulose SKU. Fine desert dust is exactly what a nano-fiber layer catches best, and buyers there already understand that a clogged, high-dust air filter shortens engine life. Positioning a nano-fiber air filter as a \u201cdesert grade\u201d line is both technically honest and commercially sharper than competing on price alone.',
+        'Whether a nano-fiber layer is the right choice for a desert market depends on more than the climate: media grade and pleat density, dust-holding capacity, flow restriction, the efficiency the engine requires, and the total cost of ownership. A high-dust market can be served by a nano-fiber layer or by a high-capacity cellulose design with a safety layer — the better option is whichever meets the engine\u2019s dust and restriction budget at the lower total cost. We match media to the measured dust load and the target service interval, and recommend against defaulting to a single material.',
     },
   },
 
@@ -56,14 +57,16 @@ export const categoryContent: Record<string, CategoryContent> = {
       'The oil filter removes dust, metal debris, carbon and soot from engine oil and delivers clean oil to the crank, rods, cams, turbocharger and piston rings. It is the highest-consequence filter in the catalog: a failed oil filter can destroy an engine. That is why the \u201cgood vs cheap\u201d differences \u2014 canister draw, bypass calibration, seal rebound \u2014 matter more here than anywhere else.',
     selection: [
       { title: 'Check the canister draw', text: 'A one-piece drawn steel shell is stronger and leak-resistant than a seam-welded or thin-walled shell; it is a reliable quality signal.' },
-      { title: 'Confirm bypass calibration', text: 'The bypass valve must open at the specified pressure so oil flow continues if the media clogs \u2014 a wrong opening pressure starves or bypasses the engine.' },
+      { title: 'Confirm bypass calibration', text: 'The bypass valve opens at a calibrated OE/design reference pressure so oil flow continues if the media clogs \u2014 a wrong opening pressure starves or bypasses the engine. Confirm the opening pressure against the OE specification before quoting.' },
+      { title: 'Read efficiency as a beta ratio', text: 'A bare \u201c≥90% @ 20µm\u201d is a reference figure until the test standard is stated. Oil-filter efficiency is only meaningful as a beta ratio under ISO 4548 multi-pass testing, with the micron level and test reference attached. We state it as a design reference and confirm it per SKU.' },
+      { title: 'Long-Life is a media match, not a promise', text: 'A \u201cLong-Life\u201d oil filter means media selected for a longer drain interval \u2014 it does not, by itself, extend the oil-change interval. The actual interval depends on the engine, oil quality and operating conditions, and is set by the vehicle or oil specification, not the media name.' },
       { title: 'Verify anti-drainback', text: 'An anti-drainback valve keeps oil in the filter for cold-start lubrication; it is essential for vertical-mount applications.' },
       { title: 'Spin-on vs cartridge', text: 'Spin-on is a complete canister; cartridge elements (EU/JP vehicles) replace only the media. Match the OE design for the target fleet.' },
     ],
     faqs: [
-      { q: 'What happens if the oil filter bypass opens?', a: 'When the media is clogged or oil is cold and thick, the bypass valve opens to maintain oil pressure, protecting the engine from oil starvation at the cost of temporary filtration.' },
+      { q: 'What happens if the oil filter bypass opens, and what opening pressure do you set?', a: 'When the media is clogged or oil is cold and thick, the bypass valve opens to maintain oil pressure, protecting the engine from oil starvation at the cost of temporary filtration. The opening pressure is set to an OE/design reference for each engine and confirmed per order.' },
       { q: 'What is your MOQ for oil filters?', a: 'Passenger-car spin-on and cartridge filters start at 1,000 units per model; heavy-duty filters at 500 units.' },
-      { q: 'How do you test oil filters?', a: '100% airtightness test, burst-pressure testing, and bypass opening-pressure calibration, with the option of ISO 4548 test reports for OEM projects.' },
+      { q: 'How do you test oil filters?', a: 'Airtightness checking as part of our QC program, burst-pressure testing, and bypass opening-pressure calibration, with ISO 4548 multi-pass reports available for OEM projects. Efficiency is stated as a reference value until the test standard is attached.' },
     ],
     opinion: {
       title: 'Russia and cold-start markets want a better anti-drainback valve',
