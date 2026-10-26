@@ -1,0 +1,447 @@
+model,category,series,name_en,field,value,value_type,confirmation_status,note
+hy-af-nano,af,Nano,Nano-Fiber Panel Air Filter,Filtration Efficiency,>=99.5%,reference,unverified,"No test standard, test dust or particle size stated on the seed value. Confirm against an ISO 5011 / SAE J726 report for the exact SKU before quoting."
+hy-af-nano,af,Nano,Nano-Fiber Panel Air Filter,Media,nano-fiber,design-target,pending-sample,Media grade selected by application; confirm grade and pleat spec on the sample.
+hy-af-nano,af,Nano,Nano-Fiber Panel Air Filter,Length (mm),280,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-af-nano,af,Nano,Nano-Fiber Panel Air Filter,Width (mm),205,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-af-nano,af,Nano,Nano-Fiber Panel Air Filter,Height (mm),45,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-af-nano,af,Nano,Nano-Fiber Panel Air Filter,Housing Material,polyurethane (PU) frame,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-af-nano,af,Nano,Nano-Fiber Panel Air Filter,Media Material,nano-fiber composite,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-af-nano,af,Nano,Nano-Fiber Panel Air Filter,End Cap Material,polyurethane,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-af-nano,af,Nano,Nano-Fiber Panel Air Filter,Seal Material,PU foam gasket,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-af-nano,af,Nano,Nano-Fiber Panel Air Filter,Applicable Vehicles,passenger cars; SUVs,reference,unverified,Indicative fitment; confirm by OE number before quoting.
+hy-af-nano,af,Nano,Nano-Fiber Panel Air Filter,OE Numbers,17801-XXXXX,reference,unverified,Seed placeholder; verify against the OE catalog.
+hy-af-nano,af,Nano,Nano-Fiber Panel Air Filter,Cross Reference,MANN C 24 005; Bosch F 026 400 xxx,reference,unverified,Seed placeholder; verify cross-reference before quoting.
+hy-af-nano,af,Nano,Nano-Fiber Panel Air Filter,Inner Box,polybag + color box,typical,pending-order,Export packing standard; confirm per order.
+hy-af-nano,af,Nano,Nano-Fiber Panel Air Filter,Outer Carton,5-ply export carton,typical,pending-order,Export packing standard; confirm per order.
+hy-af-nano,af,Nano,Nano-Fiber Panel Air Filter,Carton Qty,20,typical,pending-order,Units per carton; confirm per order.
+hy-af-nano,af,Nano,Nano-Fiber Panel Air Filter,Net Weight (kg),0.42,typical,pending-order,Net weight per unit; confirm per order.
+hy-af-nano,af,Nano,Nano-Fiber Panel Air Filter,MOQ,500,typical,pending-order,Typical MOQ; negotiable by model and order size.
+hy-af-nano,af,Nano,Nano-Fiber Panel Air Filter,Lead Time (days),20,typical,pending-order,Typical lead time; firm date confirmed at order confirmation.
+hy-af-nano,af,Nano,Nano-Fiber Panel Air Filter,Certifications,ISO 9001 framework; IATF 16949 framework,reference,unverified,"Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+hy-af-nano,af,Nano,Nano-Fiber Panel Air Filter,Target Markets,Middle East; Russia; South America,reference,unverified,Indicative target markets.
+hy-af-nano,af,Nano,Nano-Fiber Panel Air Filter,HS Code,8421310000,reference,unverified,China export HS code; confirm per product and destination.
+hy-af-panel,af,Panel,Standard Panel Air Filter,Filtration Efficiency,>=99.0%,reference,unverified,"No test standard, test dust or particle size stated on the seed value. Confirm against an ISO 5011 / SAE J726 report for the exact SKU before quoting."
+hy-af-panel,af,Panel,Standard Panel Air Filter,Media,cellulose,design-target,pending-sample,Media grade selected by application; confirm grade and pleat spec on the sample.
+hy-af-panel,af,Panel,Standard Panel Air Filter,Length (mm),300,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-af-panel,af,Panel,Standard Panel Air Filter,Width (mm),210,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-af-panel,af,Panel,Standard Panel Air Filter,Height (mm),50,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-af-panel,af,Panel,Standard Panel Air Filter,Housing Material,polyurethane (PU) frame,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-af-panel,af,Panel,Standard Panel Air Filter,Media Material,resin-impregnated cellulose,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-af-panel,af,Panel,Standard Panel Air Filter,End Cap Material,polyurethane,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-af-panel,af,Panel,Standard Panel Air Filter,Seal Material,PU foam gasket,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-af-panel,af,Panel,Standard Panel Air Filter,Applicable Vehicles,passenger cars,reference,unverified,Indicative fitment; confirm by OE number before quoting.
+hy-af-panel,af,Panel,Standard Panel Air Filter,OE Numbers,17801-YYYYY,reference,unverified,Seed placeholder; verify against the OE catalog.
+hy-af-panel,af,Panel,Standard Panel Air Filter,Cross Reference,MANN C 25 110; Bosch F 026 400 yyy,reference,unverified,Seed placeholder; verify cross-reference before quoting.
+hy-af-panel,af,Panel,Standard Panel Air Filter,Inner Box,polybag + color box,typical,pending-order,Export packing standard; confirm per order.
+hy-af-panel,af,Panel,Standard Panel Air Filter,Outer Carton,5-ply export carton,typical,pending-order,Export packing standard; confirm per order.
+hy-af-panel,af,Panel,Standard Panel Air Filter,Carton Qty,20,typical,pending-order,Units per carton; confirm per order.
+hy-af-panel,af,Panel,Standard Panel Air Filter,Net Weight (kg),0.38,typical,pending-order,Net weight per unit; confirm per order.
+hy-af-panel,af,Panel,Standard Panel Air Filter,MOQ,500,typical,pending-order,Typical MOQ; negotiable by model and order size.
+hy-af-panel,af,Panel,Standard Panel Air Filter,Lead Time (days),18,typical,pending-order,Typical lead time; firm date confirmed at order confirmation.
+hy-af-panel,af,Panel,Standard Panel Air Filter,Certifications,ISO 9001 framework,reference,unverified,"Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+hy-af-panel,af,Panel,Standard Panel Air Filter,Target Markets,Middle East; Africa; Southeast Asia,reference,unverified,Indicative target markets.
+hy-af-panel,af,Panel,Standard Panel Air Filter,HS Code,8421310000,reference,unverified,China export HS code; confirm per product and destination.
+hy-af-round,af,Round,Round Air Filter,Filtration Efficiency,>=99.0%,reference,unverified,"No test standard, test dust or particle size stated on the seed value. Confirm against an ISO 5011 / SAE J726 report for the exact SKU before quoting."
+hy-af-round,af,Round,Round Air Filter,Media,cellulose,design-target,pending-sample,Media grade selected by application; confirm grade and pleat spec on the sample.
+hy-af-round,af,Round,Round Air Filter,Height (mm),320,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-af-round,af,Round,Round Air Filter,Outer Diameter (mm),150,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-af-round,af,Round,Round Air Filter,Inner Diameter (mm),80,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-af-round,af,Round,Round Air Filter,Housing Material,steel (perforated core),design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-af-round,af,Round,Round Air Filter,Media Material,resin-impregnated cellulose,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-af-round,af,Round,Round Air Filter,End Cap Material,steel,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-af-round,af,Round,Round Air Filter,Seal Material,NBR,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-af-round,af,Round,Round Air Filter,Applicable Vehicles,light trucks; commercial vehicles,reference,unverified,Indicative fitment; confirm by OE number before quoting.
+hy-af-round,af,Round,Round Air Filter,OE Numbers,AF-ROUND-001,reference,unverified,Seed placeholder; verify against the OE catalog.
+hy-af-round,af,Round,Round Air Filter,Cross Reference,MANN C 30 045; Fleetguard AFxxx,reference,unverified,Seed placeholder; verify cross-reference before quoting.
+hy-af-round,af,Round,Round Air Filter,Inner Box,polybag + color box,typical,pending-order,Export packing standard; confirm per order.
+hy-af-round,af,Round,Round Air Filter,Outer Carton,5-ply export carton,typical,pending-order,Export packing standard; confirm per order.
+hy-af-round,af,Round,Round Air Filter,Carton Qty,10,typical,pending-order,Units per carton; confirm per order.
+hy-af-round,af,Round,Round Air Filter,Net Weight (kg),1.1,typical,pending-order,Net weight per unit; confirm per order.
+hy-af-round,af,Round,Round Air Filter,MOQ,300,typical,pending-order,Typical MOQ; negotiable by model and order size.
+hy-af-round,af,Round,Round Air Filter,Lead Time (days),22,typical,pending-order,Typical lead time; firm date confirmed at order confirmation.
+hy-af-round,af,Round,Round Air Filter,Certifications,ISO 9001 framework,reference,unverified,"Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+hy-af-round,af,Round,Round Air Filter,Target Markets,Russia; South America; Africa,reference,unverified,Indicative target markets.
+hy-af-round,af,Round,Round Air Filter,HS Code,8421310000,reference,unverified,China export HS code; confirm per product and destination.
+hy-af-heavy,af,Heavy-Duty,Heavy-Duty Air Filter,Filtration Efficiency,>=99.6%,reference,unverified,"No test standard, test dust or particle size stated on the seed value. Confirm against an ISO 5011 / SAE J726 report for the exact SKU before quoting."
+hy-af-heavy,af,Heavy-Duty,Heavy-Duty Air Filter,Media,nano-fiber + safety layer,design-target,pending-sample,Media grade selected by application; confirm grade and pleat spec on the sample.
+hy-af-heavy,af,Heavy-Duty,Heavy-Duty Air Filter,Height (mm),400,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-af-heavy,af,Heavy-Duty,Heavy-Duty Air Filter,Outer Diameter (mm),200,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-af-heavy,af,Heavy-Duty,Heavy-Duty Air Filter,Inner Diameter (mm),120,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-af-heavy,af,Heavy-Duty,Heavy-Duty Air Filter,Housing Material,steel (perforated core),design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-af-heavy,af,Heavy-Duty,Heavy-Duty Air Filter,Media Material,nano-fiber composite + safety layer,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-af-heavy,af,Heavy-Duty,Heavy-Duty Air Filter,End Cap Material,steel,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-af-heavy,af,Heavy-Duty,Heavy-Duty Air Filter,Seal Material,NBR,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-af-heavy,af,Heavy-Duty,Heavy-Duty Air Filter,Applicable Vehicles,construction machinery; agricultural machinery; heavy trucks,reference,unverified,Indicative fitment; confirm by OE number before quoting.
+hy-af-heavy,af,Heavy-Duty,Heavy-Duty Air Filter,OE Numbers,AF-HEAVY-001,reference,unverified,Seed placeholder; verify against the OE catalog.
+hy-af-heavy,af,Heavy-Duty,Heavy-Duty Air Filter,Cross Reference,Fleetguard AFxxx-HD; Donaldson Pxxxxxx,reference,unverified,Seed placeholder; verify cross-reference before quoting.
+hy-af-heavy,af,Heavy-Duty,Heavy-Duty Air Filter,Inner Box,polybag + carton,typical,pending-order,Export packing standard; confirm per order.
+hy-af-heavy,af,Heavy-Duty,Heavy-Duty Air Filter,Outer Carton,double-wall export carton,typical,pending-order,Export packing standard; confirm per order.
+hy-af-heavy,af,Heavy-Duty,Heavy-Duty Air Filter,Carton Qty,6,typical,pending-order,Units per carton; confirm per order.
+hy-af-heavy,af,Heavy-Duty,Heavy-Duty Air Filter,Net Weight (kg),2.4,typical,pending-order,Net weight per unit; confirm per order.
+hy-af-heavy,af,Heavy-Duty,Heavy-Duty Air Filter,MOQ,200,typical,pending-order,Typical MOQ; negotiable by model and order size.
+hy-af-heavy,af,Heavy-Duty,Heavy-Duty Air Filter,Lead Time (days),25,typical,pending-order,Typical lead time; firm date confirmed at order confirmation.
+hy-af-heavy,af,Heavy-Duty,Heavy-Duty Air Filter,Certifications,ISO 9001 framework; IATF 16949 framework,reference,unverified,"Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+hy-af-heavy,af,Heavy-Duty,Heavy-Duty Air Filter,Target Markets,Middle East; Russia; Africa; South America,reference,unverified,Indicative target markets.
+hy-af-heavy,af,Heavy-Duty,Heavy-Duty Air Filter,HS Code,8421310000,reference,unverified,China export HS code; confirm per product and destination.
+hy-cf-particle,cf,Particle,Particle Cabin Filter,Filtration Efficiency,>=95%,reference,unverified,No test standard or particle size stated. HEPA values must state H-class and MPPS per a real standard; confirm per SKU.
+hy-cf-particle,cf,Particle,Particle Cabin Filter,Media,particle,design-target,pending-sample,Media grade selected by application; confirm grade and pleat spec on the sample.
+hy-cf-particle,cf,Particle,Particle Cabin Filter,Length (mm),240,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-cf-particle,cf,Particle,Particle Cabin Filter,Width (mm),200,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-cf-particle,cf,Particle,Particle Cabin Filter,Height (mm),30,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-cf-particle,cf,Particle,Particle Cabin Filter,Housing Material,plastic frame,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-cf-particle,cf,Particle,Particle Cabin Filter,Media Material,particle filtration media,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-cf-particle,cf,Particle,Particle Cabin Filter,End Cap Material,plastic,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-cf-particle,cf,Particle,Particle Cabin Filter,Seal Material,PU foam gasket,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-cf-particle,cf,Particle,Particle Cabin Filter,Applicable Vehicles,passenger cars,reference,unverified,Indicative fitment; confirm by OE number before quoting.
+hy-cf-particle,cf,Particle,Particle Cabin Filter,OE Numbers,CF-PART-001,reference,unverified,Seed placeholder; verify against the OE catalog.
+hy-cf-particle,cf,Particle,Particle Cabin Filter,Cross Reference,MANN CU 25001; Bosch P 3xxx,reference,unverified,Seed placeholder; verify cross-reference before quoting.
+hy-cf-particle,cf,Particle,Particle Cabin Filter,Inner Box,polybag + color box,typical,pending-order,Export packing standard; confirm per order.
+hy-cf-particle,cf,Particle,Particle Cabin Filter,Outer Carton,5-ply export carton,typical,pending-order,Export packing standard; confirm per order.
+hy-cf-particle,cf,Particle,Particle Cabin Filter,Carton Qty,25,typical,pending-order,Units per carton; confirm per order.
+hy-cf-particle,cf,Particle,Particle Cabin Filter,Net Weight (kg),0.22,typical,pending-order,Net weight per unit; confirm per order.
+hy-cf-particle,cf,Particle,Particle Cabin Filter,MOQ,1000,typical,pending-order,Typical MOQ; negotiable by model and order size.
+hy-cf-particle,cf,Particle,Particle Cabin Filter,Lead Time (days),15,typical,pending-order,Typical lead time; firm date confirmed at order confirmation.
+hy-cf-particle,cf,Particle,Particle Cabin Filter,Certifications,ISO 9001 framework,reference,unverified,"Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+hy-cf-particle,cf,Particle,Particle Cabin Filter,Target Markets,Middle East; Southeast Asia; South America,reference,unverified,Indicative target markets.
+hy-cf-particle,cf,Particle,Particle Cabin Filter,HS Code,8421310000,reference,unverified,China export HS code; confirm per product and destination.
+hy-cf-carbon,cf,Carbon,Activated Carbon Cabin Filter,Filtration Efficiency,>=96%,reference,unverified,No test standard or particle size stated. HEPA values must state H-class and MPPS per a real standard; confirm per SKU.
+hy-cf-carbon,cf,Carbon,Activated Carbon Cabin Filter,Media,activated carbon,design-target,pending-sample,Media grade selected by application; confirm grade and pleat spec on the sample.
+hy-cf-carbon,cf,Carbon,Activated Carbon Cabin Filter,Length (mm),240,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-cf-carbon,cf,Carbon,Activated Carbon Cabin Filter,Width (mm),200,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-cf-carbon,cf,Carbon,Activated Carbon Cabin Filter,Height (mm),30,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-cf-carbon,cf,Carbon,Activated Carbon Cabin Filter,Housing Material,plastic frame,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-cf-carbon,cf,Carbon,Activated Carbon Cabin Filter,Media Material,activated carbon + particle media,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-cf-carbon,cf,Carbon,Activated Carbon Cabin Filter,End Cap Material,plastic,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-cf-carbon,cf,Carbon,Activated Carbon Cabin Filter,Seal Material,PU foam gasket,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-cf-carbon,cf,Carbon,Activated Carbon Cabin Filter,Applicable Vehicles,passenger cars; SUVs,reference,unverified,Indicative fitment; confirm by OE number before quoting.
+hy-cf-carbon,cf,Carbon,Activated Carbon Cabin Filter,OE Numbers,CF-CARB-001,reference,unverified,Seed placeholder; verify against the OE catalog.
+hy-cf-carbon,cf,Carbon,Activated Carbon Cabin Filter,Cross Reference,MANN CUK 25001; Bosch P 3xxx C,reference,unverified,Seed placeholder; verify cross-reference before quoting.
+hy-cf-carbon,cf,Carbon,Activated Carbon Cabin Filter,Inner Box,polybag + color box,typical,pending-order,Export packing standard; confirm per order.
+hy-cf-carbon,cf,Carbon,Activated Carbon Cabin Filter,Outer Carton,5-ply export carton,typical,pending-order,Export packing standard; confirm per order.
+hy-cf-carbon,cf,Carbon,Activated Carbon Cabin Filter,Carton Qty,25,typical,pending-order,Units per carton; confirm per order.
+hy-cf-carbon,cf,Carbon,Activated Carbon Cabin Filter,Net Weight (kg),0.26,typical,pending-order,Net weight per unit; confirm per order.
+hy-cf-carbon,cf,Carbon,Activated Carbon Cabin Filter,MOQ,1000,typical,pending-order,Typical MOQ; negotiable by model and order size.
+hy-cf-carbon,cf,Carbon,Activated Carbon Cabin Filter,Lead Time (days),15,typical,pending-order,Typical lead time; firm date confirmed at order confirmation.
+hy-cf-carbon,cf,Carbon,Activated Carbon Cabin Filter,Certifications,ISO 9001 framework,reference,unverified,"Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+hy-cf-carbon,cf,Carbon,Activated Carbon Cabin Filter,Target Markets,Middle East; Southeast Asia; Europe,reference,unverified,Indicative target markets.
+hy-cf-carbon,cf,Carbon,Activated Carbon Cabin Filter,HS Code,8421310000,reference,unverified,China export HS code; confirm per product and destination.
+hy-cf-hepa,cf,HEPA,HEPA Cabin Filter,Filtration Efficiency,>=99.97% (H13),reference,unverified,No test standard or particle size stated. HEPA values must state H-class and MPPS per a real standard; confirm per SKU.
+hy-cf-hepa,cf,HEPA,HEPA Cabin Filter,Media,HEPA composite,design-target,pending-sample,Media grade selected by application; confirm grade and pleat spec on the sample.
+hy-cf-hepa,cf,HEPA,HEPA Cabin Filter,Length (mm),240,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-cf-hepa,cf,HEPA,HEPA Cabin Filter,Width (mm),200,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-cf-hepa,cf,HEPA,HEPA Cabin Filter,Height (mm),30,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-cf-hepa,cf,HEPA,HEPA Cabin Filter,Housing Material,plastic frame,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-cf-hepa,cf,HEPA,HEPA Cabin Filter,Media Material,HEPA composite + activated carbon,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-cf-hepa,cf,HEPA,HEPA Cabin Filter,End Cap Material,plastic,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-cf-hepa,cf,HEPA,HEPA Cabin Filter,Seal Material,PU foam gasket,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-cf-hepa,cf,HEPA,HEPA Cabin Filter,Applicable Vehicles,passenger cars; SUVs; premium vehicles,reference,unverified,Indicative fitment; confirm by OE number before quoting.
+hy-cf-hepa,cf,HEPA,HEPA Cabin Filter,OE Numbers,CF-HEPA-001,reference,unverified,Seed placeholder; verify against the OE catalog.
+hy-cf-hepa,cf,HEPA,HEPA Cabin Filter,Cross Reference,MANN FP 25001; Bosch P 3xxx HEPA,reference,unverified,Seed placeholder; verify cross-reference before quoting.
+hy-cf-hepa,cf,HEPA,HEPA Cabin Filter,Inner Box,polybag + color box,typical,pending-order,Export packing standard; confirm per order.
+hy-cf-hepa,cf,HEPA,HEPA Cabin Filter,Outer Carton,5-ply export carton,typical,pending-order,Export packing standard; confirm per order.
+hy-cf-hepa,cf,HEPA,HEPA Cabin Filter,Carton Qty,25,typical,pending-order,Units per carton; confirm per order.
+hy-cf-hepa,cf,HEPA,HEPA Cabin Filter,Net Weight (kg),0.3,typical,pending-order,Net weight per unit; confirm per order.
+hy-cf-hepa,cf,HEPA,HEPA Cabin Filter,MOQ,1000,typical,pending-order,Typical MOQ; negotiable by model and order size.
+hy-cf-hepa,cf,HEPA,HEPA Cabin Filter,Lead Time (days),18,typical,pending-order,Typical lead time; firm date confirmed at order confirmation.
+hy-cf-hepa,cf,HEPA,HEPA Cabin Filter,Certifications,ISO 9001 framework; IATF 16949 framework,reference,unverified,"Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+hy-cf-hepa,cf,HEPA,HEPA Cabin Filter,Target Markets,Europe; Middle East; North America,reference,unverified,Indicative target markets.
+hy-cf-hepa,cf,HEPA,HEPA Cabin Filter,HS Code,8421310000,reference,unverified,China export HS code; confirm per product and destination.
+hy-of-spinon,of,Spin-On,Spin-On Oil Filter,Filtration Efficiency,>=90% @ 20um,reference,unverified,Stated without a beta ratio or ISO 4548 multi-pass reference. Confirm the test reference and micron level per SKU.
+hy-of-spinon,of,Spin-On,Spin-On Oil Filter,Media,cellulose,design-target,pending-sample,Media grade selected by application; confirm grade and pleat spec on the sample.
+hy-of-spinon,of,Spin-On,Spin-On Oil Filter,Height (mm),90,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-of-spinon,of,Spin-On,Spin-On Oil Filter,Outer Diameter (mm),76,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-of-spinon,of,Spin-On,Spin-On Oil Filter,Thread,3/4-16 UNF,reference,unverified,OE / design reference thread spec; verify against the engine or vehicle fitment.
+hy-of-spinon,of,Spin-On,Spin-On Oil Filter,Gasket,NBR,reference,unverified,OE / design reference gasket spec; verify against the housing.
+hy-of-spinon,of,Spin-On,Spin-On Oil Filter,Housing Material,steel (one-piece drawn),design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-of-spinon,of,Spin-On,Spin-On Oil Filter,Media Material,resin-impregnated cellulose,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-of-spinon,of,Spin-On,Spin-On Oil Filter,End Cap Material,steel,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-of-spinon,of,Spin-On,Spin-On Oil Filter,Seal Material,NBR (high/low temp resilient),design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-of-spinon,of,Spin-On,Spin-On Oil Filter,Applicable Vehicles,passenger cars,reference,unverified,Indicative fitment; confirm by OE number before quoting.
+hy-of-spinon,of,Spin-On,Spin-On Oil Filter,OE Numbers,OF-SPIN-001,reference,unverified,Seed placeholder; verify against the OE catalog.
+hy-of-spinon,of,Spin-On,Spin-On Oil Filter,Cross Reference,MANN W 610/3; Bosch 0451 103 xxx,reference,unverified,Seed placeholder; verify cross-reference before quoting.
+hy-of-spinon,of,Spin-On,Spin-On Oil Filter,Inner Box,polybag + color box,typical,pending-order,Export packing standard; confirm per order.
+hy-of-spinon,of,Spin-On,Spin-On Oil Filter,Outer Carton,5-ply export carton,typical,pending-order,Export packing standard; confirm per order.
+hy-of-spinon,of,Spin-On,Spin-On Oil Filter,Carton Qty,30,typical,pending-order,Units per carton; confirm per order.
+hy-of-spinon,of,Spin-On,Spin-On Oil Filter,Net Weight (kg),0.35,typical,pending-order,Net weight per unit; confirm per order.
+hy-of-spinon,of,Spin-On,Spin-On Oil Filter,MOQ,1000,typical,pending-order,Typical MOQ; negotiable by model and order size.
+hy-of-spinon,of,Spin-On,Spin-On Oil Filter,Lead Time (days),15,typical,pending-order,Typical lead time; firm date confirmed at order confirmation.
+hy-of-spinon,of,Spin-On,Spin-On Oil Filter,Certifications,ISO 9001 framework; IATF 16949 framework,reference,unverified,"Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+hy-of-spinon,of,Spin-On,Spin-On Oil Filter,Target Markets,Middle East; Russia; South America,reference,unverified,Indicative target markets.
+hy-of-spinon,of,Spin-On,Spin-On Oil Filter,HS Code,8421230000,reference,unverified,China export HS code; confirm per product and destination.
+hy-of-cartridge,of,Cartridge,Cartridge Oil Filter,Filtration Efficiency,>=90% @ 20um,reference,unverified,Stated without a beta ratio or ISO 4548 multi-pass reference. Confirm the test reference and micron level per SKU.
+hy-of-cartridge,of,Cartridge,Cartridge Oil Filter,Media,composite,design-target,pending-sample,Media grade selected by application; confirm grade and pleat spec on the sample.
+hy-of-cartridge,of,Cartridge,Cartridge Oil Filter,Height (mm),78,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-of-cartridge,of,Cartridge,Cartridge Oil Filter,Outer Diameter (mm),64,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-of-cartridge,of,Cartridge,Cartridge Oil Filter,Inner Diameter (mm),28,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-of-cartridge,of,Cartridge,Cartridge Oil Filter,Gasket,NBR,reference,unverified,OE / design reference gasket spec; verify against the housing.
+hy-of-cartridge,of,Cartridge,Cartridge Oil Filter,Housing Material,none (cartridge element),design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-of-cartridge,of,Cartridge,Cartridge Oil Filter,Media Material,composite fiber,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-of-cartridge,of,Cartridge,Cartridge Oil Filter,End Cap Material,plastic / thermoset,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-of-cartridge,of,Cartridge,Cartridge Oil Filter,Seal Material,NBR,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-of-cartridge,of,Cartridge,Cartridge Oil Filter,Applicable Vehicles,passenger cars (EU/JP models),reference,unverified,Indicative fitment; confirm by OE number before quoting.
+hy-of-cartridge,of,Cartridge,Cartridge Oil Filter,OE Numbers,OF-CART-001,reference,unverified,Seed placeholder; verify against the OE catalog.
+hy-of-cartridge,of,Cartridge,Cartridge Oil Filter,Cross Reference,MANN HU 719/7 x; Bosch 0451 104 xxx,reference,unverified,Seed placeholder; verify cross-reference before quoting.
+hy-of-cartridge,of,Cartridge,Cartridge Oil Filter,Inner Box,polybag + color box,typical,pending-order,Export packing standard; confirm per order.
+hy-of-cartridge,of,Cartridge,Cartridge Oil Filter,Outer Carton,5-ply export carton,typical,pending-order,Export packing standard; confirm per order.
+hy-of-cartridge,of,Cartridge,Cartridge Oil Filter,Carton Qty,30,typical,pending-order,Units per carton; confirm per order.
+hy-of-cartridge,of,Cartridge,Cartridge Oil Filter,Net Weight (kg),0.2,typical,pending-order,Net weight per unit; confirm per order.
+hy-of-cartridge,of,Cartridge,Cartridge Oil Filter,MOQ,1000,typical,pending-order,Typical MOQ; negotiable by model and order size.
+hy-of-cartridge,of,Cartridge,Cartridge Oil Filter,Lead Time (days),15,typical,pending-order,Typical lead time; firm date confirmed at order confirmation.
+hy-of-cartridge,of,Cartridge,Cartridge Oil Filter,Certifications,ISO 9001 framework; IATF 16949 framework,reference,unverified,"Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+hy-of-cartridge,of,Cartridge,Cartridge Oil Filter,Target Markets,Europe; Middle East,reference,unverified,Indicative target markets.
+hy-of-cartridge,of,Cartridge,Cartridge Oil Filter,HS Code,8421230000,reference,unverified,China export HS code; confirm per product and destination.
+hy-of-hd,of,Heavy-Duty,Heavy-Duty Oil Filter,Filtration Efficiency,>=95% @ 20um,reference,unverified,Stated without a beta ratio or ISO 4548 multi-pass reference. Confirm the test reference and micron level per SKU.
+hy-of-hd,of,Heavy-Duty,Heavy-Duty Oil Filter,Media,glass-enhanced,design-target,pending-sample,Media grade selected by application; confirm grade and pleat spec on the sample.
+hy-of-hd,of,Heavy-Duty,Heavy-Duty Oil Filter,Height (mm),210,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-of-hd,of,Heavy-Duty,Heavy-Duty Oil Filter,Outer Diameter (mm),118,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-of-hd,of,Heavy-Duty,Heavy-Duty Oil Filter,Thread,1-12 UNF,reference,unverified,OE / design reference thread spec; verify against the engine or vehicle fitment.
+hy-of-hd,of,Heavy-Duty,Heavy-Duty Oil Filter,Gasket,NBR,reference,unverified,OE / design reference gasket spec; verify against the housing.
+hy-of-hd,of,Heavy-Duty,Heavy-Duty Oil Filter,Housing Material,steel (one-piece drawn),design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-of-hd,of,Heavy-Duty,Heavy-Duty Oil Filter,Media Material,glass-fiber enhanced composite,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-of-hd,of,Heavy-Duty,Heavy-Duty Oil Filter,End Cap Material,steel,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-of-hd,of,Heavy-Duty,Heavy-Duty Oil Filter,Seal Material,NBR (high/low temp resilient),design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-of-hd,of,Heavy-Duty,Heavy-Duty Oil Filter,Applicable Vehicles,heavy trucks; construction machinery; agricultural machinery,reference,unverified,Indicative fitment; confirm by OE number before quoting.
+hy-of-hd,of,Heavy-Duty,Heavy-Duty Oil Filter,OE Numbers,OF-HD-001,reference,unverified,Seed placeholder; verify against the OE catalog.
+hy-of-hd,of,Heavy-Duty,Heavy-Duty Oil Filter,Cross Reference,Fleetguard LFxxxx; MANN W 940/xx,reference,unverified,Seed placeholder; verify cross-reference before quoting.
+hy-of-hd,of,Heavy-Duty,Heavy-Duty Oil Filter,Inner Box,polybag + carton,typical,pending-order,Export packing standard; confirm per order.
+hy-of-hd,of,Heavy-Duty,Heavy-Duty Oil Filter,Outer Carton,double-wall export carton,typical,pending-order,Export packing standard; confirm per order.
+hy-of-hd,of,Heavy-Duty,Heavy-Duty Oil Filter,Carton Qty,12,typical,pending-order,Units per carton; confirm per order.
+hy-of-hd,of,Heavy-Duty,Heavy-Duty Oil Filter,Net Weight (kg),1.3,typical,pending-order,Net weight per unit; confirm per order.
+hy-of-hd,of,Heavy-Duty,Heavy-Duty Oil Filter,MOQ,500,typical,pending-order,Typical MOQ; negotiable by model and order size.
+hy-of-hd,of,Heavy-Duty,Heavy-Duty Oil Filter,Lead Time (days),22,typical,pending-order,Typical lead time; firm date confirmed at order confirmation.
+hy-of-hd,of,Heavy-Duty,Heavy-Duty Oil Filter,Certifications,ISO 9001 framework; IATF 16949 framework,reference,unverified,"Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+hy-of-hd,of,Heavy-Duty,Heavy-Duty Oil Filter,Target Markets,Middle East; Russia; Africa; South America,reference,unverified,Indicative target markets.
+hy-of-hd,of,Heavy-Duty,Heavy-Duty Oil Filter,HS Code,8421230000,reference,unverified,China export HS code; confirm per product and destination.
+hy-of-longlife,of,Long-Life,Long-Life Oil Filter,Filtration Efficiency,>=95% @ 20um,reference,unverified,Stated without a beta ratio or ISO 4548 multi-pass reference. Confirm the test reference and micron level per SKU.
+hy-of-longlife,of,Long-Life,Long-Life Oil Filter,Media,nano composite,design-target,pending-sample,Media grade selected by application; confirm grade and pleat spec on the sample.
+hy-of-longlife,of,Long-Life,Long-Life Oil Filter,Height (mm),90,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-of-longlife,of,Long-Life,Long-Life Oil Filter,Outer Diameter (mm),76,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-of-longlife,of,Long-Life,Long-Life Oil Filter,Thread,3/4-16 UNF,reference,unverified,OE / design reference thread spec; verify against the engine or vehicle fitment.
+hy-of-longlife,of,Long-Life,Long-Life Oil Filter,Gasket,NBR,reference,unverified,OE / design reference gasket spec; verify against the housing.
+hy-of-longlife,of,Long-Life,Long-Life Oil Filter,Housing Material,steel (one-piece drawn),design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-of-longlife,of,Long-Life,Long-Life Oil Filter,Media Material,nano-fiber composite (high-temp carbonized),design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-of-longlife,of,Long-Life,Long-Life Oil Filter,End Cap Material,thermoset plastisol,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-of-longlife,of,Long-Life,Long-Life Oil Filter,Seal Material,NBR (high/low temp resilient),design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-of-longlife,of,Long-Life,Long-Life Oil Filter,Applicable Vehicles,passenger cars (extended oil-change interval),reference,unverified,Indicative fitment; confirm by OE number before quoting.
+hy-of-longlife,of,Long-Life,Long-Life Oil Filter,OE Numbers,OF-LL-001,reference,unverified,Seed placeholder; verify against the OE catalog.
+hy-of-longlife,of,Long-Life,Long-Life Oil Filter,Cross Reference,MANN W 712/xx; Bosch 0451 105 xxx,reference,unverified,Seed placeholder; verify cross-reference before quoting.
+hy-of-longlife,of,Long-Life,Long-Life Oil Filter,Inner Box,polybag + color box,typical,pending-order,Export packing standard; confirm per order.
+hy-of-longlife,of,Long-Life,Long-Life Oil Filter,Outer Carton,5-ply export carton,typical,pending-order,Export packing standard; confirm per order.
+hy-of-longlife,of,Long-Life,Long-Life Oil Filter,Carton Qty,30,typical,pending-order,Units per carton; confirm per order.
+hy-of-longlife,of,Long-Life,Long-Life Oil Filter,Net Weight (kg),0.38,typical,pending-order,Net weight per unit; confirm per order.
+hy-of-longlife,of,Long-Life,Long-Life Oil Filter,MOQ,1000,typical,pending-order,Typical MOQ; negotiable by model and order size.
+hy-of-longlife,of,Long-Life,Long-Life Oil Filter,Lead Time (days),20,typical,pending-order,Typical lead time; firm date confirmed at order confirmation.
+hy-of-longlife,of,Long-Life,Long-Life Oil Filter,Certifications,ISO 9001 framework; IATF 16949 framework,reference,unverified,"Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+hy-of-longlife,of,Long-Life,Long-Life Oil Filter,Target Markets,Europe; North America; Middle East,reference,unverified,Indicative target markets.
+hy-of-longlife,of,Long-Life,Long-Life Oil Filter,HS Code,8421230000,reference,unverified,China export HS code; confirm per product and destination.
+hy-ff-spinon,ff,Spin-On,Spin-On Fuel Filter,Filtration Efficiency,>=95% @ 10um,reference,unverified,Stated without a beta ratio or micron-level reference. Confirm the rating against the injection system.
+hy-ff-spinon,ff,Spin-On,Spin-On Fuel Filter,Media,cellulose,design-target,pending-sample,Media grade selected by application; confirm grade and pleat spec on the sample.
+hy-ff-spinon,ff,Spin-On,Spin-On Fuel Filter,Height (mm),140,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-ff-spinon,ff,Spin-On,Spin-On Fuel Filter,Outer Diameter (mm),85,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-ff-spinon,ff,Spin-On,Spin-On Fuel Filter,Thread,M16x1.5,reference,unverified,OE / design reference thread spec; verify against the engine or vehicle fitment.
+hy-ff-spinon,ff,Spin-On,Spin-On Fuel Filter,Gasket,NBR,reference,unverified,OE / design reference gasket spec; verify against the housing.
+hy-ff-spinon,ff,Spin-On,Spin-On Fuel Filter,Housing Material,steel (one-piece drawn),design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-ff-spinon,ff,Spin-On,Spin-On Fuel Filter,Media Material,resin-impregnated cellulose,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-ff-spinon,ff,Spin-On,Spin-On Fuel Filter,End Cap Material,steel,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-ff-spinon,ff,Spin-On,Spin-On Fuel Filter,Seal Material,NBR,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-ff-spinon,ff,Spin-On,Spin-On Fuel Filter,Applicable Vehicles,diesel passenger cars; light commercial vehicles,reference,unverified,Indicative fitment; confirm by OE number before quoting.
+hy-ff-spinon,ff,Spin-On,Spin-On Fuel Filter,OE Numbers,FF-SPIN-001,reference,unverified,Seed placeholder; verify against the OE catalog.
+hy-ff-spinon,ff,Spin-On,Spin-On Fuel Filter,Cross Reference,MANN WK 842/xx; Bosch F 026 402 xxx,reference,unverified,Seed placeholder; verify cross-reference before quoting.
+hy-ff-spinon,ff,Spin-On,Spin-On Fuel Filter,Inner Box,polybag + color box,typical,pending-order,Export packing standard; confirm per order.
+hy-ff-spinon,ff,Spin-On,Spin-On Fuel Filter,Outer Carton,5-ply export carton,typical,pending-order,Export packing standard; confirm per order.
+hy-ff-spinon,ff,Spin-On,Spin-On Fuel Filter,Carton Qty,20,typical,pending-order,Units per carton; confirm per order.
+hy-ff-spinon,ff,Spin-On,Spin-On Fuel Filter,Net Weight (kg),0.5,typical,pending-order,Net weight per unit; confirm per order.
+hy-ff-spinon,ff,Spin-On,Spin-On Fuel Filter,MOQ,500,typical,pending-order,Typical MOQ; negotiable by model and order size.
+hy-ff-spinon,ff,Spin-On,Spin-On Fuel Filter,Lead Time (days),18,typical,pending-order,Typical lead time; firm date confirmed at order confirmation.
+hy-ff-spinon,ff,Spin-On,Spin-On Fuel Filter,Certifications,ISO 9001 framework; IATF 16949 framework,reference,unverified,"Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+hy-ff-spinon,ff,Spin-On,Spin-On Fuel Filter,Target Markets,Europe; Middle East; South America,reference,unverified,Indicative target markets.
+hy-ff-spinon,ff,Spin-On,Spin-On Fuel Filter,HS Code,8421230000,reference,unverified,China export HS code; confirm per product and destination.
+hy-ff-inline,ff,Inline,Inline Fuel Filter,Filtration Efficiency,>=95% @ 10um,reference,unverified,Stated without a beta ratio or micron-level reference. Confirm the rating against the injection system.
+hy-ff-inline,ff,Inline,Inline Fuel Filter,Media,cellulose,design-target,pending-sample,Media grade selected by application; confirm grade and pleat spec on the sample.
+hy-ff-inline,ff,Inline,Inline Fuel Filter,Length (mm),90,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-ff-inline,ff,Inline,Inline Fuel Filter,Outer Diameter (mm),30,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-ff-inline,ff,Inline,Inline Fuel Filter,Housing Material,aluminum / plastic,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-ff-inline,ff,Inline,Inline Fuel Filter,Media Material,resin-impregnated cellulose,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-ff-inline,ff,Inline,Inline Fuel Filter,End Cap Material,plastic,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-ff-inline,ff,Inline,Inline Fuel Filter,Seal Material,quick-connect O-ring,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-ff-inline,ff,Inline,Inline Fuel Filter,Applicable Vehicles,gasoline passenger cars,reference,unverified,Indicative fitment; confirm by OE number before quoting.
+hy-ff-inline,ff,Inline,Inline Fuel Filter,OE Numbers,FF-INL-001,reference,unverified,Seed placeholder; verify against the OE catalog.
+hy-ff-inline,ff,Inline,Inline Fuel Filter,Cross Reference,MANN WK 6030; Bosch F 026 403 xxx,reference,unverified,Seed placeholder; verify cross-reference before quoting.
+hy-ff-inline,ff,Inline,Inline Fuel Filter,Inner Box,polybag + color box,typical,pending-order,Export packing standard; confirm per order.
+hy-ff-inline,ff,Inline,Inline Fuel Filter,Outer Carton,5-ply export carton,typical,pending-order,Export packing standard; confirm per order.
+hy-ff-inline,ff,Inline,Inline Fuel Filter,Carton Qty,50,typical,pending-order,Units per carton; confirm per order.
+hy-ff-inline,ff,Inline,Inline Fuel Filter,Net Weight (kg),0.12,typical,pending-order,Net weight per unit; confirm per order.
+hy-ff-inline,ff,Inline,Inline Fuel Filter,MOQ,1000,typical,pending-order,Typical MOQ; negotiable by model and order size.
+hy-ff-inline,ff,Inline,Inline Fuel Filter,Lead Time (days),15,typical,pending-order,Typical lead time; firm date confirmed at order confirmation.
+hy-ff-inline,ff,Inline,Inline Fuel Filter,Certifications,ISO 9001 framework,reference,unverified,"Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+hy-ff-inline,ff,Inline,Inline Fuel Filter,Target Markets,Middle East; Southeast Asia; South America,reference,unverified,Indicative target markets.
+hy-ff-inline,ff,Inline,Inline Fuel Filter,HS Code,8421230000,reference,unverified,China export HS code; confirm per product and destination.
+hy-ff-water,ff,Water-Separator,Fuel Water Separator Filter,Filtration Efficiency,>=97% @ 10um,reference,unverified,Stated without a beta ratio or micron-level reference. Confirm the rating against the injection system.
+hy-ff-water,ff,Water-Separator,Fuel Water Separator Filter,Media,composite,design-target,pending-sample,Media grade selected by application; confirm grade and pleat spec on the sample.
+hy-ff-water,ff,Water-Separator,Fuel Water Separator Filter,Height (mm),165,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-ff-water,ff,Water-Separator,Fuel Water Separator Filter,Outer Diameter (mm),90,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-ff-water,ff,Water-Separator,Fuel Water Separator Filter,Thread,M16x1.5,reference,unverified,OE / design reference thread spec; verify against the engine or vehicle fitment.
+hy-ff-water,ff,Water-Separator,Fuel Water Separator Filter,Gasket,NBR,reference,unverified,OE / design reference gasket spec; verify against the housing.
+hy-ff-water,ff,Water-Separator,Fuel Water Separator Filter,Housing Material,steel / aluminum,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-ff-water,ff,Water-Separator,Fuel Water Separator Filter,Media Material,composite + water-separation layer,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-ff-water,ff,Water-Separator,Fuel Water Separator Filter,End Cap Material,steel,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-ff-water,ff,Water-Separator,Fuel Water Separator Filter,Seal Material,NBR,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-ff-water,ff,Water-Separator,Fuel Water Separator Filter,Applicable Vehicles,diesel trucks; construction machinery; agricultural machinery,reference,unverified,Indicative fitment; confirm by OE number before quoting.
+hy-ff-water,ff,Water-Separator,Fuel Water Separator Filter,OE Numbers,FF-WS-001,reference,unverified,Seed placeholder; verify against the OE catalog.
+hy-ff-water,ff,Water-Separator,Fuel Water Separator Filter,Cross Reference,MANN WK 940/xx; Fleetguard FSxxxx,reference,unverified,Seed placeholder; verify cross-reference before quoting.
+hy-ff-water,ff,Water-Separator,Fuel Water Separator Filter,Inner Box,polybag + carton,typical,pending-order,Export packing standard; confirm per order.
+hy-ff-water,ff,Water-Separator,Fuel Water Separator Filter,Outer Carton,double-wall export carton,typical,pending-order,Export packing standard; confirm per order.
+hy-ff-water,ff,Water-Separator,Fuel Water Separator Filter,Carton Qty,12,typical,pending-order,Units per carton; confirm per order.
+hy-ff-water,ff,Water-Separator,Fuel Water Separator Filter,Net Weight (kg),0.9,typical,pending-order,Net weight per unit; confirm per order.
+hy-ff-water,ff,Water-Separator,Fuel Water Separator Filter,MOQ,500,typical,pending-order,Typical MOQ; negotiable by model and order size.
+hy-ff-water,ff,Water-Separator,Fuel Water Separator Filter,Lead Time (days),22,typical,pending-order,Typical lead time; firm date confirmed at order confirmation.
+hy-ff-water,ff,Water-Separator,Fuel Water Separator Filter,Certifications,ISO 9001 framework; IATF 16949 framework,reference,unverified,"Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+hy-ff-water,ff,Water-Separator,Fuel Water Separator Filter,Target Markets,Middle East; Russia; Africa,reference,unverified,Indicative target markets.
+hy-ff-water,ff,Water-Separator,Fuel Water Separator Filter,HS Code,8421230000,reference,unverified,China export HS code; confirm per product and destination.
+hy-wb-beam,wb,Beam,Beam Wiper Blade,Media,natural rubber (graphite-coated),design-target,pending-sample,Media grade selected by application; confirm grade and pleat spec on the sample.
+hy-wb-beam,wb,Beam,Beam Wiper Blade,Length (mm),550,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-wb-beam,wb,Beam,Beam Wiper Blade,Housing Material,steel spring + plastic,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-wb-beam,wb,Beam,Beam Wiper Blade,Media Material,natural rubber + graphite coating,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-wb-beam,wb,Beam,Beam Wiper Blade,End Cap Material,plastic,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-wb-beam,wb,Beam,Beam Wiper Blade,Applicable Vehicles,passenger cars,reference,unverified,Indicative fitment; confirm by OE number before quoting.
+hy-wb-beam,wb,Beam,Beam Wiper Blade,OE Numbers,WB-BEAM-22,reference,unverified,Seed placeholder; verify against the OE catalog.
+hy-wb-beam,wb,Beam,Beam Wiper Blade,Cross Reference,Bosch A 5xx S; Valeo VMxxx,reference,unverified,Seed placeholder; verify cross-reference before quoting.
+hy-wb-beam,wb,Beam,Beam Wiper Blade,Inner Box,polybag + sleeve,typical,pending-order,Export packing standard; confirm per order.
+hy-wb-beam,wb,Beam,Beam Wiper Blade,Outer Carton,5-ply export carton,typical,pending-order,Export packing standard; confirm per order.
+hy-wb-beam,wb,Beam,Beam Wiper Blade,Carton Qty,50,typical,pending-order,Units per carton; confirm per order.
+hy-wb-beam,wb,Beam,Beam Wiper Blade,Net Weight (kg),0.18,typical,pending-order,Net weight per unit; confirm per order.
+hy-wb-beam,wb,Beam,Beam Wiper Blade,MOQ,1000,typical,pending-order,Typical MOQ; negotiable by model and order size.
+hy-wb-beam,wb,Beam,Beam Wiper Blade,Lead Time (days),15,typical,pending-order,Typical lead time; firm date confirmed at order confirmation.
+hy-wb-beam,wb,Beam,Beam Wiper Blade,Certifications,ISO 9001 framework,reference,unverified,"Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+hy-wb-beam,wb,Beam,Beam Wiper Blade,Target Markets,Middle East; Southeast Asia; South America,reference,unverified,Indicative target markets.
+hy-wb-beam,wb,Beam,Beam Wiper Blade,HS Code,8512400000,reference,unverified,China export HS code; confirm per product and destination.
+hy-wb-hybrid,wb,Hybrid,Hybrid Wiper Blade,Media,coated rubber,design-target,pending-sample,Media grade selected by application; confirm grade and pleat spec on the sample.
+hy-wb-hybrid,wb,Hybrid,Hybrid Wiper Blade,Length (mm),650,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-wb-hybrid,wb,Hybrid,Hybrid Wiper Blade,Housing Material,steel + plastic frame,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-wb-hybrid,wb,Hybrid,Hybrid Wiper Blade,Media Material,coated natural rubber,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-wb-hybrid,wb,Hybrid,Hybrid Wiper Blade,End Cap Material,plastic,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-wb-hybrid,wb,Hybrid,Hybrid Wiper Blade,Applicable Vehicles,passenger cars; SUVs,reference,unverified,Indicative fitment; confirm by OE number before quoting.
+hy-wb-hybrid,wb,Hybrid,Hybrid Wiper Blade,OE Numbers,WB-HYBRID-26,reference,unverified,Seed placeholder; verify against the OE catalog.
+hy-wb-hybrid,wb,Hybrid,Hybrid Wiper Blade,Cross Reference,Bosch A 6xx S; Valeo VMxxx,reference,unverified,Seed placeholder; verify cross-reference before quoting.
+hy-wb-hybrid,wb,Hybrid,Hybrid Wiper Blade,Inner Box,polybag + sleeve,typical,pending-order,Export packing standard; confirm per order.
+hy-wb-hybrid,wb,Hybrid,Hybrid Wiper Blade,Outer Carton,5-ply export carton,typical,pending-order,Export packing standard; confirm per order.
+hy-wb-hybrid,wb,Hybrid,Hybrid Wiper Blade,Carton Qty,50,typical,pending-order,Units per carton; confirm per order.
+hy-wb-hybrid,wb,Hybrid,Hybrid Wiper Blade,Net Weight (kg),0.22,typical,pending-order,Net weight per unit; confirm per order.
+hy-wb-hybrid,wb,Hybrid,Hybrid Wiper Blade,MOQ,1000,typical,pending-order,Typical MOQ; negotiable by model and order size.
+hy-wb-hybrid,wb,Hybrid,Hybrid Wiper Blade,Lead Time (days),15,typical,pending-order,Typical lead time; firm date confirmed at order confirmation.
+hy-wb-hybrid,wb,Hybrid,Hybrid Wiper Blade,Certifications,ISO 9001 framework,reference,unverified,"Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+hy-wb-hybrid,wb,Hybrid,Hybrid Wiper Blade,Target Markets,Middle East; Southeast Asia; Europe,reference,unverified,Indicative target markets.
+hy-wb-hybrid,wb,Hybrid,Hybrid Wiper Blade,HS Code,8512400000,reference,unverified,China export HS code; confirm per product and destination.
+hy-wb-rear,wb,Rear,Rear Wiper Blade,Media,coated rubber,design-target,pending-sample,Media grade selected by application; confirm grade and pleat spec on the sample.
+hy-wb-rear,wb,Rear,Rear Wiper Blade,Length (mm),350,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-wb-rear,wb,Rear,Rear Wiper Blade,Housing Material,plastic frame,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-wb-rear,wb,Rear,Rear Wiper Blade,Media Material,coated natural rubber,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-wb-rear,wb,Rear,Rear Wiper Blade,End Cap Material,plastic,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-wb-rear,wb,Rear,Rear Wiper Blade,Applicable Vehicles,SUV rear; hatchback rear,reference,unverified,Indicative fitment; confirm by OE number before quoting.
+hy-wb-rear,wb,Rear,Rear Wiper Blade,OE Numbers,WB-REAR-14,reference,unverified,Seed placeholder; verify against the OE catalog.
+hy-wb-rear,wb,Rear,Rear Wiper Blade,Cross Reference,Bosch R 3xx,reference,unverified,Seed placeholder; verify cross-reference before quoting.
+hy-wb-rear,wb,Rear,Rear Wiper Blade,Inner Box,polybag + sleeve,typical,pending-order,Export packing standard; confirm per order.
+hy-wb-rear,wb,Rear,Rear Wiper Blade,Outer Carton,5-ply export carton,typical,pending-order,Export packing standard; confirm per order.
+hy-wb-rear,wb,Rear,Rear Wiper Blade,Carton Qty,50,typical,pending-order,Units per carton; confirm per order.
+hy-wb-rear,wb,Rear,Rear Wiper Blade,Net Weight (kg),0.12,typical,pending-order,Net weight per unit; confirm per order.
+hy-wb-rear,wb,Rear,Rear Wiper Blade,MOQ,1000,typical,pending-order,Typical MOQ; negotiable by model and order size.
+hy-wb-rear,wb,Rear,Rear Wiper Blade,Lead Time (days),15,typical,pending-order,Typical lead time; firm date confirmed at order confirmation.
+hy-wb-rear,wb,Rear,Rear Wiper Blade,Certifications,ISO 9001 framework,reference,unverified,"Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+hy-wb-rear,wb,Rear,Rear Wiper Blade,Target Markets,Middle East; Southeast Asia; South America,reference,unverified,Indicative target markets.
+hy-wb-rear,wb,Rear,Rear Wiper Blade,HS Code,8512400000,reference,unverified,China export HS code; confirm per product and destination.
+hy-tf-pan,tf,Pan,Transmission Pan Filter Screen,Filtration Efficiency,>=90% @ 40um,reference,unverified,Stated as a screen mesh pore rating. Confirm the pore size and flow requirement against the transmission.
+hy-tf-pan,tf,Pan,Transmission Pan Filter Screen,Media,nylon mesh,design-target,pending-sample,Media grade selected by application; confirm grade and pleat spec on the sample.
+hy-tf-pan,tf,Pan,Transmission Pan Filter Screen,Length (mm),260,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-tf-pan,tf,Pan,Transmission Pan Filter Screen,Width (mm),140,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-tf-pan,tf,Pan,Transmission Pan Filter Screen,Height (mm),35,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-tf-pan,tf,Pan,Transmission Pan Filter Screen,Gasket,pan gasket included,reference,unverified,OE / design reference gasket spec; verify against the housing.
+hy-tf-pan,tf,Pan,Transmission Pan Filter Screen,Housing Material,plastic,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-tf-pan,tf,Pan,Transmission Pan Filter Screen,Media Material,nylon mesh,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-tf-pan,tf,Pan,Transmission Pan Filter Screen,End Cap Material,plastic,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-tf-pan,tf,Pan,Transmission Pan Filter Screen,Seal Material,cork / rubber pan gasket,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-tf-pan,tf,Pan,Transmission Pan Filter Screen,Applicable Vehicles,automatic transmission vehicles,reference,unverified,Indicative fitment; confirm by OE number before quoting.
+hy-tf-pan,tf,Pan,Transmission Pan Filter Screen,OE Numbers,TF-PAN-001,reference,unverified,Seed placeholder; verify against the OE catalog.
+hy-tf-pan,tf,Pan,Transmission Pan Filter Screen,Cross Reference,ATP B-xxx; Fram FTxxxx,reference,unverified,Seed placeholder; verify cross-reference before quoting.
+hy-tf-pan,tf,Pan,Transmission Pan Filter Screen,Inner Box,polybag + color box,typical,pending-order,Export packing standard; confirm per order.
+hy-tf-pan,tf,Pan,Transmission Pan Filter Screen,Outer Carton,5-ply export carton,typical,pending-order,Export packing standard; confirm per order.
+hy-tf-pan,tf,Pan,Transmission Pan Filter Screen,Carton Qty,20,typical,pending-order,Units per carton; confirm per order.
+hy-tf-pan,tf,Pan,Transmission Pan Filter Screen,Net Weight (kg),0.3,typical,pending-order,Net weight per unit; confirm per order.
+hy-tf-pan,tf,Pan,Transmission Pan Filter Screen,MOQ,500,typical,pending-order,Typical MOQ; negotiable by model and order size.
+hy-tf-pan,tf,Pan,Transmission Pan Filter Screen,Lead Time (days),20,typical,pending-order,Typical lead time; firm date confirmed at order confirmation.
+hy-tf-pan,tf,Pan,Transmission Pan Filter Screen,Certifications,ISO 9001 framework,reference,unverified,"Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+hy-tf-pan,tf,Pan,Transmission Pan Filter Screen,Target Markets,North America; Middle East; South America,reference,unverified,Indicative target markets.
+hy-tf-pan,tf,Pan,Transmission Pan Filter Screen,HS Code,8708409990,reference,unverified,China export HS code; confirm per product and destination.
+hy-tf-kit,tf,Kit,Transmission Filter + Gasket Kit,Filtration Efficiency,>=90% @ 40um,reference,unverified,Stated as a screen mesh pore rating. Confirm the pore size and flow requirement against the transmission.
+hy-tf-kit,tf,Kit,Transmission Filter + Gasket Kit,Media,nylon mesh,design-target,pending-sample,Media grade selected by application; confirm grade and pleat spec on the sample.
+hy-tf-kit,tf,Kit,Transmission Filter + Gasket Kit,Length (mm),260,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-tf-kit,tf,Kit,Transmission Filter + Gasket Kit,Width (mm),140,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-tf-kit,tf,Kit,Transmission Filter + Gasket Kit,Height (mm),35,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-tf-kit,tf,Kit,Transmission Filter + Gasket Kit,Gasket,pan gasket included,reference,unverified,OE / design reference gasket spec; verify against the housing.
+hy-tf-kit,tf,Kit,Transmission Filter + Gasket Kit,Housing Material,plastic,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-tf-kit,tf,Kit,Transmission Filter + Gasket Kit,Media Material,nylon mesh,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-tf-kit,tf,Kit,Transmission Filter + Gasket Kit,End Cap Material,plastic,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-tf-kit,tf,Kit,Transmission Filter + Gasket Kit,Seal Material,cork / rubber pan gasket,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-tf-kit,tf,Kit,Transmission Filter + Gasket Kit,Applicable Vehicles,automatic transmission vehicles (service kit),reference,unverified,Indicative fitment; confirm by OE number before quoting.
+hy-tf-kit,tf,Kit,Transmission Filter + Gasket Kit,OE Numbers,TF-KIT-001,reference,unverified,Seed placeholder; verify against the OE catalog.
+hy-tf-kit,tf,Kit,Transmission Filter + Gasket Kit,Cross Reference,ATP B-xxx Kit; Fram FTxxxx Kit,reference,unverified,Seed placeholder; verify cross-reference before quoting.
+hy-tf-kit,tf,Kit,Transmission Filter + Gasket Kit,Inner Box,polybag + color box,typical,pending-order,Export packing standard; confirm per order.
+hy-tf-kit,tf,Kit,Transmission Filter + Gasket Kit,Outer Carton,5-ply export carton,typical,pending-order,Export packing standard; confirm per order.
+hy-tf-kit,tf,Kit,Transmission Filter + Gasket Kit,Carton Qty,20,typical,pending-order,Units per carton; confirm per order.
+hy-tf-kit,tf,Kit,Transmission Filter + Gasket Kit,Net Weight (kg),0.35,typical,pending-order,Net weight per unit; confirm per order.
+hy-tf-kit,tf,Kit,Transmission Filter + Gasket Kit,MOQ,500,typical,pending-order,Typical MOQ; negotiable by model and order size.
+hy-tf-kit,tf,Kit,Transmission Filter + Gasket Kit,Lead Time (days),20,typical,pending-order,Typical lead time; firm date confirmed at order confirmation.
+hy-tf-kit,tf,Kit,Transmission Filter + Gasket Kit,Certifications,ISO 9001 framework,reference,unverified,"Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+hy-tf-kit,tf,Kit,Transmission Filter + Gasket Kit,Target Markets,North America; Middle East; South America,reference,unverified,Indicative target markets.
+hy-tf-kit,tf,Kit,Transmission Filter + Gasket Kit,HS Code,8708409990,reference,unverified,China export HS code; confirm per product and destination.
+hy-led-h4,led,H4,H4 LED Headlight Bulb,Media,LED,design-target,pending-sample,Media grade selected by application; confirm grade and pleat spec on the sample.
+hy-led-h4,led,H4,H4 LED Headlight Bulb,Housing Material,aluminum,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-led-h4,led,H4,H4 LED Headlight Bulb,Media Material,CSP LED chip,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-led-h4,led,H4,H4 LED Headlight Bulb,End Cap Material,aluminum,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-led-h4,led,H4,H4 LED Headlight Bulb,Applicable Vehicles,passenger cars (H4/9003 socket),reference,unverified,Indicative fitment; confirm by OE number before quoting.
+hy-led-h4,led,H4,H4 LED Headlight Bulb,OE Numbers,LED-H4-001,reference,unverified,Seed placeholder; verify against the OE catalog.
+hy-led-h4,led,H4,H4 LED Headlight Bulb,Cross Reference,Philips Ultinon H4; Osram H4 LED,reference,unverified,Seed placeholder; verify cross-reference before quoting.
+hy-led-h4,led,H4,H4 LED Headlight Bulb,Inner Box,polybag + color box,typical,pending-order,Export packing standard; confirm per order.
+hy-led-h4,led,H4,H4 LED Headlight Bulb,Outer Carton,5-ply export carton,typical,pending-order,Export packing standard; confirm per order.
+hy-led-h4,led,H4,H4 LED Headlight Bulb,Carton Qty,20,typical,pending-order,Units per carton; confirm per order.
+hy-led-h4,led,H4,H4 LED Headlight Bulb,Net Weight (kg),0.25,typical,pending-order,Net weight per unit; confirm per order.
+hy-led-h4,led,H4,H4 LED Headlight Bulb,MOQ,200,typical,pending-order,Typical MOQ; negotiable by model and order size.
+hy-led-h4,led,H4,H4 LED Headlight Bulb,Lead Time (days),15,typical,pending-order,Typical lead time; firm date confirmed at order confirmation.
+hy-led-h4,led,H4,H4 LED Headlight Bulb,Certifications,CE (self-declared); RoHS (self-declared),reference,unverified,"Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+hy-led-h4,led,H4,H4 LED Headlight Bulb,Target Markets,Middle East; Southeast Asia; South America,reference,unverified,Indicative target markets.
+hy-led-h4,led,H4,H4 LED Headlight Bulb,HS Code,8512209000,reference,unverified,China export HS code; confirm per product and destination.
+hy-led-h7,led,H7,H7 LED Headlight Bulb,Media,LED,design-target,pending-sample,Media grade selected by application; confirm grade and pleat spec on the sample.
+hy-led-h7,led,H7,H7 LED Headlight Bulb,Housing Material,aluminum,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-led-h7,led,H7,H7 LED Headlight Bulb,Media Material,CSP LED chip,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-led-h7,led,H7,H7 LED Headlight Bulb,End Cap Material,aluminum,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-led-h7,led,H7,H7 LED Headlight Bulb,Applicable Vehicles,passenger cars (H7 socket),reference,unverified,Indicative fitment; confirm by OE number before quoting.
+hy-led-h7,led,H7,H7 LED Headlight Bulb,OE Numbers,LED-H7-001,reference,unverified,Seed placeholder; verify against the OE catalog.
+hy-led-h7,led,H7,H7 LED Headlight Bulb,Cross Reference,Philips Ultinon H7; Osram H7 LED,reference,unverified,Seed placeholder; verify cross-reference before quoting.
+hy-led-h7,led,H7,H7 LED Headlight Bulb,Inner Box,polybag + color box,typical,pending-order,Export packing standard; confirm per order.
+hy-led-h7,led,H7,H7 LED Headlight Bulb,Outer Carton,5-ply export carton,typical,pending-order,Export packing standard; confirm per order.
+hy-led-h7,led,H7,H7 LED Headlight Bulb,Carton Qty,20,typical,pending-order,Units per carton; confirm per order.
+hy-led-h7,led,H7,H7 LED Headlight Bulb,Net Weight (kg),0.25,typical,pending-order,Net weight per unit; confirm per order.
+hy-led-h7,led,H7,H7 LED Headlight Bulb,MOQ,200,typical,pending-order,Typical MOQ; negotiable by model and order size.
+hy-led-h7,led,H7,H7 LED Headlight Bulb,Lead Time (days),15,typical,pending-order,Typical lead time; firm date confirmed at order confirmation.
+hy-led-h7,led,H7,H7 LED Headlight Bulb,Certifications,CE (self-declared); RoHS (self-declared),reference,unverified,"Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+hy-led-h7,led,H7,H7 LED Headlight Bulb,Target Markets,Middle East; Southeast Asia; Europe,reference,unverified,Indicative target markets.
+hy-led-h7,led,H7,H7 LED Headlight Bulb,HS Code,8512209000,reference,unverified,China export HS code; confirm per product and destination.
+hy-led-bar,led,Bar,LED Light Bar,Media,LED,design-target,pending-sample,Media grade selected by application; confirm grade and pleat spec on the sample.
+hy-led-bar,led,Bar,LED Light Bar,Length (mm),520,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-led-bar,led,Bar,LED Light Bar,Width (mm),55,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-led-bar,led,Bar,LED Light Bar,Height (mm),70,design-target,pending-sample,Nominal design dimension; confirm against the OE drawing and a pre-production sample.
+hy-led-bar,led,Bar,LED Light Bar,Housing Material,aluminum + PC lens,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-led-bar,led,Bar,LED Light Bar,Media Material,CSP LED chip,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-led-bar,led,Bar,LED Light Bar,End Cap Material,aluminum,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-led-bar,led,Bar,LED Light Bar,Seal Material,silicone,design-target,pending-sample,Material spec; confirm on the pre-production sample.
+hy-led-bar,led,Bar,LED Light Bar,Applicable Vehicles,off-road vehicles; trucks; machinery (auxiliary lighting),reference,unverified,Indicative fitment; confirm by OE number before quoting.
+hy-led-bar,led,Bar,LED Light Bar,OE Numbers,LED-BAR-001,reference,unverified,Seed placeholder; verify against the OE catalog.
+hy-led-bar,led,Bar,LED Light Bar,Cross Reference,generic 52-inch light bar,reference,unverified,Seed placeholder; verify cross-reference before quoting.
+hy-led-bar,led,Bar,LED Light Bar,Inner Box,polybag + color box,typical,pending-order,Export packing standard; confirm per order.
+hy-led-bar,led,Bar,LED Light Bar,Outer Carton,5-ply export carton,typical,pending-order,Export packing standard; confirm per order.
+hy-led-bar,led,Bar,LED Light Bar,Carton Qty,10,typical,pending-order,Units per carton; confirm per order.
+hy-led-bar,led,Bar,LED Light Bar,Net Weight (kg),2.8,typical,pending-order,Net weight per unit; confirm per order.
+hy-led-bar,led,Bar,LED Light Bar,MOQ,200,typical,pending-order,Typical MOQ; negotiable by model and order size.
+hy-led-bar,led,Bar,LED Light Bar,Lead Time (days),18,typical,pending-order,Typical lead time; firm date confirmed at order confirmation.
+hy-led-bar,led,Bar,LED Light Bar,Certifications,CE (self-declared); RoHS (self-declared),reference,unverified,"Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+hy-led-bar,led,Bar,LED Light Bar,Target Markets,Middle East; Africa; South America,reference,unverified,Indicative target markets.
+hy-led-bar,led,Bar,LED Light Bar,HS Code,8512209000,reference,unverified,China export HS code; confirm per product and destination.

@@ -344,7 +344,7 @@ export const originImages = {
       'factory-warehouse-shelves-1600x900.webp',
       'factory-warehouse-shelves-2-1600x900.webp',
     ],
-  } as Record<string, string[]>,
+  },
 
   /** home hero — source home slide2 background (alt "OEM&ODM") */
   homeOem: 'c9b13651-5a3f-47ac-9cf6-bb0c26ee8b3b.jpg',
