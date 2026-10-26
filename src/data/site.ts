@@ -5,6 +5,17 @@ export const site = {
   companyNameShort: 'Hongying Auto Parts',
   domain: 'hycarfilter.com', // placeholder domain
   since: 2013,
+  // Brand vs legal-entity founding (P0 audit remediation) — no false "since" claims.
+  // The brand/team lineage predates the registered entity; both are disclosed together.
+  brandHistory: {
+    brandFounded: 2013, // brand & manufacturing team lineage
+    entityFounded: '2023-11-28', // legal entity registration date
+    statement:
+      'The hycarfilter brand and its manufacturing team trace their business back to 2013; the current legal entity, Qinghe County Hongying Auto Parts Co., Ltd., was registered on 2023-11-28.',
+  },
+  // Manufacturing model — truthful framing (no fabricated co-manufacturers).
+  manufacturingModel:
+    'In-house production is our core model; for select product categories we may work with collaborating factories.',
   // Verified legal entity (E-E-A-T disclosure) — sourced from the authoritative Baidu
   // Aiqicha official registry profile (user-provided), retrieved 2026-10-25. Zero
   // fabrication: every field below matches the registry record for

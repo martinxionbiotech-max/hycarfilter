@@ -44,6 +44,7 @@ export interface UIStrings {
   legalEntity: string;
   registeredAddress: string;
   creditCode: string;
+  founded: string;
   // whatsapp
   waLabel: string;
   waAria: string;
@@ -202,6 +203,7 @@ const ar: UIStrings = {
   legalEntity: 'الكيان القانوني',
   registeredAddress: 'العنوان المسجل',
   creditCode: 'رمز الائتمان الاجتماعي الموحد',
+  founded: 'التأسيس',
   waLabel: 'تواصل معنا الآن',
   waAria: 'تواصل معنا عبر واتساب',
   ctaEyebrow: 'اطلب عرض سعر',
@@ -351,6 +353,7 @@ const es: UIStrings = {
   legalEntity: 'Entidad jurídica',
   registeredAddress: 'Dirección registrada',
   creditCode: 'Código de crédito social unificado',
+  founded: 'Fundada',
   waLabel: 'Chatea con nosotros ahora',
   waAria: 'Chatea con nosotros por WhatsApp',
   ctaEyebrow: 'Solicita una cotización',

@@ -5,7 +5,8 @@ import { site } from '../../data/site';
 import { originImages } from '../../data/originImages';
 
 const facts = [
-  { k: 'Fundada', v: 'DESDE 2013' },
+  { k: 'Linaje de marca', v: 'Desde 2013' },
+  { k: 'Entidad jurídica', v: 'Registrada 2023-11-28' },
   { k: 'Ubicación', v: 'Condado de Qinghe, Xingtai, Hebei — clúster industrial de filtros de China' },
   { k: 'Actividad', v: 'Fabricación, I+D, ventas y servicio posventa' },
   { k: 'Categorías', v: 'Aire · Habitáculo · Aceite · Combustible · Escobillas · Mallas de transmisión · LED' },
@@ -23,7 +24,7 @@ const values = [
 
 <BaseLayout
   title="Nosotros"
-  description={`Acerca de ${site.brand}: fabricante y exportador profesional de filtros automotrices desde 2013, con sede en el clúster industrial de filtros de Qinghe, Hebei, China — nuestra historia, posicionamiento y filosofía editorial.`}
+  description={`Acerca de ${site.brand}: la marca ${site.brand} y su equipo de fabricación remontan su actividad a 2013, mientras que la entidad jurídica Qinghe County Hongying Auto Parts Co., Ltd. se registró el 2023-11-28 — nuestra historia, posicionamiento y filosofía editorial.`}
 >
   <section class="section">
     <div class="container">
@@ -63,6 +64,15 @@ const values = [
         habitáculo en una tercera. Quiere un proveedor que entienda el sistema de filtración completo — y que
         pueda hablar con precisión sobre grado de medio, calibración de derivación, recuperación de sello,
         separación de agua y retención de polvo. Ese es el papel que desempeñamos.
+      </p>
+
+      <h2>Linaje de marca y entidad jurídica</h2>
+      <p>
+        Divulgamos dos hechos lado a lado para que el registro sea inequívoco. La marca {site.brand} y su
+        equipo de fabricación remontan su actividad a {site.brandHistory.brandFounded}. La entidad jurídica
+        actual, {site.entity.legalName}（{site.entity.legalNameZh}）, se registró el{' '}
+        {site.brandHistory.entityFounded}. Cuando este sitio dice «desde {site.since}», se refiere al linaje de
+        la marca y el equipo, no a la fecha de registro de la entidad jurídica.
       </p>
 
       <h2>Entidad jurídica de la empresa</h2>
@@ -108,6 +118,12 @@ const values = [
         filtración con nanofibras — esos son los detalles que incorporamos al producto y que un comprador serio
         puede verificar. Donde interviene la certificación, declaramos el marco con el que operamos y confirmamos
         el estado específico por pedido y destino.
+      </p>
+      <p>
+        Sobre la producción: la fabricación interna es nuestro modelo principal — el plegado del medio, la unión de
+        tapas, el ensamblaje spin-on y la inspección final se realizan en nuestras propias líneas. Para algunas
+        categorías también podemos trabajar con fábricas colaboradoras, y cuando eso aplica, la fuente de
+        producción específica se confirma por pedido en lugar de darse por sentada.
       </p>
 
       <h2>Cómo pensamos el contenido</h2>

@@ -60,7 +60,7 @@ const licenseCaption = [
       </div>
 
       <div class="grid grid--2 mb-2">
-        <div class="card"><h3>Fundada</h3><p class="muted" style="margin:0">DESDE {site.since}</p></div>
+        <div class="card"><h3>Fundada</h3><p class="muted" style="margin:0">Marca desde {site.brandHistory.brandFounded} · entidad {site.brandHistory.entityFounded}</p></div>
         <div class="card"><h3>Ubicación</h3><p class="muted" style="margin:0">{site.address}</p></div>
         <div class="card"><h3>Modelo de negocio</h3><p class="muted" style="margin:0">OEM / ODM / marca privada</p></div>
         <div class="card"><h3>Categorías</h3><p class="muted" style="margin:0">Aire · Habitáculo · Aceite · Combustible · Escobillas · Mallas de transmisión · LED</p></div>
@@ -71,6 +71,7 @@ const licenseCaption = [
         <p><strong>Entidad jurídica:</strong> {site.entity.legalName}（{site.entity.legalNameZh}）</p>
         <p><strong>Dirección registrada:</strong> {site.entity.addressCn}</p>
         <p><strong>Código de crédito social unificado:</strong> {site.entity.creditCode}</p>
+        <p><strong>Fundada (registro):</strong> {site.entity.foundedDate}</p>
       </div>
     </div>
   </section>

@@ -60,7 +60,7 @@ const licenseCaption = [
       </div>
 
       <div class="grid grid--2 mb-2">
-        <div class="card"><h3>التأسيس</h3><p class="muted" style="margin:0">منذ {site.since}</p></div>
+        <div class="card"><h3>التأسيس</h3><p class="muted" style="margin:0">العلامة منذ {site.brandHistory.brandFounded} · الكيان {site.brandHistory.entityFounded}</p></div>
         <div class="card"><h3>الموقع</h3><p class="muted" style="margin:0">{site.address}</p></div>
         <div class="card"><h3>نموذج العمل</h3><p class="muted" style="margin:0">OEM / ODM / علامة خاصة</p></div>
         <div class="card"><h3>الفئات</h3><p class="muted" style="margin:0">هواء · مقصورة · زيت · وقود · مسّاحات · مصافي ناقل الحركة · LED</p></div>
@@ -71,6 +71,7 @@ const licenseCaption = [
         <p><strong>الكيان القانوني:</strong> {site.entity.legalName}（{site.entity.legalNameZh}）</p>
         <p><strong>العنوان المسجل:</strong> {site.entity.addressCn}</p>
         <p><strong>رمز الائتمان الاجتماعي الموحد:</strong> {site.entity.creditCode}</p>
+        <p><strong>التأسيس (التسجيل):</strong> {site.entity.foundedDate}</p>
       </div>
     </div>
   </section>

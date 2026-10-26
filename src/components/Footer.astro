@@ -91,11 +91,11 @@ const positioning = currentLocale === 'ar' ? site.positioningAr : currentLocale 
 
     <div class="footer__bottom">
       <span>© {new Date().getFullYear()} {site.companyName}. {u ? u.allRightsReserved : 'All rights reserved.'}</span>
-      <span class="footer__since">SINCE {site.since}</span>
+      <span class="footer__since">BRAND SINCE {site.brandHistory.brandFounded}</span>
     </div>
 
     <p class="footer__legal-entity">
-      {u?.legalEntity ?? 'Legal entity'}: {site.entity.legalName}（{site.entity.legalNameZh}）· {u?.creditCode ?? 'Unified Social Credit Code'}: {site.entity.creditCode}
+      {u?.legalEntity ?? 'Legal entity'}: {site.entity.legalName}（{site.entity.legalNameZh}）· {u?.creditCode ?? 'Unified Social Credit Code'}: {site.entity.creditCode} · {u?.founded ?? 'Founded'}: {site.entity.foundedDate}
     </p>
   </div>
 </footer>

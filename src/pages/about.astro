@@ -5,7 +5,8 @@ import { site } from '../data/site';
 import { originImages } from '../data/originImages';
 
 const facts = [
-  { k: 'Founded', v: 'SINCE 2013' },
+  { k: 'Brand lineage', v: 'Since 2013' },
+  { k: 'Legal entity', v: 'Registered 2023-11-28' },
   { k: 'Location', v: 'Qinghe County, Xingtai, Hebei — China filter industry cluster' },
   { k: 'Business', v: 'Manufacturing, R&D, sales & after-sales service' },
   { k: 'Categories', v: 'Air · Cabin · Oil · Fuel filters · Wipers · Transmission screens · LED' },
@@ -23,7 +24,7 @@ const values = [
 
 <BaseLayout
   title="About Us"
-  description={`About ${site.brand}: a professional automotive filter manufacturer and exporter since 2013, based in the Qinghe filter industry cluster, Hebei, China — our story, positioning and editorial philosophy.`}
+  description={`About ${site.brand}: the hycarfilter brand and its manufacturing team trace their business to 2013, while the legal entity Qinghe County Hongying Auto Parts Co., Ltd. was registered on 2023-11-28 — our story, positioning and editorial philosophy.`}
 >
   <section class="section">
     <div class="container">
@@ -62,6 +63,15 @@ const values = [
         want to buy air filters from one factory, oil filters from a second and cabin filters from a third. They
         want one supplier who understands the full filtration system — and who can speak precisely about media
         grade, bypass calibration, seal rebound, water separation and dust-holding. That is the role we play.
+      </p>
+
+      <h2>Brand lineage &amp; legal entity</h2>
+      <p>
+        Two facts are disclosed side by side so the record is unambiguous. The {site.brand} brand and its
+        manufacturing team trace their business back to {site.brandHistory.brandFounded}. The current legal
+        entity, {site.entity.legalName}（{site.entity.legalNameZh}）, was registered on{' '}
+        {site.brandHistory.entityFounded}. When this site says &ldquo;since {site.since}&rdquo;, it refers to the
+        brand and team lineage, not the registration date of the legal entity.
       </p>
 
       <h2>Company entity</h2>
@@ -106,6 +116,11 @@ const values = [
         plastisol end caps, composite high-temperature media and nano-fiber filtration — these are the details we
         build into the product and the details a serious buyer can check. Where certification is involved, we state
         the framework we operate to and confirm specific status per order and destination.
+      </p>
+      <p>
+        On production: in-house manufacturing is our core model — media pleating, end-cap bonding, spin-on assembly
+        and final inspection run on our own lines. For select product categories we may also work with collaborating
+        factories, and where that applies the specific production source is confirmed per order rather than assumed.
       </p>
 
       <h2>How we think about content</h2>
