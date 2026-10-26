@@ -163,6 +163,9 @@ function fmtDate(iso: string): string {
                     </p>
                   );
                 }
+                if (block.type === 'html') {
+                  return <div class="k-html" set:html={block.html} />;
+                }
                 return null;
               })
             }
@@ -180,15 +183,27 @@ function fmtDate(iso: string): string {
         ))}
       </section>
 
-      <aside class="crossref">
-        <strong>Cross-reference database</strong>
-        <p class="small muted" style="margin:0.35rem 0 0.6rem">
-          We link to our live cross-reference dataset rather than copying records into this page.
-        </p>
-        <a class="btn btn--outline" href="https://data.hycarfilter.com/cross-reference/" target="_blank" rel="noopener">
-          Browse the cross-reference database ↗
-        </a>
-      </aside>
+      {
+        post.subsite ? (
+          <aside class="crossref">
+            <strong>{post.subsite.title}</strong>
+            <p class="small muted" style="margin:0.35rem 0 0.6rem">{post.subsite.blurb}</p>
+            <a class="btn btn--outline" href={post.subsite.href} target="_blank" rel="noopener">
+              {post.subsite.label}
+            </a>
+          </aside>
+        ) : (
+          <aside class="crossref">
+            <strong>Cross-reference database</strong>
+            <p class="small muted" style="margin:0.35rem 0 0.6rem">
+              We link to our live cross-reference dataset rather than copying records into this page.
+            </p>
+            <a class="btn btn--outline" href="https://data.hycarfilter.com/cross-reference/" target="_blank" rel="noopener">
+              Browse the cross-reference database ↗
+            </a>
+          </aside>
+        )
+      }
 
       {
         seriesLinks.length > 0 ? (
@@ -349,6 +364,35 @@ function fmtDate(iso: string): string {
     border-radius: var(--radius);
   }
   .crossref strong { color: var(--navy-800); }
+
+  .k-html p { margin: 0 0 1em; }
+  .k-formula {
+    margin: 1rem 0;
+    padding: 0.9rem 1.1rem;
+    background: var(--bg-soft);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    text-align: center;
+    font-size: 1.05rem;
+  }
+  .k-formula code {
+    font-family: var(--font-mono, ui-monospace, SFMono-Regular, Menlo, monospace);
+    color: var(--navy-800);
+  }
+  .k-template {
+    margin: 1rem 0 1.25rem;
+    padding: 1.25rem 1.4rem;
+    background: #f6f8fb;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    font-family: var(--font-mono, ui-monospace, SFMono-Regular, Menlo, monospace);
+    font-size: 0.85rem;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-break: break-word;
+    color: var(--navy-800);
+    overflow-x: auto;
+  }
 
   .series { margin-top: 2.5rem; }
   .series h2, .related h2 { margin-bottom: 1rem; }

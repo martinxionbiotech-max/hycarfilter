@@ -3,8 +3,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import InquiryCta from '../../components/InquiryCta.astro';
 import { knowledgePosts } from '../../data/knowledgePosts';
 
-const pillar = knowledgePosts.find((p) => p.kind === 'pillar');
-const clusters = knowledgePosts.filter((p) => p.kind === 'cluster');
+const pillars = knowledgePosts.filter((p) => p.kind === 'pillar');
+const seriesGroups = pillars.map((pillar) => ({
+  pillar,
+  clusters: knowledgePosts.filter((p) => p.kind === 'cluster' && p.series === pillar.slug),
+}));
 
 // English-only content: no ar/es equivalents exist, so emit only x-default + en.
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
@@ -21,8 +24,8 @@ function fmtDate(iso: string): string {
 ---
 
 <BaseLayout
-  title="Knowledge — Automotive Filter Specifications & OE Cross-Reference"
-  description="A technical knowledge series for automotive filter importers, distributors and private-label brands: OE cross-referencing, air filter dimensions, oil filter compatibility and cross-reference verification."
+  title="Knowledge — Automotive Filter Technical & Sourcing Guides"
+  description="A technical knowledge series for automotive filter importers, distributors and private-label brands: OE cross-referencing, quality and performance testing, and OEM sourcing and procurement."
   alternates={alternates}
   hideLocales
 >
@@ -32,39 +35,43 @@ function fmtDate(iso: string): string {
         <h1>Knowledge</h1>
         <p class="lede">
           A technical guide series for automotive filter importers, distributors and private-label
-          brands — how to match filters by OE number, verify dimensions, check oil filter
-          compatibility and validate cross-reference data before sourcing.
+          brands — three pillars covering OE cross-referencing and specifications, quality and
+          performance testing, and OEM sourcing and procurement.
         </p>
       </div>
 
       {
-        pillar ? (
-          <a class="card pillar-card" href={`/knowledge/${pillar.slug}/`}>
-            <span class="chip">Pillar Guide</span>
-            <h2>{pillar.title}</h2>
-            <p class="muted" style="margin:0 0 0.6rem">{pillar.description}</p>
-            <p class="small muted" style="margin:0">{fmtDate(pillar.date)} · {pillar.topicLabel}</p>
-          </a>
-        ) : null
-      }
-
-      <div class="grid grid--2 cluster-grid">
-        {
-          clusters.map((p) => (
-            <a class="card cluster-card" href={`/knowledge/${p.slug}/`}>
-              <span class="chip">{p.topicLabel}</span>
-              <h3>{p.title}</h3>
-              <p class="small muted" style="margin:0 0 0.6rem">{p.description}</p>
-              <p class="small muted" style="margin:0">{fmtDate(p.date)}</p>
+        seriesGroups.map(({ pillar, clusters }) => (
+          <div class="series-group">
+            <a class="card pillar-card" href={`/knowledge/${pillar.slug}/`}>
+              <span class="chip">Pillar Guide</span>
+              <h2>{pillar.title}</h2>
+              <p class="muted" style="margin:0 0 0.6rem">{pillar.description}</p>
+              <p class="small muted" style="margin:0">{fmtDate(pillar.date)} · {pillar.topicLabel}</p>
             </a>
-          ))
-        }
-      </div>
+
+            <div class="grid grid--2 cluster-grid">
+              {
+                clusters.map((p) => (
+                  <a class="card cluster-card" href={`/knowledge/${p.slug}/`}>
+                    <span class="chip">{p.topicLabel}</span>
+                    <h3>{p.title}</h3>
+                    <p class="small muted" style="margin:0 0 0.6rem">{p.description}</p>
+                    <p class="small muted" style="margin:0">{fmtDate(p.date)}</p>
+                  </a>
+                ))
+              }
+            </div>
+          </div>
+        ))
+      }
 
       <p class="small muted" style="margin-top:1.5rem">
         Cross-reference data lives in our dedicated
         <a href="https://data.hycarfilter.com/cross-reference/" target="_blank" rel="noopener">data subsite ↗</a> —
-        these guides link to it rather than duplicating records.
+        these guides link to it rather than duplicating records. Testing topics are covered at a
+        framework level and linked to the
+        <a href="https://tech.hycarfilter.com/testing/" target="_blank" rel="noopener">tech subsite ↗</a>.
       </p>
     </div>
   </section>
@@ -76,16 +83,18 @@ function fmtDate(iso: string): string {
 </BaseLayout>
 
 <style>
+  .series-group { margin-bottom: 3rem; }
+
   .pillar-card {
     display: block;
     color: var(--brand-ink);
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
     border-left: 4px solid var(--orange-500);
   }
   .pillar-card:hover { color: var(--brand-ink); }
   .pillar-card h2 { margin: 0.5rem 0 0.2rem; }
 
-  .cluster-grid { margin-top: 1rem; }
+  .cluster-grid { margin-top: 0; }
   .cluster-card { display: block; color: var(--brand-ink); }
   .cluster-card:hover { color: var(--brand-ink); }
   .cluster-card h3 { margin: 0.5rem 0 0.2rem; }
