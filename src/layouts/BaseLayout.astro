@@ -23,9 +23,11 @@ interface Props {
   alternates?: Alternate[];
   /** Suppress canonical + hreflang and mark the page noindex (404 pages). */
   noindex?: boolean;
+  /** Hide the language switcher (EN-only pages such as /knowledge/). */
+  hideLocales?: boolean;
 }
 
-const { title, description, lang, dir, alternates, noindex } = Astro.props;
+const { title, description, lang, dir, alternates, noindex, hideLocales = false } = Astro.props;
 
 const currentLocale = getLocaleFromPath(Astro.url.pathname);
 const locale = localeMeta[currentLocale];
@@ -97,7 +99,7 @@ const orgJsonLd = {
     <script type="application/ld+json" set:html={JSON.stringify(orgJsonLd)} />
   </head>
   <body>
-    <Header />
+    <Header hideLocales={hideLocales} />
     <main>
       <slot />
     </main>
