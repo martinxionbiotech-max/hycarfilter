@@ -115,6 +115,9 @@ export interface UIStrings {
   lblCertifications: string;
   lblHsCode: string;
   lblTargetMarkets: string;
+  // spec-evidence tags (P0-2)
+  dataBasis: string;
+  specDisclaimer: string;
   // dimension words
   length: string;
   width: string;
@@ -265,9 +268,11 @@ const ar: UIStrings = {
   lblOuterCarton: 'الكرتون الخارجي',
   lblNetWeight: 'الوزن الصافي',
   lblLeadTime: 'المهلة الزمنية',
-  lblCertifications: 'الشهادات',
+  lblCertifications: 'إطار الجودة',
   lblHsCode: 'رمز النظام المنسق (HS)',
   lblTargetMarkets: 'الأسواق المستهدفة',
+  dataBasis: 'أساس البيانات',
+  specDisclaimer: 'المواصفات في هذه الصفحة قيم مرجعية تصميمية، وليست بديلًا عن ورقة المواصفات الرسمية أو العينة المؤكدة. يجب إعادة تأكيد كل قيمة مقابل إخلاء المسؤولية وعينة ما قبل الإنتاج قبل تقديم الطلب.',
   length: 'الطول',
   width: 'العرض',
   height: 'الارتفاع',
@@ -415,9 +420,11 @@ const es: UIStrings = {
   lblOuterCarton: 'Caja exterior',
   lblNetWeight: 'Peso neto',
   lblLeadTime: 'Plazo de entrega',
-  lblCertifications: 'Certificaciones',
+  lblCertifications: 'Marco de calidad',
   lblHsCode: 'Código SA (HS)',
   lblTargetMarkets: 'Mercados objetivo',
+  dataBasis: 'Base de datos',
+  specDisclaimer: 'Las especificaciones de esta página son valores de referencia de diseño y no sustituyen la ficha técnica formal ni una muestra confirmada. Cada valor debe reconfirmarse contra el Aviso legal y la muestra de preproducción antes de realizar un pedido.',
   length: 'Largo',
   width: 'Ancho',
   height: 'Alto',

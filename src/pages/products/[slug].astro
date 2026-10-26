@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import InquiryCta from '../../components/InquiryCta.astro';
 import productsData from '../../data/products.json';
+import specEvidence from '../../data/spec-evidence.json';
 import { categoryContent } from '../../data/categoryContent';
 import { procurementConcerns, extraFaqs } from '../../data/procurementContent';
 import { originImages } from '../../data/originImages';
@@ -27,6 +28,11 @@ if (!cat && !sku) {
 }
 
 const v = (x: any): string => (x === null || x === undefined || x === '') ? '—' : String(x);
+
+// Per-field evidence annotation (P0-2): render an honest "Data basis" tag per value.
+const ev: Record<string, any> = sku ? (specEvidence.skus[sku.model]?.fields ?? {}) : {};
+const basis = (key: string): string | null => ev[key]?.value_type ?? null;
+const basisNote = (key: string): string => ev[key]?.note ?? '';
 
 function dimsSummary(p: any): string {
   const d = p.dimensions;
@@ -241,13 +247,13 @@ const relatedPosts = relSlug ? blogPosts.filter((p) => p.relatedCategory === rel
           }
 
           <h2>Specification</h2>
-          <p class="muted small">Canonical values from <code>src/data/products.json</code> — the single source of truth.</p>
+          <p class="muted small">Canonical values from <code>src/data/products.json</code> — the single source of truth. Each value carries a <span class="basis-tag">Data basis</span> tag showing how it should be read (measured / design target / typical / reference).</p>
           <div class="table-wrap">
             <table class="spec">
               <tbody>
                 <tr><th>Model</th><td>{sku.model}</td><th>Brand</th><td>{sku.brand}</td></tr>
                 <tr><th>Category</th><td><a href={`/products/${skuCat.slug}/`}>{skuCat.name_en}</a></td><th>Series</th><td>{sku.series}</td></tr>
-                <tr><th>Filtration Efficiency</th><td>{v(sku.filtration_efficiency)}</td><th>Media</th><td>{sku.media}</td></tr>
+                <tr><th>Filtration Efficiency</th><td>{v(sku.filtration_efficiency)} {basis('filtration_efficiency') ? <span class="basis-tag" title={basisNote('filtration_efficiency')}>Data basis: {basis('filtration_efficiency')}</span> : null}</td><th>Media</th><td>{sku.media} {basis('media') ? <span class="basis-tag" title={basisNote('media')}>Data basis: {basis('media')}</span> : null}</td></tr>
                 {hasDim ? (
                   <tr>
                     <th>Dimensions</th>
@@ -272,17 +278,23 @@ const relatedPosts = relSlug ? blogPosts.filter((p) => p.relatedCategory === rel
                 ) : null}
                 <tr><th>Housing</th><td>{v(sku.materials.housing)}</td><th>Media Material</th><td>{v(sku.materials.media_material)}</td></tr>
                 <tr><th>End Cap</th><td>{v(sku.materials.endcap)}</td><th>Seal</th><td>{v(sku.materials.seal)}</td></tr>
-                <tr><th>Applicable Vehicles</th><td colspan="3">{sku.applicable_vehicles.join(', ')}</td></tr>
+                <tr><th>Applicable Vehicles</th><td colspan="3">{sku.applicable_vehicles.join(', ')} {basis('applicable_vehicles') ? <span class="basis-tag" title={basisNote('applicable_vehicles')}>Data basis: {basis('applicable_vehicles')}</span> : null}</td></tr>
                 <tr><th>OE Numbers</th><td colspan="3">{sku.oe_numbers.join(', ')}</td></tr>
                 <tr><th>Cross Reference</th><td colspan="3">{sku.cross_reference.join(', ')}</td></tr>
                 <tr><th>Inner Box</th><td>{sku.packing.inner_box}</td><th>Outer Carton</th><td>{sku.packing.outer_carton}</td></tr>
                 <tr><th>Carton Qty</th><td>{sku.packing.carton_qty} pcs</td><th>Net Weight</th><td>{sku.packing.net_weight_kg} kg/unit</td></tr>
-                <tr><th>MOQ</th><td>{sku.moq} pcs</td><th>Lead Time</th><td>{sku.lead_time_days} days</td></tr>
-                <tr><th>Certifications</th><td>{sku.certifications.join(', ')}</td><th>HS Code</th><td>{sku.hs_code}</td></tr>
+                <tr><th>MOQ</th><td>{sku.moq} pcs {basis('moq') ? <span class="basis-tag" title={basisNote('moq')}>Data basis: {basis('moq')}</span> : null}</td><th>Lead Time</th><td>{sku.lead_time_days} days {basis('lead_time_days') ? <span class="basis-tag" title={basisNote('lead_time_days')}>Data basis: {basis('lead_time_days')}</span> : null}</td></tr>
+                <tr><th>Quality Framework</th><td>{sku.certifications.join(', ')} {basis('certifications') ? <span class="basis-tag" title={basisNote('certifications')}>Data basis: {basis('certifications')}</span> : null}</td><th>HS Code</th><td>{sku.hs_code}</td></tr>
                 <tr><th>Target Markets</th><td colspan="3">{sku.target_markets.join(', ')}</td></tr>
               </tbody>
             </table>
           </div>
+
+          <p class="muted small spec-disclaimer">
+            Specifications on this page are <strong>design reference values</strong>. They are not a substitute for the
+            formal specification sheet or a confirmed sample. Every value should be re-confirmed against the
+            <a href="/disclaimer/">Disclaimer</a> and the pre-production sample before you place an order.
+          </p>
 
           <h2>Procurement Concerns for This Category</h2>
           <p class="muted small">The real worries a {skuCat.name_en.toLowerCase()} buyer raises — and how we address them.</p>
@@ -362,6 +374,26 @@ const relatedPosts = relSlug ? blogPosts.filter((p) => p.relatedCategory === rel
   .sku-card:hover { color: var(--brand-ink); }
   .blog-card { display: block; color: var(--brand-ink); }
   .blog-card:hover { color: var(--brand-ink); }
+  .basis-tag {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--orange-700, #c2410c);
+    background: var(--orange-050, #fff7ed);
+    border: 1px solid var(--orange-200, #fed7aa);
+    border-radius: 999px;
+    padding: 0.05rem 0.45rem;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  .spec-disclaimer {
+    margin: 0.75rem 0 0;
+    padding: 0.65rem 0.85rem;
+    background: #f4f7fa;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+  }
   @media (max-width: 820px) {
     .cat-head { grid-template-columns: 1fr; }
     .cat-hero { justify-self: start; }

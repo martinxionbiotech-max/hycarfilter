@@ -1,0 +1,2832 @@
+{
+  "_meta": {
+    "title": "Hycarfilter Specification Evidence Register",
+    "version": "0.1.0",
+    "generated": "2026-10-26",
+    "source": "src/data/products.json (canonical dataset)",
+    "purpose": "Per-field evidence annotation for every SKU. Each value carries a value_type, source, confirmation status and note so the site renders honest \"Data basis\" tags and never presents a seed value as a verified measurement or certificate.",
+    "value_types": {
+      "measured": "Measured — verified by test or measurement against a stated standard.",
+      "design-target": "Design target — engineering target value, confirmed against the OE drawing / sample.",
+      "typical": "Typical — representative or nominal value; confirm per order.",
+      "reference": "Reference — for guidance only; confirm against the spec sheet or sample before ordering.",
+      "promotional": "Promotional — marketing claim, not a verified specification."
+    },
+    "confirmation_statuses": {
+      "confirmed": "Verified against a test report or sample.",
+      "pending-sample": "To be confirmed against the pre-production sample.",
+      "pending-order": "To be confirmed at order confirmation.",
+      "unverified": "Not yet verified; treat as reference only."
+    }
+  },
+  "skus": {
+    "hy-af-nano": {
+      "category": "af",
+      "name_en": "Nano-Fiber Panel Air Filter",
+      "fields": {
+        "filtration_efficiency": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "No test standard, test dust or particle size stated on the seed value. Confirm against an ISO 5011 / SAE J726 report for the exact SKU before quoting."
+        },
+        "dimensions.length_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "dimensions.width_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "dimensions.height_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "media": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Media grade selected by application; confirm grade and pleat spec on the sample."
+        },
+        "materials.housing": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.media_material": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.endcap": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.seal": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "applicable_vehicles": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative fitment; confirm by OE number before quoting."
+        },
+        "oe_numbers": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify against the OE catalog."
+        },
+        "cross_reference": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify cross-reference before quoting."
+        },
+        "packing_inner_box": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_outer_carton": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_carton_qty": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Units per carton; confirm per order."
+        },
+        "packing_net_weight_kg": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Net weight per unit; confirm per order."
+        },
+        "moq": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical MOQ; negotiable by model and order size."
+        },
+        "lead_time_days": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical lead time; firm date confirmed at order confirmation."
+        },
+        "certifications": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+        },
+        "target_markets": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative target markets."
+        },
+        "hs_code": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "China export HS code; confirm per product and destination."
+        }
+      }
+    },
+    "hy-af-panel": {
+      "category": "af",
+      "name_en": "Standard Panel Air Filter",
+      "fields": {
+        "filtration_efficiency": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "No test standard, test dust or particle size stated on the seed value. Confirm against an ISO 5011 / SAE J726 report for the exact SKU before quoting."
+        },
+        "dimensions.length_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "dimensions.width_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "dimensions.height_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "media": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Media grade selected by application; confirm grade and pleat spec on the sample."
+        },
+        "materials.housing": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.media_material": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.endcap": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.seal": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "applicable_vehicles": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative fitment; confirm by OE number before quoting."
+        },
+        "oe_numbers": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify against the OE catalog."
+        },
+        "cross_reference": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify cross-reference before quoting."
+        },
+        "packing_inner_box": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_outer_carton": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_carton_qty": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Units per carton; confirm per order."
+        },
+        "packing_net_weight_kg": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Net weight per unit; confirm per order."
+        },
+        "moq": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical MOQ; negotiable by model and order size."
+        },
+        "lead_time_days": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical lead time; firm date confirmed at order confirmation."
+        },
+        "certifications": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+        },
+        "target_markets": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative target markets."
+        },
+        "hs_code": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "China export HS code; confirm per product and destination."
+        }
+      }
+    },
+    "hy-af-round": {
+      "category": "af",
+      "name_en": "Round Air Filter",
+      "fields": {
+        "filtration_efficiency": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "No test standard, test dust or particle size stated on the seed value. Confirm against an ISO 5011 / SAE J726 report for the exact SKU before quoting."
+        },
+        "dimensions.height_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "dimensions.outer_diameter_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "dimensions.inner_diameter_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "media": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Media grade selected by application; confirm grade and pleat spec on the sample."
+        },
+        "materials.housing": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.media_material": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.endcap": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.seal": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "applicable_vehicles": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative fitment; confirm by OE number before quoting."
+        },
+        "oe_numbers": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify against the OE catalog."
+        },
+        "cross_reference": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify cross-reference before quoting."
+        },
+        "packing_inner_box": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_outer_carton": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_carton_qty": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Units per carton; confirm per order."
+        },
+        "packing_net_weight_kg": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Net weight per unit; confirm per order."
+        },
+        "moq": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical MOQ; negotiable by model and order size."
+        },
+        "lead_time_days": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical lead time; firm date confirmed at order confirmation."
+        },
+        "certifications": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+        },
+        "target_markets": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative target markets."
+        },
+        "hs_code": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "China export HS code; confirm per product and destination."
+        }
+      }
+    },
+    "hy-af-heavy": {
+      "category": "af",
+      "name_en": "Heavy-Duty Air Filter",
+      "fields": {
+        "filtration_efficiency": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "No test standard, test dust or particle size stated on the seed value. Confirm against an ISO 5011 / SAE J726 report for the exact SKU before quoting."
+        },
+        "dimensions.height_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "dimensions.outer_diameter_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "dimensions.inner_diameter_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "media": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Media grade selected by application; confirm grade and pleat spec on the sample."
+        },
+        "materials.housing": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.media_material": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.endcap": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.seal": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "applicable_vehicles": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative fitment; confirm by OE number before quoting."
+        },
+        "oe_numbers": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify against the OE catalog."
+        },
+        "cross_reference": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify cross-reference before quoting."
+        },
+        "packing_inner_box": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_outer_carton": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_carton_qty": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Units per carton; confirm per order."
+        },
+        "packing_net_weight_kg": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Net weight per unit; confirm per order."
+        },
+        "moq": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical MOQ; negotiable by model and order size."
+        },
+        "lead_time_days": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical lead time; firm date confirmed at order confirmation."
+        },
+        "certifications": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+        },
+        "target_markets": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative target markets."
+        },
+        "hs_code": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "China export HS code; confirm per product and destination."
+        }
+      }
+    },
+    "hy-cf-particle": {
+      "category": "cf",
+      "name_en": "Particle Cabin Filter",
+      "fields": {
+        "filtration_efficiency": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "No test standard or particle size stated. HEPA values must state H-class and MPPS per a real standard; confirm per SKU."
+        },
+        "dimensions.length_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "dimensions.width_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "dimensions.height_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "media": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Media grade selected by application; confirm grade and pleat spec on the sample."
+        },
+        "materials.housing": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.media_material": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.endcap": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.seal": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "applicable_vehicles": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative fitment; confirm by OE number before quoting."
+        },
+        "oe_numbers": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify against the OE catalog."
+        },
+        "cross_reference": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify cross-reference before quoting."
+        },
+        "packing_inner_box": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_outer_carton": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_carton_qty": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Units per carton; confirm per order."
+        },
+        "packing_net_weight_kg": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Net weight per unit; confirm per order."
+        },
+        "moq": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical MOQ; negotiable by model and order size."
+        },
+        "lead_time_days": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical lead time; firm date confirmed at order confirmation."
+        },
+        "certifications": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+        },
+        "target_markets": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative target markets."
+        },
+        "hs_code": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "China export HS code; confirm per product and destination."
+        }
+      }
+    },
+    "hy-cf-carbon": {
+      "category": "cf",
+      "name_en": "Activated Carbon Cabin Filter",
+      "fields": {
+        "filtration_efficiency": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "No test standard or particle size stated. HEPA values must state H-class and MPPS per a real standard; confirm per SKU."
+        },
+        "dimensions.length_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "dimensions.width_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "dimensions.height_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "media": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Media grade selected by application; confirm grade and pleat spec on the sample."
+        },
+        "materials.housing": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.media_material": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.endcap": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.seal": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "applicable_vehicles": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative fitment; confirm by OE number before quoting."
+        },
+        "oe_numbers": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify against the OE catalog."
+        },
+        "cross_reference": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify cross-reference before quoting."
+        },
+        "packing_inner_box": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_outer_carton": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_carton_qty": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Units per carton; confirm per order."
+        },
+        "packing_net_weight_kg": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Net weight per unit; confirm per order."
+        },
+        "moq": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical MOQ; negotiable by model and order size."
+        },
+        "lead_time_days": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical lead time; firm date confirmed at order confirmation."
+        },
+        "certifications": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+        },
+        "target_markets": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative target markets."
+        },
+        "hs_code": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "China export HS code; confirm per product and destination."
+        }
+      }
+    },
+    "hy-cf-hepa": {
+      "category": "cf",
+      "name_en": "HEPA Cabin Filter",
+      "fields": {
+        "filtration_efficiency": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "No test standard or particle size stated. HEPA values must state H-class and MPPS per a real standard; confirm per SKU."
+        },
+        "dimensions.length_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "dimensions.width_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "dimensions.height_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "media": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Media grade selected by application; confirm grade and pleat spec on the sample."
+        },
+        "materials.housing": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.media_material": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.endcap": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.seal": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "applicable_vehicles": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative fitment; confirm by OE number before quoting."
+        },
+        "oe_numbers": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify against the OE catalog."
+        },
+        "cross_reference": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify cross-reference before quoting."
+        },
+        "packing_inner_box": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_outer_carton": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_carton_qty": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Units per carton; confirm per order."
+        },
+        "packing_net_weight_kg": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Net weight per unit; confirm per order."
+        },
+        "moq": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical MOQ; negotiable by model and order size."
+        },
+        "lead_time_days": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical lead time; firm date confirmed at order confirmation."
+        },
+        "certifications": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+        },
+        "target_markets": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative target markets."
+        },
+        "hs_code": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "China export HS code; confirm per product and destination."
+        }
+      }
+    },
+    "hy-of-spinon": {
+      "category": "of",
+      "name_en": "Spin-On Oil Filter",
+      "fields": {
+        "filtration_efficiency": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Stated without a beta ratio or ISO 4548 multi-pass reference. Confirm the test reference and micron level per SKU."
+        },
+        "dimensions.height_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "dimensions.outer_diameter_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "dimensions.thread": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "OE / design reference thread spec; verify against the engine or vehicle fitment."
+        },
+        "dimensions.gasket": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "OE / design reference gasket spec; verify against the housing."
+        },
+        "media": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Media grade selected by application; confirm grade and pleat spec on the sample."
+        },
+        "materials.housing": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.media_material": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.endcap": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.seal": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "applicable_vehicles": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative fitment; confirm by OE number before quoting."
+        },
+        "oe_numbers": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify against the OE catalog."
+        },
+        "cross_reference": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify cross-reference before quoting."
+        },
+        "packing_inner_box": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_outer_carton": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_carton_qty": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Units per carton; confirm per order."
+        },
+        "packing_net_weight_kg": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Net weight per unit; confirm per order."
+        },
+        "moq": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical MOQ; negotiable by model and order size."
+        },
+        "lead_time_days": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical lead time; firm date confirmed at order confirmation."
+        },
+        "certifications": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+        },
+        "target_markets": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative target markets."
+        },
+        "hs_code": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "China export HS code; confirm per product and destination."
+        }
+      }
+    },
+    "hy-of-cartridge": {
+      "category": "of",
+      "name_en": "Cartridge Oil Filter",
+      "fields": {
+        "filtration_efficiency": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Stated without a beta ratio or ISO 4548 multi-pass reference. Confirm the test reference and micron level per SKU."
+        },
+        "dimensions.height_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "dimensions.outer_diameter_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "dimensions.inner_diameter_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "dimensions.gasket": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "OE / design reference gasket spec; verify against the housing."
+        },
+        "media": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Media grade selected by application; confirm grade and pleat spec on the sample."
+        },
+        "materials.housing": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.media_material": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.endcap": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.seal": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "applicable_vehicles": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative fitment; confirm by OE number before quoting."
+        },
+        "oe_numbers": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify against the OE catalog."
+        },
+        "cross_reference": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify cross-reference before quoting."
+        },
+        "packing_inner_box": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_outer_carton": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_carton_qty": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Units per carton; confirm per order."
+        },
+        "packing_net_weight_kg": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Net weight per unit; confirm per order."
+        },
+        "moq": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical MOQ; negotiable by model and order size."
+        },
+        "lead_time_days": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical lead time; firm date confirmed at order confirmation."
+        },
+        "certifications": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+        },
+        "target_markets": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative target markets."
+        },
+        "hs_code": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "China export HS code; confirm per product and destination."
+        }
+      }
+    },
+    "hy-of-hd": {
+      "category": "of",
+      "name_en": "Heavy-Duty Oil Filter",
+      "fields": {
+        "filtration_efficiency": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Stated without a beta ratio or ISO 4548 multi-pass reference. Confirm the test reference and micron level per SKU."
+        },
+        "dimensions.height_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "dimensions.outer_diameter_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "dimensions.thread": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "OE / design reference thread spec; verify against the engine or vehicle fitment."
+        },
+        "dimensions.gasket": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "OE / design reference gasket spec; verify against the housing."
+        },
+        "media": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Media grade selected by application; confirm grade and pleat spec on the sample."
+        },
+        "materials.housing": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.media_material": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.endcap": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.seal": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "applicable_vehicles": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative fitment; confirm by OE number before quoting."
+        },
+        "oe_numbers": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify against the OE catalog."
+        },
+        "cross_reference": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify cross-reference before quoting."
+        },
+        "packing_inner_box": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_outer_carton": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_carton_qty": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Units per carton; confirm per order."
+        },
+        "packing_net_weight_kg": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Net weight per unit; confirm per order."
+        },
+        "moq": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical MOQ; negotiable by model and order size."
+        },
+        "lead_time_days": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical lead time; firm date confirmed at order confirmation."
+        },
+        "certifications": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+        },
+        "target_markets": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative target markets."
+        },
+        "hs_code": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "China export HS code; confirm per product and destination."
+        }
+      }
+    },
+    "hy-of-longlife": {
+      "category": "of",
+      "name_en": "Long-Life Oil Filter",
+      "fields": {
+        "filtration_efficiency": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Stated without a beta ratio or ISO 4548 multi-pass reference. Confirm the test reference and micron level per SKU."
+        },
+        "dimensions.height_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "dimensions.outer_diameter_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "dimensions.thread": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "OE / design reference thread spec; verify against the engine or vehicle fitment."
+        },
+        "dimensions.gasket": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "OE / design reference gasket spec; verify against the housing."
+        },
+        "media": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Media grade selected by application; confirm grade and pleat spec on the sample."
+        },
+        "materials.housing": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.media_material": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.endcap": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.seal": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "applicable_vehicles": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative fitment; confirm by OE number before quoting."
+        },
+        "oe_numbers": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify against the OE catalog."
+        },
+        "cross_reference": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify cross-reference before quoting."
+        },
+        "packing_inner_box": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_outer_carton": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_carton_qty": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Units per carton; confirm per order."
+        },
+        "packing_net_weight_kg": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Net weight per unit; confirm per order."
+        },
+        "moq": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical MOQ; negotiable by model and order size."
+        },
+        "lead_time_days": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical lead time; firm date confirmed at order confirmation."
+        },
+        "certifications": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+        },
+        "target_markets": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative target markets."
+        },
+        "hs_code": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "China export HS code; confirm per product and destination."
+        }
+      }
+    },
+    "hy-ff-spinon": {
+      "category": "ff",
+      "name_en": "Spin-On Fuel Filter",
+      "fields": {
+        "filtration_efficiency": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Stated without a beta ratio or micron-level reference. Confirm the rating against the injection system."
+        },
+        "dimensions.height_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "dimensions.outer_diameter_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "dimensions.thread": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "OE / design reference thread spec; verify against the engine or vehicle fitment."
+        },
+        "dimensions.gasket": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "OE / design reference gasket spec; verify against the housing."
+        },
+        "media": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Media grade selected by application; confirm grade and pleat spec on the sample."
+        },
+        "materials.housing": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.media_material": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.endcap": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.seal": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "applicable_vehicles": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative fitment; confirm by OE number before quoting."
+        },
+        "oe_numbers": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify against the OE catalog."
+        },
+        "cross_reference": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify cross-reference before quoting."
+        },
+        "packing_inner_box": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_outer_carton": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_carton_qty": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Units per carton; confirm per order."
+        },
+        "packing_net_weight_kg": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Net weight per unit; confirm per order."
+        },
+        "moq": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical MOQ; negotiable by model and order size."
+        },
+        "lead_time_days": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical lead time; firm date confirmed at order confirmation."
+        },
+        "certifications": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+        },
+        "target_markets": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative target markets."
+        },
+        "hs_code": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "China export HS code; confirm per product and destination."
+        }
+      }
+    },
+    "hy-ff-inline": {
+      "category": "ff",
+      "name_en": "Inline Fuel Filter",
+      "fields": {
+        "filtration_efficiency": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Stated without a beta ratio or micron-level reference. Confirm the rating against the injection system."
+        },
+        "dimensions.length_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "dimensions.outer_diameter_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "media": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Media grade selected by application; confirm grade and pleat spec on the sample."
+        },
+        "materials.housing": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.media_material": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.endcap": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.seal": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "applicable_vehicles": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative fitment; confirm by OE number before quoting."
+        },
+        "oe_numbers": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify against the OE catalog."
+        },
+        "cross_reference": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify cross-reference before quoting."
+        },
+        "packing_inner_box": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_outer_carton": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_carton_qty": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Units per carton; confirm per order."
+        },
+        "packing_net_weight_kg": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Net weight per unit; confirm per order."
+        },
+        "moq": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical MOQ; negotiable by model and order size."
+        },
+        "lead_time_days": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical lead time; firm date confirmed at order confirmation."
+        },
+        "certifications": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+        },
+        "target_markets": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative target markets."
+        },
+        "hs_code": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "China export HS code; confirm per product and destination."
+        }
+      }
+    },
+    "hy-ff-water": {
+      "category": "ff",
+      "name_en": "Fuel Water Separator Filter",
+      "fields": {
+        "filtration_efficiency": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Stated without a beta ratio or micron-level reference. Confirm the rating against the injection system."
+        },
+        "dimensions.height_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "dimensions.outer_diameter_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "dimensions.thread": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "OE / design reference thread spec; verify against the engine or vehicle fitment."
+        },
+        "dimensions.gasket": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "OE / design reference gasket spec; verify against the housing."
+        },
+        "media": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Media grade selected by application; confirm grade and pleat spec on the sample."
+        },
+        "materials.housing": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.media_material": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.endcap": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.seal": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "applicable_vehicles": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative fitment; confirm by OE number before quoting."
+        },
+        "oe_numbers": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify against the OE catalog."
+        },
+        "cross_reference": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify cross-reference before quoting."
+        },
+        "packing_inner_box": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_outer_carton": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_carton_qty": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Units per carton; confirm per order."
+        },
+        "packing_net_weight_kg": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Net weight per unit; confirm per order."
+        },
+        "moq": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical MOQ; negotiable by model and order size."
+        },
+        "lead_time_days": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical lead time; firm date confirmed at order confirmation."
+        },
+        "certifications": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+        },
+        "target_markets": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative target markets."
+        },
+        "hs_code": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "China export HS code; confirm per product and destination."
+        }
+      }
+    },
+    "hy-wb-beam": {
+      "category": "wb",
+      "name_en": "Beam Wiper Blade",
+      "fields": {
+        "dimensions.length_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "media": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Media grade selected by application; confirm grade and pleat spec on the sample."
+        },
+        "materials.housing": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.media_material": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.endcap": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "applicable_vehicles": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative fitment; confirm by OE number before quoting."
+        },
+        "oe_numbers": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify against the OE catalog."
+        },
+        "cross_reference": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify cross-reference before quoting."
+        },
+        "packing_inner_box": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_outer_carton": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_carton_qty": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Units per carton; confirm per order."
+        },
+        "packing_net_weight_kg": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Net weight per unit; confirm per order."
+        },
+        "moq": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical MOQ; negotiable by model and order size."
+        },
+        "lead_time_days": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical lead time; firm date confirmed at order confirmation."
+        },
+        "certifications": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+        },
+        "target_markets": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative target markets."
+        },
+        "hs_code": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "China export HS code; confirm per product and destination."
+        }
+      }
+    },
+    "hy-wb-hybrid": {
+      "category": "wb",
+      "name_en": "Hybrid Wiper Blade",
+      "fields": {
+        "dimensions.length_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "media": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Media grade selected by application; confirm grade and pleat spec on the sample."
+        },
+        "materials.housing": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.media_material": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.endcap": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "applicable_vehicles": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative fitment; confirm by OE number before quoting."
+        },
+        "oe_numbers": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify against the OE catalog."
+        },
+        "cross_reference": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify cross-reference before quoting."
+        },
+        "packing_inner_box": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_outer_carton": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_carton_qty": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Units per carton; confirm per order."
+        },
+        "packing_net_weight_kg": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Net weight per unit; confirm per order."
+        },
+        "moq": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical MOQ; negotiable by model and order size."
+        },
+        "lead_time_days": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical lead time; firm date confirmed at order confirmation."
+        },
+        "certifications": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+        },
+        "target_markets": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative target markets."
+        },
+        "hs_code": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "China export HS code; confirm per product and destination."
+        }
+      }
+    },
+    "hy-wb-rear": {
+      "category": "wb",
+      "name_en": "Rear Wiper Blade",
+      "fields": {
+        "dimensions.length_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "media": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Media grade selected by application; confirm grade and pleat spec on the sample."
+        },
+        "materials.housing": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.media_material": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.endcap": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "applicable_vehicles": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative fitment; confirm by OE number before quoting."
+        },
+        "oe_numbers": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify against the OE catalog."
+        },
+        "cross_reference": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify cross-reference before quoting."
+        },
+        "packing_inner_box": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_outer_carton": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_carton_qty": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Units per carton; confirm per order."
+        },
+        "packing_net_weight_kg": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Net weight per unit; confirm per order."
+        },
+        "moq": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical MOQ; negotiable by model and order size."
+        },
+        "lead_time_days": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical lead time; firm date confirmed at order confirmation."
+        },
+        "certifications": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+        },
+        "target_markets": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative target markets."
+        },
+        "hs_code": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "China export HS code; confirm per product and destination."
+        }
+      }
+    },
+    "hy-tf-pan": {
+      "category": "tf",
+      "name_en": "Transmission Pan Filter Screen",
+      "fields": {
+        "filtration_efficiency": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Stated as a screen mesh pore rating. Confirm the pore size and flow requirement against the transmission."
+        },
+        "dimensions.length_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "dimensions.width_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "dimensions.height_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "dimensions.gasket": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "OE / design reference gasket spec; verify against the housing."
+        },
+        "media": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Media grade selected by application; confirm grade and pleat spec on the sample."
+        },
+        "materials.housing": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.media_material": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.endcap": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.seal": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "applicable_vehicles": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative fitment; confirm by OE number before quoting."
+        },
+        "oe_numbers": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify against the OE catalog."
+        },
+        "cross_reference": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify cross-reference before quoting."
+        },
+        "packing_inner_box": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_outer_carton": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_carton_qty": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Units per carton; confirm per order."
+        },
+        "packing_net_weight_kg": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Net weight per unit; confirm per order."
+        },
+        "moq": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical MOQ; negotiable by model and order size."
+        },
+        "lead_time_days": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical lead time; firm date confirmed at order confirmation."
+        },
+        "certifications": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+        },
+        "target_markets": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative target markets."
+        },
+        "hs_code": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "China export HS code; confirm per product and destination."
+        }
+      }
+    },
+    "hy-tf-kit": {
+      "category": "tf",
+      "name_en": "Transmission Filter + Gasket Kit",
+      "fields": {
+        "filtration_efficiency": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Stated as a screen mesh pore rating. Confirm the pore size and flow requirement against the transmission."
+        },
+        "dimensions.length_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "dimensions.width_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "dimensions.height_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "dimensions.gasket": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "OE / design reference gasket spec; verify against the housing."
+        },
+        "media": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Media grade selected by application; confirm grade and pleat spec on the sample."
+        },
+        "materials.housing": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.media_material": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.endcap": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.seal": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "applicable_vehicles": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative fitment; confirm by OE number before quoting."
+        },
+        "oe_numbers": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify against the OE catalog."
+        },
+        "cross_reference": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify cross-reference before quoting."
+        },
+        "packing_inner_box": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_outer_carton": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_carton_qty": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Units per carton; confirm per order."
+        },
+        "packing_net_weight_kg": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Net weight per unit; confirm per order."
+        },
+        "moq": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical MOQ; negotiable by model and order size."
+        },
+        "lead_time_days": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical lead time; firm date confirmed at order confirmation."
+        },
+        "certifications": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+        },
+        "target_markets": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative target markets."
+        },
+        "hs_code": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "China export HS code; confirm per product and destination."
+        }
+      }
+    },
+    "hy-led-h4": {
+      "category": "led",
+      "name_en": "H4 LED Headlight Bulb",
+      "fields": {
+        "media": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Media grade selected by application; confirm grade and pleat spec on the sample."
+        },
+        "materials.housing": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.media_material": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.endcap": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "applicable_vehicles": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative fitment; confirm by OE number before quoting."
+        },
+        "oe_numbers": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify against the OE catalog."
+        },
+        "cross_reference": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify cross-reference before quoting."
+        },
+        "packing_inner_box": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_outer_carton": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_carton_qty": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Units per carton; confirm per order."
+        },
+        "packing_net_weight_kg": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Net weight per unit; confirm per order."
+        },
+        "moq": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical MOQ; negotiable by model and order size."
+        },
+        "lead_time_days": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical lead time; firm date confirmed at order confirmation."
+        },
+        "certifications": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+        },
+        "target_markets": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative target markets."
+        },
+        "hs_code": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "China export HS code; confirm per product and destination."
+        }
+      }
+    },
+    "hy-led-h7": {
+      "category": "led",
+      "name_en": "H7 LED Headlight Bulb",
+      "fields": {
+        "media": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Media grade selected by application; confirm grade and pleat spec on the sample."
+        },
+        "materials.housing": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.media_material": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.endcap": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "applicable_vehicles": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative fitment; confirm by OE number before quoting."
+        },
+        "oe_numbers": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify against the OE catalog."
+        },
+        "cross_reference": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify cross-reference before quoting."
+        },
+        "packing_inner_box": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_outer_carton": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_carton_qty": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Units per carton; confirm per order."
+        },
+        "packing_net_weight_kg": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Net weight per unit; confirm per order."
+        },
+        "moq": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical MOQ; negotiable by model and order size."
+        },
+        "lead_time_days": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical lead time; firm date confirmed at order confirmation."
+        },
+        "certifications": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+        },
+        "target_markets": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative target markets."
+        },
+        "hs_code": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "China export HS code; confirm per product and destination."
+        }
+      }
+    },
+    "hy-led-bar": {
+      "category": "led",
+      "name_en": "LED Light Bar",
+      "fields": {
+        "dimensions.length_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "dimensions.width_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "dimensions.height_mm": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Nominal design dimension; confirm against the OE drawing and a pre-production sample."
+        },
+        "media": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Media grade selected by application; confirm grade and pleat spec on the sample."
+        },
+        "materials.housing": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.media_material": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.endcap": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "materials.seal": {
+          "value_type": "design-target",
+          "source": "products.json (seed)",
+          "status": "pending-sample",
+          "note": "Material spec; confirm on the pre-production sample."
+        },
+        "applicable_vehicles": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative fitment; confirm by OE number before quoting."
+        },
+        "oe_numbers": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify against the OE catalog."
+        },
+        "cross_reference": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Seed placeholder; verify cross-reference before quoting."
+        },
+        "packing_inner_box": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_outer_carton": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Export packing standard; confirm per order."
+        },
+        "packing_carton_qty": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Units per carton; confirm per order."
+        },
+        "packing_net_weight_kg": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Net weight per unit; confirm per order."
+        },
+        "moq": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical MOQ; negotiable by model and order size."
+        },
+        "lead_time_days": {
+          "value_type": "typical",
+          "source": "products.json (seed)",
+          "status": "pending-order",
+          "note": "Typical lead time; firm date confirmed at order confirmation."
+        },
+        "certifications": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Framework reference, not a certificate claim. Specific certification status is confirmed per order and destination."
+        },
+        "target_markets": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "Indicative target markets."
+        },
+        "hs_code": {
+          "value_type": "reference",
+          "source": "products.json (seed)",
+          "status": "unverified",
+          "note": "China export HS code; confirm per product and destination."
+        }
+      }
+    }
+  }
+}

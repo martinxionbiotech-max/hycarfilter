@@ -14,26 +14,26 @@ const totalSkus = productsData.products.length;
 
 const strengths = [
   { title: 'Carcasa de acero estampada en una pieza', text: 'Bote hermético formado en un solo embutido — sin soldaduras en el lado de presión.' },
-  { title: 'Prueba de hermeticidad al 100%', text: 'Cada filtro pasa una verificación completa de hermeticidad antes de empacar, no por muestreo de lote.' },
+  { title: 'Prueba de hermeticidad (programa de calidad)', text: 'La verificación de hermeticidad forma parte de nuestro programa de control de calidad final para filtros roscados sellados, antes del embalaje.' },
   { title: 'Roscas roscadas hidráulicamente', text: 'Roscas de precisión que garantizan un montaje limpio y repetible sin cruce de rosca.' },
-  { title: 'Válvula de derivación y antirretorno calibradas', text: 'La válvula de derivación abre a una presión definida; la antirretorno mantiene el aceite en su sitio en arranques en frío.' },
-  { title: 'Sellos resistentes a altas/bajas temperaturas', text: 'Los anillos de sellado conservan la recuperación y la integridad de -40 °C a +150 °C.' },
+  { title: 'Calibración de derivación y antirretorno', text: 'Las válvulas de derivación y antirretorno se calibran como parte de nuestro programa de calidad; la presión de apertura es una referencia OE/de diseño.' },
+  { title: 'Sellos resistentes a altas/bajas temperaturas', text: 'Los anillos de sellado se seleccionan para resistencia a altas/bajas temperaturas; el rango exacto depende del compuesto y la aplicación.' },
   { title: 'Tapas extremas de plastisol termoestable', text: 'El plastisol termocurado adhiere el medio a las tapas para un núcleo rígido y resistente al colapso.' },
-  { title: 'Medio compuesto de alta temperatura', text: 'La fibra compuesta carbonizada soporta calor sostenido sin colapsar el medio.' },
-  { title: 'Filtración con nanofibras', text: 'Poros finos y gran captura de polvo elevan la eficiencia y prolongan la vida útil.' },
+  { title: 'Medio compuesto de alta temperatura', text: 'El medio compuesto se especifica para aplicaciones de calor sostenido, emparejado al requisito del motor.' },
+  { title: 'Filtración con nanofibras', text: 'El medio de nanofibras de poro fino se ofrece para mercados con mucho polvo, emparejado a la carga de polvo y los objetivos de eficiencia.' },
 ];
 
 const faqs = [
   { q: '¿Cuáles son sus cantidades mínimas de pedido?', a: 'El pedido mínimo varía por categoría — normalmente 500–1.000 pzas para filtros y escobillas, y 200 pzas para iluminación LED. Los pedidos de contenedor mixto se pueden consolidar entre categorías para llenar un contenedor con eficiencia.' },
   { q: '¿Ofrecen OEM / ODM y marca privada?', a: 'Sí. Personalizamos medio, marca, embalaje y documentación para tu mercado, y enviamos bajo tu marca con tu especificación.' },
-  { q: '¿Puedo obtener muestras e informes de prueba primero?', a: 'Entregamos muestras de preproducción para aprobación, más informes de prueba según ISO 5011 / SAE J726 (aire) e ISO 4548 (aceite) para que verifiques el rendimiento antes de comprometerte.' },
+  { q: '¿Puedo obtener muestras e informes de prueba primero?', a: 'Entregamos muestras de preproducción para aprobación. Cuando un proyecto lo requiere, podemos gestionar documentación de prueba conforme a normas de referencia (ISO 5011 / SAE J726 para aire, ISO 4548 para aceite) para que verifiques el rendimiento antes de comprometerte.' },
   { q: '¿Cuál es su plazo de entrega?', a: 'El plazo estándar de producción es de 15–25 días según la categoría y el tamaño del pedido. Confirmamos una fecha firme al confirmar el pedido y te informamos durante la producción.' },
 ];
 ---
 
 <BaseLayout
   title="Fabricante y exportador de filtros automotrices"
-  description="Hycarfilter es un fabricante y exportador de filtros automotrices con sede en Qinghe: filtros de aire, habitáculo, aceite y combustible, escobillas, mallas de transmisión y luces LED. OEM/ODM, ISO 9001 / IATF 16949."
+  description="Hycarfilter es un fabricante y exportador de filtros automotrices con sede en Qinghe: filtros de aire, habitáculo, aceite y combustible, escobillas, mallas de transmisión y luces LED. OEM/ODM, marco ISO 9001 / IATF 16949."
 >
   <section class="hero">
     <div class="container hero__inner">
@@ -49,7 +49,7 @@ const faqs = [
           <a class="btn btn--ghost" href="/es/factory/">Dentro de nuestra fábrica</a>
         </p>
         <p class="hero__stats small muted">
-          <strong>7</strong> categorías · <strong>{totalSkus}</strong> referencias · ISO 9001 / IATF 16949
+          <strong>7</strong> categorías · <strong>{totalSkus}</strong> referencias · ISO 9001 / IATF 16949 (marco)
         </p>
       </div>
       <div class="hero__panel">

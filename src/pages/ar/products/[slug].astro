@@ -2,6 +2,7 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import InquiryCta from '../../../components/InquiryCta.astro';
 import productsData from '../../../data/products.json';
+import specEvidence from '../../../data/spec-evidence.json';
 import { originImages } from '../../../data/originImages';
 import { categoryKeywords } from '../../../data/categoryKeywords';
 import { content, packingI18n } from '../../../i18n/content';
@@ -28,6 +29,10 @@ if (!cat && !sku) {
 }
 
 const v = (x: any): string => (x === null || x === undefined || x === '') ? '—' : String(x);
+
+const ev: Record<string, any> = sku ? (specEvidence.skus[sku.model]?.fields ?? {}) : {};
+const basis = (key: string): string | null => ev[key]?.value_type ?? null;
+const basisNote = (key: string): string => ev[key]?.note ?? '';
 
 function dimsSummary(p: any): string {
   const d = p.dimensions;
@@ -228,7 +233,7 @@ if (sku) {
               <tbody>
                 <tr><th>{u.lblModel}</th><td>{sku.model}</td><th>{u.lblBrand}</th><td>{sku.brand}</td></tr>
                 <tr><th>{u.lblCategory}</th><td><a href={`/ar/products/${skuCat.slug}/`}>{loc.categories[skuCat.code].name}</a></td><th>{u.lblSeries}</th><td>{skuLoc.series}</td></tr>
-                <tr><th>{u.thFiltrationEfficiency}</th><td>{v(sku.filtration_efficiency)}</td><th>{u.thMedia}</th><td>{skuLoc.media}</td></tr>
+                <tr><th>{u.thFiltrationEfficiency}</th><td>{v(sku.filtration_efficiency)} {basis('filtration_efficiency') ? <span class="basis-tag" title={basisNote('filtration_efficiency')}>{u.dataBasis}: {basis('filtration_efficiency')}</span> : null}</td><th>{u.thMedia}</th><td>{skuLoc.media} {basis('media') ? <span class="basis-tag" title={basisNote('media')}>{u.dataBasis}: {basis('media')}</span> : null}</td></tr>
                 {hasDim ? (
                   <tr>
                     <th>{u.lblDimensions}</th>
@@ -253,17 +258,19 @@ if (sku) {
                 ) : null}
                 <tr><th>{u.lblHousing}</th><td>{v(skuLoc.materials.housing)}</td><th>{u.lblMediaMaterial}</th><td>{v(skuLoc.materials.media_material)}</td></tr>
                 <tr><th>{u.lblEndCap}</th><td>{v(skuLoc.materials.endcap)}</td><th>{u.lblSeal}</th><td>{v(skuLoc.materials.seal)}</td></tr>
-                <tr><th>{u.lblApplicableVehicles}</th><td colspan="3">{skuLoc.applicable_vehicles.join(', ')}</td></tr>
+                <tr><th>{u.lblApplicableVehicles}</th><td colspan="3">{skuLoc.applicable_vehicles.join(', ')} {basis('applicable_vehicles') ? <span class="basis-tag" title={basisNote('applicable_vehicles')}>{u.dataBasis}: {basis('applicable_vehicles')}</span> : null}</td></tr>
                 <tr><th>{u.lblOeNumbers}</th><td colspan="3">{sku.oe_numbers.join(', ')}</td></tr>
                 <tr><th>{u.lblCrossReference}</th><td colspan="3">{sku.cross_reference.join(', ')}</td></tr>
                 <tr><th>{u.lblInnerBox}</th><td>{packingI18n.ar[sku.packing.inner_box] ?? sku.packing.inner_box}</td><th>{u.lblOuterCarton}</th><td>{packingI18n.ar[sku.packing.outer_carton] ?? sku.packing.outer_carton}</td></tr>
                 <tr><th>{u.thCartonQty}</th><td>{sku.packing.carton_qty} {u.unitPcs}</td><th>{u.lblNetWeight}</th><td>{sku.packing.net_weight_kg} {u.unitKgPerUnit}</td></tr>
-                <tr><th>{u.thMoq}</th><td>{sku.moq} {u.unitPcs}</td><th>{u.lblLeadTime}</th><td>{sku.lead_time_days} {u.unitDays}</td></tr>
-                <tr><th>{u.lblCertifications}</th><td>{sku.certifications.join(', ')}</td><th>{u.lblHsCode}</th><td>{sku.hs_code}</td></tr>
+                <tr><th>{u.thMoq}</th><td>{sku.moq} {u.unitPcs} {basis('moq') ? <span class="basis-tag" title={basisNote('moq')}>{u.dataBasis}: {basis('moq')}</span> : null}</td><th>{u.lblLeadTime}</th><td>{sku.lead_time_days} {u.unitDays}</td></tr>
+                <tr><th>{u.lblCertifications}</th><td>{sku.certifications.join(', ')} {basis('certifications') ? <span class="basis-tag" title={basisNote('certifications')}>{u.dataBasis}: {basis('certifications')}</span> : null}</td><th>{u.lblHsCode}</th><td>{sku.hs_code}</td></tr>
                 <tr><th>{u.lblTargetMarkets}</th><td colspan="3">{skuLoc.target_markets.join(', ')}</td></tr>
               </tbody>
             </table>
           </div>
+
+          <p class="muted small spec-disclaimer">{u.specDisclaimer}</p>
 
           <h2>{u.procurementConcernsFor}</h2>
           <p class="muted small">{t(u.realWorries, loc.categories[skuCat.code].name)}</p>
@@ -326,6 +333,26 @@ if (sku) {
   .sku-gallery__img { width: 100%; aspect-ratio: 1 / 1; object-fit: contain; background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 0.5rem; }
   .sku-card { display: block; color: var(--brand-ink); }
   .sku-card:hover { color: var(--brand-ink); }
+  .basis-tag {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--orange-700, #c2410c);
+    background: var(--orange-050, #fff7ed);
+    border: 1px solid var(--orange-200, #fed7aa);
+    border-radius: 999px;
+    padding: 0.05rem 0.45rem;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  .spec-disclaimer {
+    margin: 0.75rem 0 0;
+    padding: 0.65rem 0.85rem;
+    background: #f4f7fa;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+  }
   @media (max-width: 820px) {
     .cat-head { grid-template-columns: 1fr; }
     .cat-hero { justify-self: start; }
