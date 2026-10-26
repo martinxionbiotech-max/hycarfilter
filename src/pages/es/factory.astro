@@ -31,7 +31,6 @@ const certFramework = [
   { title: 'Estándares de prueba — ISO / SAE', text: 'Las afirmaciones de rendimiento se verifican contra estándares relevantes como ISO 5011 / SAE J726 (aire) e ISO 4548 (aceite), con informes de prueba disponibles para proyectos OEM.' },
 ];
 
-const aiNote = 'Illustrative rendering — not company photography · 示意图，非公司实拍 · رسم توضيحي — ليس تصويراً للشركة';
 const licenseCaption = [
   'Business license — Qinghe County Hongying Auto Parts Co., Ltd.',
   '营业执照 — 清河县宏盈汽车零部件有限公司',
@@ -96,8 +95,7 @@ const licenseCaption = [
         ))}
       </div>
       <div class="ai-illustrations mt-2">
-        <p class="ai-note">{aiNote}</p>
-        {originImages.aiIllustrations.production.map((img, i) => (
+                {originImages.aiIllustrations.production.map((img, i) => (
           <img class="ai-illustration__img" src={`${originImages.aiIllustrations.prefix}${img}`} alt={`Línea de producción de ${site.brand} — ilustración ${i + 1}`} loading="lazy" />
         ))}
       </div>
@@ -124,8 +122,7 @@ const licenseCaption = [
         ))}
       </div>
       <div class="ai-illustrations mt-2">
-        <p class="ai-note">{aiNote}</p>
-        {originImages.aiIllustrations.qc.map((img, i) => (
+                {originImages.aiIllustrations.qc.map((img, i) => (
           <img class="ai-illustration__img" src={`${originImages.aiIllustrations.prefix}${img}`} alt={`Control de calidad de ${site.brand} — ilustración ${i + 1}`} loading="lazy" />
         ))}
       </div>
@@ -152,8 +149,7 @@ const licenseCaption = [
         ))}
       </div>
       <div class="ai-illustrations mt-2">
-        <p class="ai-note">{aiNote}</p>
-        {originImages.aiIllustrations.warehouse.map((img, i) => (
+                {originImages.aiIllustrations.warehouse.map((img, i) => (
           <img class="ai-illustration__img" src={`${originImages.aiIllustrations.prefix}${img}`} alt={`Almacenamiento de ${site.brand} — ilustración ${i + 1}`} loading="lazy" />
         ))}
       </div>

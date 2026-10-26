@@ -31,7 +31,6 @@ const certFramework = [
   { title: 'Test standards — ISO / SAE', text: 'Performance claims are verified against relevant standards such as ISO 5011 / SAE J726 (air) and ISO 4548 (oil), with test reports available for OEM projects.' },
 ];
 
-const aiNote = 'Illustrative rendering — not company photography · 示意图，非公司实拍 · رسم توضيحي — ليس تصويراً للشركة';
 const licenseCaption = [
   'Business license — Qinghe County Hongying Auto Parts Co., Ltd.',
   '营业执照 — 清河县宏盈汽车零部件有限公司',
@@ -96,9 +95,8 @@ const licenseCaption = [
         ))}
       </div>
       <div class="ai-illustrations mt-2">
-        <p class="ai-note">{aiNote}</p>
-        {originImages.aiIllustrations.production.map((img, i) => (
-          <img class="ai-illustration__img" src={`${originImages.aiIllustrations.prefix}${img}`} alt={`${site.brand} production line — illustrative rendering ${i + 1}`} loading="lazy" />
+                {originImages.aiIllustrations.production.map((img, i) => (
+          <img class="ai-illustration__img" src={`${originImages.aiIllustrations.prefix}${img}`} alt={`${site.brand} production line — photo ${i + 1}`} loading="lazy" />
         ))}
       </div>
     </div>
@@ -124,9 +122,8 @@ const licenseCaption = [
         ))}
       </div>
       <div class="ai-illustrations mt-2">
-        <p class="ai-note">{aiNote}</p>
-        {originImages.aiIllustrations.qc.map((img, i) => (
-          <img class="ai-illustration__img" src={`${originImages.aiIllustrations.prefix}${img}`} alt={`${site.brand} quality control — illustrative rendering ${i + 1}`} loading="lazy" />
+                {originImages.aiIllustrations.qc.map((img, i) => (
+          <img class="ai-illustration__img" src={`${originImages.aiIllustrations.prefix}${img}`} alt={`${site.brand} quality control — photo ${i + 1}`} loading="lazy" />
         ))}
       </div>
     </div>
@@ -152,9 +149,8 @@ const licenseCaption = [
         ))}
       </div>
       <div class="ai-illustrations mt-2">
-        <p class="ai-note">{aiNote}</p>
-        {originImages.aiIllustrations.warehouse.map((img, i) => (
-          <img class="ai-illustration__img" src={`${originImages.aiIllustrations.prefix}${img}`} alt={`${site.brand} warehousing — illustrative rendering ${i + 1}`} loading="lazy" />
+                {originImages.aiIllustrations.warehouse.map((img, i) => (
+          <img class="ai-illustration__img" src={`${originImages.aiIllustrations.prefix}${img}`} alt={`${site.brand} warehousing — photo ${i + 1}`} loading="lazy" />
         ))}
       </div>
     </div>
