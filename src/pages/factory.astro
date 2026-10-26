@@ -30,6 +30,13 @@ const certFramework = [
   { title: 'Product compliance — CE / RoHS', text: 'LED products carry CE and RoHS documentation as a baseline; destination-market approvals are confirmed before shipment where required.' },
   { title: 'Test standards — ISO / SAE', text: 'Performance claims are verified against relevant standards such as ISO 5011 / SAE J726 (air) and ISO 4548 (oil), with test reports available for OEM projects.' },
 ];
+
+const aiNote = 'Illustrative rendering — not company photography · 示意图，非公司实拍 · رسم توضيحي — ليس تصويراً للشركة';
+const licenseCaption = [
+  'Business license — Qinghe County Hongying Auto Parts Co., Ltd.',
+  '营业执照 — 清河县宏盈汽车零部件有限公司',
+  'رخصة تجارية — شركة تشينغخه هونغ ينغ لقطع غيار السيارات المحدودة',
+];
 ---
 
 <BaseLayout
@@ -88,6 +95,12 @@ const certFramework = [
           <img class="factory-strip__img" src={`${originImages.prefix}${img}`} alt={`${site.brand} filter production line — photo ${i + 1}`} loading="lazy" />
         ))}
       </div>
+      <div class="ai-illustrations mt-2">
+        <p class="ai-note">{aiNote}</p>
+        {originImages.aiIllustrations.production.map((img, i) => (
+          <img class="ai-illustration__img" src={`${originImages.aiIllustrations.prefix}${img}`} alt={`${site.brand} production line — illustrative rendering ${i + 1}`} loading="lazy" />
+        ))}
+      </div>
     </div>
   </section>
 
@@ -107,7 +120,13 @@ const certFramework = [
       </div>
       <div class="factory-strip mt-2">
         {originImages.factorySections.qc.map((img, i) => (
-          <img class={i === 0 ? 'factory-strip__img factory-strip__img--doc' : 'factory-strip__img'} src={`${originImages.prefix}${img}`} alt={`${site.brand} quality control — ${i === 0 ? 'business license & certification' : `inspection ${i}`}`} loading="lazy" />
+          <img class="factory-strip__img" src={`${originImages.prefix}${img}`} alt={`${site.brand} quality control — inspection ${i + 1}`} loading="lazy" />
+        ))}
+      </div>
+      <div class="ai-illustrations mt-2">
+        <p class="ai-note">{aiNote}</p>
+        {originImages.aiIllustrations.qc.map((img, i) => (
+          <img class="ai-illustration__img" src={`${originImages.aiIllustrations.prefix}${img}`} alt={`${site.brand} quality control — illustrative rendering ${i + 1}`} loading="lazy" />
         ))}
       </div>
     </div>
@@ -132,6 +151,12 @@ const certFramework = [
           <img class="factory-strip__img" src={`${originImages.prefix}${img}`} alt={`${site.brand} export packing & warehousing — photo ${i + 1}`} loading="lazy" />
         ))}
       </div>
+      <div class="ai-illustrations mt-2">
+        <p class="ai-note">{aiNote}</p>
+        {originImages.aiIllustrations.warehouse.map((img, i) => (
+          <img class="ai-illustration__img" src={`${originImages.aiIllustrations.prefix}${img}`} alt={`${site.brand} warehousing — illustrative rendering ${i + 1}`} loading="lazy" />
+        ))}
+      </div>
     </div>
   </section>
 
@@ -153,10 +178,20 @@ const certFramework = [
         ))}
       </div>
 
+      <div class="business-license mt-2">
+        <h3>Business License</h3>
+        <p class="muted" style="margin:0 0 0.75rem">
+          {licenseCaption[0]}<br/>
+          {licenseCaption[1]}<br/>
+          {licenseCaption[2]}
+        </p>
+        <img class="business-license__img" src={`${originImages.prefix}${originImages.businessLicense}`} alt="Business license — Qinghe County Hongying Auto Parts Co., Ltd." loading="lazy" />
+      </div>
+
       <img class="cert-banner mt-2" src={`${originImages.prefix}${originImages.qualification.banner}`} alt={`${site.brand} qualification & certification banner`} loading="lazy" />
       <div class="cert-grid mt-2">
         {originImages.qualification.docs.map((img, i) => (
-          <img class={i === 0 ? 'cert-grid__img cert-grid__img--doc' : 'cert-grid__img'} src={`${originImages.prefix}${img}`} alt={`${site.brand} certification & business license — ${i + 1}`} loading="lazy" />
+          <img class="cert-grid__img" src={`${originImages.prefix}${img}`} alt={`${site.brand} certification — ${i + 1}`} loading="lazy" />
         ))}
       </div>
 
@@ -183,12 +218,16 @@ const certFramework = [
   .factory-photo { width: 100%; height: 240px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--line); }
   .factory-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.75rem; }
   .factory-strip__img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 8px; border: 1px solid var(--line); background: #fff; }
-  .factory-strip__img--doc { aspect-ratio: auto; max-height: 280px; object-fit: contain; }
   .cert-banner { width: 100%; height: auto; max-height: 220px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--line); }
   .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
   .cert-grid__img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 8px; border: 1px solid var(--line); background: #fff; }
-  .cert-grid__img--doc { aspect-ratio: auto; max-height: 340px; object-fit: contain; }
   .entity-disclosure { background: #F4F7FA; border: 1px solid var(--line); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
   .entity-disclosure h3 { margin-top: 0; }
   .entity-disclosure p { margin: 0.35rem 0; }
+  .ai-illustrations { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.75rem; }
+  .ai-illustration__img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 8px; border: 1px dashed var(--line-strong); background: #fafafa; }
+  .ai-note { font-size: 0.82rem; color: var(--ink-soft); margin: 0 0 0.5rem; }
+  .business-license { background: #F4F7FA; border: 1px solid var(--line); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 1.5rem 0 1rem; }
+  .business-license h3 { margin-top: 0; }
+  .business-license__img { width: 100%; max-width: 560px; height: auto; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
 </style>

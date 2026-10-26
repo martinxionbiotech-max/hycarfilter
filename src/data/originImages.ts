@@ -294,7 +294,6 @@ export const originImages = {
       '3b68e5a1-93f7-4650-ac34-d13ac70ca7ed.jpg',
     ],
     qc: [
-      'e5ca537e-3754-4988-af6f-5392bda05685.jpg',
       '593e6c21-73d3-4665-ba34-70b2c211ef99.jpg',
       '6436649d-9ada-428e-926a-0225ed359c29.jpg',
     ],
@@ -314,11 +313,38 @@ export const originImages = {
   qualification: {
     banner: '8f490fe4-35cd-4f5e-bac9-d61c3e92bc8a.jpg',
     docs: [
-      'e5ca537e-3754-4988-af6f-5392bda05685.jpg',
       '049b6b15-cc77-4b97-8e66-0493e9239e77.jpg',
       'b6f8f6b6-33e3-4faf-b65d-3fee27614d70.jpg',
     ],
   },
+
+  /**
+   * Business license (营业执照) — single legal document, rendered standalone in its
+   * own block on /factory/ so it is never mixed with inspection/certification images.
+   * Qinghe County Hongying Auto Parts Co., Ltd. (清河县宏盈汽车零部件有限公司).
+   */
+  businessLicense: 'e5ca537e-3754-4988-af6f-5392bda05685.jpg',
+
+  /**
+   * AI-generated illustrative renderings (Seedream / Ark). These are editorial
+   * process visualizations — NOT company photography. Kept separate from recovered
+   * origin images and served from /images/ai-illustrations/ so provenance stays clear.
+   */
+  aiIllustrations: {
+    prefix: '/images/ai-illustrations/',
+    production: [
+      'factory-production-line-wide-1600x900.webp',
+      'factory-production-line-2-1600x900.webp',
+    ],
+    qc: [
+      'factory-qc-bench-1600x900.webp',
+      'factory-qc-bench-2-1600x900.webp',
+    ],
+    warehouse: [
+      'factory-warehouse-shelves-1600x900.webp',
+      'factory-warehouse-shelves-2-1600x900.webp',
+    ],
+  } as Record<string, string[]>,
 
   /** home hero — source home slide2 background (alt "OEM&ODM") */
   homeOem: 'c9b13651-5a3f-47ac-9cf6-bb0c26ee8b3b.jpg',
