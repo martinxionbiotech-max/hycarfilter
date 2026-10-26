@@ -1,0 +1,44 @@
+# hycarfilter
+
+> hycarfilter.com — Automotive filter manufacturer & exporter from the Qinghe filter industry cluster, Hebei, China. Seven product lines (air, cabin, oil, fuel, wiper, transmission, LED) with 22 SKUs, factory capability, trilingual B2B content (English / العربية / Español), and three supporting knowledge sites (data / tech / market). Legal entity: Qinghe County Hongying Auto Parts Co., Ltd. (incorporated 2023-11-28). Contact: martin@hycarfilter.com · WhatsApp +86 13323237275.
+
+## Site structure (English)
+
+- [Home](https://hycarfilter.com/): Brand overview, seven category entrances, factory strengths, FAQ, inquiry CTA.
+- [Products](https://hycarfilter.com/products/): Full product catalog index across seven categories.
+- [Air Filter](https://hycarfilter.com/products/air-filter/): Air filter line — selection guide, SKU table, procurement Q&A.
+- [Cabin Filter](https://hycarfilter.com/products/cabin-filter/): Cabin air filter line — selection guide, SKU table, procurement Q&A.
+- [Oil Filter](https://hycarfilter.com/products/oil-filter/): Oil filter line — selection guide, SKU table, procurement Q&A.
+- [Fuel Filter](https://hycarfilter.com/products/fuel-filter/): Fuel filter line — selection guide, SKU table, procurement Q&A.
+- [Wiper Blade](https://hycarfilter.com/products/wiper-blade/): Wiper blade line — selection guide, SKU table, procurement Q&A.
+- [Transmission Filter Screen](https://hycarfilter.com/products/transmission-filter-screen/): Transmission filter line — selection guide, SKU table, procurement Q&A.
+- [LED Lights](https://hycarfilter.com/products/led-lights/): LED headlight line — selection guide, SKU table, procurement Q&A.
+- [Applications](https://hycarfilter.com/applications/): Four application segments (passenger cars, commercial vehicles, construction machinery, agricultural machinery) with procurement points per segment.
+- [Factory](https://hycarfilter.com/factory/): Production, quality control, warehousing, business license (shown separately) and certification information.
+- [About](https://hycarfilter.com/about/): Company profile, brand lineage (since 2013) vs legal entity (2023-11-28), E-E-A-T disclosure, Baidu Aiqicha registry reference.
+- [Blog](https://hycarfilter.com/blog/): 20 export-oriented maintenance and purchasing articles across filter topics.
+- [Contact](https://hycarfilter.com/contact/): Inquiry form, email, phone, WhatsApp button.
+
+## Languages
+
+- English: https://hycarfilter.com/ (default)
+- العربية: https://hycarfilter.com/ar/
+- Español: https://hycarfilter.com/es/
+
+## Supporting knowledge sites
+
+- [Data (product database)](https://data.hycarfilter.com/): Machine-readable product database — SKU index, category pages, spec schemas, cross-reference and packing tables. Single source of truth synced with the main site's products.json.
+- [Tech (technology & standards)](https://tech.hycarfilter.com/): Production processes, technical parameters, testing & QC, industry standard frameworks (ISO/SAE reference).
+- [Market Insights](https://market.hycarfilter.com/): Industry overview, five regional export market reports, industry trends, purchasing guide.
+
+## Compliance & legal
+
+- [Privacy Policy](https://hycarfilter.com/privacy/)
+- [Terms of Service](https://hycarfilter.com/terms/)
+- [Disclaimer](https://hycarfilter.com/disclaimer/)
+- [Cookie Policy](https://hycarfilter.com/cookies/)
+
+## Notes
+
+- Product specifications are design reference values; the formal spec sheet / sample confirmation prevails (see Disclaimer).
+- Registry profile: Baidu Aiqicha (清河县宏盈汽车零部件有限公司, credit code 91130534MAD6454E17).
