@@ -60,6 +60,7 @@ const positioning = currentLocale === 'ar' ? site.positioningAr : currentLocale 
         <h4>{u ? u.sitemap : 'Sitemap'}</h4>
         <ul class="footer__list">
           {nav.map((i) => <li><a href={localizedPath(i.href, currentLocale)}>{navLabel(i.href, i.label)}</a></li>)}
+          <li><a href="/knowledge/">Knowledge</a></li>
         </ul>
       </div>
 

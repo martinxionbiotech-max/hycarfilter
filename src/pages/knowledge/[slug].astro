@@ -1,0 +1,362 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import InquiryCta from '../../components/InquiryCta.astro';
+import productsData from '../../data/products.json';
+import { site } from '../../data/site';
+import { knowledgePosts, type KnowledgePost } from '../../data/knowledgePosts';
+
+export function getStaticPaths() {
+  return knowledgePosts.map((p) => ({ params: { slug: p.slug } }));
+}
+
+const { slug } = Astro.params;
+const post = knowledgePosts.find((p) => p.slug === slug);
+
+if (!post) {
+  return Astro.redirect('/knowledge/');
+}
+
+const h1 = post.h1 ?? post.title;
+
+const relatedCat = post.relatedCategory
+  ? productsData.categories.find((c) => c.slug === post.relatedCategory)
+  : null;
+
+const seriesLinks: KnowledgePost[] = post.internalLinks
+  .map((s) => knowledgePosts.find((p) => p.slug === s))
+  .filter((p): p is KnowledgePost => Boolean(p));
+
+// English-only content: no ar/es equivalents exist, so emit only x-default + en.
+const siteUrl = Astro.site?.toString() ?? 'https://hycarfilter.com';
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
+const alternates = [
+  { lang: 'x-default', href: canonicalUrl },
+  { lang: 'en', href: canonicalUrl },
+];
+
+// Article structured data — matches the page's actual H1, description and date.
+const articleJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: h1,
+  description: post.description,
+  datePublished: post.date,
+  dateModified: post.date,
+  inLanguage: 'en',
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+  author: { '@type': 'Organization', name: site.brand, url: siteUrl },
+  publisher: {
+    '@type': 'Organization',
+    name: site.companyName,
+    url: siteUrl,
+    logo: {
+      '@type': 'ImageObject',
+      url: new URL('/images/company/company-main.png', Astro.site).toString(),
+    },
+  },
+};
+
+function fmtDate(iso: string): string {
+  return new Date(iso + 'T00:00:00Z').toLocaleDateString('en-US', {
+    year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC',
+  });
+}
+---
+
+<BaseLayout
+  title={post.title}
+  description={post.description}
+  alternates={alternates}
+>
+  <article class="section">
+    <div class="container container--narrow">
+      <p class="small muted">
+        <a href="/">Home</a> &rsaquo; <a href="/knowledge/">Knowledge</a> &rsaquo; {post.title}
+      </p>
+      <div class="section-head">
+        <p class="chip">{post.kind === 'pillar' ? 'Knowledge Pillar' : 'Knowledge Guide'}</p>
+        <h1>{h1}</h1>
+        <p class="lede">{post.description}</p>
+        <p class="small muted">{fmtDate(post.date)} · {post.topicLabel}</p>
+      </div>
+
+      {post.intro.map((p) => <p>{p}</p>)}
+
+      {
+        post.sections.map((section) => (
+          <section class="post-section">
+            <h2>{section.heading}</h2>
+            {
+              section.blocks.map((block) => {
+                if (block.type === 'p') {
+                  return <p>{block.text}</p>;
+                }
+                if (block.type === 'h3') {
+                  return <h3>{block.text}</h3>;
+                }
+                if (block.type === 'ul') {
+                  return (
+                    <ul class="k-list">
+                      {block.items.map((item) => <li>{item}</li>)}
+                    </ul>
+                  );
+                }
+                if (block.type === 'ol') {
+                  return (
+                    <ol class="k-list">
+                      {block.items.map((item) => <li>{item}</li>)}
+                    </ol>
+                  );
+                }
+                if (block.type === 'checklist') {
+                  return (
+                    <div class="checklist" data-check>
+                      <div class="checklist__head">
+                        <strong>{block.title}</strong>
+                        <span class="checklist__count" data-check-count>0 of {block.items.length}</span>
+                      </div>
+                      <div class="checklist__items">
+                        {block.items.map((item) => (
+                          <label class="checklist__item">
+                            <input type="checkbox" data-check-input />
+                            <span>{item}</span>
+                          </label>
+                        ))}
+                      </div>
+                      <button type="button" class="checklist__reset" data-check-reset>Reset checklist</button>
+                    </div>
+                  );
+                }
+                if (block.type === 'table') {
+                  return (
+                    <div class="table-wrap">
+                      <table class="spec">
+                        <thead>
+                          <tr>
+                            {block.headers.map((h) => <th>{h}</th>)}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {block.rows.map((row) => (
+                            <tr>
+                              {row.map((cell, i) => (i === 0 ? <th>{cell}</th> : <td>{cell}</td>))}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  );
+                }
+                if (block.type === 'status') {
+                  return (
+                    <div class={`status status--${block.title.toLowerCase().split(' ')[0]}`}>
+                      <strong>{block.title}</strong>
+                      <p style="margin:0.4rem 0 0">{block.body}</p>
+                    </div>
+                  );
+                }
+                if (block.type === 'readmore') {
+                  return (
+                    <p class="readmore">
+                      Read the detailed guide: <a href={`/knowledge/${block.slug}/`}>{block.label}</a>.
+                    </p>
+                  );
+                }
+                return null;
+              })
+            }
+          </section>
+        ))
+      }
+
+      <section class="post-section">
+        <h2>Frequently Asked Questions</h2>
+        {post.faq.map((f) => (
+          <details class="faq">
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+      </section>
+
+      <aside class="crossref">
+        <strong>Cross-reference database</strong>
+        <p class="small muted" style="margin:0.35rem 0 0.6rem">
+          We link to our live cross-reference dataset rather than copying records into this page.
+        </p>
+        <a class="btn btn--outline" href="https://data.hycarfilter.com/cross-reference/" target="_blank" rel="noopener">
+          Browse the cross-reference database ↗
+        </a>
+      </aside>
+
+      {
+        seriesLinks.length > 0 ? (
+          <div class="series">
+            <h2>In this series</h2>
+            <div class="grid grid--2">
+              {seriesLinks.map((p) => (
+                <a class="card series-card" href={`/knowledge/${p.slug}/`}>
+                  <span class="chip">{p.kind === 'pillar' ? 'Pillar' : 'Guide'}</span>
+                  <h3 style="margin:0.5rem 0 0.2rem">{p.title}</h3>
+                  <p class="small muted" style="margin:0">{p.description}</p>
+                </a>
+              ))}
+            </div>
+          </div>
+        ) : null
+      }
+
+      {
+        relatedCat ? (
+          <div class="related">
+            <h2>Related product line</h2>
+            <a class="card related-card" href={`/products/${relatedCat.slug}/`}>
+              <span class="chip">{relatedCat.code.toUpperCase()}</span>
+              <h3>{relatedCat.name_en}</h3>
+              <p class="small muted" style="margin:0">{relatedCat.tagline}</p>
+            </a>
+          </div>
+        ) : (
+          <div class="related">
+            <h2>Related products</h2>
+            <a class="card related-card" href="/products/">
+              <span class="chip">Catalog</span>
+              <h3>HycarFilter Products</h3>
+              <p class="small muted" style="margin:0">Browse our full filter catalog and SKU tables.</p>
+            </a>
+          </div>
+        )
+      }
+    </div>
+  </article>
+
+  <InquiryCta
+    title="Ready to source filters?"
+    sub="Tell us your model, OE number, or target market — we reply within 24 hours."
+  />
+
+  <script type="application/ld+json" set:html={JSON.stringify(articleJsonLd)} />
+
+  <script>
+    // Static checklist: toggle + count + reset (progressive enhancement).
+    document.querySelectorAll<HTMLElement>('[data-check]').forEach((box) => {
+      const inputs = Array.from(box.querySelectorAll<HTMLInputElement>('[data-check-input]'));
+      const count = box.querySelector<HTMLElement>('[data-check-count]');
+      const reset = box.querySelector<HTMLElement>('[data-check-reset]');
+      const update = () => {
+        if (count) {
+          const done = inputs.filter((i) => i.checked).length;
+          count.textContent = `${done} of ${inputs.length}`;
+        }
+      };
+      inputs.forEach((i) => i.addEventListener('change', update));
+      reset?.addEventListener('click', () => {
+        inputs.forEach((i) => (i.checked = false));
+        update();
+      });
+    });
+  </script>
+</BaseLayout>
+
+<style>
+  .container--narrow { max-width: 780px; }
+  .post-section { margin-bottom: 1.75rem; }
+  .post-section h2 { margin-bottom: 0.5em; }
+  .post-section h3 { margin: 1.1rem 0 0.35em; color: var(--navy-800); }
+
+  .k-list { margin: 0 0 1em; padding-left: 1.4rem; }
+  .k-list li { margin-bottom: 0.35rem; }
+
+  .readmore {
+    margin-top: 1rem;
+    padding: 0.65rem 0.9rem;
+    background: var(--orange-050);
+    border-left: 3px solid var(--orange-500);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  }
+
+  .checklist {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: #fff;
+    padding: 1.1rem 1.25rem;
+    margin: 1rem 0 1.25rem;
+    box-shadow: var(--shadow-sm);
+  }
+  .checklist__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.85rem;
+  }
+  .checklist__count {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--orange-700);
+    background: var(--orange-050);
+    border: 1px solid var(--orange-100);
+    border-radius: 999px;
+    padding: 0.1rem 0.6rem;
+    white-space: nowrap;
+  }
+  .checklist__items { display: flex; flex-direction: column; gap: 0.55rem; }
+  .checklist__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    cursor: pointer;
+    line-height: 1.45;
+  }
+  .checklist__item input {
+    flex: none;
+    width: 1.05rem;
+    height: 1.05rem;
+    margin-top: 0.18rem;
+    accent-color: var(--orange-500);
+  }
+  .checklist__reset {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--navy-700);
+    background: var(--bg-soft);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    padding: 0.4rem 0.85rem;
+    cursor: pointer;
+  }
+  .checklist__reset:hover { background: var(--navy-050); }
+
+  .status {
+    border-left: 4px solid var(--line-strong);
+    background: var(--bg-soft);
+    padding: 0.85rem 1rem;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    margin: 0.85rem 0;
+  }
+  .status--verified { border-left-color: #2E8B57; background: #F0F7F2; }
+  .status--pending { border-left-color: #D98A1F; background: #FBF4E8; }
+  .status--rejected { border-left-color: #C0392B; background: #FBEFED; }
+  .status > strong { color: var(--navy-800); }
+
+  .crossref {
+    margin-top: 2rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--navy-050);
+    border: 1px solid var(--navy-100);
+    border-radius: var(--radius);
+  }
+  .crossref strong { color: var(--navy-800); }
+
+  .series { margin-top: 2.5rem; }
+  .series h2, .related h2 { margin-bottom: 1rem; }
+  .series-card { display: block; color: var(--brand-ink); }
+  .series-card:hover { color: var(--brand-ink); }
+  .series-card h3 { margin: 0.5rem 0 0.2rem; font-size: 1.08rem; }
+
+  .related { margin-top: 2.5rem; }
+  .related-card { display: block; color: var(--brand-ink); max-width: 380px; }
+  .related-card:hover { color: var(--brand-ink); }
+  .related-card h3 { margin: 0.5rem 0 0.2rem; }
+</style>

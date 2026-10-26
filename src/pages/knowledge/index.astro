@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import InquiryCta from '../../components/InquiryCta.astro';
+import { knowledgePosts } from '../../data/knowledgePosts';
+
+const pillar = knowledgePosts.find((p) => p.kind === 'pillar');
+const clusters = knowledgePosts.filter((p) => p.kind === 'cluster');
+
+// English-only content: no ar/es equivalents exist, so emit only x-default + en.
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
+const alternates = [
+  { lang: 'x-default', href: canonicalUrl },
+  { lang: 'en', href: canonicalUrl },
+];
+
+function fmtDate(iso: string): string {
+  return new Date(iso + 'T00:00:00Z').toLocaleDateString('en-US', {
+    year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC',
+  });
+}
+---
+
+<BaseLayout
+  title="Knowledge — Automotive Filter Specifications & OE Cross-Reference"
+  description="A technical knowledge series for automotive filter importers, distributors and private-label brands: OE cross-referencing, air filter dimensions, oil filter compatibility and cross-reference verification."
+  alternates={alternates}
+>
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h1>Knowledge</h1>
+        <p class="lede">
+          A technical guide series for automotive filter importers, distributors and private-label
+          brands — how to match filters by OE number, verify dimensions, check oil filter
+          compatibility and validate cross-reference data before sourcing.
+        </p>
+      </div>
+
+      {
+        pillar ? (
+          <a class="card pillar-card" href={`/knowledge/${pillar.slug}/`}>
+            <span class="chip">Pillar Guide</span>
+            <h2>{pillar.title}</h2>
+            <p class="muted" style="margin:0 0 0.6rem">{pillar.description}</p>
+            <p class="small muted" style="margin:0">{fmtDate(pillar.date)} · {pillar.topicLabel}</p>
+          </a>
+        ) : null
+      }
+
+      <div class="grid grid--2 cluster-grid">
+        {
+          clusters.map((p) => (
+            <a class="card cluster-card" href={`/knowledge/${p.slug}/`}>
+              <span class="chip">{p.topicLabel}</span>
+              <h3>{p.title}</h3>
+              <p class="small muted" style="margin:0 0 0.6rem">{p.description}</p>
+              <p class="small muted" style="margin:0">{fmtDate(p.date)}</p>
+            </a>
+          ))
+        }
+      </div>
+
+      <p class="small muted" style="margin-top:1.5rem">
+        Cross-reference data lives in our dedicated
+        <a href="https://data.hycarfilter.com/cross-reference/" target="_blank" rel="noopener">data subsite ↗</a> —
+        these guides link to it rather than duplicating records.
+      </p>
+    </div>
+  </section>
+
+  <InquiryCta
+    title="Questions about a specific filter?"
+    sub="Our technical team writes for procurement decisions — send us your market or OE number and we'll match the right SKU."
+  />
+</BaseLayout>
+
+<style>
+  .pillar-card {
+    display: block;
+    color: var(--brand-ink);
+    margin-bottom: 2rem;
+    border-left: 4px solid var(--orange-500);
+  }
+  .pillar-card:hover { color: var(--brand-ink); }
+  .pillar-card h2 { margin: 0.5rem 0 0.2rem; }
+
+  .cluster-grid { margin-top: 1rem; }
+  .cluster-card { display: block; color: var(--brand-ink); }
+  .cluster-card:hover { color: var(--brand-ink); }
+  .cluster-card h3 { margin: 0.5rem 0 0.2rem; }
+</style>
